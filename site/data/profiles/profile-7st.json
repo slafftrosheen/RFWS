@@ -1,0 +1,43 @@
+{
+ "slug": "profile-7st",
+ "group": "lightbox",
+ "order": 200,
+ "published": true,
+ "title": {
+  "en": "Profile 7 ST lightbox",
+  "lv": "Profils 7 ST, gaismas kaste",
+  "ru": "Профиль 7 ST, световой короб",
+  "nl": "Profiel 7 ST · lichtbak",
+  "de": "Profil 7 ST · Leuchtkasten",
+  "sv": "Profil 7 ST · ljuslåda"
+ },
+ "subtitle": {
+  "en": "Lightbox",
+  "lv": "Gaismas kaste",
+  "ru": "Световой короб",
+  "nl": "Lichtbak",
+  "de": "Leuchtkasten",
+  "sv": "Ljuslåda"
+ },
+ "light": "lightbox",
+ "size": "",
+ "depth": "",
+ "specs": [],
+ "note": {},
+ "cover": "img-20220519-142212",
+ "video": "",
+ "gallery": [
+  "31",
+  "2016-04-22-12-32-03",
+  "20160421-145007",
+  "20170804-133313",
+  "img-20220519-142219",
+  "save-20201010-101613"
+ ],
+ "seo": {
+  "description": {}
+ },
+ "updated": "2026-11-21T20:18:18",
+ "custom_depth": true,
+ "diagram": ""
+}

@@ -1,0 +1,126 @@
+{
+ "site_url": "https://reclamefabriek.eu",
+ "company": "Reclame Fabriek SIA",
+ "founded": "1993",
+ "languages": [
+  {
+   "code": "en",
+   "enabled": true
+  },
+  {
+   "code": "lv",
+   "enabled": true
+  },
+  {
+   "code": "ru",
+   "enabled": true
+  },
+  {
+   "code": "nl",
+   "enabled": true
+  },
+  {
+   "code": "de",
+   "enabled": true
+  },
+  {
+   "code": "sv",
+   "enabled": true
+  }
+ ],
+ "default_lang": "en",
+ "form_to": "pa@reclamefabriek.eu",
+ "form_from": "website@reclamefabriek.eu",
+ "address": {
+  "en": "Komunala iela 100B\nLV-5449 Daugavpils\nLatvia, EU",
+  "lv": "Komunālā iela 100B\nLV-5449 Daugavpils\nLatvija, ES",
+  "ru": "Komunala iela 100B\nLV-5449 Даугавпилс\nЛатвия, ЕС",
+  "nl": "Komunala iela 100B\nLV-5449 Daugavpils\nLetland, EU",
+  "de": "Komunala iela 100B\nLV-5449 Daugavpils\nLettland, EU",
+  "sv": "Komunala iela 100B\nLV-5449 Daugavpils\nLettland, EU"
+ },
+ "maps_query": "Komunala iela 100B, LV-5449 Daugavpils",
+ "contacts": [
+  {
+   "role": {
+    "en": "General",
+    "lv": "Vispārīgi",
+    "ru": "Общие вопросы",
+    "nl": "Algemeen",
+    "de": "Allgemein",
+    "sv": "Allmänt"
+   },
+   "name": "Petr Abramov",
+   "phone": "+371 29 433 637",
+   "email": "pa@reclamefabriek.eu"
+  },
+  {
+   "role": {
+    "en": "Factory",
+    "lv": "Rūpnīca",
+    "ru": "Производство",
+    "nl": "Fabriek",
+    "de": "Fertigung",
+    "sv": "Fabrik"
+   },
+   "name": "Vitaly Danilevics",
+   "phone": "+371 26 389 364",
+   "email": "factory@reclamefabriek.eu"
+  },
+  {
+   "role": {
+    "en": "UK department",
+    "lv": "Nodaļa Lielbritānijā",
+    "ru": "Отдел в Великобритании",
+    "nl": "Afdeling VK",
+    "de": "Niederlassung UK",
+    "sv": "Avdelning i Storbritannien"
+   },
+   "name": "Nikita Nikolaevs",
+   "phone": "+44 7447 048948",
+   "email": "uk@reclamefabriek.eu"
+  }
+ ],
+ "social": [
+  {
+   "name": "YouTube",
+   "url": "https://www.youtube.com/@reclamefabriekLatvia"
+  },
+  {
+   "name": "Instagram",
+   "url": "https://www.instagram.com/reclame_fabriek/"
+  },
+  {
+   "name": "Facebook",
+   "url": "https://www.facebook.com/RA.REKLAMAS.FABRIKA"
+  },
+  {
+   "name": "LinkedIn",
+   "url": "https://www.linkedin.com/company/reclame-fabriek"
+  }
+ ],
+ "lumigrid_url": "https://algorhythmicdev.github.io/lumigrid-lander/",
+ "partner_logos": [
+  "liaa-logo-ansamblis-1",
+  "20231220-1208-bilde3",
+  "an"
+ ],
+ "og_image": "/assets/brand/og-image.jpg",
+ "hero_phone": "+371 29 433 637",
+ "motion": "full",
+ "ral_image": "ral-colour-guide-image-v1-01",
+ "portal": {
+  "registration": "auto",
+  "vat": 21,
+  "valid_days": 30,
+  "notify": "",
+  "terms": {
+   "en": "Prices in euro, excluding VAT unless stated. Production starts after written acceptance and approval of the final drawing. Delivery and installation are quoted separately unless included above. Warranty: LED modules 5 years, LED power supplies 3 years.",
+   "lv": "Cenas eiro, bez PVN, ja nav norādīts citādi. Ražošana sākas pēc rakstiskas akceptēšanas un gala rasējuma apstiprināšanas. Piegāde un uzstādīšana tiek aprēķināta atsevišķi, ja nav iekļauta iepriekš. Garantija: LED moduļiem 5 gadi, LED barošanas blokiem 3 gadi.",
+   "ru": "Цены в евро, без НДС, если не указано иное. Производство начинается после письменного согласия и утверждения финального чертежа. Доставка и монтаж рассчитываются отдельно, если не включены выше. Гарантия: LED-модули 5 лет, блоки питания LED 3 года.",
+   "nl": "Prijzen in euro, exclusief btw tenzij anders vermeld. De productie start na schriftelijke acceptatie en goedkeuring van de definitieve tekening. Levering en montage worden apart geoffreerd, tenzij hierboven inbegrepen. Garantie: LED-modules 5 jaar, LED-voedingen 3 jaar.",
+   "de": "Preise in Euro, zzgl. USt., sofern nicht anders angegeben. Die Fertigung beginnt nach schriftlicher Annahme und Freigabe der finalen Zeichnung. Lieferung und Montage werden separat angeboten, sofern oben nicht enthalten. Garantie: LED-Module 5 Jahre, LED-Netzteile 3 Jahre.",
+   "sv": "Priser i euro, exklusive moms om inget annat anges. Produktionen startar efter skriftligt godkännande av offerten och den slutliga ritningen. Leverans och montering offereras separat om de inte ingår ovan. Garanti: LED-moduler 5 år, LED-nätaggregat 3 år."
+  }
+ }
+}

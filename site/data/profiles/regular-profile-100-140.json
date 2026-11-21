@@ -1,0 +1,39 @@
+{
+ "slug": "regular-profile-100-140",
+ "group": "lightbox",
+ "order": 150,
+ "published": true,
+ "title": {
+  "en": "Regular profile 100 / 140",
+  "lv": "Standarta profils 100 / 140",
+  "ru": "Стандартный профиль 100 / 140",
+  "nl": "Standaardprofiel 100 / 140",
+  "de": "Standardprofil 100 / 140",
+  "sv": "Standardprofil 100 / 140"
+ },
+ "subtitle": {
+  "en": "Lightbox",
+  "lv": "Gaismas kaste",
+  "ru": "Световой короб",
+  "nl": "Lichtbak",
+  "de": "Leuchtkasten",
+  "sv": "Ljuslåda"
+ },
+ "light": "lightbox",
+ "size": "",
+ "depth": "",
+ "specs": [],
+ "note": {},
+ "cover": "20170331-152825-e1730192345579",
+ "video": "",
+ "gallery": [
+  "whatsapp-image-2020-01-10-at-08-43-22",
+  "whatsapp-image-2020-01-11-at-08-39-46-1"
+ ],
+ "seo": {
+  "description": {}
+ },
+ "updated": "2026-11-21T20:18:18",
+ "custom_depth": true,
+ "diagram": ""
+}

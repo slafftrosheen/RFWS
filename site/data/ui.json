@@ -1,0 +1,2242 @@
+{
+ "nav.profiles": {
+  "en": "Product profiles",
+  "lv": "Produktu profili",
+  "ru": "Профили продукции",
+  "nl": "Productprofielen",
+  "de": "Produktprofile",
+  "sv": "Produktprofiler"
+ },
+ "nav.projects": {
+  "en": "Projects",
+  "lv": "Projekti",
+  "ru": "Проекты",
+  "nl": "Projecten",
+  "de": "Projekte",
+  "sv": "Projekt"
+ },
+ "nav.research": {
+  "en": "Signage Research",
+  "lv": "Izkārtņu izpēte",
+  "ru": "Исследования",
+  "nl": "Onderzoek & ontwikkeling",
+  "de": "Forschung & Entwicklung",
+  "sv": "Forskning & utveckling"
+ },
+ "nav.lumigrid": {
+  "en": "LUMIGRID controller",
+  "lv": "LUMIGRID kontrolleris",
+  "ru": "Контроллер LUMIGRID",
+  "nl": "LUMIGRID-controller",
+  "de": "LUMIGRID-Controller",
+  "sv": "LUMIGRID-styrenhet"
+ },
+ "nav.contact": {
+  "en": "Contact",
+  "lv": "Kontakti",
+  "ru": "Контакты",
+  "nl": "Contact",
+  "de": "Kontakt",
+  "sv": "Kontakt"
+ },
+ "cta.quote": {
+  "en": "Request a quote",
+  "lv": "Pieprasīt cenu",
+  "ru": "Запросить цену",
+  "nl": "Offerte aanvragen",
+  "de": "Angebot anfordern",
+  "sv": "Begär offert"
+ },
+ "brand.tag": {
+  "en": "B2B sign supplier · since 1993",
+  "lv": "B2B izkārtņu piegādātājs · kopš 1993",
+  "ru": "B2B-поставщик вывесок · с 1993",
+  "nl": "B2B-signing · sinds 1993",
+  "de": "B2B-Werbetechnik · seit 1993",
+  "sv": "B2B-skyltar · sedan 1993"
+ },
+ "skip": {
+  "en": "Skip to content",
+  "lv": "Pāriet uz saturu",
+  "ru": "Перейти к содержимому",
+  "nl": "Naar inhoud",
+  "de": "Zum Inhalt",
+  "sv": "Till innehållet"
+ },
+ "menu": {
+  "en": "Menu",
+  "lv": "Izvēlne",
+  "ru": "Меню",
+  "nl": "Menu",
+  "de": "Menü",
+  "sv": "Meny"
+ },
+ "lang": {
+  "en": "Language",
+  "lv": "Valoda",
+  "ru": "Язык",
+  "nl": "Taal",
+  "de": "Sprache",
+  "sv": "Språk"
+ },
+ "home": {
+  "en": "Home",
+  "lv": "Sākums",
+  "ru": "Главная",
+  "nl": "Home",
+  "de": "Start",
+  "sv": "Hem"
+ },
+ "crumbs": {
+  "en": "Breadcrumb",
+  "lv": "Navigācijas ceļš",
+  "ru": "Навигационная цепочка",
+  "nl": "Kruimelpad",
+  "de": "Brotkrumen",
+  "sv": "Brödsmulor"
+ },
+ "all_profiles": {
+  "en": "All {n} profiles",
+  "lv": "Visi {n} profili",
+  "ru": "Все профили ({n})",
+  "nl": "Alle {n} profielen",
+  "de": "Alle {n} Profile",
+  "sv": "Alla {n} profiler"
+ },
+ "all_profiles_short": {
+  "en": "All profiles",
+  "lv": "Visi profili",
+  "ru": "Все профили",
+  "nl": "Alle profielen",
+  "de": "Alle Profile",
+  "sv": "Alla profiler"
+ },
+ "box_letters": {
+  "en": "Box letters",
+  "lv": "Tilpuma burti",
+  "ru": "Объёмные буквы",
+  "nl": "Doosletters",
+  "de": "Profilbuchstaben",
+  "sv": "3D-bokstäver"
+ },
+ "lightboxes": {
+  "en": "Lightboxes",
+  "lv": "Gaismas kastes",
+  "ru": "Световые короба",
+  "nl": "Lichtbakken",
+  "de": "Leuchtkästen",
+  "sv": "Ljuslådor"
+ },
+ "filter.all": {
+  "en": "All",
+  "lv": "Visi",
+  "ru": "Все",
+  "nl": "Alle",
+  "de": "Alle",
+  "sv": "Alla"
+ },
+ "filter.label": {
+  "en": "Filter profiles",
+  "lv": "Filtrēt profilus",
+  "ru": "Фильтр профилей",
+  "nl": "Profielen filteren",
+  "de": "Profile filtern",
+  "sv": "Filtrera profiler"
+ },
+ "filter.showing": {
+  "en": "Showing {n} of {m} profiles",
+  "lv": "Rāda {n} no {m} profiliem",
+  "ru": "Показано {n} из {m} профилей",
+  "nl": "{n} van {m} profielen",
+  "de": "{n} von {m} Profilen",
+  "sv": "Visar {n} av {m} profiler"
+ },
+ "read_story": {
+  "en": "Read the story",
+  "lv": "Lasīt stāstu",
+  "ru": "Читать историю",
+  "nl": "Lees het verhaal",
+  "de": "Geschichte lesen",
+  "sv": "Läs berättelsen"
+ },
+ "spec": {
+  "en": "Specification",
+  "lv": "Specifikācija",
+  "ru": "Спецификация",
+  "nl": "Specificatie",
+  "de": "Spezifikation",
+  "sv": "Specifikation"
+ },
+ "see_made": {
+  "en": "See it made",
+  "lv": "Kā tas top",
+  "ru": "Как это делается",
+  "nl": "Zo wordt het gemaakt",
+  "de": "So entsteht es",
+  "sv": "Så tillverkas den"
+ },
+ "made_with": {
+  "en": "Made with {x}",
+  "lv": "Darbi ar {x}",
+  "ru": "Работы с профилем {x}",
+  "nl": "Projecten met {x}",
+  "de": "Projekte mit {x}",
+  "sv": "Projekt med {x}"
+ },
+ "other_letters": {
+  "en": "Other box letters",
+  "lv": "Citi tilpuma burti",
+  "ru": "Другие объёмные буквы",
+  "nl": "Andere doosletters",
+  "de": "Weitere Profilbuchstaben",
+  "sv": "Andra 3D-bokstäver"
+ },
+ "other_lightboxes": {
+  "en": "Other lightboxes",
+  "lv": "Citas gaismas kastes",
+  "ru": "Другие световые короба",
+  "nl": "Andere lichtbakken",
+  "de": "Weitere Leuchtkästen",
+  "sv": "Andra ljuslådor"
+ },
+ "ask_price": {
+  "en": "Ask for a price",
+  "lv": "Pieprasīt cenu",
+  "ru": "Узнать цену",
+  "nl": "Prijs aanvragen",
+  "de": "Preis anfragen",
+  "sv": "Fråga om pris"
+ },
+ "letter_height": {
+  "en": "Letter height",
+  "lv": "Burtu augstums",
+  "ru": "Высота букв",
+  "nl": "Letterhoogte",
+  "de": "Buchstabenhöhe",
+  "sv": "Bokstavshöjd"
+ },
+ "depths": {
+  "en": "Standard depths",
+  "lv": "Standarta dziļumi",
+  "ru": "Стандартная глубина",
+  "nl": "Standaard diepten",
+  "de": "Standardtiefen",
+  "sv": "Standarddjup"
+ },
+ "custom_depth": {
+  "en": "Custom letter depths are also available upon request.",
+  "lv": "Pēc pieprasījuma pieejams arī individuāls burtu dziļums.",
+  "ru": "По запросу возможна и нестандартная глубина букв.",
+  "nl": "Andere letterdieptes zijn op aanvraag ook mogelijk.",
+  "de": "Individuelle Buchstabentiefen sind auf Anfrage ebenfalls möglich.",
+  "sv": "Andra bokstavsdjup finns också på begäran."
+ },
+ "mounting": {
+  "en": "Mounting",
+  "lv": "Montāža",
+  "ru": "Крепление",
+  "nl": "Montage",
+  "de": "Montage",
+  "sv": "Montering"
+ },
+ "surface": {
+  "en": "Surface finish",
+  "lv": "Virsmas apdare",
+  "ru": "Отделка поверхности",
+  "nl": "Afwerking",
+  "de": "Oberfläche",
+  "sv": "Ytbehandling"
+ },
+ "led": {
+  "en": "LED components",
+  "lv": "LED komponenti",
+  "ru": "LED-компоненты",
+  "nl": "LED-componenten",
+  "de": "LED-Komponenten",
+  "sv": "LED-komponenter"
+ },
+ "customisation": {
+  "en": "Customisation",
+  "lv": "Pielāgošana",
+  "ru": "Индивидуальные решения",
+  "nl": "Maatwerk",
+  "de": "Individuelle Anpassung",
+  "sv": "Anpassning"
+ },
+ "mount_text": {
+  "en": "**No frame:** supplied with a paper template for accurate installation. **On frame:** letters pre-installed on rails behind the letters.",
+  "lv": "**Bez rāmja:** komplektā papīra šablons precīzai uzstādīšanai. **Uz rāmja:** burti iepriekš uzstādīti uz sliedēm aiz burtiem.",
+  "ru": "**Без рамы:** поставляется с бумажным шаблоном для точного монтажа. **На раме:** буквы заранее смонтированы на направляющих за буквами.",
+  "nl": "**Zonder frame:** geleverd met een papieren sjabloon voor nauwkeurige montage. **Op frame:** letters vooraf gemonteerd op rails achter de letters.",
+  "de": "**Ohne Rahmen:** mit Papierschablone für eine exakte Montage. **Auf Rahmen:** Buchstaben vormontiert auf Schienen hinter den Buchstaben.",
+  "sv": "**Utan ram:** levereras med pappersmall för exakt montering. **På ram:** bokstäverna förmonterade på skenor bakom bokstäverna."
+ },
+ "custom_text": {
+  "en": "Additional materials, components and finishes are available upon special request, subject to price and availability. Depending on the specific requirements, design or usage, certain components or construction aspects may be modified in consultation with the customer.",
+  "lv": "Papildu materiāli, komponenti un apdares pieejami pēc īpaša pieprasījuma atkarībā no cenas un pieejamības. Atkarībā no konkrētajām prasībām, dizaina vai lietojuma atsevišķus komponentus vai konstrukcijas elementus var mainīt, vienojoties ar klientu.",
+  "ru": "Дополнительные материалы, комплектующие и варианты отделки доступны по специальному запросу, в зависимости от цены и наличия. В зависимости от конкретных требований, дизайна или условий эксплуатации отдельные комплектующие или элементы конструкции могут быть изменены по согласованию с заказчиком.",
+  "nl": "Andere materialen, componenten en afwerkingen zijn op speciaal verzoek beschikbaar, afhankelijk van prijs en beschikbaarheid. Afhankelijk van de specifieke eisen, het ontwerp of het gebruik kunnen bepaalde componenten of constructiedetails in overleg met de klant worden aangepast.",
+  "de": "Weitere Materialien, Komponenten und Oberflächen sind auf besondere Anfrage erhältlich, je nach Preis und Verfügbarkeit. Je nach Anforderungen, Design oder Einsatz können einzelne Komponenten oder Konstruktionsdetails in Absprache mit dem Kunden angepasst werden.",
+  "sv": "Fler material, komponenter och ytbehandlingar finns på särskild begäran, beroende på pris och tillgänglighet. Beroende på krav, design eller användning kan vissa komponenter eller konstruktionsdetaljer ändras i samråd med kunden."
+ },
+ "lightbox_note": {
+  "en": "**Built to your drawing.** Lightboxes are made to measure: size, depth, face material, light and mounting are agreed per project. Send us the size and the place, and we’ll prepare the specification and a price.",
+  "lv": "**Izgatavots pēc jūsu rasējuma.** Gaismas kastes tiek izgatavotas pēc izmēra: izmērs, dziļums, priekšējās virsmas materiāls, apgaismojums un montāža tiek saskaņoti katram projektam. Atsūtiet izmēru un vietu – mēs sagatavosim specifikāciju un cenu.",
+  "ru": "**По вашему чертежу.** Световые короба изготавливаются по размеру: габариты, глубина, материал лицевой панели, подсветка и крепление согласуются для каждого проекта. Пришлите размер и место — мы подготовим спецификацию и цену.",
+  "nl": "**Gebouwd naar uw tekening.** Lichtbakken worden op maat gemaakt: afmetingen, diepte, frontmateriaal, verlichting en montage worden per project afgestemd. Stuur ons de maat en de locatie, dan maken wij de specificatie en een prijs.",
+  "de": "**Nach Ihrer Zeichnung gebaut.** Leuchtkästen werden nach Maß gefertigt: Größe, Tiefe, Frontmaterial, Beleuchtung und Montage werden je Projekt abgestimmt. Senden Sie uns Maße und Standort, wir erstellen Spezifikation und Preis.",
+  "sv": "**Byggd efter er ritning.** Ljuslådor tillverkas på mått: storlek, djup, frontmaterial, ljus och montering bestäms per projekt. Skicka mått och plats så tar vi fram specifikation och pris."
+ },
+ "footer.tag": {
+  "en": "Custom signage, CNC machinery and LED neon, made in our 6,000 m² factory in Daugavpils and delivered across Europe since 1993.",
+  "lv": "Individuālas izkārtnes, CNC iekārtas un LED neons – izgatavoti mūsu 6000 m² rūpnīcā Daugavpilī un piegādāti visā Eiropā kopš 1993. gada.",
+  "ru": "Вывески на заказ, станки с ЧПУ и LED-неон — производим на нашей фабрике площадью 6000 м² в Даугавпилсе и поставляем по всей Европе с 1993 года.",
+  "nl": "Signing op maat, CNC-machines en LED-neon, gemaakt in onze fabriek van 6.000 m² in Daugavpils en sinds 1993 geleverd in heel Europa.",
+  "de": "Individuelle Werbeanlagen, CNC-Maschinen und LED-Neon, gefertigt in unserem 6.000-m²-Werk in Daugavpils und seit 1993 in ganz Europa geliefert.",
+  "sv": "Skyltar på beställning, CNC-maskiner och LED-neon, tillverkade i vår fabrik på 6 000 m² i Daugavpils och levererade i hela Europa sedan 1993."
+ },
+ "cta.title": {
+  "en": "Have a sign in mind?",
+  "lv": "Jums ir ideja izkārtnei?",
+  "ru": "Задумали вывеску?",
+  "nl": "Een idee voor signing?",
+  "de": "Eine Werbeanlage im Kopf?",
+  "sv": "Har ni en skylt i tankarna?"
+ },
+ "cta.text": {
+  "en": "Send us a sketch, a photo of the facade or just the size and the address. We reply with a solution and a price.",
+  "lv": "Atsūtiet mums skici, fasādes foto vai vienkārši izmēru un adresi. Mēs atbildēsim ar risinājumu un cenu.",
+  "ru": "Пришлите нам эскиз, фото фасада или просто размер и адрес. Мы ответим решением и ценой.",
+  "nl": "Stuur ons een schets, een foto van de gevel of alleen de afmetingen en het adres. Wij antwoorden met een oplossing en een prijs.",
+  "de": "Senden Sie uns eine Skizze, ein Foto der Fassade oder einfach Größe und Adresse. Wir antworten mit einer Lösung und einem Preis.",
+  "sv": "Skicka en skiss, ett foto på fasaden eller bara storlek och adress. Vi svarar med en lösning och ett pris."
+ },
+ "video": {
+  "en": "Video",
+  "lv": "Video",
+  "ru": "Видео",
+  "nl": "Video",
+  "de": "Video",
+  "sv": "Video"
+ },
+ "photos": {
+  "en": "Photos",
+  "lv": "Foto",
+  "ru": "Фото",
+  "nl": "Foto’s",
+  "de": "Fotos",
+  "sv": "Foton"
+ },
+ "next_story": {
+  "en": "Next story",
+  "lv": "Nākamais stāsts",
+  "ru": "Следующая история",
+  "nl": "Volgend verhaal",
+  "de": "Nächste Geschichte",
+  "sv": "Nästa berättelse"
+ },
+ "project_story": {
+  "en": "Project story",
+  "lv": "Projekta stāsts",
+  "ru": "История проекта",
+  "nl": "Projectverhaal",
+  "de": "Projektgeschichte",
+  "sv": "Projektberättelse"
+ },
+ "play": {
+  "en": "Play video",
+  "lv": "Atskaņot video",
+  "ru": "Смотреть видео",
+  "nl": "Video afspelen",
+  "de": "Video abspielen",
+  "sv": "Spela video"
+ },
+ "yt_note": {
+  "en": "Loads from YouTube when you press play.",
+  "lv": "Ielādējas no YouTube, kad nospiežat atskaņot.",
+  "ru": "Загружается с YouTube после нажатия.",
+  "nl": "Laadt van YouTube zodra u op afspelen drukt.",
+  "de": "Wird erst beim Abspielen von YouTube geladen.",
+  "sv": "Laddas från YouTube när ni trycker på spela."
+ },
+ "map_show": {
+  "en": "Show the map",
+  "lv": "Rādīt karti",
+  "ru": "Показать карту",
+  "nl": "Toon de kaart",
+  "de": "Karte anzeigen",
+  "sv": "Visa kartan"
+ },
+ "map_note": {
+  "en": "The map loads from Google when you press the button.",
+  "lv": "Karte ielādējas no Google, kad nospiežat pogu.",
+  "ru": "Карта загружается с Google после нажатия кнопки.",
+  "nl": "De kaart laadt van Google zodra u op de knop drukt.",
+  "de": "Die Karte wird erst nach Klick von Google geladen.",
+  "sv": "Kartan laddas från Google när ni trycker på knappen."
+ },
+ "f.name": {
+  "en": "Name",
+  "lv": "Vārds",
+  "ru": "Имя",
+  "nl": "Naam",
+  "de": "Name",
+  "sv": "Namn"
+ },
+ "f.company": {
+  "en": "Company",
+  "lv": "Uzņēmums",
+  "ru": "Компания",
+  "nl": "Bedrijf",
+  "de": "Firma",
+  "sv": "Företag"
+ },
+ "f.email": {
+  "en": "Email",
+  "lv": "E-pasts",
+  "ru": "E-mail",
+  "nl": "E-mail",
+  "de": "E-Mail",
+  "sv": "E-post"
+ },
+ "f.phone": {
+  "en": "Phone",
+  "lv": "Tālrunis",
+  "ru": "Телефон",
+  "nl": "Telefoon",
+  "de": "Telefon",
+  "sv": "Telefon"
+ },
+ "f.profile": {
+  "en": "Product profile, if you know it",
+  "lv": "Produkta profils, ja zināt",
+  "ru": "Профиль продукции, если знаете",
+  "nl": "Productprofiel, als u het weet",
+  "de": "Produktprofil, falls bekannt",
+  "sv": "Produktprofil, om ni vet"
+ },
+ "f.unsure": {
+  "en": "Not sure yet",
+  "lv": "Vēl nezinu",
+  "ru": "Пока не знаю",
+  "nl": "Nog niet zeker",
+  "de": "Noch unklar",
+  "sv": "Inte säker än"
+ },
+ "f.furniture": {
+  "en": "Custom furniture (CubeMöbel)",
+  "lv": "Mēbeles pēc pasūtījuma (CubeMöbel)",
+  "ru": "Мебель на заказ (CubeMöbel)",
+  "nl": "Meubels op maat (CubeMöbel)",
+  "de": "Möbel nach Maß (CubeMöbel)",
+  "sv": "Möbler på beställning (CubeMöbel)"
+ },
+ "f.cnc": {
+  "en": "CNC machinery (CubeCNC)",
+  "lv": "CNC iekārtas (CubeCNC)",
+  "ru": "Станки с ЧПУ (CubeCNC)",
+  "nl": "CNC-machines (CubeCNC)",
+  "de": "CNC-Maschinen (CubeCNC)",
+  "sv": "CNC-maskiner (CubeCNC)"
+ },
+ "f.special": {
+  "en": "Something special (Signage Research)",
+  "lv": "Kaut kas īpašs (izpētes nodaļa)",
+  "ru": "Что-то особенное (отдел исследований)",
+  "nl": "Iets bijzonders (onderzoek & ontwikkeling)",
+  "de": "Etwas Besonderes (Forschung & Entwicklung)",
+  "sv": "Något speciellt (forskning & utveckling)"
+ },
+ "f.message": {
+  "en": "Your project",
+  "lv": "Jūsu projekts",
+  "ru": "Ваш проект",
+  "nl": "Uw project",
+  "de": "Ihr Projekt",
+  "sv": "Ert projekt"
+ },
+ "f.placeholder": {
+  "en": "Size, place, quantity, deadline. A link to a sketch or photo helps too.",
+  "lv": "Izmērs, vieta, daudzums, termiņš. Noderēs arī saite uz skici vai foto.",
+  "ru": "Размер, место, количество, сроки. Ссылка на эскиз или фото тоже поможет.",
+  "nl": "Afmetingen, locatie, aantal, deadline. Een link naar een schets of foto helpt ook.",
+  "de": "Größe, Ort, Menge, Termin. Ein Link zu Skizze oder Foto hilft auch.",
+  "sv": "Storlek, plats, antal, deadline. En länk till skiss eller foto hjälper också."
+ },
+ "f.consent": {
+  "en": "By sending this form you agree to our [privacy policy]({privacy}). We only use your details to answer you.",
+  "lv": "Nosūtot veidlapu, jūs piekrītat mūsu [privātuma politikai]({privacy}). Jūsu datus izmantojam tikai, lai jums atbildētu.",
+  "ru": "Отправляя форму, вы соглашаетесь с нашей [политикой конфиденциальности]({privacy}). Мы используем ваши данные только для ответа вам.",
+  "nl": "Door dit formulier te versturen gaat u akkoord met ons [privacybeleid]({privacy}). We gebruiken uw gegevens alleen om u te antwoorden.",
+  "de": "Mit dem Absenden stimmen Sie unserer [Datenschutzerklärung]({privacy}) zu. Wir nutzen Ihre Angaben nur für die Antwort.",
+  "sv": "Genom att skicka formuläret godkänner ni vår [integritetspolicy]({privacy}). Vi använder era uppgifter bara för att svara er."
+ },
+ "f.send": {
+  "en": "Send request",
+  "lv": "Nosūtīt pieprasījumu",
+  "ru": "Отправить запрос",
+  "nl": "Aanvraag versturen",
+  "de": "Anfrage senden",
+  "sv": "Skicka förfrågan"
+ },
+ "f.sending": {
+  "en": "Sending…",
+  "lv": "Sūta…",
+  "ru": "Отправка…",
+  "nl": "Bezig met versturen…",
+  "de": "Wird gesendet…",
+  "sv": "Skickar…"
+ },
+ "f.ok": {
+  "en": "Thank you. We’ve got your request and will reply within one working day.",
+  "lv": "Paldies! Esam saņēmuši jūsu pieprasījumu un atbildēsim vienas darba dienas laikā.",
+  "ru": "Спасибо! Мы получили ваш запрос и ответим в течение одного рабочего дня.",
+  "nl": "Bedankt. We hebben uw aanvraag ontvangen en reageren binnen één werkdag.",
+  "de": "Danke. Wir haben Ihre Anfrage erhalten und antworten innerhalb eines Werktags.",
+  "sv": "Tack. Vi har fått er förfrågan och svarar inom en arbetsdag."
+ },
+ "f.sub_ok": {
+  "en": "Thank you, you’re on the list.",
+  "lv": "Paldies, jūs esat sarakstā.",
+  "ru": "Спасибо, вы в списке.",
+  "nl": "Bedankt, u staat op de lijst.",
+  "de": "Danke, Sie sind dabei.",
+  "sv": "Tack, ni är med på listan."
+ },
+ "f.err": {
+  "en": "The form couldn’t send right now.",
+  "lv": "Veidlapu šobrīd neizdevās nosūtīt.",
+  "ru": "Сейчас не удалось отправить форму.",
+  "nl": "Het formulier kon nu niet worden verzonden.",
+  "de": "Das Formular konnte gerade nicht gesendet werden.",
+  "sv": "Formuläret kunde inte skickas just nu."
+ },
+ "f.err_link": {
+  "en": "Send it by email instead",
+  "lv": "Nosūtīt pa e-pastu",
+  "ru": "Отправить по e-mail",
+  "nl": "Verstuur het per e-mail",
+  "de": "Per E-Mail senden",
+  "sv": "Skicka med e-post istället"
+ },
+ "f.work_email": {
+  "en": "Work email",
+  "lv": "Darba e-pasts",
+  "ru": "Рабочий e-mail",
+  "nl": "Zakelijk e-mailadres",
+  "de": "Geschäftliche E-Mail",
+  "sv": "Jobbmejl"
+ },
+ "f.subscribe": {
+  "en": "Subscribe",
+  "lv": "Abonēt",
+  "ru": "Подписаться",
+  "nl": "Aanmelden",
+  "de": "Abonnieren",
+  "sv": "Prenumerera"
+ },
+ "f.leave": {
+  "en": "Leave empty",
+  "lv": "Atstāt tukšu",
+  "ru": "Оставьте пустым",
+  "nl": "Leeg laten",
+  "de": "Leer lassen",
+  "sv": "Lämna tomt"
+ },
+ "start_request": {
+  "en": "Start a request",
+  "lv": "Sākt pieprasījumu",
+  "ru": "Оставить запрос",
+  "nl": "Aanvraag starten",
+  "de": "Anfrage starten",
+  "sv": "Skicka en förfrågan"
+ },
+ "find_us": {
+  "en": "Find us",
+  "lv": "Kā mūs atrast",
+  "ru": "Как нас найти",
+  "nl": "Vind ons",
+  "de": "So finden Sie uns",
+  "sv": "Hitta oss"
+ },
+ "contacts": {
+  "en": "Contacts",
+  "lv": "Kontakti",
+  "ru": "Контакты",
+  "nl": "Contacten",
+  "de": "Kontakte",
+  "sv": "Kontakter"
+ },
+ "follow": {
+  "en": "Follow",
+  "lv": "Sekojiet",
+  "ru": "Мы в соцсетях",
+  "nl": "Volg ons",
+  "de": "Folgen",
+  "sv": "Följ oss"
+ },
+ "open_maps": {
+  "en": "Open in Maps",
+  "lv": "Atvērt kartē",
+  "ru": "Открыть на карте",
+  "nl": "Openen in Maps",
+  "de": "In Maps öffnen",
+  "sv": "Öppna i Kartor"
+ },
+ "lsez": {
+  "en": "Member of the Latgale Special Economic Zone",
+  "lv": "Latgales speciālās ekonomiskās zonas dalībnieks",
+  "ru": "Участник Латгальской специальной экономической зоны",
+  "nl": "Lid van de Speciale Economische Zone Latgale",
+  "de": "Mitglied der Sonderwirtschaftszone Latgale",
+  "sv": "Medlem av Latgales särskilda ekonomiska zon"
+ },
+ "rights": {
+  "en": "All rights reserved.",
+  "lv": "Visas tiesības aizsargātas.",
+  "ru": "Все права защищены.",
+  "nl": "Alle rechten voorbehouden.",
+  "de": "Alle Rechte vorbehalten.",
+  "sv": "Alla rättigheter förbehållna."
+ },
+ "privacy": {
+  "en": "Privacy policy",
+  "lv": "Privātuma politika",
+  "ru": "Политика конфиденциальности",
+  "nl": "Privacybeleid",
+  "de": "Datenschutz",
+  "sv": "Integritetspolicy"
+ },
+ "close": {
+  "en": "Close",
+  "lv": "Aizvērt",
+  "ru": "Закрыть",
+  "nl": "Sluiten",
+  "de": "Schließen",
+  "sv": "Stäng"
+ },
+ "prev": {
+  "en": "Previous image",
+  "lv": "Iepriekšējais attēls",
+  "ru": "Предыдущее фото",
+  "nl": "Vorige afbeelding",
+  "de": "Vorheriges Bild",
+  "sv": "Föregående bild"
+ },
+ "next": {
+  "en": "Next image",
+  "lv": "Nākamais attēls",
+  "ru": "Следующее фото",
+  "nl": "Volgende afbeelding",
+  "de": "Nächstes Bild",
+  "sv": "Nästa bild"
+ },
+ "viewer": {
+  "en": "Image viewer",
+  "lv": "Attēlu skatītājs",
+  "ru": "Просмотр изображений",
+  "nl": "Afbeeldingsviewer",
+  "de": "Bildbetrachter",
+  "sv": "Bildvisare"
+ },
+ "team_scroll": {
+  "en": "Team photos, scroll sideways",
+  "lv": "Komandas foto, ritiniet uz sāniem",
+  "ru": "Фото команды, листайте вбок",
+  "nl": "Teamfoto’s, scroll opzij",
+  "de": "Teamfotos, seitlich scrollen",
+  "sv": "Teamfoton, skrolla i sidled"
+ },
+ "team_alt": {
+  "en": "Reclame Fabriek team member",
+  "lv": "Reclame Fabriek komandas biedrs",
+  "ru": "Сотрудник Reclame Fabriek",
+  "nl": "Teamlid van Reclame Fabriek",
+  "de": "Teammitglied von Reclame Fabriek",
+  "sv": "Medarbetare på Reclame Fabriek"
+ },
+ "clients_alt": {
+  "en": "Logos of brands Reclame Fabriek has made signage for",
+  "lv": "Zīmolu logotipi, kuriem Reclame Fabriek ir izgatavojis izkārtnes",
+  "ru": "Логотипы брендов, для которых Reclame Fabriek делала вывески",
+  "nl": "Logo’s van merken waarvoor Reclame Fabriek signing maakte",
+  "de": "Logos von Marken, für die Reclame Fabriek Werbeanlagen gebaut hat",
+  "sv": "Logotyper för varumärken som Reclame Fabriek har gjort skyltar åt"
+ },
+ "story_en_only": {
+  "en": "This story is currently available in English.",
+  "lv": "Šis stāsts pagaidām ir pieejams angļu valodā.",
+  "ru": "Эта история пока доступна на английском языке.",
+  "nl": "Dit verhaal is momenteel beschikbaar in het Engels.",
+  "de": "Diese Geschichte ist derzeit auf Englisch verfügbar.",
+  "sv": "Den här berättelsen finns för närvarande på engelska."
+ },
+ "nf.title": {
+  "en": "This sign is switched off.",
+  "lv": "Šī izkārtne ir izslēgta.",
+  "ru": "Эта вывеска выключена.",
+  "nl": "Deze lichtreclame staat uit.",
+  "de": "Diese Leuchtreklame ist aus.",
+  "sv": "Den här skylten är släckt."
+ },
+ "nf.text": {
+  "en": "The page you’re looking for has moved or no longer exists.",
+  "lv": "Meklētā lapa ir pārvietota vai vairs neeksistē.",
+  "ru": "Страница, которую вы ищете, перемещена или больше не существует.",
+  "nl": "De pagina die u zoekt is verplaatst of bestaat niet meer.",
+  "de": "Die gesuchte Seite wurde verschoben oder existiert nicht mehr.",
+  "sv": "Sidan ni letar efter har flyttats eller finns inte längre."
+ },
+ "nf.home": {
+  "en": "Back to home",
+  "lv": "Uz sākumlapu",
+  "ru": "На главную",
+  "nl": "Terug naar home",
+  "de": "Zur Startseite",
+  "sv": "Till startsidan"
+ },
+ "light.frontlit": {
+  "en": "Frontlit",
+  "lv": "Priekšējā gaisma",
+  "ru": "Лицевая подсветка",
+  "nl": "Frontverlicht",
+  "de": "Frontleuchtend",
+  "sv": "Frontbelyst"
+ },
+ "light.corona": {
+  "en": "Corona (halo)",
+  "lv": "Kontūrgaisma (halo)",
+  "ru": "Контражур (гало)",
+  "nl": "Halo-verlichting",
+  "de": "Hinterleuchtet (Halo)",
+  "sv": "Bakbelyst (halo)"
+ },
+ "light.neon": {
+  "en": "Neon look",
+  "lv": "Neona efekts",
+  "ru": "Под неон",
+  "nl": "Neon-look",
+  "de": "Neon-Optik",
+  "sv": "Neonlook"
+ },
+ "light.front_corona": {
+  "en": "Frontlit + corona",
+  "lv": "Priekšpuse + kontūrgaisma",
+  "ru": "Лицевая + контражур",
+  "nl": "Front + halo",
+  "de": "Front + Halo",
+  "sv": "Front + halo"
+ },
+ "light.front_side": {
+  "en": "Frontlit + side-lit",
+  "lv": "Priekšpuse + sāni",
+  "ru": "Лицевая + боковая",
+  "nl": "Front + zijkant",
+  "de": "Front + seitlich",
+  "sv": "Front + sida"
+ },
+ "light.unlit": {
+  "en": "Not lit",
+  "lv": "Bez gaismas",
+  "ru": "Без подсветки",
+  "nl": "Onverlicht",
+  "de": "Unbeleuchtet",
+  "sv": "Obelyst"
+ },
+ "light.flat": {
+  "en": "Flat, not lit",
+  "lv": "Plakani, bez gaismas",
+  "ru": "Плоские, без подсветки",
+  "nl": "Vlak, onverlicht",
+  "de": "Flach, unbeleuchtet",
+  "sv": "Platta, obelysta"
+ },
+ "light.lightbox": {
+  "en": "Lightbox",
+  "lv": "Gaismas kaste",
+  "ru": "Световой короб",
+  "nl": "Lichtbak",
+  "de": "Leuchtkasten",
+  "sv": "Ljuslåda"
+ },
+ "how_lights": {
+  "en": "How it lights",
+  "lv": "Kā tas spīd",
+  "ru": "Как светится",
+  "nl": "Zo licht het op",
+  "de": "So leuchtet es",
+  "sv": "Så lyser den"
+ },
+ "no_custom_depth": {
+  "en": "Custom letter depths are not available for this type of profile.",
+  "lv": "Šim profila veidam individuāls burtu dziļums nav pieejams.",
+  "ru": "Для этого типа профиля нестандартная глубина букв невозможна.",
+  "nl": "Voor dit type profiel zijn geen andere letterdieptes mogelijk.",
+  "de": "Für diesen Profiltyp sind keine individuellen Buchstabentiefen möglich.",
+  "sv": "För den här profiltypen finns inga andra bokstavsdjup."
+ },
+ "construction": {
+  "en": "Construction",
+  "lv": "Konstrukcija",
+  "ru": "Конструкция",
+  "nl": "Constructie",
+  "de": "Aufbau",
+  "sv": "Konstruktion"
+ },
+ "ral_title": {
+  "en": "Colours: RAL and NCS",
+  "lv": "Krāsas: RAL un NCS",
+  "ru": "Цвета: RAL и NCS",
+  "nl": "Kleuren: RAL en NCS",
+  "de": "Farben: RAL und NCS",
+  "sv": "Kulörer: RAL och NCS"
+ },
+ "ral_alt": {
+  "en": "RAL colour guide",
+  "lv": "RAL krāsu karte",
+  "ru": "Палитра цветов RAL",
+  "nl": "RAL-kleurenwaaier",
+  "de": "RAL-Farbkarte",
+  "sv": "RAL-färgkarta"
+ },
+ "nav.portal": {
+  "en": "Client portal",
+  "lv": "Klientu portāls",
+  "ru": "Кабинет клиента",
+  "nl": "Klantportaal",
+  "de": "Kundenportal",
+  "sv": "Kundportal"
+ },
+ "motion.pause": {
+  "en": "Pause motion",
+  "lv": "Apturēt kustību",
+  "ru": "Остановить анимацию",
+  "nl": "Beweging pauzeren",
+  "de": "Bewegung anhalten",
+  "sv": "Pausa rörelse"
+ },
+ "motion.play": {
+  "en": "Play motion",
+  "lv": "Atsākt kustību",
+  "ru": "Включить анимацию",
+  "nl": "Beweging afspelen",
+  "de": "Bewegung abspielen",
+  "sv": "Spela rörelse"
+ },
+ "film_label": {
+  "en": "Our factory in photos",
+  "lv": "Mūsu rūpnīca fotogrāfijās",
+  "ru": "Наше производство в фотографиях",
+  "nl": "Onze fabriek in beeld",
+  "de": "Unsere Fertigung in Bildern",
+  "sv": "Vår fabrik i bilder"
+ },
+ "basket.add": {
+  "en": "Add to request",
+  "lv": "Pievienot pieprasījumam",
+  "ru": "Добавить в запрос",
+  "nl": "Toevoegen aan aanvraag",
+  "de": "Zur Anfrage hinzufügen",
+  "sv": "Lägg till i förfrågan"
+ },
+ "basket.in": {
+  "en": "In your request",
+  "lv": "Jūsu pieprasījumā",
+  "ru": "В вашем запросе",
+  "nl": "In uw aanvraag",
+  "de": "In Ihrer Anfrage",
+  "sv": "I din förfrågan"
+ },
+ "anat.kicker": {
+  "en": "Inside the letter",
+  "lv": "Burta iekšpuse",
+  "ru": "Внутри буквы",
+  "nl": "Binnenin de letter",
+  "de": "Im Inneren des Buchstabens",
+  "sv": "Inuti bokstaven"
+ },
+ "anat.title": {
+  "en": "Anatomy of {x}",
+  "lv": "{x} uzbūve",
+  "ru": "Устройство: {x}",
+  "nl": "Opbouw van {x}",
+  "de": "Aufbau von {x}",
+  "sv": "Så är {x} uppbyggd"
+ },
+ "anat.text": {
+  "en": "Every layer of this profile, from the back panel to the face. Scroll, or take it apart yourself.",
+  "lv": "Katrs šī profila slānis – no aizmugures paneļa līdz priekšējai virsmai. Ritiniet vai izjauciet to paši.",
+  "ru": "Каждый слой этого профиля, от задней стенки до лицевой панели. Прокрутите страницу или разберите букву сами.",
+  "nl": "Elke laag van dit profiel, van achterwand tot front. Scroll, of haal hem zelf uit elkaar.",
+  "de": "Jede Schicht dieses Profils, von der Rückwand bis zur Front. Scrollen Sie, oder nehmen Sie ihn selbst auseinander.",
+  "sv": "Varje lager i den här profilen, från baksida till front. Skrolla, eller ta isär den själv."
+ },
+ "anat.apart": {
+  "en": "Take it apart",
+  "lv": "Izjaukt",
+  "ru": "Разобрать",
+  "nl": "Uit elkaar halen",
+  "de": "Zerlegen",
+  "sv": "Ta isär"
+ },
+ "anat.together": {
+  "en": "Put it together",
+  "lv": "Salikt kopā",
+  "ru": "Собрать",
+  "nl": "In elkaar zetten",
+  "de": "Zusammensetzen",
+  "sv": "Sätt ihop"
+ },
+ "anat.back": {
+  "en": "Back",
+  "lv": "Aizmugure",
+  "ru": "Задняя стенка",
+  "nl": "Achterkant",
+  "de": "Rückwand",
+  "sv": "Baksida"
+ },
+ "anat.led": {
+  "en": "LED modules",
+  "lv": "LED moduļi",
+  "ru": "LED-модули",
+  "nl": "LED-modules",
+  "de": "LED-Module",
+  "sv": "LED-moduler"
+ },
+ "anat.sides": {
+  "en": "Sides",
+  "lv": "Sāni",
+  "ru": "Борта",
+  "nl": "Zijkanten",
+  "de": "Zarge",
+  "sv": "Sidor"
+ },
+ "anat.trim": {
+  "en": "Trim",
+  "lv": "Apmale",
+  "ru": "Окантовка",
+  "nl": "Rand",
+  "de": "Kantenprofil",
+  "sv": "Kantlist"
+ },
+ "anat.face": {
+  "en": "Face",
+  "lv": "Priekšējā virsma",
+  "ru": "Лицевая панель",
+  "nl": "Front",
+  "de": "Front",
+  "sv": "Front"
+ },
+ "p.title": {
+  "en": "Client portal",
+  "lv": "Klientu portāls",
+  "ru": "Кабинет клиента",
+  "nl": "Klantportaal",
+  "de": "Kundenportal",
+  "sv": "Kundportal"
+ },
+ "p.lead": {
+  "en": "Requests, written quotes and all communication with Reclame Fabriek in one place.",
+  "lv": "Pieprasījumi, rakstiski piedāvājumi un visa saziņa ar Reclame Fabriek vienuviet.",
+  "ru": "Запросы, письменные коммерческие предложения и вся переписка с Reclame Fabriek в одном месте.",
+  "nl": "Aanvragen, schriftelijke offertes en alle communicatie met Reclame Fabriek op één plek.",
+  "de": "Anfragen, schriftliche Angebote und die gesamte Kommunikation mit Reclame Fabriek an einem Ort.",
+  "sv": "Förfrågningar, skriftliga offerter och all kommunikation med Reclame Fabriek på ett ställe."
+ },
+ "p.login": {
+  "en": "Log in",
+  "lv": "Pieteikties",
+  "ru": "Войти",
+  "nl": "Inloggen",
+  "de": "Anmelden",
+  "sv": "Logga in"
+ },
+ "p.logout": {
+  "en": "Log out",
+  "lv": "Iziet",
+  "ru": "Выйти",
+  "nl": "Uitloggen",
+  "de": "Abmelden",
+  "sv": "Logga ut"
+ },
+ "p.email": {
+  "en": "Email",
+  "lv": "E-pasts",
+  "ru": "E-mail",
+  "nl": "E-mail",
+  "de": "E-Mail",
+  "sv": "E-post"
+ },
+ "p.password": {
+  "en": "Password",
+  "lv": "Parole",
+  "ru": "Пароль",
+  "nl": "Wachtwoord",
+  "de": "Passwort",
+  "sv": "Lösenord"
+ },
+ "p.password_new": {
+  "en": "New password (at least 10 characters)",
+  "lv": "Jaunā parole (vismaz 10 rakstzīmes)",
+  "ru": "Новый пароль (не менее 10 символов)",
+  "nl": "Nieuw wachtwoord (minstens 10 tekens)",
+  "de": "Neues Passwort (mindestens 10 Zeichen)",
+  "sv": "Nytt lösenord (minst 10 tecken)"
+ },
+ "p.password2": {
+  "en": "Repeat password",
+  "lv": "Atkārtojiet paroli",
+  "ru": "Повторите пароль",
+  "nl": "Herhaal wachtwoord",
+  "de": "Passwort wiederholen",
+  "sv": "Upprepa lösenordet"
+ },
+ "p.forgot": {
+  "en": "Forgot your password?",
+  "lv": "Aizmirsāt paroli?",
+  "ru": "Забыли пароль?",
+  "nl": "Wachtwoord vergeten?",
+  "de": "Passwort vergessen?",
+  "sv": "Glömt lösenordet?"
+ },
+ "p.no_account": {
+  "en": "New to the portal?",
+  "lv": "Pirmo reizi portālā?",
+  "ru": "Впервые в кабинете?",
+  "nl": "Nieuw in het portaal?",
+  "de": "Neu im Portal?",
+  "sv": "Ny i portalen?"
+ },
+ "p.register": {
+  "en": "Create an account",
+  "lv": "Izveidot kontu",
+  "ru": "Создать аккаунт",
+  "nl": "Account aanmaken",
+  "de": "Konto erstellen",
+  "sv": "Skapa konto"
+ },
+ "p.have_account": {
+  "en": "Already have an account?",
+  "lv": "Jums jau ir konts?",
+  "ru": "Уже есть аккаунт?",
+  "nl": "Heeft u al een account?",
+  "de": "Sie haben schon ein Konto?",
+  "sv": "Har du redan ett konto?"
+ },
+ "p.name": {
+  "en": "Your name",
+  "lv": "Jūsu vārds",
+  "ru": "Ваше имя",
+  "nl": "Uw naam",
+  "de": "Ihr Name",
+  "sv": "Ditt namn"
+ },
+ "p.company": {
+  "en": "Company",
+  "lv": "Uzņēmums",
+  "ru": "Компания",
+  "nl": "Bedrijf",
+  "de": "Firma",
+  "sv": "Företag"
+ },
+ "p.vat": {
+  "en": "VAT number",
+  "lv": "PVN numurs",
+  "ru": "Номер плательщика НДС",
+  "nl": "Btw-nummer",
+  "de": "USt-IdNr.",
+  "sv": "Momsregistreringsnummer"
+ },
+ "p.phone": {
+  "en": "Phone",
+  "lv": "Tālrunis",
+  "ru": "Телефон",
+  "nl": "Telefoon",
+  "de": "Telefon",
+  "sv": "Telefon"
+ },
+ "p.country": {
+  "en": "Country",
+  "lv": "Valsts",
+  "ru": "Страна",
+  "nl": "Land",
+  "de": "Land",
+  "sv": "Land"
+ },
+ "p.address": {
+  "en": "Company address",
+  "lv": "Uzņēmuma adrese",
+  "ru": "Адрес компании",
+  "nl": "Bedrijfsadres",
+  "de": "Firmenanschrift",
+  "sv": "Företagets adress"
+ },
+ "p.lang": {
+  "en": "Language for emails",
+  "lv": "E-pastu valoda",
+  "ru": "Язык писем",
+  "nl": "Taal van e-mails",
+  "de": "Sprache der E-Mails",
+  "sv": "Språk för e-post"
+ },
+ "p.consent": {
+  "en": "I agree that Reclame Fabriek stores my details to answer my requests ([privacy policy]({privacy})).",
+  "lv": "Piekrītu, ka Reclame Fabriek glabā manus datus, lai atbildētu uz maniem pieprasījumiem ([privātuma politika]({privacy})).",
+  "ru": "Я согласен, что Reclame Fabriek хранит мои данные для ответа на мои запросы ([политика конфиденциальности]({privacy})).",
+  "nl": "Ik ga ermee akkoord dat Reclame Fabriek mijn gegevens bewaart om mijn aanvragen te beantwoorden ([privacybeleid]({privacy})).",
+  "de": "Ich bin einverstanden, dass Reclame Fabriek meine Daten speichert, um meine Anfragen zu beantworten ([Datenschutzerklärung]({privacy})).",
+  "sv": "Jag godkänner att Reclame Fabriek sparar mina uppgifter för att besvara mina förfrågningar ([integritetspolicy]({privacy}))."
+ },
+ "p.err_login": {
+  "en": "Wrong email or password.",
+  "lv": "Nepareizs e-pasts vai parole.",
+  "ru": "Неверный e-mail или пароль.",
+  "nl": "Onjuist e-mailadres of wachtwoord.",
+  "de": "E-Mail oder Passwort ist falsch.",
+  "sv": "Fel e-post eller lösenord."
+ },
+ "p.err_blocked": {
+  "en": "This account is not active. Please contact us.",
+  "lv": "Šis konts nav aktīvs. Lūdzu, sazinieties ar mums.",
+  "ru": "Этот аккаунт не активен. Пожалуйста, свяжитесь с нами.",
+  "nl": "Dit account is niet actief. Neem contact met ons op.",
+  "de": "Dieses Konto ist nicht aktiv. Bitte kontaktieren Sie uns.",
+  "sv": "Kontot är inte aktivt. Kontakta oss."
+ },
+ "p.err_wait": {
+  "en": "Too many attempts. Please wait a few minutes.",
+  "lv": "Pārāk daudz mēģinājumu. Lūdzu, uzgaidiet dažas minūtes.",
+  "ru": "Слишком много попыток. Подождите несколько минут.",
+  "nl": "Te veel pogingen. Wacht een paar minuten.",
+  "de": "Zu viele Versuche. Bitte warten Sie einige Minuten.",
+  "sv": "För många försök. Vänta några minuter."
+ },
+ "p.err_exists": {
+  "en": "An account with this email already exists. Log in or reset your password.",
+  "lv": "Konts ar šo e-pastu jau eksistē. Piesakieties vai atjaunojiet paroli.",
+  "ru": "Аккаунт с этим e-mail уже существует. Войдите или восстановите пароль.",
+  "nl": "Er bestaat al een account met dit e-mailadres. Log in of stel uw wachtwoord opnieuw in.",
+  "de": "Für diese E-Mail gibt es bereits ein Konto. Melden Sie sich an oder setzen Sie Ihr Passwort zurück.",
+  "sv": "Det finns redan ett konto med den här e-postadressen. Logga in eller återställ lösenordet."
+ },
+ "p.err_pw": {
+  "en": "Passwords must match and be at least 10 characters.",
+  "lv": "Parolēm jāsakrīt un jābūt vismaz 10 rakstzīmēm.",
+  "ru": "Пароли должны совпадать и содержать не менее 10 символов.",
+  "nl": "Wachtwoorden moeten overeenkomen en minstens 10 tekens hebben.",
+  "de": "Die Passwörter müssen übereinstimmen und mindestens 10 Zeichen haben.",
+  "sv": "Lösenorden måste stämma överens och ha minst 10 tecken."
+ },
+ "p.err_email": {
+  "en": "Please enter a valid email address.",
+  "lv": "Lūdzu, ievadiet derīgu e-pasta adresi.",
+  "ru": "Введите корректный e-mail.",
+  "nl": "Vul een geldig e-mailadres in.",
+  "de": "Bitte geben Sie eine gültige E-Mail-Adresse ein.",
+  "sv": "Ange en giltig e-postadress."
+ },
+ "p.err_required": {
+  "en": "Please fill in the required fields.",
+  "lv": "Lūdzu, aizpildiet obligātos laukus.",
+  "ru": "Заполните обязательные поля.",
+  "nl": "Vul de verplichte velden in.",
+  "de": "Bitte füllen Sie die Pflichtfelder aus.",
+  "sv": "Fyll i de obligatoriska fälten."
+ },
+ "p.err_token": {
+  "en": "This link has expired or was already used.",
+  "lv": "Šī saite ir novecojusi vai jau izmantota.",
+  "ru": "Ссылка устарела или уже использована.",
+  "nl": "Deze link is verlopen of al gebruikt.",
+  "de": "Dieser Link ist abgelaufen oder wurde bereits verwendet.",
+  "sv": "Länken har gått ut eller har redan använts."
+ },
+ "p.err_db": {
+  "en": "The client portal is being set up. Please use the contact form for now.",
+  "lv": "Klientu portāls tiek sagatavots. Pagaidām, lūdzu, izmantojiet kontaktformu.",
+  "ru": "Кабинет клиента настраивается. Пока, пожалуйста, используйте форму на странице контактов.",
+  "nl": "Het klantportaal wordt ingericht. Gebruik voorlopig het contactformulier.",
+  "de": "Das Kundenportal wird gerade eingerichtet. Bitte nutzen Sie vorerst das Kontaktformular.",
+  "sv": "Kundportalen håller på att sättas upp. Använd kontaktformuläret så länge."
+ },
+ "p.err_files": {
+  "en": "Some files were not attached: {x}",
+  "lv": "Daži faili netika pievienoti: {x}",
+  "ru": "Некоторые файлы не прикреплены: {x}",
+  "nl": "Sommige bestanden zijn niet bijgevoegd: {x}",
+  "de": "Einige Dateien wurden nicht angehängt: {x}",
+  "sv": "Vissa filer bifogades inte: {x}"
+ },
+ "p.sent_verify": {
+  "en": "Check your inbox: we've sent you a link to confirm your email.",
+  "lv": "Pārbaudiet pastkastīti: nosūtījām saiti e-pasta apstiprināšanai.",
+  "ru": "Проверьте почту: мы отправили ссылку для подтверждения e-mail.",
+  "nl": "Kijk in uw inbox: we hebben u een link gestuurd om uw e-mail te bevestigen.",
+  "de": "Bitte prüfen Sie Ihr Postfach: Wir haben Ihnen einen Link zur Bestätigung Ihrer E-Mail geschickt.",
+  "sv": "Kolla din inkorg: vi har skickat en länk för att bekräfta din e-post."
+ },
+ "p.verified": {
+  "en": "Email confirmed. You can log in now.",
+  "lv": "E-pasts apstiprināts. Tagad varat pieteikties.",
+  "ru": "E-mail подтверждён. Теперь можно войти.",
+  "nl": "E-mail bevestigd. U kunt nu inloggen.",
+  "de": "E-Mail bestätigt. Sie können sich jetzt anmelden.",
+  "sv": "E-posten är bekräftad. Du kan logga in nu."
+ },
+ "p.verified_pending": {
+  "en": "Email confirmed. We'll activate your account shortly and let you know by email.",
+  "lv": "E-pasts apstiprināts. Drīzumā aktivizēsim jūsu kontu un paziņosim pa e-pastu.",
+  "ru": "E-mail подтверждён. Мы скоро активируем аккаунт и сообщим вам по почте.",
+  "nl": "E-mail bevestigd. We activeren uw account binnenkort en laten het u per e-mail weten.",
+  "de": "E-Mail bestätigt. Wir schalten Ihr Konto in Kürze frei und informieren Sie per E-Mail.",
+  "sv": "E-posten är bekräftad. Vi aktiverar ditt konto inom kort och meddelar dig via e-post."
+ },
+ "p.pending": {
+  "en": "Your account is waiting for activation by our team.",
+  "lv": "Jūsu konts gaida mūsu komandas aktivizāciju.",
+  "ru": "Ваш аккаунт ожидает активации нашей командой.",
+  "nl": "Uw account wacht op activering door ons team.",
+  "de": "Ihr Konto wartet auf die Freischaltung durch unser Team.",
+  "sv": "Ditt konto väntar på att aktiveras av vårt team."
+ },
+ "p.sent_reset": {
+  "en": "If this email has an account, we've sent a link to set a new password.",
+  "lv": "Ja ar šo e-pastu ir konts, nosūtījām saiti jaunas paroles iestatīšanai.",
+  "ru": "Если для этого e-mail есть аккаунт, мы отправили ссылку для нового пароля.",
+  "nl": "Als er een account bij dit e-mailadres hoort, hebben we een link gestuurd om een nieuw wachtwoord in te stellen.",
+  "de": "Falls es zu dieser E-Mail ein Konto gibt, haben wir einen Link zum Festlegen eines neuen Passworts geschickt.",
+  "sv": "Om det finns ett konto för e-postadressen har vi skickat en länk för att välja ett nytt lösenord."
+ },
+ "p.reset_title": {
+  "en": "Set a new password",
+  "lv": "Iestatīt jaunu paroli",
+  "ru": "Новый пароль",
+  "nl": "Nieuw wachtwoord instellen",
+  "de": "Neues Passwort festlegen",
+  "sv": "Välj ett nytt lösenord"
+ },
+ "p.reset_send": {
+  "en": "Send link",
+  "lv": "Nosūtīt saiti",
+  "ru": "Отправить ссылку",
+  "nl": "Link versturen",
+  "de": "Link senden",
+  "sv": "Skicka länk"
+ },
+ "p.reset_done": {
+  "en": "Password saved. You're logged in.",
+  "lv": "Parole saglabāta. Jūs esat pieteicies.",
+  "ru": "Пароль сохранён. Вы вошли.",
+  "nl": "Wachtwoord opgeslagen. U bent ingelogd.",
+  "de": "Passwort gespeichert. Sie sind angemeldet.",
+  "sv": "Lösenordet är sparat. Du är inloggad."
+ },
+ "p.save": {
+  "en": "Save",
+  "lv": "Saglabāt",
+  "ru": "Сохранить",
+  "nl": "Opslaan",
+  "de": "Speichern",
+  "sv": "Spara"
+ },
+ "p.saved": {
+  "en": "Saved.",
+  "lv": "Saglabāts.",
+  "ru": "Сохранено.",
+  "nl": "Opgeslagen.",
+  "de": "Gespeichert.",
+  "sv": "Sparat."
+ },
+ "p.back": {
+  "en": "Back",
+  "lv": "Atpakaļ",
+  "ru": "Назад",
+  "nl": "Terug",
+  "de": "Zurück",
+  "sv": "Tillbaka"
+ },
+ "p.hello": {
+  "en": "Hello, {name}",
+  "lv": "Sveiki, {name}",
+  "ru": "Здравствуйте, {name}",
+  "nl": "Hallo, {name}",
+  "de": "Hallo, {name}",
+  "sv": "Hej {name}"
+ },
+ "p.dash": {
+  "en": "Overview",
+  "lv": "Pārskats",
+  "ru": "Обзор",
+  "nl": "Overzicht",
+  "de": "Übersicht",
+  "sv": "Översikt"
+ },
+ "p.requests": {
+  "en": "Requests",
+  "lv": "Pieprasījumi",
+  "ru": "Запросы",
+  "nl": "Aanvragen",
+  "de": "Anfragen",
+  "sv": "Förfrågningar"
+ },
+ "p.quotes": {
+  "en": "Quotes",
+  "lv": "Piedāvājumi",
+  "ru": "Предложения",
+  "nl": "Offertes",
+  "de": "Angebote",
+  "sv": "Offerter"
+ },
+ "p.account": {
+  "en": "Account",
+  "lv": "Konts",
+  "ru": "Профиль",
+  "nl": "Account",
+  "de": "Konto",
+  "sv": "Konto"
+ },
+ "p.new_request": {
+  "en": "New request",
+  "lv": "Jauns pieprasījums",
+  "ru": "Новый запрос",
+  "nl": "Nieuwe aanvraag",
+  "de": "Neue Anfrage",
+  "sv": "Ny förfrågan"
+ },
+ "p.open_requests": {
+  "en": "Open requests",
+  "lv": "Atvērtie pieprasījumi",
+  "ru": "Открытые запросы",
+  "nl": "Open aanvragen",
+  "de": "Offene Anfragen",
+  "sv": "Öppna förfrågningar"
+ },
+ "p.quotes_waiting": {
+  "en": "Quotes awaiting your decision",
+  "lv": "Piedāvājumi, kas gaida jūsu lēmumu",
+  "ru": "Предложения ждут вашего решения",
+  "nl": "Offertes die op uw beslissing wachten",
+  "de": "Angebote warten auf Ihre Entscheidung",
+  "sv": "Offerter som väntar på ditt beslut"
+ },
+ "p.unread": {
+  "en": "New messages",
+  "lv": "Jaunas ziņas",
+  "ru": "Новые сообщения",
+  "nl": "Nieuwe berichten",
+  "de": "Neue Nachrichten",
+  "sv": "Nya meddelanden"
+ },
+ "p.no_requests": {
+  "en": "No requests yet. Start one here, or add profiles to a request while browsing the site.",
+  "lv": "Pieprasījumu vēl nav. Sāciet šeit vai pievienojiet profilus pieprasījumam, pārlūkojot vietni.",
+  "ru": "Запросов пока нет. Начните здесь или добавляйте профили в запрос прямо на сайте.",
+  "nl": "Nog geen aanvragen. Begin hier, of voeg profielen toe aan een aanvraag terwijl u de site bekijkt.",
+  "de": "Noch keine Anfragen. Starten Sie hier oder fügen Sie beim Stöbern auf der Website Profile zu einer Anfrage hinzu.",
+  "sv": "Inga förfrågningar än. Börja här, eller lägg till profiler i en förfrågan medan du tittar på webbplatsen."
+ },
+ "p.browse": {
+  "en": "Browse product profiles",
+  "lv": "Skatīt produktu profilus",
+  "ru": "Смотреть профили продукции",
+  "nl": "Bekijk productprofielen",
+  "de": "Produktprofile ansehen",
+  "sv": "Se produktprofiler"
+ },
+ "p.updated": {
+  "en": "Updated",
+  "lv": "Atjaunināts",
+  "ru": "Обновлено",
+  "nl": "Bijgewerkt",
+  "de": "Aktualisiert",
+  "sv": "Uppdaterad"
+ },
+ "p.status": {
+  "en": "Status",
+  "lv": "Statuss",
+  "ru": "Статус",
+  "nl": "Status",
+  "de": "Status",
+  "sv": "Status"
+ },
+ "p.st.new": {
+  "en": "Received",
+  "lv": "Saņemts",
+  "ru": "Получен",
+  "nl": "Ontvangen",
+  "de": "Eingegangen",
+  "sv": "Mottagen"
+ },
+ "p.st.review": {
+  "en": "In review",
+  "lv": "Izskatīšanā",
+  "ru": "На рассмотрении",
+  "nl": "In behandeling",
+  "de": "In Prüfung",
+  "sv": "Granskas"
+ },
+ "p.st.quoted": {
+  "en": "Quote sent",
+  "lv": "Piedāvājums nosūtīts",
+  "ru": "Предложение отправлено",
+  "nl": "Offerte verstuurd",
+  "de": "Angebot gesendet",
+  "sv": "Offert skickad"
+ },
+ "p.st.accepted": {
+  "en": "Quote accepted",
+  "lv": "Piedāvājums pieņemts",
+  "ru": "Предложение принято",
+  "nl": "Offerte geaccepteerd",
+  "de": "Angebot angenommen",
+  "sv": "Offert accepterad"
+ },
+ "p.st.production": {
+  "en": "In production",
+  "lv": "Ražošanā",
+  "ru": "В производстве",
+  "nl": "In productie",
+  "de": "In Fertigung",
+  "sv": "I produktion"
+ },
+ "p.st.ready": {
+  "en": "Ready",
+  "lv": "Gatavs",
+  "ru": "Готово",
+  "nl": "Klaar",
+  "de": "Fertig",
+  "sv": "Klar"
+ },
+ "p.st.installed": {
+  "en": "Installed",
+  "lv": "Uzstādīts",
+  "ru": "Смонтировано",
+  "nl": "Gemonteerd",
+  "de": "Montiert",
+  "sv": "Monterad"
+ },
+ "p.st.closed": {
+  "en": "Closed",
+  "lv": "Slēgts",
+  "ru": "Закрыт",
+  "nl": "Gesloten",
+  "de": "Abgeschlossen",
+  "sv": "Stängd"
+ },
+ "p.st.cancelled": {
+  "en": "Cancelled",
+  "lv": "Atcelts",
+  "ru": "Отменён",
+  "nl": "Geannuleerd",
+  "de": "Storniert",
+  "sv": "Avbruten"
+ },
+ "p.req_title": {
+  "en": "Project name",
+  "lv": "Projekta nosaukums",
+  "ru": "Название проекта",
+  "nl": "Projectnaam",
+  "de": "Projektname",
+  "sv": "Projektnamn"
+ },
+ "p.req_title_ph": {
+  "en": "e.g. Façade sign, Riga store",
+  "lv": "piem., fasādes izkārtne, veikals Rīgā",
+  "ru": "например, вывеска на фасад, магазин в Риге",
+  "nl": "bijv. gevelreclame, winkel in Riga",
+  "de": "z. B. Fassadenschild, Filiale Riga",
+  "sv": "t.ex. fasadskylt, butik i Riga"
+ },
+ "p.site": {
+  "en": "Installation address or city",
+  "lv": "Uzstādīšanas adrese vai pilsēta",
+  "ru": "Адрес или город монтажа",
+  "nl": "Montageadres of plaats",
+  "de": "Montageort oder Stadt",
+  "sv": "Monteringsadress eller ort"
+ },
+ "p.deadline": {
+  "en": "Wanted by",
+  "lv": "Vajadzīgs līdz",
+  "ru": "Нужно к дате",
+  "nl": "Gewenst op",
+  "de": "Gewünscht bis",
+  "sv": "Önskas senast"
+ },
+ "p.notes": {
+  "en": "Anything else we should know",
+  "lv": "Kas vēl mums būtu jāzina",
+  "ru": "Что ещё нам стоит знать",
+  "nl": "Wat moeten we nog meer weten",
+  "de": "Was wir sonst noch wissen sollten",
+  "sv": "Något annat vi bör veta"
+ },
+ "p.items": {
+  "en": "Signs in this request",
+  "lv": "Izkārtnes šajā pieprasījumā",
+  "ru": "Вывески в этом запросе",
+  "nl": "Signing in deze aanvraag",
+  "de": "Anlagen in dieser Anfrage",
+  "sv": "Skyltar i den här förfrågan"
+ },
+ "p.item": {
+  "en": "Sign",
+  "lv": "Izkārtne",
+  "ru": "Вывеска",
+  "nl": "Item",
+  "de": "Anlage",
+  "sv": "Skylt"
+ },
+ "p.add_item": {
+  "en": "Add another sign",
+  "lv": "Pievienot vēl vienu izkārtni",
+  "ru": "Добавить ещё вывеску",
+  "nl": "Nog een item toevoegen",
+  "de": "Weitere Anlage hinzufügen",
+  "sv": "Lägg till en skylt till"
+ },
+ "p.remove": {
+  "en": "Remove",
+  "lv": "Noņemt",
+  "ru": "Убрать",
+  "nl": "Verwijderen",
+  "de": "Entfernen",
+  "sv": "Ta bort"
+ },
+ "p.profile": {
+  "en": "Product profile",
+  "lv": "Produkta profils",
+  "ru": "Профиль продукции",
+  "nl": "Productprofiel",
+  "de": "Produktprofil",
+  "sv": "Produktprofil"
+ },
+ "p.profile_any": {
+  "en": "Not sure yet: please advise",
+  "lv": "Vēl nezinu: lūdzu, iesakiet",
+  "ru": "Пока не знаю: посоветуйте",
+  "nl": "Weet ik nog niet: graag advies",
+  "de": "Noch unklar: bitte beraten",
+  "sv": "Vet inte än: ge gärna råd"
+ },
+ "p.content": {
+  "en": "Text or logo",
+  "lv": "Teksts vai logotips",
+  "ru": "Текст или логотип",
+  "nl": "Tekst of logo",
+  "de": "Text oder Logo",
+  "sv": "Text eller logotyp"
+ },
+ "p.content_ph": {
+  "en": "e.g. NATURE, or “logo, see file”",
+  "lv": "piem., NATURE vai “logotips, skatīt failu”",
+  "ru": "например, NATURE или «логотип, см. файл»",
+  "nl": "bijv. NATURE, of “logo, zie bestand”",
+  "de": "z. B. NATURE oder „Logo, siehe Datei“",
+  "sv": "t.ex. NATURE, eller ”logotyp, se fil”"
+ },
+ "p.height": {
+  "en": "Letter height, mm",
+  "lv": "Burtu augstums, mm",
+  "ru": "Высота букв, мм",
+  "nl": "Letterhoogte, mm",
+  "de": "Buchstabenhöhe, mm",
+  "sv": "Bokstavshöjd, mm"
+ },
+ "p.depth": {
+  "en": "Depth",
+  "lv": "Dziļums",
+  "ru": "Глубина",
+  "nl": "Diepte",
+  "de": "Tiefe",
+  "sv": "Djup"
+ },
+ "p.depth_custom": {
+  "en": "Custom depth",
+  "lv": "Individuāls dziļums",
+  "ru": "Нестандартная глубина",
+  "nl": "Andere diepte",
+  "de": "Individuelle Tiefe",
+  "sv": "Annat djup"
+ },
+ "p.qty": {
+  "en": "Quantity (sets)",
+  "lv": "Daudzums (komplekti)",
+  "ru": "Количество (комплектов)",
+  "nl": "Aantal (sets)",
+  "de": "Menge (Sätze)",
+  "sv": "Antal (set)"
+ },
+ "p.face": {
+  "en": "Face colour (RAL / NCS)",
+  "lv": "Priekšpuses krāsa (RAL / NCS)",
+  "ru": "Цвет лицевой панели (RAL / NCS)",
+  "nl": "Kleur front (RAL / NCS)",
+  "de": "Farbe Front (RAL / NCS)",
+  "sv": "Frontens kulör (RAL / NCS)"
+ },
+ "p.sides": {
+  "en": "Sides colour (RAL / NCS)",
+  "lv": "Sānu krāsa (RAL / NCS)",
+  "ru": "Цвет бортов (RAL / NCS)",
+  "nl": "Kleur zijkanten (RAL / NCS)",
+  "de": "Farbe Zarge (RAL / NCS)",
+  "sv": "Sidornas kulör (RAL / NCS)"
+ },
+ "p.mounting": {
+  "en": "Mounting",
+  "lv": "Montāža",
+  "ru": "Монтаж",
+  "nl": "Montage",
+  "de": "Montage",
+  "sv": "Montering"
+ },
+ "p.no_frame": {
+  "en": "No frame (paper template)",
+  "lv": "Bez rāmja (papīra šablons)",
+  "ru": "Без рамы (бумажный шаблон)",
+  "nl": "Zonder frame (papieren mal)",
+  "de": "Ohne Rahmen (Papierschablone)",
+  "sv": "Utan ram (pappersmall)"
+ },
+ "p.on_frame": {
+  "en": "On frame (rails)",
+  "lv": "Uz rāmja (sliedes)",
+  "ru": "На раме (рельсы)",
+  "nl": "Op frame (rails)",
+  "de": "Auf Rahmen (Schienen)",
+  "sv": "På ram (skenor)"
+ },
+ "p.files": {
+  "en": "Files: logo, drawing, photo of the place",
+  "lv": "Faili: logotips, rasējums, vietas foto",
+  "ru": "Файлы: логотип, чертёж, фото места",
+  "nl": "Bestanden: logo, tekening, foto van de locatie",
+  "de": "Dateien: Logo, Zeichnung, Foto des Ortes",
+  "sv": "Filer: logotyp, ritning, foto av platsen"
+ },
+ "p.files_hint": {
+  "en": "PDF, AI, EPS, SVG, DXF, DWG, CDR, images or ZIP · up to 25 MB each · up to 10 files",
+  "lv": "PDF, AI, EPS, SVG, DXF, DWG, CDR, attēli vai ZIP · līdz 25 MB katrs · līdz 10 failiem",
+  "ru": "PDF, AI, EPS, SVG, DXF, DWG, CDR, изображения или ZIP · до 25 МБ каждый · до 10 файлов",
+  "nl": "PDF, AI, EPS, SVG, DXF, DWG, CDR, afbeeldingen of ZIP · max. 25 MB per bestand · max. 10 bestanden",
+  "de": "PDF, AI, EPS, SVG, DXF, DWG, CDR, Bilder oder ZIP · bis 25 MB je Datei · bis 10 Dateien",
+  "sv": "PDF, AI, EPS, SVG, DXF, DWG, CDR, bilder eller ZIP · upp till 25 MB per fil · upp till 10 filer"
+ },
+ "p.send_request": {
+  "en": "Send request",
+  "lv": "Nosūtīt pieprasījumu",
+  "ru": "Отправить запрос",
+  "nl": "Aanvraag versturen",
+  "de": "Anfrage senden",
+  "sv": "Skicka förfrågan"
+ },
+ "p.request_sent": {
+  "en": "Request {no} sent. We'll reply here, usually within one working day.",
+  "lv": "Pieprasījums {no} nosūtīts. Atbildēsim šeit, parasti vienas darba dienas laikā.",
+  "ru": "Запрос {no} отправлен. Мы ответим здесь, обычно в течение одного рабочего дня.",
+  "nl": "Aanvraag {no} verstuurd. We antwoorden hier, meestal binnen één werkdag.",
+  "de": "Anfrage {no} gesendet. Wir antworten hier, meist innerhalb eines Werktags.",
+  "sv": "Förfrågan {no} är skickad. Vi svarar här, oftast inom en arbetsdag."
+ },
+ "p.view_profile": {
+  "en": "View profile",
+  "lv": "Skatīt profilu",
+  "ru": "Открыть профиль",
+  "nl": "Profiel bekijken",
+  "de": "Profil ansehen",
+  "sv": "Visa profil"
+ },
+ "p.request": {
+  "en": "Request {no}",
+  "lv": "Pieprasījums {no}",
+  "ru": "Запрос {no}",
+  "nl": "Aanvraag {no}",
+  "de": "Anfrage {no}",
+  "sv": "Förfrågan {no}"
+ },
+ "p.created": {
+  "en": "Created",
+  "lv": "Izveidots",
+  "ru": "Создан",
+  "nl": "Aangemaakt",
+  "de": "Erstellt",
+  "sv": "Skapad"
+ },
+ "p.timeline": {
+  "en": "Progress",
+  "lv": "Gaita",
+  "ru": "Ход работ",
+  "nl": "Voortgang",
+  "de": "Fortschritt",
+  "sv": "Förlopp"
+ },
+ "p.messages": {
+  "en": "Messages",
+  "lv": "Ziņas",
+  "ru": "Сообщения",
+  "nl": "Berichten",
+  "de": "Nachrichten",
+  "sv": "Meddelanden"
+ },
+ "p.write": {
+  "en": "Write a message",
+  "lv": "Rakstīt ziņu",
+  "ru": "Написать сообщение",
+  "nl": "Schrijf een bericht",
+  "de": "Nachricht schreiben",
+  "sv": "Skriv ett meddelande"
+ },
+ "p.send": {
+  "en": "Send",
+  "lv": "Sūtīt",
+  "ru": "Отправить",
+  "nl": "Versturen",
+  "de": "Senden",
+  "sv": "Skicka"
+ },
+ "p.attach": {
+  "en": "Attach files",
+  "lv": "Pievienot failus",
+  "ru": "Прикрепить файлы",
+  "nl": "Bestanden bijvoegen",
+  "de": "Dateien anhängen",
+  "sv": "Bifoga filer"
+ },
+ "p.you": {
+  "en": "You",
+  "lv": "Jūs",
+  "ru": "Вы",
+  "nl": "U",
+  "de": "Sie",
+  "sv": "Du"
+ },
+ "p.team": {
+  "en": "Reclame Fabriek",
+  "lv": "Reclame Fabriek",
+  "ru": "Reclame Fabriek",
+  "nl": "Reclame Fabriek",
+  "de": "Reclame Fabriek",
+  "sv": "Reclame Fabriek"
+ },
+ "p.system": {
+  "en": "Update",
+  "lv": "Atjauninājums",
+  "ru": "Обновление",
+  "nl": "Update",
+  "de": "Update",
+  "sv": "Uppdatering"
+ },
+ "p.no_messages": {
+  "en": "No messages yet.",
+  "lv": "Ziņu vēl nav.",
+  "ru": "Сообщений пока нет.",
+  "nl": "Nog geen berichten.",
+  "de": "Noch keine Nachrichten.",
+  "sv": "Inga meddelanden än."
+ },
+ "p.all_files": {
+  "en": "Files",
+  "lv": "Faili",
+  "ru": "Файлы",
+  "nl": "Bestanden",
+  "de": "Dateien",
+  "sv": "Filer"
+ },
+ "p.no_files": {
+  "en": "No files yet.",
+  "lv": "Failu vēl nav.",
+  "ru": "Файлов пока нет.",
+  "nl": "Nog geen bestanden.",
+  "de": "Noch keine Dateien.",
+  "sv": "Inga filer än."
+ },
+ "p.cancel_request": {
+  "en": "Cancel this request",
+  "lv": "Atcelt šo pieprasījumu",
+  "ru": "Отменить запрос",
+  "nl": "Deze aanvraag annuleren",
+  "de": "Diese Anfrage stornieren",
+  "sv": "Avbryt den här förfrågan"
+ },
+ "p.cancel_confirm": {
+  "en": "Cancel this request? You can still read it afterwards.",
+  "lv": "Atcelt šo pieprasījumu? To joprojām varēsiet izlasīt.",
+  "ru": "Отменить этот запрос? Его можно будет просматривать и после отмены.",
+  "nl": "Deze aanvraag annuleren? U kunt hem daarna nog steeds lezen.",
+  "de": "Diese Anfrage stornieren? Sie können sie danach weiterhin lesen.",
+  "sv": "Avbryta förfrågan? Du kan fortfarande läsa den efteråt."
+ },
+ "p.cancelled_ok": {
+  "en": "Request cancelled.",
+  "lv": "Pieprasījums atcelts.",
+  "ru": "Запрос отменён.",
+  "nl": "Aanvraag geannuleerd.",
+  "de": "Anfrage storniert.",
+  "sv": "Förfrågan är avbruten."
+ },
+ "p.msg_sent": {
+  "en": "Message sent.",
+  "lv": "Ziņa nosūtīta.",
+  "ru": "Сообщение отправлено.",
+  "nl": "Bericht verstuurd.",
+  "de": "Nachricht gesendet.",
+  "sv": "Meddelandet är skickat."
+ },
+ "p.quote": {
+  "en": "Quote {no}",
+  "lv": "Piedāvājums {no}",
+  "ru": "Предложение {no}",
+  "nl": "Offerte {no}",
+  "de": "Angebot {no}",
+  "sv": "Offert {no}"
+ },
+ "p.view_quote": {
+  "en": "View quote",
+  "lv": "Skatīt piedāvājumu",
+  "ru": "Открыть предложение",
+  "nl": "Offerte bekijken",
+  "de": "Angebot ansehen",
+  "sv": "Visa offert"
+ },
+ "p.valid_until": {
+  "en": "Valid until",
+  "lv": "Derīgs līdz",
+  "ru": "Действительно до",
+  "nl": "Geldig tot",
+  "de": "Gültig bis",
+  "sv": "Giltig till"
+ },
+ "p.lead_time": {
+  "en": "Lead time",
+  "lv": "Izpildes laiks",
+  "ru": "Срок изготовления",
+  "nl": "Levertijd",
+  "de": "Lieferzeit",
+  "sv": "Leveranstid"
+ },
+ "p.description": {
+  "en": "Description",
+  "lv": "Apraksts",
+  "ru": "Описание",
+  "nl": "Omschrijving",
+  "de": "Beschreibung",
+  "sv": "Beskrivning"
+ },
+ "p.qty_short": {
+  "en": "Qty",
+  "lv": "Daudz.",
+  "ru": "Кол-во",
+  "nl": "Aantal",
+  "de": "Menge",
+  "sv": "Antal"
+ },
+ "p.unit_price": {
+  "en": "Unit price",
+  "lv": "Vienības cena",
+  "ru": "Цена за ед.",
+  "nl": "Prijs per stuk",
+  "de": "Einzelpreis",
+  "sv": "À-pris"
+ },
+ "p.amount": {
+  "en": "Amount",
+  "lv": "Summa",
+  "ru": "Сумма",
+  "nl": "Bedrag",
+  "de": "Betrag",
+  "sv": "Belopp"
+ },
+ "p.net": {
+  "en": "Subtotal (excl. VAT)",
+  "lv": "Starpsumma (bez PVN)",
+  "ru": "Итого без НДС",
+  "nl": "Subtotaal (excl. btw)",
+  "de": "Zwischensumme (netto)",
+  "sv": "Delsumma (exkl. moms)"
+ },
+ "p.vat_line": {
+  "en": "VAT {r}%",
+  "lv": "PVN {r}%",
+  "ru": "НДС {r}%",
+  "nl": "Btw {r}%",
+  "de": "USt. {r} %",
+  "sv": "Moms {r} %"
+ },
+ "p.total": {
+  "en": "Total",
+  "lv": "Kopā",
+  "ru": "Всего",
+  "nl": "Totaal",
+  "de": "Gesamt",
+  "sv": "Totalt"
+ },
+ "p.terms": {
+  "en": "Terms",
+  "lv": "Noteikumi",
+  "ru": "Условия",
+  "nl": "Voorwaarden",
+  "de": "Bedingungen",
+  "sv": "Villkor"
+ },
+ "p.accept": {
+  "en": "Accept quote",
+  "lv": "Pieņemt piedāvājumu",
+  "ru": "Принять предложение",
+  "nl": "Offerte accepteren",
+  "de": "Angebot annehmen",
+  "sv": "Acceptera offerten"
+ },
+ "p.decline": {
+  "en": "Decline",
+  "lv": "Noraidīt",
+  "ru": "Отклонить",
+  "nl": "Afwijzen",
+  "de": "Ablehnen",
+  "sv": "Avböj"
+ },
+ "p.accept_name": {
+  "en": "Your full name (as signature)",
+  "lv": "Jūsu vārds un uzvārds (kā paraksts)",
+  "ru": "Ваше полное имя (как подпись)",
+  "nl": "Uw volledige naam (als handtekening)",
+  "de": "Ihr vollständiger Name (als Unterschrift)",
+  "sv": "Ditt fullständiga namn (som underskrift)"
+ },
+ "p.accept_check": {
+  "en": "I accept this quote and its terms on behalf of {company}.",
+  "lv": "Pieņemu šo piedāvājumu un tā noteikumus {company} vārdā.",
+  "ru": "Я принимаю это предложение и его условия от имени {company}.",
+  "nl": "Ik accepteer deze offerte en de voorwaarden namens {company}.",
+  "de": "Ich nehme dieses Angebot und seine Bedingungen im Namen von {company} an.",
+  "sv": "Jag accepterar offerten och dess villkor för {company}."
+ },
+ "p.decline_reason": {
+  "en": "What should we change? (optional)",
+  "lv": "Ko mums vajadzētu mainīt? (nav obligāti)",
+  "ru": "Что нам изменить? (необязательно)",
+  "nl": "Wat moeten we aanpassen? (optioneel)",
+  "de": "Was sollen wir ändern? (optional)",
+  "sv": "Vad ska vi ändra? (valfritt)"
+ },
+ "p.accepted_ok": {
+  "en": "Thank you! Quote accepted. We'll confirm the production schedule here.",
+  "lv": "Paldies! Piedāvājums pieņemts. Ražošanas grafiku apstiprināsim šeit.",
+  "ru": "Спасибо! Предложение принято. График производства подтвердим здесь.",
+  "nl": "Bedankt! Offerte geaccepteerd. We bevestigen de productieplanning hier.",
+  "de": "Vielen Dank! Angebot angenommen. Den Fertigungsplan bestätigen wir hier.",
+  "sv": "Tack! Offerten är accepterad. Vi bekräftar produktionsplanen här."
+ },
+ "p.declined_ok": {
+  "en": "Quote declined. We'll get back to you with a new version.",
+  "lv": "Piedāvājums noraidīts. Sazināsimies ar jauno versiju.",
+  "ru": "Предложение отклонено. Мы подготовим новую версию.",
+  "nl": "Offerte afgewezen. We komen terug met een nieuwe versie.",
+  "de": "Angebot abgelehnt. Wir melden uns mit einer neuen Version.",
+  "sv": "Offerten är avböjd. Vi återkommer med en ny version."
+ },
+ "p.q.draft": {
+  "en": "Draft",
+  "lv": "Melnraksts",
+  "ru": "Черновик",
+  "nl": "Concept",
+  "de": "Entwurf",
+  "sv": "Utkast"
+ },
+ "p.q.sent": {
+  "en": "Awaiting your decision",
+  "lv": "Gaida jūsu lēmumu",
+  "ru": "Ждёт вашего решения",
+  "nl": "Wacht op uw beslissing",
+  "de": "Wartet auf Ihre Entscheidung",
+  "sv": "Väntar på ditt beslut"
+ },
+ "p.q.accepted": {
+  "en": "Accepted",
+  "lv": "Pieņemts",
+  "ru": "Принято",
+  "nl": "Geaccepteerd",
+  "de": "Angenommen",
+  "sv": "Accepterad"
+ },
+ "p.q.declined": {
+  "en": "Declined",
+  "lv": "Noraidīts",
+  "ru": "Отклонено",
+  "nl": "Afgewezen",
+  "de": "Abgelehnt",
+  "sv": "Avböjd"
+ },
+ "p.q.expired": {
+  "en": "Expired",
+  "lv": "Beidzies",
+  "ru": "Истёк срок",
+  "nl": "Verlopen",
+  "de": "Abgelaufen",
+  "sv": "Utgången"
+ },
+ "p.q.superseded": {
+  "en": "Replaced by a newer version",
+  "lv": "Aizstāts ar jaunāku versiju",
+  "ru": "Заменено новой версией",
+  "nl": "Vervangen door een nieuwere versie",
+  "de": "Durch neuere Version ersetzt",
+  "sv": "Ersatt av en nyare version"
+ },
+ "p.print": {
+  "en": "Print / save as PDF",
+  "lv": "Drukāt / saglabāt PDF",
+  "ru": "Печать / сохранить в PDF",
+  "nl": "Afdrukken / opslaan als pdf",
+  "de": "Drucken / als PDF speichern",
+  "sv": "Skriv ut / spara som PDF"
+ },
+ "p.accepted_by": {
+  "en": "Accepted by {name} on {date}",
+  "lv": "Pieņēma {name}, {date}",
+  "ru": "Принято: {name}, {date}",
+  "nl": "Geaccepteerd door {name} op {date}",
+  "de": "Angenommen von {name} am {date}",
+  "sv": "Accepterad av {name} den {date}"
+ },
+ "p.to": {
+  "en": "For",
+  "lv": "Kam",
+  "ru": "Для",
+  "nl": "Voor",
+  "de": "Für",
+  "sv": "Till"
+ },
+ "p.date": {
+  "en": "Date",
+  "lv": "Datums",
+  "ru": "Дата",
+  "nl": "Datum",
+  "de": "Datum",
+  "sv": "Datum"
+ },
+ "p.company_details": {
+  "en": "Company details",
+  "lv": "Uzņēmuma dati",
+  "ru": "Данные компании",
+  "nl": "Bedrijfsgegevens",
+  "de": "Firmendaten",
+  "sv": "Företagsuppgifter"
+ },
+ "p.change_pw": {
+  "en": "Change password",
+  "lv": "Mainīt paroli",
+  "ru": "Сменить пароль",
+  "nl": "Wachtwoord wijzigen",
+  "de": "Passwort ändern",
+  "sv": "Byt lösenord"
+ },
+ "p.pw_current": {
+  "en": "Current password",
+  "lv": "Pašreizējā parole",
+  "ru": "Текущий пароль",
+  "nl": "Huidig wachtwoord",
+  "de": "Aktuelles Passwort",
+  "sv": "Nuvarande lösenord"
+ },
+ "p.notify": {
+  "en": "Email me when there's news on my requests",
+  "lv": "Sūtīt e-pastu, kad ir jaunumi par maniem pieprasījumiem",
+  "ru": "Сообщать на e-mail о новостях по моим запросам",
+  "nl": "Mail mij bij nieuws over mijn aanvragen",
+  "de": "Mich per E-Mail über Neuigkeiten zu meinen Anfragen informieren",
+  "sv": "Mejla mig när det finns nyheter om mina förfrågningar"
+ },
+ "p.pw_changed": {
+  "en": "Password changed.",
+  "lv": "Parole nomainīta.",
+  "ru": "Пароль изменён.",
+  "nl": "Wachtwoord gewijzigd.",
+  "de": "Passwort geändert.",
+  "sv": "Lösenordet är bytt."
+ },
+ "p.err_pw_current": {
+  "en": "Current password is wrong.",
+  "lv": "Pašreizējā parole ir nepareiza.",
+  "ru": "Текущий пароль неверный.",
+  "nl": "Huidig wachtwoord is onjuist.",
+  "de": "Das aktuelle Passwort ist falsch.",
+  "sv": "Nuvarande lösenord är fel."
+ },
+ "p.basket_note": {
+  "en": "{n} profiles from the site are already added below.",
+  "lv": "{n} profili no vietnes jau pievienoti zemāk.",
+  "ru": "{n} профилей с сайта уже добавлены ниже.",
+  "nl": "{n} profielen van de site zijn hieronder al toegevoegd.",
+  "de": "{n} Profile von der Website sind unten bereits eingetragen.",
+  "sv": "{n} profiler från webbplatsen har redan lagts till nedan."
+ },
+ "p.login_to_continue": {
+  "en": "Log in or create an account to send your request.",
+  "lv": "Piesakieties vai izveidojiet kontu, lai nosūtītu pieprasījumu.",
+  "ru": "Войдите или создайте аккаунт, чтобы отправить запрос.",
+  "nl": "Log in of maak een account aan om uw aanvraag te versturen.",
+  "de": "Melden Sie sich an oder erstellen Sie ein Konto, um Ihre Anfrage zu senden.",
+  "sv": "Logga in eller skapa ett konto för att skicka din förfrågan."
+ },
+ "p.why": {
+  "en": "Why an account?",
+  "lv": "Kāpēc konts?",
+  "ru": "Зачем аккаунт?",
+  "nl": "Waarom een account?",
+  "de": "Warum ein Konto?",
+  "sv": "Varför ett konto?"
+ },
+ "p.why_1": {
+  "en": "Every request, quote and message in one place",
+  "lv": "Visi pieprasījumi, piedāvājumi un ziņas vienuviet",
+  "ru": "Все запросы, предложения и сообщения в одном месте",
+  "nl": "Alle aanvragen, offertes en berichten op één plek",
+  "de": "Alle Anfragen, Angebote und Nachrichten an einem Ort",
+  "sv": "Alla förfrågningar, offerter och meddelanden på ett ställe"
+ },
+ "p.why_2": {
+  "en": "Written quotes you can accept online",
+  "lv": "Rakstiski piedāvājumi, ko varat pieņemt tiešsaistē",
+  "ru": "Письменные предложения, которые можно принять онлайн",
+  "nl": "Schriftelijke offertes die u online kunt accepteren",
+  "de": "Schriftliche Angebote, die Sie online annehmen können",
+  "sv": "Skriftliga offerter som du kan acceptera online"
+ },
+ "p.why_3": {
+  "en": "Follow production from drawing to installation",
+  "lv": "Sekojiet ražošanai no rasējuma līdz uzstādīšanai",
+  "ru": "Следите за производством от чертежа до монтажа",
+  "nl": "Volg de productie van tekening tot montage",
+  "de": "Verfolgen Sie die Fertigung von der Zeichnung bis zur Montage",
+  "sv": "Följ produktionen från ritning till montering"
+ },
+ "p.mail.verify_s": {
+  "en": "Confirm your email · Reclame Fabriek",
+  "lv": "Apstipriniet e-pastu · Reclame Fabriek",
+  "ru": "Подтвердите e-mail · Reclame Fabriek",
+  "nl": "Bevestig uw e-mail · Reclame Fabriek",
+  "de": "E-Mail bestätigen · Reclame Fabriek",
+  "sv": "Bekräfta din e-post · Reclame Fabriek"
+ },
+ "p.mail.verify_b": {
+  "en": "Hello {name},\n\nplease confirm your email to start using the Reclame Fabriek client portal:\n{link}\n\nThe link is valid for 48 hours.",
+  "lv": "Sveiki, {name}!\n\nLūdzu, apstipriniet e-pastu, lai sāktu lietot Reclame Fabriek klientu portālu:\n{link}\n\nSaite ir derīga 48 stundas.",
+  "ru": "Здравствуйте, {name}!\n\nПодтвердите e-mail, чтобы начать пользоваться кабинетом клиента Reclame Fabriek:\n{link}\n\nСсылка действительна 48 часов.",
+  "nl": "Hallo {name},\n\nbevestig uw e-mail om het klantportaal van Reclame Fabriek te gebruiken:\n{link}\n\nDe link is 48 uur geldig.",
+  "de": "Hallo {name},\n\nbitte bestätigen Sie Ihre E-Mail, um das Kundenportal von Reclame Fabriek zu nutzen:\n{link}\n\nDer Link ist 48 Stunden gültig.",
+  "sv": "Hej {name},\n\nbekräfta din e-post för att börja använda Reclame Fabrieks kundportal:\n{link}\n\nLänken är giltig i 48 timmar."
+ },
+ "p.mail.reset_s": {
+  "en": "Set a new password · Reclame Fabriek",
+  "lv": "Jaunas paroles iestatīšana · Reclame Fabriek",
+  "ru": "Новый пароль · Reclame Fabriek",
+  "nl": "Nieuw wachtwoord · Reclame Fabriek",
+  "de": "Neues Passwort · Reclame Fabriek",
+  "sv": "Nytt lösenord · Reclame Fabriek"
+ },
+ "p.mail.reset_b": {
+  "en": "Hello {name},\n\nuse this link to set a new password for the client portal:\n{link}\n\nThe link is valid for 2 hours. If you didn't ask for it, you can ignore this email.",
+  "lv": "Sveiki, {name}!\n\nIzmantojiet šo saiti, lai iestatītu jaunu klientu portāla paroli:\n{link}\n\nSaite ir derīga 2 stundas. Ja to nepieprasījāt, varat šo e-pastu ignorēt.",
+  "ru": "Здравствуйте, {name}!\n\nПо этой ссылке можно задать новый пароль для кабинета клиента:\n{link}\n\nСсылка действительна 2 часа. Если вы не запрашивали смену пароля, просто проигнорируйте письмо.",
+  "nl": "Hallo {name},\n\nmet deze link stelt u een nieuw wachtwoord in voor het klantportaal:\n{link}\n\nDe link is 2 uur geldig. Heeft u dit niet aangevraagd, dan kunt u deze e-mail negeren.",
+  "de": "Hallo {name},\n\nüber diesen Link legen Sie ein neues Passwort für das Kundenportal fest:\n{link}\n\nDer Link ist 2 Stunden gültig. Falls Sie das nicht angefordert haben, ignorieren Sie diese E-Mail einfach.",
+  "sv": "Hej {name},\n\nanvänd länken för att välja ett nytt lösenord till kundportalen:\n{link}\n\nLänken är giltig i 2 timmar. Om du inte bad om det kan du strunta i mejlet."
+ },
+ "p.mail.invite_s": {
+  "en": "Your Reclame Fabriek client portal",
+  "lv": "Jūsu Reclame Fabriek klientu portāls",
+  "ru": "Ваш кабинет клиента Reclame Fabriek",
+  "nl": "Uw klantportaal bij Reclame Fabriek",
+  "de": "Ihr Kundenportal bei Reclame Fabriek",
+  "sv": "Din kundportal hos Reclame Fabriek"
+ },
+ "p.mail.invite_b": {
+  "en": "Hello {name},\n\nwe've opened a client portal for you: your requests, written quotes and messages with our team in one place.\nSet your password here:\n{link}\n\nThe link is valid for 7 days.",
+  "lv": "Sveiki, {name}!\n\nEsam atvēruši jums klientu portālu: jūsu pieprasījumi, rakstiski piedāvājumi un saziņa ar mūsu komandu vienuviet.\nIestatiet paroli šeit:\n{link}\n\nSaite ir derīga 7 dienas.",
+  "ru": "Здравствуйте, {name}!\n\nМы открыли для вас кабинет клиента: ваши запросы, письменные предложения и переписка с нашей командой в одном месте.\nЗадайте пароль здесь:\n{link}\n\nСсылка действительна 7 дней.",
+  "nl": "Hallo {name},\n\nwe hebben een klantportaal voor u geopend: uw aanvragen, schriftelijke offertes en berichten met ons team op één plek.\nStel hier uw wachtwoord in:\n{link}\n\nDe link is 7 dagen geldig.",
+  "de": "Hallo {name},\n\nwir haben ein Kundenportal für Sie eingerichtet: Ihre Anfragen, schriftlichen Angebote und Nachrichten mit unserem Team an einem Ort.\nLegen Sie hier Ihr Passwort fest:\n{link}\n\nDer Link ist 7 Tage gültig.",
+  "sv": "Hej {name},\n\nvi har öppnat en kundportal åt dig: dina förfrågningar, skriftliga offerter och meddelanden med vårt team på ett ställe.\nVälj ditt lösenord här:\n{link}\n\nLänken är giltig i 7 dagar."
+ },
+ "p.mail.update_s": {
+  "en": "{no}: news on your request",
+  "lv": "{no}: jaunumi par jūsu pieprasījumu",
+  "ru": "{no}: новости по вашему запросу",
+  "nl": "{no}: nieuws over uw aanvraag",
+  "de": "{no}: Neuigkeiten zu Ihrer Anfrage",
+  "sv": "{no}: nyheter om din förfrågan"
+ },
+ "p.mail.update_b": {
+  "en": "Hello {name},\n\n{what}\n\nOpen your request:\n{link}",
+  "lv": "Sveiki, {name}!\n\n{what}\n\nAtvērt pieprasījumu:\n{link}",
+  "ru": "Здравствуйте, {name}!\n\n{what}\n\nОткрыть запрос:\n{link}",
+  "nl": "Hallo {name},\n\n{what}\n\nOpen uw aanvraag:\n{link}",
+  "de": "Hallo {name},\n\n{what}\n\nZu Ihrer Anfrage:\n{link}",
+  "sv": "Hej {name},\n\n{what}\n\nÖppna din förfrågan:\n{link}"
+ },
+ "p.mail.what_message": {
+  "en": "Reclame Fabriek sent you a message.",
+  "lv": "Reclame Fabriek jums nosūtīja ziņu.",
+  "ru": "Reclame Fabriek прислал вам сообщение.",
+  "nl": "Reclame Fabriek heeft u een bericht gestuurd.",
+  "de": "Reclame Fabriek hat Ihnen eine Nachricht geschickt.",
+  "sv": "Reclame Fabriek har skickat ett meddelande till dig."
+ },
+ "p.mail.what_quote": {
+  "en": "Your quote {q} is ready.",
+  "lv": "Jūsu piedāvājums {q} ir gatavs.",
+  "ru": "Ваше предложение {q} готово.",
+  "nl": "Uw offerte {q} staat klaar.",
+  "de": "Ihr Angebot {q} ist fertig.",
+  "sv": "Din offert {q} är klar."
+ },
+ "p.mail.what_status": {
+  "en": "Status changed: {status}.",
+  "lv": "Statuss mainīts: {status}.",
+  "ru": "Статус изменён: {status}.",
+  "nl": "Status gewijzigd: {status}.",
+  "de": "Status geändert: {status}.",
+  "sv": "Status ändrad: {status}."
+ },
+ "p.mail.received_s": {
+  "en": "{no}: we've received your request",
+  "lv": "{no}: esam saņēmuši jūsu pieprasījumu",
+  "ru": "{no}: мы получили ваш запрос",
+  "nl": "{no}: we hebben uw aanvraag ontvangen",
+  "de": "{no}: Ihre Anfrage ist eingegangen",
+  "sv": "{no}: vi har tagit emot din förfrågan"
+ },
+ "p.mail.received_b": {
+  "en": "Hello {name},\n\nthank you, we've received your request {no}. We'll reply in the portal, usually within one working day.\n\n{link}",
+  "lv": "Sveiki, {name}!\n\nPaldies, esam saņēmuši jūsu pieprasījumu {no}. Atbildēsim portālā, parasti vienas darba dienas laikā.\n\n{link}",
+  "ru": "Здравствуйте, {name}!\n\nСпасибо, мы получили ваш запрос {no}. Ответим в кабинете, обычно в течение одного рабочего дня.\n\n{link}",
+  "nl": "Hallo {name},\n\nbedankt, we hebben uw aanvraag {no} ontvangen. We antwoorden in het portaal, meestal binnen één werkdag.\n\n{link}",
+  "de": "Hallo {name},\n\nvielen Dank, Ihre Anfrage {no} ist bei uns eingegangen. Wir antworten im Portal, meist innerhalb eines Werktags.\n\n{link}",
+  "sv": "Hej {name},\n\ntack, vi har tagit emot din förfrågan {no}. Vi svarar i portalen, oftast inom en arbetsdag.\n\n{link}"
+ },
+ "p.mail.active_s": {
+  "en": "Your account is active · Reclame Fabriek",
+  "lv": "Jūsu konts ir aktīvs · Reclame Fabriek",
+  "ru": "Ваш аккаунт активен · Reclame Fabriek",
+  "nl": "Uw account is actief · Reclame Fabriek",
+  "de": "Ihr Konto ist freigeschaltet · Reclame Fabriek",
+  "sv": "Ditt konto är aktivt · Reclame Fabriek"
+ },
+ "p.mail.active_b": {
+  "en": "Hello {name},\n\nyour client portal account is active. Log in here:\n{link}",
+  "lv": "Sveiki, {name}!\n\nJūsu klientu portāla konts ir aktīvs. Piesakieties šeit:\n{link}",
+  "ru": "Здравствуйте, {name}!\n\nВаш аккаунт в кабинете клиента активен. Войти можно здесь:\n{link}",
+  "nl": "Hallo {name},\n\nuw account in het klantportaal is actief. Log hier in:\n{link}",
+  "de": "Hallo {name},\n\nIhr Konto im Kundenportal ist freigeschaltet. Hier anmelden:\n{link}",
+  "sv": "Hej {name},\n\nditt konto i kundportalen är aktivt. Logga in här:\n{link}"
+ },
+ "p.sig": {
+  "en": "Reclame Fabriek · Komunala iela 100B, LV-5449 Daugavpils, Latvia · reclamefabriek.eu",
+  "lv": "Reclame Fabriek · Komunālā iela 100B, LV-5449 Daugavpils, Latvija · reclamefabriek.eu",
+  "ru": "Reclame Fabriek · Komunala iela 100B, LV-5449 Даугавпилс, Латвия · reclamefabriek.eu",
+  "nl": "Reclame Fabriek · Komunala iela 100B, LV-5449 Daugavpils, Letland · reclamefabriek.eu",
+  "de": "Reclame Fabriek · Komunala iela 100B, LV-5449 Daugavpils, Lettland · reclamefabriek.eu",
+  "sv": "Reclame Fabriek · Komunala iela 100B, LV-5449 Daugavpils, Lettland · reclamefabriek.eu"
+ }
+}

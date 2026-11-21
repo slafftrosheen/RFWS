@@ -1,0 +1,8 @@
+.env
+.env.*
+!.env.example
+node_modules/
+
+# PHP runtime data and uploaded client files
+/site/data/_*/
+/site/assets/.rfws-build-*.css

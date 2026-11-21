@@ -1,0 +1,145 @@
+{
+ "slug": "profile-7-3",
+ "group": "letters",
+ "order": 130,
+ "published": true,
+ "title": {
+  "en": "Profile 7-3",
+  "lv": "Profils 7-3",
+  "ru": "Профиль 7-3",
+  "nl": "Profiel 7-3",
+  "de": "Profil 7-3",
+  "sv": "Profil 7-3"
+ },
+ "subtitle": {
+  "en": "Frontlit and indirect (corona) aluminium box letters",
+  "lv": "Alumīnija tilpuma burti ar priekšējo un netiešo (kontūr) gaismu",
+  "ru": "Объёмные буквы из алюминия с лицевой подсветкой и контражуром",
+  "nl": "Aluminium doosletters, frontverlicht en indirect (halo)",
+  "de": "Aluminium-Profilbuchstaben, frontleuchtend und hinterleuchtet",
+  "sv": "3D-bokstäver i aluminium, frontbelysta och bakbelysta (halo)"
+ },
+ "light": "front_corona",
+ "size": "100–1200 mm",
+ "depth": "50, 60, 80, 100, 120, 140 mm",
+ "specs": [
+  {
+   "label": {
+    "en": "Face panels",
+    "lv": "Priekšējā virsma",
+    "ru": "Лицевая панель",
+    "nl": "Frontpaneel",
+    "de": "Front",
+    "sv": "Front"
+   },
+   "value": {
+    "en": "3–10 mm acrylic",
+    "lv": "3–10 mm akrils",
+    "ru": "Акрил 3–10 мм",
+    "nl": "3–10 mm acryl",
+    "de": "3–10 mm Acryl",
+    "sv": "3–10 mm akryl"
+   }
+  },
+  {
+   "label": {
+    "en": "Internal trim",
+    "lv": "Iekšējā apmale",
+    "ru": "Внутренний борт",
+    "nl": "Binnenrand",
+    "de": "Innenzarge",
+    "sv": "Inre list"
+   },
+   "value": {
+    "en": "2–5 mm PVC or acrylic",
+    "lv": "2–5 mm PVC vai akrils",
+    "ru": "ПВХ или акрил 2–5 мм",
+    "nl": "2–5 mm pvc of acryl",
+    "de": "2–5 mm PVC oder Acryl",
+    "sv": "2–5 mm PVC eller akryl"
+   }
+  },
+  {
+   "label": {
+    "en": "Sides",
+    "lv": "Sāni",
+    "ru": "Борта",
+    "nl": "Zijkanten",
+    "de": "Zarge",
+    "sv": "Sidor"
+   },
+   "value": {
+    "en": "1.2–2 mm aluminium",
+    "lv": "1,2–2 mm alumīnijs",
+    "ru": "Алюминий 1,2–2 мм",
+    "nl": "1,2–2 mm aluminium",
+    "de": "1,2–2 mm Aluminium",
+    "sv": "1,2–2 mm aluminium"
+   }
+  },
+  {
+   "label": {
+    "en": "Back",
+    "lv": "Aizmugure",
+    "ru": "Задняя стенка",
+    "nl": "Achterkant",
+    "de": "Rückwand",
+    "sv": "Baksida"
+   },
+   "value": {
+    "en": "3–10 mm acrylic",
+    "lv": "3–10 mm akrils",
+    "ru": "Акрил 3–10 мм",
+    "nl": "3–10 mm acryl",
+    "de": "3–10 mm Acryl",
+    "sv": "3–10 mm akryl"
+   }
+  },
+  {
+   "label": {
+    "en": "Surface finish",
+    "lv": "Virsmas apdare",
+    "ru": "Отделка поверхности",
+    "nl": "Afwerking",
+    "de": "Oberfläche",
+    "sv": "Ytbehandling"
+   },
+   "value": {
+    "en": "Tikkurila industrial two-component spray paint. Any RAL or NCS colour, or special coatings.",
+    "lv": "Tikkurila industriālā divkomponentu krāsa. Jebkurš RAL vai NCS tonis vai īpaši pārklājumi.",
+    "ru": "Промышленная двухкомпонентная краска Tikkurila. Любой цвет RAL или NCS либо специальные покрытия.",
+    "nl": "Tikkurila industriële tweecomponenten-spuitlak. Elke RAL- of NCS-kleur, of speciale coatings.",
+    "de": "Tikkurila Industrie-2K-Spritzlack. Jede RAL- oder NCS-Farbe oder Spezialbeschichtungen.",
+    "sv": "Tikkurila industriell tvåkomponentsfärg. Valfri RAL- eller NCS-kulör eller specialbeläggningar."
+   }
+  },
+  {
+   "label": {
+    "en": "LED components",
+    "lv": "LED komponenti",
+    "ru": "LED-компоненты",
+    "nl": "LED-componenten",
+    "de": "LED-Komponenten",
+    "sv": "LED-komponenter"
+   },
+   "value": {
+    "en": "LED modules with a 5-year warranty; LED power supplies with a 3-year warranty.",
+    "lv": "LED moduļi ar 5 gadu garantiju; LED barošanas bloki ar 3 gadu garantiju.",
+    "ru": "LED-модули с гарантией 5 лет; блоки питания LED с гарантией 3 года.",
+    "nl": "LED-modules met 5 jaar garantie; LED-voedingen met 3 jaar garantie.",
+    "de": "LED-Module mit 5 Jahren Garantie; LED-Netzteile mit 3 Jahren Garantie.",
+    "sv": "LED-moduler med 5 års garanti; LED-nätaggregat med 3 års garanti."
+   }
+  }
+ ],
+ "note": {},
+ "cover": "profile-7-3",
+ "video": "OA1pp-OMC9s",
+ "gallery": [],
+ "seo": {
+  "description": {}
+ },
+ "updated": "2026-11-21T20:18:18",
+ "custom_depth": true,
+ "diagram": "profile-7-3-diagram"
+}

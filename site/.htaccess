@@ -1,0 +1,46 @@
+# Reclame Fabriek website 2.2 (PHP; PostgreSQL only for the client portal). Replaces WordPress.
+Options -Indexes
+DirectoryIndex index.php
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteCond %{HTTPS} off [OR]
+RewriteCond %{HTTP_HOST} ^www\. [NC]
+RewriteRule ^ https://reclamefabriek.eu%{REQUEST_URI} [L,R=301]
+# private folders
+RewriteRule ^(data|app|tools)(/|$) - [F,L]
+RewriteRule ^(wp-admin|wp-login\.php|xmlrpc\.php|wp-json)(/.*)?$ - [G,L]
+RewriteRule ^wp-content/uploads/.*$ / [L,R=301]
+# admin is a real folder; everything else that is not a real file goes to index.php
+RewriteRule ^admin/?$ admin/index.php [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^ index.php [L,QSA]
+</IfModule>
+<IfModule mod_headers.c>
+Header always set X-Content-Type-Options "nosniff"
+Header always set Referrer-Policy "strict-origin-when-cross-origin"
+Header always set Permissions-Policy "camera=(), microphone=(), geolocation=()"
+# photos, fonts and versioned css/js/animations (?v=...) can be cached for a year; pages always revalidate
+<FilesMatch "\.(woff2|webp|png|jpg|svg|ico|css|js|json)$">
+Header set Cache-Control "public, max-age=31536000, immutable"
+</FilesMatch>
+</IfModule>
+<IfModule mod_brotli.c>
+AddOutputFilterByType BROTLI_COMPRESS text/html text/css application/javascript text/javascript image/svg+xml application/xml application/json
+</IfModule>
+<IfModule mod_deflate.c>
+AddOutputFilterByType DEFLATE text/html text/css application/javascript text/javascript image/svg+xml application/xml application/json
+</IfModule>
+<IfModule mod_mime.c>
+AddType application/json .json
+AddType image/webp .webp
+AddType font/woff2 .woff2
+</IfModule>
+<IfModule mod_php.c>
+php_value upload_max_filesize 25M
+php_value post_max_size 100M
+php_value memory_limit 768M
+php_value max_input_vars 10000
+</IfModule>
+<Files ".user.ini">
+Require all denied
+</Files>

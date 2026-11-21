@@ -1,0 +1,40 @@
+{
+ "slug": "profile-5-2",
+ "group": "lightbox",
+ "order": 190,
+ "published": true,
+ "title": {
+  "en": "Profile 5 lightbox",
+  "lv": "Profils 5, gaismas kaste",
+  "ru": "Профиль 5, световой короб",
+  "nl": "Profiel 5 · lichtbak",
+  "de": "Profil 5 · Leuchtkasten",
+  "sv": "Profil 5 · ljuslåda"
+ },
+ "subtitle": {
+  "en": "Lightbox",
+  "lv": "Gaismas kaste",
+  "ru": "Световой короб",
+  "nl": "Lichtbak",
+  "de": "Leuchtkasten",
+  "sv": "Ljuslåda"
+ },
+ "light": "lightbox",
+ "size": "",
+ "depth": "",
+ "specs": [],
+ "note": {},
+ "cover": "whatsapp-image-2024-10-04-at-2-20-49-pm-e1730192479848",
+ "video": "",
+ "gallery": [
+  "whatsapp-image-2020-02-07-at-15-34-07-1",
+  "whatsapp-image-2020-02-10-at-13-45-22-1",
+  "whatsapp-image-2024-10-04-at-2-20-50-pm"
+ ],
+ "seo": {
+  "description": {}
+ },
+ "updated": "2026-11-21T20:18:18",
+ "custom_depth": true,
+ "diagram": ""
+}

@@ -1,0 +1,705 @@
+{
+ "seo": {
+  "title": {},
+  "description": {
+   "en": "Reclame Fabriek is a B2B sign supplier in Daugavpils, Latvia, since 1993: custom 3D box letters, lightboxes and LED neon, CNC machinery and custom furniture, delivered across Europe."
+  }
+ },
+ "hero": {
+  "eyebrow": {
+   "en": "Daugavpils, Latvia · since 1993",
+   "lv": "Daugavpils, Latvija · kopš 1993. gada",
+   "ru": "Даугавпилс, Латвия · с 1993 года",
+   "nl": "Daugavpils, Letland · sinds 1993",
+   "de": "Daugavpils, Lettland · seit 1993",
+   "sv": "Daugavpils, Lettland · sedan 1993"
+  },
+  "title": {
+   "en": "B2B sign supplier",
+   "lv": "B2B izkārtņu piegādātājs",
+   "ru": "B2B-поставщик вывесок",
+   "nl": "B2B-leverancier van signing",
+   "de": "B2B-Lieferant für Werbetechnik",
+   "sv": "B2B-leverantör av skyltar"
+  },
+  "lead": {
+   "en": "Your trusted partner for innovative signage since 1993. Custom signage, advanced CNC technology and creative LED neon, delivered across Europe. Where quality meets precision.",
+   "lv": "Jūsu uzticams partneris inovatīvās izkārtnēs kopš 1993. gada. Individuālas izkārtnes, moderna CNC tehnoloģija un radošs LED neons ar piegādi visā Eiropā. Kur kvalitāte satiek precizitāti.",
+   "ru": "Ваш надёжный партнёр в области инновационных вывесок с 1993 года. Вывески на заказ, современные технологии ЧПУ и креативный LED-неон с доставкой по всей Европе. Там, где качество встречается с точностью.",
+   "nl": "Uw betrouwbare partner voor innovatieve signing sinds 1993. Signing op maat, geavanceerde CNC-technologie en creatieve LED-neon, geleverd in heel Europa. Waar kwaliteit en precisie samenkomen.",
+   "de": "Ihr verlässlicher Partner für innovative Werbetechnik seit 1993. Individuelle Werbeanlagen, moderne CNC-Technik und kreatives LED-Neon, geliefert in ganz Europa. Wo Qualität auf Präzision trifft.",
+   "sv": "Er pålitliga partner för innovativa skyltar sedan 1993. Skyltar på beställning, avancerad CNC-teknik och kreativ LED-neon, levererat i hela Europa. Där kvalitet möter precision."
+  },
+  "image": "img-20231224-182033",
+  "btn1": {
+   "en": "See product profiles",
+   "lv": "Skatīt produktu profilus",
+   "ru": "Смотреть профили продукции",
+   "nl": "Bekijk productprofielen",
+   "de": "Produktprofile ansehen",
+   "sv": "Se produktprofiler"
+  },
+  "btn2": {
+   "en": "Our projects",
+   "lv": "Mūsu projekti",
+   "ru": "Наши проекты",
+   "nl": "Onze projecten",
+   "de": "Unsere Projekte",
+   "sv": "Våra projekt"
+  },
+  "images": [
+   "67062340-1106435422887498-8875652871845052416-n",
+   "434575192-940810241383816-5151635588363468865-n-1",
+   "kfc-restaurant-2"
+  ]
+ },
+ "stats": {
+  "items": [
+   {
+    "value": "1993",
+    "label": {
+     "en": "Making signs since",
+     "lv": "Ražojam izkārtnes kopš",
+     "ru": "Делаем вывески с",
+     "nl": "Maken signing sinds",
+     "de": "Fertigen Werbeanlagen seit",
+     "sv": "Tillverkar skyltar sedan"
+    }
+   },
+   {
+    "value": "6 000 m²",
+    "label": {
+     "en": "Factory in Daugavpils",
+     "lv": "Rūpnīca Daugavpilī",
+     "ru": "Производство в Даугавпилсе",
+     "nl": "Fabriek in Daugavpils",
+     "de": "Fertigung in Daugavpils",
+     "sv": "Fabrik i Daugavpils"
+    }
+   },
+   {
+    "value": "22",
+    "label": {
+     "en": "Standard sign profiles",
+     "lv": "Standarta izkārtņu profili",
+     "ru": "Стандартных профилей",
+     "nl": "Standaardprofielen",
+     "de": "Standardprofile",
+     "sv": "Standardprofiler"
+    }
+   },
+   {
+    "value": "EU + UK",
+    "label": {
+     "en": "Delivery and a UK department",
+     "lv": "Piegāde un nodaļa Lielbritānijā",
+     "ru": "Доставка и отдел в Великобритании",
+     "nl": "Levering en een afdeling in het VK",
+     "de": "Lieferung und Niederlassung in Großbritannien",
+     "sv": "Leverans och en avdelning i Storbritannien"
+    }
+   }
+  ]
+ },
+ "services": {
+  "kicker": {
+   "en": "Our services",
+   "lv": "Mūsu pakalpojumi",
+   "ru": "Наши услуги",
+   "nl": "Onze diensten",
+   "de": "Unsere Leistungen",
+   "sv": "Våra tjänster"
+  },
+  "title": {
+   "en": "We provide high-quality services",
+   "lv": "Mēs sniedzam augstas kvalitātes pakalpojumus",
+   "ru": "Мы предоставляем услуги высокого качества",
+   "nl": "Wij leveren diensten van hoge kwaliteit",
+   "de": "Wir bieten Leistungen von hoher Qualität",
+   "sv": "Vi levererar tjänster av hög kvalitet"
+  },
+  "items": [
+   {
+    "icon": "box-letter",
+    "title": {
+     "en": "Custom signage",
+     "lv": "Individuālas izkārtnes",
+     "ru": "Вывески на заказ",
+     "nl": "Signing op maat",
+     "de": "Individuelle Werbeanlagen",
+     "sv": "Skyltar på beställning"
+    },
+    "text": {
+     "en": "Our core division specialises in the design, manufacturing and installation of custom signage solutions, including 3D box letters, LED displays and lightboxes, and architectural signage. We are committed to providing a personalised signage service, ensuring your project is handled with the utmost care and professionalism. Well-established logistics allow us to partner with customers from Europe and overseas.",
+     "lv": "Mūsu galvenā nodaļa specializējas individuālu izkārtņu projektēšanā, ražošanā un uzstādīšanā: 3D tilpuma burti, LED ekrāni un gaismas kastes, arhitektūras izkārtnes. Mēs nodrošinām personīgu apkalpošanu un rūpējamies, lai jūsu projekts tiktu īstenots ar vislielāko rūpību un profesionalitāti. Labi izveidota loģistika ļauj mums sadarboties ar klientiem no Eiropas un aiz okeāna.",
+     "ru": "Наше основное подразделение специализируется на проектировании, производстве и монтаже вывесок на заказ: объёмные 3D-буквы, LED-экраны и световые короба, архитектурные вывески. Мы работаем с каждым клиентом лично, чтобы ваш проект был выполнен с максимальной тщательностью и профессионализмом. Отлаженная логистика позволяет нам сотрудничать с клиентами из Европы и других континентов.",
+     "nl": "Onze kernafdeling is gespecialiseerd in het ontwerpen, produceren en monteren van signing op maat: 3D-doosletters, LED-displays en lichtbakken, architectonische signing. We bieden een persoonlijke service en zorgen dat uw project met de grootste zorg en professionaliteit wordt uitgevoerd. Dankzij een goed georganiseerde logistiek werken we samen met klanten in heel Europa en daarbuiten.",
+     "de": "Unser Kernbereich ist auf Planung, Fertigung und Montage individueller Werbeanlagen spezialisiert: 3D-Profilbuchstaben, LED-Displays und Leuchtkästen, Architektur-Beschilderung. Wir betreuen jedes Projekt persönlich und setzen es mit größter Sorgfalt und Professionalität um. Dank eingespielter Logistik arbeiten wir mit Kunden in ganz Europa und in Übersee.",
+     "sv": "Vår huvudavdelning är specialiserad på att konstruera, tillverka och montera skyltar på beställning: 3D-bokstäver, LED-skärmar och ljuslådor, arkitektonisk skyltning. Vi erbjuder personlig service och ser till att ditt projekt hanteras med största omsorg och professionalism. Väl etablerad logistik gör att vi samarbetar med kunder i Europa och utomlands."
+    },
+    "link_label": {
+     "en": "Explore our projects",
+     "lv": "Apskatīt mūsu projektus",
+     "ru": "Смотреть наши проекты",
+     "nl": "Bekijk onze projecten",
+     "de": "Unsere Projekte entdecken",
+     "sv": "Utforska våra projekt"
+    },
+    "link_url": "/projects/",
+    "image": "img-20200828-115955"
+   },
+   {
+    "icon": "cnc",
+    "title": {
+     "en": "CNC machinery supplier · CubeCNC",
+     "lv": "CNC iekārtu piegādātājs · CubeCNC",
+     "ru": "Поставщик станков с ЧПУ · CubeCNC",
+     "nl": "Leverancier van CNC-machines · CubeCNC",
+     "de": "Lieferant für CNC-Maschinen · CubeCNC",
+     "sv": "Leverantör av CNC-maskiner · CubeCNC"
+    },
+    "text": {
+     "en": "Through a strategic partnership with BCAMCNC, a globally recognised leader in CNC technology, we offer high-performance routers and laser cutting systems for industries such as woodworking, metal fabrication and signage production. CubeCNC’s services include installation, comprehensive training and ongoing support, ensuring that clients can maximise the productivity and accuracy of their CNC machinery.",
+     "lv": "Stratēģiskā partnerībā ar BCAMCNC, pasaulē atzītu CNC tehnoloģiju līderi, piedāvājam augstas veiktspējas frēzes un lāzergriešanas sistēmas kokapstrādei, metālapstrādei un izkārtņu ražošanai. CubeCNC pakalpojumi ietver uzstādīšanu, pilnu apmācību un pastāvīgu atbalstu, lai klienti varētu maksimāli izmantot savu CNC iekārtu ražīgumu un precizitāti.",
+     "ru": "В стратегическом партнёрстве с BCAMCNC, признанным мировым лидером в технологиях ЧПУ, мы поставляем высокопроизводительные фрезерные станки и системы лазерной резки для деревообработки, металлообработки и производства вывесок. Услуги CubeCNC включают установку, полное обучение и постоянную поддержку, чтобы клиенты использовали производительность и точность своих станков с ЧПУ по максимуму.",
+     "nl": "Via een strategisch partnerschap met BCAMCNC, wereldwijd erkend leider in CNC-technologie, leveren we krachtige freesmachines en lasersnijsystemen voor houtbewerking, metaalbewerking en signingproductie. De diensten van CubeCNC omvatten installatie, uitgebreide training en doorlopende ondersteuning, zodat klanten het maximale halen uit de productiviteit en nauwkeurigheid van hun CNC-machines.",
+     "de": "In strategischer Partnerschaft mit BCAMCNC, einem weltweit anerkannten Marktführer für CNC-Technologie, liefern wir leistungsstarke Fräsmaschinen und Laserschneidanlagen für Holzbearbeitung, Metallverarbeitung und Werbetechnik. Die Leistungen von CubeCNC umfassen Installation, umfassende Schulung und laufenden Support, damit Kunden Produktivität und Präzision ihrer CNC-Maschinen voll ausschöpfen.",
+     "sv": "Genom ett strategiskt partnerskap med BCAMCNC, en globalt erkänd ledare inom CNC-teknik, levererar vi högpresterande fräsar och laserskärsystem för träbearbetning, metallbearbetning och skylttillverkning. CubeCNC:s tjänster omfattar installation, grundlig utbildning och löpande support, så att kunderna får ut maximal produktivitet och precision av sina CNC-maskiner."
+    },
+    "link_label": {
+     "en": "View the catalogue",
+     "lv": "Skatīt katalogu",
+     "ru": "Смотреть каталог",
+     "nl": "Bekijk de catalogus",
+     "de": "Katalog ansehen",
+     "sv": "Se katalogen"
+    },
+    "link_url": "https://cubecnc.eu/index.php/catalogue/",
+    "image": "09-01"
+   },
+   {
+    "icon": "lab",
+    "title": {
+     "en": "Signage Research Department",
+     "lv": "Izkārtņu izpētes nodaļa",
+     "ru": "Отдел исследований вывесок",
+     "nl": "Afdeling Onderzoek & Ontwikkeling",
+     "de": "Abteilung Forschung & Entwicklung",
+     "sv": "Avdelningen för forskning & utveckling"
+    },
+    "text": {
+     "en": "Our in-house Signage Research Department continually develops advanced products such as fully customisable, waterproof LED Neon NEW GEN tubes and other special signage products, powered by custom-built LED controllers, so you stay ahead of the competition in your industry.",
+     "lv": "Mūsu pašu Izkārtņu izpētes nodaļa nepārtraukti izstrādā progresīvus produktus, piemēram, pilnībā pielāgojamas, ūdensizturīgas LED Neon NEW GEN caurules un citas īpašas izkārtnes ar pašu būvētiem LED kontrolleriem, lai jūs vienmēr būtu soli priekšā konkurentiem savā nozarē.",
+     "ru": "Наш собственный отдел исследований вывесок постоянно разрабатывает передовые продукты: полностью настраиваемые водонепроницаемые трубки LED Neon NEW GEN и другие специальные вывески на собственных LED-контроллерах, чтобы вы всегда были на шаг впереди конкурентов в своей отрасли.",
+     "nl": "Onze eigen afdeling Onderzoek & Ontwikkeling ontwikkelt voortdurend geavanceerde producten, zoals volledig aanpasbare, waterdichte LED Neon NEW GEN-buizen en andere speciale signing, aangestuurd door zelfgebouwde LED-controllers, zodat u de concurrentie in uw branche altijd een stap voor bent.",
+     "de": "Unsere hauseigene Abteilung Forschung & Entwicklung entwickelt laufend fortschrittliche Produkte wie vollständig anpassbare, wasserdichte LED Neon NEW GEN-Röhren und weitere Spezialanlagen, gesteuert von selbst gebauten LED-Controllern, damit Sie Ihrer Konkurrenz stets einen Schritt voraus sind.",
+     "sv": "Vår egen avdelning för forskning och utveckling tar hela tiden fram avancerade produkter som helt anpassningsbara, vattentäta LED Neon NEW GEN-rör och andra specialskyltar, styrda av egenbyggda LED-styrenheter, så att du ligger steget före konkurrenterna i din bransch."
+    },
+    "link_label": {
+     "en": "Discover more",
+     "lv": "Uzzināt vairāk",
+     "ru": "Подробнее",
+     "nl": "Meer ontdekken",
+     "de": "Mehr erfahren",
+     "sv": "Läs mer"
+    },
+    "link_url": "/signage-research/",
+    "image": "service-3"
+   },
+   {
+    "icon": "chair",
+    "title": {
+     "en": "CubeMöbel · transforming custom furniture design",
+     "lv": "CubeMöbel · mēbeles pēc individuāla dizaina",
+     "ru": "CubeMöbel · мебель по индивидуальному дизайну",
+     "nl": "CubeMöbel · meubelontwerp op maat",
+     "de": "CubeMöbel · Möbeldesign nach Maß",
+     "sv": "CubeMöbel · möbeldesign på beställning"
+    },
+    "text": {
+     "en": "At CubeMöbel, we specialise in creating high-quality custom furniture designed to enhance corporate environments and HORECA spaces. Whether it’s elegant office solutions, bespoke hotel furnishings or functional restaurant setups, our team is dedicated to delivering tailor-made designs that blend style with durability. Using premium materials and innovative craftsmanship, CubeMöbel transforms your spaces into refined, functional environments that reflect your brand’s identity.",
+     "lv": "CubeMöbel specializējas augstas kvalitātes individuālu mēbeļu izgatavošanā, kas uzlabo biroju vidi un HORECA telpas. Vai tie būtu eleganti biroja risinājumi, viesnīcu mēbeles pēc pasūtījuma vai funkcionāls restorāna aprīkojums, mūsu komanda rada pielāgotus dizainus, kas apvieno stilu un izturību. Izmantojot augstākās kvalitātes materiālus un inovatīvu meistarību, CubeMöbel pārvērš jūsu telpas izsmalcinātā, funkcionālā vidē, kas atspoguļo jūsu zīmola identitāti.",
+     "ru": "CubeMöbel специализируется на создании высококачественной мебели на заказ для офисов и пространств HORECA. Элегантные офисные решения, мебель для отелей по индивидуальному проекту или функциональное оснащение ресторанов: наша команда создаёт дизайн, в котором стиль сочетается с долговечностью. Благодаря премиальным материалам и мастерству CubeMöbel превращает ваши помещения в продуманную, функциональную среду, отражающую характер вашего бренда.",
+     "nl": "CubeMöbel is gespecialiseerd in hoogwaardig meubilair op maat voor kantoren en HORECA-ruimtes. Of het nu gaat om elegante kantooroplossingen, hotelinrichting op maat of functionele restaurantopstellingen: ons team levert ontwerpen op maat die stijl en duurzaamheid combineren. Met hoogwaardige materialen en vakmanschap maakt CubeMöbel van uw ruimtes verfijnde, functionele omgevingen die de identiteit van uw merk weerspiegelen.",
+     "de": "CubeMöbel ist auf hochwertige Möbel nach Maß für Büros und HORECA-Räume spezialisiert. Ob elegante Bürolösungen, maßgefertigte Hotelmöbel oder funktionale Restaurantausstattung: Unser Team entwickelt individuelle Entwürfe, die Stil und Langlebigkeit verbinden. Mit hochwertigen Materialien und handwerklichem Können verwandelt CubeMöbel Ihre Räume in durchdachte, funktionale Umgebungen, die die Identität Ihrer Marke widerspiegeln.",
+     "sv": "CubeMöbel är specialiserat på högkvalitativa möbler på beställning för kontor och HORECA-miljöer. Oavsett om det gäller eleganta kontorslösningar, skräddarsydd hotellinredning eller funktionella restauranginredningar tar vårt team fram design som förenar stil och hållbarhet. Med förstklassiga material och gediget hantverk förvandlar CubeMöbel dina lokaler till genomtänkta, funktionella miljöer som speglar ditt varumärkes identitet."
+    },
+    "link_label": {
+     "en": "Ask about furniture",
+     "lv": "Jautāt par mēbelēm",
+     "ru": "Спросить о мебели",
+     "nl": "Vraag naar meubels",
+     "de": "Zu Möbeln anfragen",
+     "sv": "Fråga om möbler"
+    },
+    "link_url": "/contact/#quote",
+    "image": "mobel-2-1"
+   }
+  ]
+ },
+ "clients": {
+  "kicker": {
+   "en": "Why choose us",
+   "lv": "Kāpēc izvēlēties mūs",
+   "ru": "Почему мы",
+   "nl": "Waarom voor ons kiezen",
+   "de": "Warum wir",
+   "sv": "Varför välja oss"
+  },
+  "title": {
+   "en": "Join the brands who trust Reclame Fabriek to bring their vision to life.",
+   "lv": "Pievienojieties zīmoliem, kas uztic Reclame Fabriek savu ideju īstenošanu.",
+   "ru": "Присоединяйтесь к брендам, которые доверяют Reclame Fabriek воплощение своих идей.",
+   "nl": "Sluit u aan bij de merken die Reclame Fabriek vertrouwen om hun visie tot leven te brengen.",
+   "de": "Schließen Sie sich den Marken an, die Reclame Fabriek ihre Vision anvertrauen.",
+   "sv": "Anslut er till de varumärken som litar på att Reclame Fabriek förverkligar deras vision."
+  },
+  "text": {
+   "en": "We are the trusted signage partner for leading brands across many industries. From multinational retail groups to innovative tech companies, our clients rely on us for custom, high-quality signage that makes their brand visible and draws customers in. On every project we aim to exceed expectations and build a lasting relationship through precision, creativity and service.",
+   "lv": "Mēs esam uzticams izkārtņu partneris vadošajiem zīmoliem daudzās nozarēs. No starptautiskām mazumtirdzniecības grupām līdz inovatīviem tehnoloģiju uzņēmumiem – mūsu klienti paļaujas uz mums, lai iegūtu kvalitatīvas izkārtnes pēc pasūtījuma, kas padara zīmolu pamanāmu un piesaista pircējus. Katrā projektā mēs cenšamies pārspēt gaidas un veidot ilgstošas attiecības ar precizitāti, radošumu un servisu.",
+   "ru": "Мы — надёжный партнёр по вывескам для ведущих брендов из многих отраслей. От международных розничных сетей до инновационных технологических компаний — клиенты доверяют нам качественные вывески на заказ, которые делают бренд заметным и привлекают покупателей. В каждом проекте мы стремимся превзойти ожидания и строить долгосрочные отношения благодаря точности, креативности и сервису.",
+   "nl": "Wij zijn de vertrouwde signingpartner van toonaangevende merken in veel sectoren. Van internationale retailgroepen tot innovatieve techbedrijven: onze klanten rekenen op ons voor hoogwaardige signing op maat die hun merk zichtbaar maakt en klanten aantrekt. Bij elk project willen we de verwachtingen overtreffen en een duurzame relatie opbouwen met precisie, creativiteit en service.",
+   "de": "Wir sind der verlässliche Werbetechnik-Partner führender Marken aus vielen Branchen. Von internationalen Handelsketten bis zu innovativen Tech-Unternehmen verlassen sich unsere Kunden auf hochwertige, individuelle Werbeanlagen, die ihre Marke sichtbar machen und Kunden anziehen. Bei jedem Projekt wollen wir die Erwartungen übertreffen und mit Präzision, Kreativität und Service eine dauerhafte Beziehung aufbauen.",
+   "sv": "Vi är den pålitliga skyltpartnern för ledande varumärken i många branscher. Från internationella detaljhandelskedjor till innovativa teknikföretag litar våra kunder på oss för skräddarsydda skyltar av hög kvalitet som gör varumärket synligt och lockar kunder. I varje projekt strävar vi efter att överträffa förväntningarna och bygga långsiktiga relationer genom precision, kreativitet och service."
+  },
+  "link_label": {
+   "en": "See our largest partnerships",
+   "lv": "Mūsu lielākās sadarbības",
+   "ru": "Наши крупнейшие партнёрства",
+   "nl": "Bekijk onze grootste partnerschappen",
+   "de": "Unsere größten Partnerschaften",
+   "sv": "Se våra största samarbeten"
+  },
+  "image": "clients-2"
+ },
+ "profiles": {
+  "kicker": {
+   "en": "Our product profiles",
+   "lv": "Mūsu produktu profili",
+   "ru": "Наши профили продукции",
+   "nl": "Onze productprofielen",
+   "de": "Unsere Produktprofile",
+   "sv": "Våra produktprofiler"
+  },
+  "title": {
+   "en": "Explore our basic sign types",
+   "lv": "Iepazīstiet mūsu pamata izkārtņu veidus",
+   "ru": "Основные типы наших вывесок",
+   "nl": "Ontdek onze basistypes",
+   "de": "Entdecken Sie unsere Grundtypen",
+   "sv": "Utforska våra grundläggande skylttyper"
+  },
+  "letters": [
+   "profile-7-lux",
+   "profile-3",
+   "profile-2",
+   "profile-8",
+   "profile-4",
+   "profile-0"
+  ],
+  "lightboxes": [
+   "casette-type",
+   "pylonstotems",
+   "special"
+  ],
+  "show": "all"
+ },
+ "special": {
+  "kicker": {
+   "en": "Our special projects",
+   "lv": "Mūsu īpašie projekti",
+   "ru": "Наши особые проекты",
+   "nl": "Onze bijzondere projecten",
+   "de": "Unsere Sonderprojekte",
+   "sv": "Våra specialprojekt"
+  },
+  "title": {
+   "en": "Your ideas, our development: challenges, expertise, passion.",
+   "lv": "Jūsu idejas, mūsu izstrāde: izaicinājumi, pieredze, aizrautība.",
+   "ru": "Ваши идеи — наша разработка: задачи, опыт, страсть.",
+   "nl": "Uw ideeën, onze ontwikkeling: uitdagingen, expertise, passie.",
+   "de": "Ihre Ideen, unsere Entwicklung: Herausforderungen, Know-how, Leidenschaft.",
+   "sv": "Era idéer, vår utveckling: utmaningar, expertis, passion."
+  },
+  "text": {
+   "en": "Whether it’s a bold new sign, an architectural element or a large branding roll-out, we take on the challenge with creative solutions and work with you at every step. Let’s create something extraordinary together.",
+   "lv": "Vai tā būtu drosmīga jauna izkārtne, arhitektūras elements vai liela zīmola ieviešana – mēs uzņemamies izaicinājumu ar radošiem risinājumiem un strādājam kopā ar jums katrā solī. Radīsim kopā kaut ko neparastu.",
+   "ru": "Смелая новая вывеска, архитектурный элемент или масштабное внедрение бренда — мы берёмся за задачу с креативными решениями и работаем с вами на каждом этапе. Давайте создадим что-то необыкновенное вместе.",
+   "nl": "Of het nu gaat om opvallende nieuwe gevelreclame, een architecturaal element of een grote merkuitrol: we gaan de uitdaging aan met creatieve oplossingen en werken bij elke stap met u samen. Laten we samen iets bijzonders maken.",
+   "de": "Ob mutige neue Werbeanlage, architektonisches Element oder großer Marken-Rollout: Wir nehmen die Herausforderung mit kreativen Lösungen an und begleiten Sie bei jedem Schritt. Lassen Sie uns gemeinsam etwas Außergewöhnliches schaffen.",
+   "sv": "Oavsett om det är en djärv ny skylt, ett arkitektoniskt element eller en stor varumärkesutrullning antar vi utmaningen med kreativa lösningar och arbetar med er i varje steg. Låt oss skapa något extraordinärt tillsammans."
+  },
+  "stories": [
+   "tanqueray-gin-sign-on-green-wall-base",
+   "ciroc-vodka-neon-sign-on-wavy-mirror-base",
+   "nature-shop-wood-textured-sign",
+   "revolutionizing-circus-style-box-letters-with-custom-mini-bulbs",
+   "from-expo-spark-to-neon-brilliance-illuminating-swedens-centrumbiografen",
+   "seamless-signage-transforming-depo-stores-across-the-baltics"
+  ],
+  "button": {
+   "en": "All projects and stories",
+   "lv": "Visi projekti un stāsti",
+   "ru": "Все проекты и истории",
+   "nl": "Alle projecten en verhalen",
+   "de": "Alle Projekte und Geschichten",
+   "sv": "Alla projekt och berättelser"
+  }
+ },
+ "factory": {
+  "kicker": {
+   "en": "We’re signage",
+   "lv": "Mēs esam izkārtnes",
+   "ru": "Мы — это вывески",
+   "nl": "Wij zijn signing",
+   "de": "Wir sind Werbetechnik",
+   "sv": "Vi är skyltar"
+  },
+  "title": {
+   "en": "We have the capability to handle projects of all scales.",
+   "lv": "Mēs spējam īstenot jebkura mēroga projektus.",
+   "ru": "Мы способны реализовать проекты любого масштаба.",
+   "nl": "Wij kunnen projecten van elke omvang aan.",
+   "de": "Wir realisieren Projekte jeder Größenordnung.",
+   "sv": "Vi kan hantera projekt i alla storlekar."
+  },
+  "text": {
+   "en": "Founded in 1993, Reclame Fabriek works from a modern 6,000 m² production facility in Daugavpils, Latvia. Our machine park lets us deliver precision, quality and new ideas across the whole range of custom signage and products.",
+   "lv": "Reclame Fabriek, dibināts 1993. gadā, strādā modernā 6000 m² ražotnē Daugavpilī, Latvijā. Mūsu iekārtu parks ļauj nodrošināt precizitāti, kvalitāti un jaunas idejas visā individuālo izkārtņu un produktu klāstā.",
+   "ru": "Reclame Fabriek, основанная в 1993 году, работает на современном производстве площадью 6000 м² в Даугавпилсе, Латвия. Наш станочный парк позволяет обеспечивать точность, качество и новые идеи во всём спектре вывесок и изделий на заказ.",
+   "nl": "Reclame Fabriek, opgericht in 1993, werkt vanuit een moderne productiefaciliteit van 6.000 m² in Daugavpils, Letland. Ons machinepark stelt ons in staat precisie, kwaliteit en nieuwe ideeën te leveren voor het volledige assortiment signing en producten op maat.",
+   "de": "Reclame Fabriek wurde 1993 gegründet und arbeitet in einer modernen Produktionsstätte mit 6.000 m² in Daugavpils, Lettland. Unser Maschinenpark ermöglicht Präzision, Qualität und neue Ideen für das gesamte Spektrum individueller Werbeanlagen und Produkte.",
+   "sv": "Reclame Fabriek grundades 1993 och arbetar i en modern produktionsanläggning på 6 000 m² i Daugavpils, Lettland. Vår maskinpark gör att vi kan leverera precision, kvalitet och nya idéer inom hela utbudet av skyltar och produkter på beställning."
+  },
+  "machines_title": {
+   "en": "Our machine park",
+   "lv": "Mūsu iekārtu parks",
+   "ru": "Наш станочный парк",
+   "nl": "Ons machinepark",
+   "de": "Unser Maschinenpark",
+   "sv": "Vår maskinpark"
+  },
+  "machines": [
+   {
+    "text": {
+     "en": "CNC 3D router / engraver, 2 × 6 m",
+     "lv": "CNC 3D frēze / gravētājs, 2 × 6 m",
+     "ru": "3D-фрезер / гравёр с ЧПУ, 2 × 6 м",
+     "nl": "CNC 3D-freesmachine / graveermachine, 2 × 6 m",
+     "de": "CNC-3D-Fräse / Graviermaschine, 2 × 6 m",
+     "sv": "CNC 3D-fräs / gravyrmaskin, 2 × 6 m"
+    }
+   },
+   {
+    "text": {
+     "en": "CNC 3D router / engraver, 2 × 4 m (two units)",
+     "lv": "CNC 3D frēze / gravētājs, 2 × 4 m (divas vienības)",
+     "ru": "3D-фрезер / гравёр с ЧПУ, 2 × 4 м (два станка)",
+     "nl": "CNC 3D-freesmachine / graveermachine, 2 × 4 m (twee stuks)",
+     "de": "CNC-3D-Fräse / Graviermaschine, 2 × 4 m (zwei Anlagen)",
+     "sv": "CNC 3D-fräs / gravyrmaskin, 2 × 4 m (två enheter)"
+    }
+   },
+   {
+    "text": {
+     "en": "Laser cutting / engraving, 2 × 5 m",
+     "lv": "Lāzergriešana / gravēšana, 2 × 5 m",
+     "ru": "Лазерная резка / гравировка, 2 × 5 м",
+     "nl": "Lasersnijden / graveren, 2 × 5 m",
+     "de": "Laserschneiden / Gravieren, 2 × 5 m",
+     "sv": "Laserskärning / gravyr, 2 × 5 m"
+    }
+   },
+   {
+    "text": {
+     "en": "CNC box-letter bending machines (FLT and RCT)",
+     "lv": "CNC tilpuma burtu locīšanas iekārtas (FLT un RCT)",
+     "ru": "Станки с ЧПУ для гибки объёмных букв (FLT и RCT)",
+     "nl": "CNC-buigmachines voor doosletters (FLT en RCT)",
+     "de": "CNC-Biegemaschinen für Profilbuchstaben (FLT und RCT)",
+     "sv": "CNC-bockmaskiner för 3D-bokstäver (FLT och RCT)"
+    }
+   },
+   {
+    "text": {
+     "en": "Steel / aluminium bender, 2.5 m",
+     "lv": "Tērauda / alumīnija locītājs, 2,5 m",
+     "ru": "Гибочный станок для стали / алюминия, 2,5 м",
+     "nl": "Buigmachine voor staal / aluminium, 2,5 m",
+     "de": "Biegemaschine für Stahl / Aluminium, 2,5 m",
+     "sv": "Bockmaskin för stål / aluminium, 2,5 m"
+    }
+   },
+   {
+    "text": {
+     "en": "Laser box-letter welding machine",
+     "lv": "Lāzera metināšanas iekārta tilpuma burtiem",
+     "ru": "Лазерный сварочный аппарат для объёмных букв",
+     "nl": "Laserlasmachine voor doosletters",
+     "de": "Laserschweißanlage für Profilbuchstaben",
+     "sv": "Lasersvetsmaskin för 3D-bokstäver"
+    }
+   },
+   {
+    "text": {
+     "en": "Vacuum forming machine, 3.0 × 1.5 m",
+     "lv": "Vakuumformēšanas iekārta, 3,0 × 1,5 m",
+     "ru": "Вакуумформовочная машина, 3,0 × 1,5 м",
+     "nl": "Vacuümvormmachine, 3,0 × 1,5 m",
+     "de": "Vakuumtiefziehmaschine, 3,0 × 1,5 m",
+     "sv": "Vakuumformningsmaskin, 3,0 × 1,5 m"
+    }
+   },
+   {
+    "text": {
+     "en": "Welding stations",
+     "lv": "Metināšanas stacijas",
+     "ru": "Сварочные посты",
+     "nl": "Lasstations",
+     "de": "Schweißplätze",
+     "sv": "Svetsstationer"
+    }
+   },
+   {
+    "text": {
+     "en": "Rolling machine for metal tube profiles",
+     "lv": "Velmēšanas iekārta metāla cauruļu profiliem",
+     "ru": "Вальцовочный станок для металлических трубных профилей",
+     "nl": "Walsmachine voor metalen buisprofielen",
+     "de": "Rollbiegemaschine für Metallrohrprofile",
+     "sv": "Valsmaskin för metallrörsprofiler"
+    }
+   },
+   {
+    "text": {
+     "en": "3D printing machines, from prototype to full-scale production",
+     "lv": "3D printeri – no prototipa līdz pilna mēroga ražošanai",
+     "ru": "3D-принтеры — от прототипа до серийного производства",
+     "nl": "3D-printers, van prototype tot productie op ware grootte",
+     "de": "3D-Drucker, vom Prototyp bis zur Serienfertigung",
+     "sv": "3D-skrivare, från prototyp till fullskalig produktion"
+    }
+   }
+  ],
+  "gallery": [
+   "24",
+   "16",
+   "15",
+   "14",
+   "12d",
+   "12c",
+   "12b",
+   "12a",
+   "12",
+   "11",
+   "17",
+   "18",
+   "19",
+   "20",
+   "21",
+   "22",
+   "23",
+   "10",
+   "9",
+   "8",
+   "7",
+   "6",
+   "5",
+   "4",
+   "3",
+   "1",
+   "2-1",
+   "2"
+  ]
+ },
+ "team": {
+  "kicker": {
+   "en": "Our team",
+   "lv": "Mūsu komanda",
+   "ru": "Наша команда",
+   "nl": "Ons team",
+   "de": "Unser Team",
+   "sv": "Vårt team"
+  },
+  "title": {
+   "en": "Strong team – fulfilling all your wishes",
+   "lv": "Spēcīga komanda – izpildām visas jūsu vēlmes",
+   "ru": "Сильная команда — исполняем все ваши пожелания",
+   "nl": "Een sterk team dat al uw wensen waarmaakt",
+   "de": "Ein starkes Team, das all Ihre Wünsche erfüllt",
+   "sv": "Ett starkt team som uppfyller alla dina önskemål"
+  },
+  "gallery": [
+   "asset-41",
+   "asset-42",
+   "asset-44",
+   "asset-45",
+   "asset-46",
+   "asset-47",
+   "asset-48",
+   "asset-49",
+   "asset-51",
+   "asset-52",
+   "asset-54",
+   "asset-55",
+   "asset-56",
+   "asset-57",
+   "asset-58",
+   "asset-59",
+   "asset-60",
+   "asset-78",
+   "asset-79",
+   "asset-80",
+   "asset-81",
+   "asset-82",
+   "asset-83",
+   "asset-84",
+   "asset-85",
+   "asset-86",
+   "asset-87",
+   "asset-88",
+   "asset-89",
+   "asset-90",
+   "asset-91",
+   "asset-92",
+   "asset-93",
+   "asset-94",
+   "asset-95",
+   "asset-99",
+   "asset-100",
+   "asset-103",
+   "asset-104",
+   "asset-105",
+   "asset-106",
+   "asset-106-1"
+  ]
+ },
+ "subscribe": {
+  "kicker": {
+   "en": "Subscribe to stay in touch",
+   "lv": "Abonējiet, lai paliktu saziņā",
+   "ru": "Подпишитесь, чтобы быть на связи",
+   "nl": "Abonneer u en blijf op de hoogte",
+   "de": "Abonnieren und in Kontakt bleiben",
+   "sv": "Prenumerera för att hålla kontakten"
+  },
+  "title": {
+   "en": "Stay ahead with Reclame Fabriek",
+   "lv": "Esiet soli priekšā ar Reclame Fabriek",
+   "ru": "Будьте на шаг впереди с Reclame Fabriek",
+   "nl": "Blijf voorop met Reclame Fabriek",
+   "de": "Bleiben Sie mit Reclame Fabriek vorn",
+   "sv": "Ligg steget före med Reclame Fabriek"
+  },
+  "text": {
+   "en": "New profiles, finished projects and what our research team is working on. A few emails a year, no spam.",
+   "lv": "Jauni profili, pabeigti projekti un tas, pie kā strādā mūsu izpētes komanda. Dažas vēstules gadā, bez surogātpasta.",
+   "ru": "Новые профили, завершённые проекты и то, над чем работает наша исследовательская команда. Несколько писем в год, без спама.",
+   "nl": "Nieuwe profielen, afgeronde projecten en waar ons onderzoeksteam aan werkt. Een paar e-mails per jaar, geen spam.",
+   "de": "Neue Profile, fertige Projekte und woran unser Entwicklungsteam arbeitet. Ein paar E-Mails im Jahr, kein Spam.",
+   "sv": "Nya profiler, färdiga projekt och vad vårt forskningsteam arbetar med. Några mejl om året, ingen spam."
+  }
+ },
+ "cta": {
+  "title": {
+   "en": "Have a sign in mind?",
+   "lv": "Jums ir ideja izkārtnei?",
+   "ru": "Задумали вывеску?",
+   "nl": "Een idee voor signing?",
+   "de": "Eine Werbeanlage im Kopf?",
+   "sv": "Har ni en skylt i tankarna?"
+  },
+  "text": {
+   "en": "Send us a sketch, a photo of the facade or just the size and the address. We reply with a solution and a price.",
+   "lv": "Atsūtiet mums skici, fasādes foto vai vienkārši izmēru un adresi. Mēs atbildēsim ar risinājumu un cenu.",
+   "ru": "Пришлите нам эскиз, фото фасада или просто размер и адрес. Мы ответим решением и ценой.",
+   "nl": "Stuur ons een schets, een foto van de gevel of alleen de afmetingen en het adres. Wij antwoorden met een oplossing en een prijs.",
+   "de": "Senden Sie uns eine Skizze, ein Foto der Fassade oder einfach Größe und Adresse. Wir antworten mit einer Lösung und einem Preis.",
+   "sv": "Skicka en skiss, ett foto på fasaden eller bara storlek och adress. Vi svarar med en lösning och ett pris."
+  }
+ },
+ "ticker": {
+  "items": [
+   {
+    "text": {
+     "en": "3D box letters",
+     "lv": "3D tilpuma burti",
+     "ru": "Объёмные 3D-буквы",
+     "nl": "3D-doosletters",
+     "de": "3D-Profilbuchstaben",
+     "sv": "3D-bokstäver"
+    }
+   },
+   {
+    "text": {
+     "en": "Lightboxes",
+     "lv": "Gaismas kastes",
+     "ru": "Световые короба",
+     "nl": "Lichtbakken",
+     "de": "Leuchtkästen",
+     "sv": "Ljuslådor"
+    }
+   },
+   {
+    "text": {
+     "en": "LED neon",
+     "lv": "LED neons",
+     "ru": "LED-неон",
+     "nl": "LED-neon",
+     "de": "LED-Neon",
+     "sv": "LED-neon"
+    }
+   },
+   {
+    "text": {
+     "en": "Pylons and totems",
+     "lv": "Piloni un stelas",
+     "ru": "Пилоны и стелы",
+     "nl": "Zuilen en totems",
+     "de": "Pylonen und Stelen",
+     "sv": "Pyloner och totem"
+    }
+   },
+   {
+    "text": {
+     "en": "CNC machinery",
+     "lv": "CNC iekārtas",
+     "ru": "Станки с ЧПУ",
+     "nl": "CNC-machines",
+     "de": "CNC-Maschinen",
+     "sv": "CNC-maskiner"
+    }
+   },
+   {
+    "text": {
+     "en": "Custom furniture",
+     "lv": "Mēbeles pēc pasūtījuma",
+     "ru": "Мебель на заказ",
+     "nl": "Meubels op maat",
+     "de": "Möbel nach Maß",
+     "sv": "Möbler på beställning"
+    }
+   },
+   {
+    "text": {
+     "en": "Made in Daugavpils since 1993",
+     "lv": "Ražots Daugavpilī kopš 1993. gada",
+     "ru": "Сделано в Даугавпилсе с 1993 года",
+     "nl": "Gemaakt in Daugavpils sinds 1993",
+     "de": "Gefertigt in Daugavpils seit 1993",
+     "sv": "Tillverkat i Daugavpils sedan 1993"
+    }
+   },
+   {
+    "text": {
+     "en": "Delivered across Europe",
+     "lv": "Piegāde visā Eiropā",
+     "ru": "Доставка по всей Европе",
+     "nl": "Geleverd in heel Europa",
+     "de": "Lieferung in ganz Europa",
+     "sv": "Levererat i hela Europa"
+    }
+   }
+  ]
+ }
+}

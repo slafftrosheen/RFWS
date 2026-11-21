@@ -1,0 +1,75 @@
+{
+ "slug": "profile-0",
+ "group": "letters",
+ "order": 0,
+ "published": true,
+ "title": {
+  "en": "Profile 0",
+  "lv": "Profils 0",
+  "ru": "Профиль 0",
+  "nl": "Profiel 0",
+  "de": "Profil 0",
+  "sv": "Profil 0"
+ },
+ "subtitle": {
+  "en": "Flat letters",
+  "lv": "Plakani burti",
+  "ru": "Плоские буквы",
+  "nl": "Vlakke letters",
+  "de": "Flachbuchstaben",
+  "sv": "Platta bokstäver"
+ },
+ "light": "flat",
+ "size": "20–3000 mm",
+ "depth": "1–30 mm",
+ "specs": [
+  {
+   "label": {
+    "en": "Material",
+    "lv": "Materiāls",
+    "ru": "Материал",
+    "nl": "Materiaal",
+    "de": "Material",
+    "sv": "Material"
+   },
+   "value": {
+    "en": "Usually aluminium, steel, brass, PVC, acrylic, ACP, wood, plywood or any other flat material",
+    "lv": "Parasti alumīnijs, tērauds, misiņš, PVC, akrils, ACP, koks, saplāksnis vai jebkurš cits plakans materiāls",
+    "ru": "Обычно алюминий, сталь, латунь, ПВХ, акрил, ACP, дерево, фанера или любой другой листовой материал",
+    "nl": "Meestal aluminium, staal, messing, pvc, acryl, ACP, hout, multiplex of elk ander vlak materiaal",
+    "de": "Meist Aluminium, Stahl, Messing, PVC, Acryl, ACP, Holz, Sperrholz oder jedes andere Plattenmaterial",
+    "sv": "Vanligtvis aluminium, stål, mässing, PVC, akryl, ACP, trä, plywood eller annat plant material"
+   }
+  },
+  {
+   "label": {
+    "en": "Surface finish",
+    "lv": "Virsmas apdare",
+    "ru": "Отделка поверхности",
+    "nl": "Afwerking",
+    "de": "Oberfläche",
+    "sv": "Ytbehandling"
+   },
+   "value": {
+    "en": "Tikkurila industrial two-component spray paint. Any RAL or NCS colour, or special coatings.",
+    "lv": "Tikkurila industriālā divkomponentu krāsa. Jebkurš RAL vai NCS tonis vai īpaši pārklājumi.",
+    "ru": "Промышленная двухкомпонентная краска Tikkurila. Любой цвет RAL или NCS либо специальные покрытия.",
+    "nl": "Tikkurila industriële tweecomponenten-spuitlak. Elke RAL- of NCS-kleur, of speciale coatings.",
+    "de": "Tikkurila Industrie-2K-Spritzlack. Jede RAL- oder NCS-Farbe oder Spezialbeschichtungen.",
+    "sv": "Tikkurila industriell tvåkomponentsfärg. Valfri RAL- eller NCS-kulör eller specialbeläggningar."
+   }
+  }
+ ],
+ "note": {},
+ "cover": "profiles-0-zastavka",
+ "video": "",
+ "gallery": [
+  "profiles-0"
+ ],
+ "seo": {
+  "description": {}
+ },
+ "updated": "2026-11-21T20:18:18",
+ "custom_depth": true,
+ "diagram": ""
+}

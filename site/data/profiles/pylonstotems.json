@@ -1,0 +1,39 @@
+{
+ "slug": "pylonstotems",
+ "group": "lightbox",
+ "order": 170,
+ "published": true,
+ "title": {
+  "en": "Pylons / Totems",
+  "lv": "Piloni / stelas",
+  "ru": "Пилоны / стелы",
+  "nl": "Zuilen / totems",
+  "de": "Pylonen / Stelen",
+  "sv": "Pyloner / totem"
+ },
+ "subtitle": {
+  "en": "Lightbox",
+  "lv": "Gaismas kaste",
+  "ru": "Световой короб",
+  "nl": "Lichtbak",
+  "de": "Leuchtkasten",
+  "sv": "Ljuslåda"
+ },
+ "light": "lightbox",
+ "size": "",
+ "depth": "",
+ "specs": [],
+ "note": {},
+ "cover": "untitled",
+ "video": "",
+ "gallery": [
+  "20181221-173017",
+  "20181221-174632"
+ ],
+ "seo": {
+  "description": {}
+ },
+ "updated": "2026-11-21T20:18:18",
+ "custom_depth": true,
+ "diagram": ""
+}

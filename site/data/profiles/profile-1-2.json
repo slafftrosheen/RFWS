@@ -1,0 +1,114 @@
+{
+ "slug": "profile-1-2",
+ "group": "letters",
+ "order": 10,
+ "published": true,
+ "title": {
+  "en": "Profile 1",
+  "lv": "Profils 1",
+  "ru": "Профиль 1",
+  "nl": "Profiel 1",
+  "de": "Profil 1",
+  "sv": "Profil 1"
+ },
+ "subtitle": {
+  "en": "Aluminium box letters",
+  "lv": "Alumīnija tilpuma burti",
+  "ru": "Объёмные буквы из алюминия",
+  "nl": "Aluminium doosletters",
+  "de": "Aluminium-Profilbuchstaben",
+  "sv": "3D-bokstäver i aluminium"
+ },
+ "light": "unlit",
+ "size": "100–3000 mm",
+ "depth": "20, 30, 40, 50, 60, 80, 100, 120, 140 mm",
+ "specs": [
+  {
+   "label": {
+    "en": "Face panels",
+    "lv": "Priekšējā virsma",
+    "ru": "Лицевая панель",
+    "nl": "Frontpaneel",
+    "de": "Front",
+    "sv": "Front"
+   },
+   "value": {
+    "en": "1.5–2 mm aluminium",
+    "lv": "1,5–2 mm alumīnijs",
+    "ru": "Алюминий 1,5–2 мм",
+    "nl": "1,5–2 mm aluminium",
+    "de": "1,5–2 mm Aluminium",
+    "sv": "1,5–2 mm aluminium"
+   }
+  },
+  {
+   "label": {
+    "en": "Sides",
+    "lv": "Sāni",
+    "ru": "Борта",
+    "nl": "Zijkanten",
+    "de": "Zarge",
+    "sv": "Sidor"
+   },
+   "value": {
+    "en": "1.2–2 mm aluminium",
+    "lv": "1,2–2 mm alumīnijs",
+    "ru": "Алюминий 1,2–2 мм",
+    "nl": "1,2–2 mm aluminium",
+    "de": "1,2–2 mm Aluminium",
+    "sv": "1,2–2 mm aluminium"
+   }
+  },
+  {
+   "label": {
+    "en": "Back",
+    "lv": "Aizmugure",
+    "ru": "Задняя стенка",
+    "nl": "Achterkant",
+    "de": "Rückwand",
+    "sv": "Baksida"
+   },
+   "value": {
+    "en": "8–20 mm PVC",
+    "lv": "8–20 mm PVC",
+    "ru": "Пвх 8–20 мм",
+    "nl": "8–20 mm pvc",
+    "de": "8–20 mm PVC",
+    "sv": "8–20 mm PVC"
+   }
+  },
+  {
+   "label": {
+    "en": "Surface finish",
+    "lv": "Virsmas apdare",
+    "ru": "Отделка поверхности",
+    "nl": "Afwerking",
+    "de": "Oberfläche",
+    "sv": "Ytbehandling"
+   },
+   "value": {
+    "en": "Tikkurila industrial two-component spray paint. Any RAL or NCS colour, or special coatings.",
+    "lv": "Tikkurila industriālā divkomponentu krāsa. Jebkurš RAL vai NCS tonis vai īpaši pārklājumi.",
+    "ru": "Промышленная двухкомпонентная краска Tikkurila. Любой цвет RAL или NCS либо специальные покрытия.",
+    "nl": "Tikkurila industriële tweecomponenten-spuitlak. Elke RAL- of NCS-kleur, of speciale coatings.",
+    "de": "Tikkurila Industrie-2K-Spritzlack. Jede RAL- oder NCS-Farbe oder Spezialbeschichtungen.",
+    "sv": "Tikkurila industriell tvåkomponentsfärg. Valfri RAL- eller NCS-kulör eller specialbeläggningar."
+   }
+  }
+ ],
+ "note": {},
+ "cover": "profile-1",
+ "video": "8r1VvOJmKPY",
+ "gallery": [
+  "146663015-1578758162321886-2081254369209766755-n",
+  "141788283-1569354966595539-4885984977163659085-n",
+  "29314371-776801639184213-5213000432212770816-n",
+  "12227746-418101928387521-3167457865870149050-n"
+ ],
+ "seo": {
+  "description": {}
+ },
+ "updated": "2026-11-21T20:18:18",
+ "custom_depth": true,
+ "diagram": "profile-1-diagram"
+}

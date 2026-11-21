@@ -1,0 +1,45 @@
+{
+ "slug": "casette-type",
+ "group": "lightbox",
+ "order": 160,
+ "published": true,
+ "title": {
+  "en": "Cassette Type",
+  "lv": "Kasetes tips",
+  "ru": "Кассетный тип",
+  "nl": "Cassettetype",
+  "de": "Kassettentyp",
+  "sv": "Kassettyp"
+ },
+ "subtitle": {
+  "en": "Lightbox",
+  "lv": "Gaismas kaste",
+  "ru": "Световой короб",
+  "nl": "Lichtbak",
+  "de": "Leuchtkasten",
+  "sv": "Ljuslåda"
+ },
+ "light": "lightbox",
+ "size": "",
+ "depth": "",
+ "specs": [],
+ "note": {},
+ "cover": "img-20210721-wa0017",
+ "video": "",
+ "gallery": [
+  "20151019-172213-1",
+  "20160704-143117",
+  "20170331-151727",
+  "20180817-120240",
+  "img-20230223-142050",
+  "img-20230223-142111",
+  "save-20201010-101558a",
+  "whatsapp-image-2020-01-11-at-07-41-50"
+ ],
+ "seo": {
+  "description": {}
+ },
+ "updated": "2026-11-21T20:18:18",
+ "custom_depth": true,
+ "diagram": ""
+}

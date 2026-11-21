@@ -1,0 +1,19 @@
+project_id = "rfws"
+
+[api]
+port = 54321
+auto_expose_new_tables = false
+
+[db]
+port = 54322
+shadow_port = 54320
+major_version = 17
+
+[db.seed]
+enabled = false
+
+[studio]
+port = 54323
+
+[auth]
+site_url = "http://127.0.0.1:8080"

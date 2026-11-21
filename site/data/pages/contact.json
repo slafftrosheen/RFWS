@@ -1,0 +1,27 @@
+{
+ "seo": {
+  "title": {},
+  "description": {
+   "en": "Contact Reclame Fabriek: Komunala iela 100B, Daugavpils, Latvia. General +371 29 433 637, factory +371 26 389 364, UK department +44 7447 048948."
+  }
+ },
+ "head": {
+  "title": {
+   "en": "We’re here to answer any questions you may have",
+   "lv": "Mēs esam šeit, lai atbildētu uz visiem jūsu jautājumiem",
+   "ru": "Мы ответим на любые ваши вопросы",
+   "nl": "Wij beantwoorden graag al uw vragen",
+   "de": "Wir beantworten gern all Ihre Fragen",
+   "sv": "Vi svarar gärna på alla era frågor"
+  },
+  "lead": {
+   "en": "Tell us about your project and we’ll be glad to help. Fill out the form, or email or call the right person directly.",
+   "lv": "Pastāstiet par savu projektu – mēs labprāt palīdzēsim. Aizpildiet veidlapu vai rakstiet vai zvaniet tieši atbildīgajai personai.",
+   "ru": "Расскажите о своём проекте — мы с радостью поможем. Заполните форму или напишите либо позвоните напрямую нужному специалисту.",
+   "nl": "Vertel ons over uw project, dan helpen we u graag. Vul het formulier in of mail of bel direct de juiste persoon.",
+   "de": "Erzählen Sie uns von Ihrem Projekt, wir helfen gern. Füllen Sie das Formular aus oder schreiben bzw. rufen Sie direkt die richtige Person an.",
+   "sv": "Berätta om ert projekt så hjälper vi gärna till. Fyll i formuläret eller mejla eller ring rätt person direkt."
+  },
+  "image": "67062340-1106435422887498-8875652871845052416-n"
+ }
+}

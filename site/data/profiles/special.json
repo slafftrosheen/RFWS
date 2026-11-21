@@ -1,0 +1,53 @@
+{
+ "slug": "special",
+ "group": "lightbox",
+ "order": 180,
+ "published": true,
+ "title": {
+  "en": "Special",
+  "lv": "Īpašās",
+  "ru": "Специальные",
+  "nl": "Speciaal",
+  "de": "Sonderanfertigung",
+  "sv": "Special"
+ },
+ "subtitle": {
+  "en": "Lightbox",
+  "lv": "Gaismas kaste",
+  "ru": "Световой короб",
+  "nl": "Lichtbak",
+  "de": "Leuchtkasten",
+  "sv": "Ljuslåda"
+ },
+ "light": "lightbox",
+ "size": "",
+ "depth": "",
+ "specs": [],
+ "note": {},
+ "cover": "img-20201127-145204",
+ "video": "",
+ "gallery": [
+  "2-2",
+  "20170214-143542",
+  "20170214-143700",
+  "img-20190506-152255",
+  "img-20190506-152715",
+  "img-20201027-131111",
+  "img-20201127-145020",
+  "img-20201127-145338",
+  "img-20201127-145633",
+  "img-20210124-135845-1",
+  "img-20211104-125335",
+  "img-20211104-125505",
+  "img-20210324-wa0007",
+  "img-20211112-wa0006",
+  "whatsapp-image-2024-10-04-at-2-21-52-pm",
+  "whatsapp-image-2024-10-04-at-2-22-24-pm"
+ ],
+ "seo": {
+  "description": {}
+ },
+ "updated": "2026-11-21T20:18:18",
+ "custom_depth": true,
+ "diagram": ""
+}
