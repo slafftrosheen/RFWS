@@ -32,5 +32,8 @@ try {
     unlinkSync(inputFile);
 }
 minify(['css/portal.css', '--outfile=css/portal.min.css']);
+minify(['css/lumigrid.css', '--outfile=css/lumigrid.min.css']);
 minify(['js/site.js', '--target=es2017', '--outfile=js/site.min.js']);
 minify(['js/portal.js', '--target=es2017', '--outfile=js/portal.min.js']);
+minify(['js/preview.js', '--target=es2017', '--outfile=js/preview.min.js']);
+minify(['js/lumigrid.js', '--target=es2017', '--outfile=js/lumigrid.min.js']);

@@ -2238,5 +2238,1581 @@
   "nl": "Reclame Fabriek · Komunala iela 100B, LV-5449 Daugavpils, Letland · reclamefabriek.eu",
   "de": "Reclame Fabriek · Komunala iela 100B, LV-5449 Daugavpils, Lettland · reclamefabriek.eu",
   "sv": "Reclame Fabriek · Komunala iela 100B, LV-5449 Daugavpils, Lettland · reclamefabriek.eu"
+ },
+ "theme.label": {
+  "en": "Theme",
+  "lv": "Tēma",
+  "ru": "Тема",
+  "nl": "Thema",
+  "de": "Design",
+  "sv": "Tema"
+ },
+ "theme.light": {
+  "en": "Light",
+  "lv": "Gaiša",
+  "ru": "Светлая",
+  "nl": "Licht",
+  "de": "Hell",
+  "sv": "Ljust"
+ },
+ "theme.dark": {
+  "en": "Dark",
+  "lv": "Tumša",
+  "ru": "Тёмная",
+  "nl": "Donker",
+  "de": "Dunkel",
+  "sv": "Mörkt"
+ },
+ "theme.auto": {
+  "en": "Auto (system)",
+  "lv": "Automātiski (sistēma)",
+  "ru": "Авто (как в системе)",
+  "nl": "Automatisch (systeem)",
+  "de": "Automatisch (System)",
+  "sv": "Automatiskt (system)"
+ },
+ "search.open": {
+  "en": "Search",
+  "lv": "Meklēt",
+  "ru": "Поиск",
+  "nl": "Zoeken",
+  "de": "Suchen",
+  "sv": "Sök"
+ },
+ "search.ph": {
+  "en": "Search profiles, projects, pages…",
+  "lv": "Meklēt profilus, projektus, lapas…",
+  "ru": "Поиск профилей, проектов, страниц…",
+  "nl": "Zoek profielen, projecten, pagina’s…",
+  "de": "Profile, Projekte, Seiten suchen…",
+  "sv": "Sök profiler, projekt, sidor…"
+ },
+ "search.none": {
+  "en": "Nothing found for “{q}”. Try a profile number, a light type or a client name.",
+  "lv": "Nekas nav atrasts pēc “{q}”. Mēģiniet profila numuru, gaismas veidu vai klienta nosaukumu.",
+  "ru": "По запросу «{q}» ничего не найдено. Попробуйте номер профиля, тип подсветки или имя клиента.",
+  "nl": "Niets gevonden voor “{q}”. Probeer een profielnummer, lichttype of klantnaam.",
+  "de": "Nichts gefunden für „{q}“. Versuchen Sie eine Profilnummer, eine Lichtart oder einen Kundennamen.",
+  "sv": "Inget hittades för ”{q}”. Prova ett profilnummer, en ljustyp eller ett kundnamn."
+ },
+ "search.hint": {
+  "en": "↑ ↓ to move · Enter to open · Esc to close",
+  "lv": "↑ ↓ pārvietoties · Enter atvērt · Esc aizvērt",
+  "ru": "↑ ↓ — выбор · Enter — открыть · Esc — закрыть",
+  "nl": "↑ ↓ bewegen · Enter openen · Esc sluiten",
+  "de": "↑ ↓ wählen · Enter öffnen · Esc schließen",
+  "sv": "↑ ↓ flytta · Enter öppna · Esc stäng"
+ },
+ "search.g_profiles": {
+  "en": "Profiles",
+  "lv": "Profili",
+  "ru": "Профили",
+  "nl": "Profielen",
+  "de": "Profile",
+  "sv": "Profiler"
+ },
+ "search.g_projects": {
+  "en": "Projects",
+  "lv": "Projekti",
+  "ru": "Проекты",
+  "nl": "Projecten",
+  "de": "Projekte",
+  "sv": "Projekt"
+ },
+ "search.g_pages": {
+  "en": "Pages",
+  "lv": "Lapas",
+  "ru": "Страницы",
+  "nl": "Pagina’s",
+  "de": "Seiten",
+  "sv": "Sidor"
+ },
+ "search.g_actions": {
+  "en": "Quick actions",
+  "lv": "Ātrās darbības",
+  "ru": "Быстрые действия",
+  "nl": "Snelle acties",
+  "de": "Schnellaktionen",
+  "sv": "Snabbval"
+ },
+ "lang.hint": {
+  "en": "This page is also available in English.",
+  "lv": "Šī lapa ir pieejama arī latviski.",
+  "ru": "Эта страница есть и на русском языке.",
+  "nl": "Deze pagina is ook in het Nederlands beschikbaar.",
+  "de": "Diese Seite gibt es auch auf Deutsch.",
+  "sv": "Den här sidan finns även på svenska."
+ },
+ "lang.hint_go": {
+  "en": "Switch to English",
+  "lv": "Pārslēgt uz latviešu",
+  "ru": "Перейти на русский",
+  "nl": "Naar Nederlands",
+  "de": "Auf Deutsch wechseln",
+  "sv": "Byt till svenska"
+ },
+ "totop": {
+  "en": "Back to top",
+  "lv": "Uz augšu",
+  "ru": "Наверх",
+  "nl": "Naar boven",
+  "de": "Nach oben",
+  "sv": "Till toppen"
+ },
+ "copied": {
+  "en": "Copied",
+  "lv": "Nokopēts",
+  "ru": "Скопировано",
+  "nl": "Gekopieerd",
+  "de": "Kopiert",
+  "sv": "Kopierat"
+ },
+ "basket.toast_add": {
+  "en": "Added to your request · {n} in total.",
+  "lv": "Pievienots pieprasījumam · kopā {n}.",
+  "ru": "Добавлено в запрос · всего {n}.",
+  "nl": "Toegevoegd aan uw aanvraag · {n} in totaal.",
+  "de": "Zur Anfrage hinzugefügt · insgesamt {n}.",
+  "sv": "Tillagd i din förfrågan · {n} totalt."
+ },
+ "basket.toast_rm": {
+  "en": "Removed from your request · {n} left.",
+  "lv": "Noņemts no pieprasījuma · palika {n}.",
+  "ru": "Убрано из запроса · осталось {n}.",
+  "nl": "Verwijderd uit uw aanvraag · nog {n}.",
+  "de": "Aus der Anfrage entfernt · noch {n}.",
+  "sv": "Borttagen ur förfrågan · {n} kvar."
+ },
+ "basket.toast_open": {
+  "en": "Open request",
+  "lv": "Atvērt pieprasījumu",
+  "ru": "Открыть запрос",
+  "nl": "Aanvraag openen",
+  "de": "Anfrage öffnen",
+  "sv": "Öppna förfrågan"
+ },
+ "cmp.max": {
+  "en": "You can compare up to 3 profiles.",
+  "lv": "Var salīdzināt līdz 3 profiliem.",
+  "ru": "Сравнить можно до 3 профилей.",
+  "nl": "U kunt tot 3 profielen vergelijken.",
+  "de": "Sie können bis zu 3 Profile vergleichen.",
+  "sv": "Du kan jämföra upp till 3 profiler."
+ },
+ "cmp.title": {
+  "en": "Compare profiles",
+  "lv": "Salīdzināt profilus",
+  "ru": "Сравнить профили",
+  "nl": "Profielen vergelijken",
+  "de": "Profile vergleichen",
+  "sv": "Jämför profiler"
+ },
+ "proc.portal": {
+  "en": "Follow every step in the client portal",
+  "lv": "Sekojiet katram solim klientu portālā",
+  "ru": "Следите за каждым шагом в кабинете клиента",
+  "nl": "Volg elke stap in het klantenportaal",
+  "de": "Jeden Schritt im Kundenportal verfolgen",
+  "sv": "Följ varje steg i kundportalen"
+ },
+ "proc.fig": {
+  "en": "Back, returns, LEDs, face: switched on",
+  "lv": "Aizmugure, sāni, LED, fronte: ieslēgts",
+  "ru": "Задник, борта, светодиоды, лицо: включено",
+  "nl": "Achterkant, zijkanten, LED’s, front: aan",
+  "de": "Rückwand, Zargen, LEDs, Front: eingeschaltet",
+  "sv": "Bakstycke, sidor, LED, front: tänd"
+ },
+ "live.local": {
+  "en": "Local time at the factory",
+  "lv": "Vietējais laiks rūpnīcā",
+  "ru": "Местное время на производстве",
+  "nl": "Lokale tijd in de fabriek",
+  "de": "Ortszeit in der Fabrik",
+  "sv": "Lokal tid i fabriken"
+ },
+ "live.open": {
+  "en": "Open now",
+  "lv": "Šobrīd atvērts",
+  "ru": "Сейчас открыто",
+  "nl": "Nu geopend",
+  "de": "Jetzt geöffnet",
+  "sv": "Öppet nu"
+ },
+ "live.closed": {
+  "en": "Closed now, write to us and we’ll reply",
+  "lv": "Šobrīd slēgts, rakstiet mums, un mēs atbildēsim",
+  "ru": "Сейчас закрыто: напишите нам, и мы ответим",
+  "nl": "Nu gesloten, schrijf ons en we antwoorden",
+  "de": "Jetzt geschlossen: schreiben Sie uns, wir antworten",
+  "sv": "Stängt nu, skriv till oss så svarar vi"
+ },
+ "live.hours": {
+  "en": "{days}, {from}–{to}",
+  "lv": "{days}, {from}–{to}",
+  "ru": "{days}, {from}–{to}",
+  "nl": "{days}, {from}–{to}",
+  "de": "{days}, {from}–{to}",
+  "sv": "{days}, {from}–{to}"
+ },
+ "live.days_1_5": {
+  "en": "Monday to Friday",
+  "lv": "No pirmdienas līdz piektdienai",
+  "ru": "Понедельник–пятница",
+  "nl": "Maandag t/m vrijdag",
+  "de": "Montag bis Freitag",
+  "sv": "Måndag–fredag"
+ },
+ "live.days_1_6": {
+  "en": "Monday to Saturday",
+  "lv": "No pirmdienas līdz sestdienai",
+  "ru": "Понедельник–суббота",
+  "nl": "Maandag t/m zaterdag",
+  "de": "Montag bis Samstag",
+  "sv": "Måndag–lördag"
+ },
+ "live.days_1_7": {
+  "en": "Every day",
+  "lv": "Katru dienu",
+  "ru": "Ежедневно",
+  "nl": "Elke dag",
+  "de": "Täglich",
+  "sv": "Varje dag"
+ },
+ "p.activity": {
+  "en": "Activity",
+  "lv": "Aktivitāte",
+  "ru": "События",
+  "nl": "Activiteit",
+  "de": "Aktivität",
+  "sv": "Aktivitet"
+ },
+ "p.sites": {
+  "en": "Sites",
+  "lv": "Objekti",
+  "ru": "Объекты",
+  "nl": "Locaties",
+  "de": "Standorte",
+  "sv": "Platser"
+ },
+ "p.new_items": {
+  "en": "{n} new",
+  "lv": "{n} jauni",
+  "ru": "новых: {n}",
+  "nl": "{n} nieuw",
+  "de": "{n} neu",
+  "sv": "{n} nya"
+ },
+ "p.proofs_waiting": {
+  "en": "Proofs to approve",
+  "lv": "Maketi apstiprināšanai",
+  "ru": "Макеты на утверждение",
+  "nl": "Proeven goed te keuren",
+  "de": "Entwürfe zur Freigabe",
+  "sv": "Korrektur att godkänna"
+ },
+ "p.attention": {
+  "en": "Needs your attention",
+  "lv": "Nepieciešama jūsu uzmanība",
+  "ru": "Требует вашего внимания",
+  "nl": "Vraagt uw aandacht",
+  "de": "Braucht Ihre Aufmerksamkeit",
+  "sv": "Behöver din uppmärksamhet"
+ },
+ "p.todo_quote": {
+  "en": "Quote {no} is waiting for your decision",
+  "lv": "Piedāvājums {no} gaida jūsu lēmumu",
+  "ru": "КП {no} ждёт вашего решения",
+  "nl": "Offerte {no} wacht op uw beslissing",
+  "de": "Angebot {no} wartet auf Ihre Entscheidung",
+  "sv": "Offert {no} väntar på ditt beslut"
+ },
+ "p.todo_proof": {
+  "en": "A design proof is waiting for approval",
+  "lv": "Makets gaida apstiprinājumu",
+  "ru": "Макет ждёт утверждения",
+  "nl": "Een ontwerpproef wacht op goedkeuring",
+  "de": "Ein Entwurf wartet auf Freigabe",
+  "sv": "En korrektur väntar på godkännande"
+ },
+ "p.todo_msg": {
+  "en": "{n} new message(s) from our team",
+  "lv": "{n} jauna(s) ziņa(s) no mūsu komandas",
+  "ru": "Новые сообщения от нашей команды: {n}",
+  "nl": "{n} nieuw(e) bericht(en) van ons team",
+  "de": "{n} neue Nachricht(en) von unserem Team",
+  "sv": "{n} nytt/nya meddelande(n) från vårt team"
+ },
+ "p.todo_rate": {
+  "en": "Your sign is installed: how did we do?",
+  "lv": "Jūsu izkārtne uzstādīta: kā mums gāja?",
+  "ru": "Вывеска смонтирована: как мы справились?",
+  "nl": "Uw signing is gemonteerd: hoe deden we het?",
+  "de": "Ihre Werbeanlage ist montiert: Wie waren wir?",
+  "sv": "Er skylt är monterad: hur gick det?"
+ },
+ "p.n_items": {
+  "en": "{n} sign(s)",
+  "lv": "izkārtnes: {n}",
+  "ru": "вывесок: {n}",
+  "nl": "{n} bord(en)",
+  "de": "{n} Schild(er)",
+  "sv": "{n} skylt(ar)"
+ },
+ "p.proof": {
+  "en": "Proof",
+  "lv": "Makets",
+  "ru": "Макет",
+  "nl": "Proef",
+  "de": "Entwurf",
+  "sv": "Korrektur"
+ },
+ "p.filter": {
+  "en": "Filter requests",
+  "lv": "Filtrēt pieprasījumus",
+  "ru": "Фильтр запросов",
+  "nl": "Aanvragen filteren",
+  "de": "Anfragen filtern",
+  "sv": "Filtrera förfrågningar"
+ },
+ "p.f_all": {
+  "en": "All",
+  "lv": "Visi",
+  "ru": "Все",
+  "nl": "Alle",
+  "de": "Alle",
+  "sv": "Alla"
+ },
+ "p.f_open": {
+  "en": "In progress",
+  "lv": "Procesā",
+  "ru": "В работе",
+  "nl": "Lopend",
+  "de": "In Arbeit",
+  "sv": "Pågående"
+ },
+ "p.f_action": {
+  "en": "Needs me",
+  "lv": "Gaida mani",
+  "ru": "Ждут меня",
+  "nl": "Wacht op mij",
+  "de": "Warten auf mich",
+  "sv": "Väntar på mig"
+ },
+ "p.f_done": {
+  "en": "Finished",
+  "lv": "Pabeigti",
+  "ru": "Завершённые",
+  "nl": "Afgerond",
+  "de": "Abgeschlossen",
+  "sv": "Avslutade"
+ },
+ "p.find": {
+  "en": "Search your requests",
+  "lv": "Meklēt pieprasījumos",
+  "ru": "Поиск по запросам",
+  "nl": "Zoek in uw aanvragen",
+  "de": "Ihre Anfragen durchsuchen",
+  "sv": "Sök i dina förfrågningar"
+ },
+ "p.find_ph": {
+  "en": "Number, project, text on the sign, address…",
+  "lv": "Numurs, projekts, teksts, adrese…",
+  "ru": "Номер, проект, текст вывески, адрес…",
+  "nl": "Nummer, project, tekst, adres…",
+  "de": "Nummer, Projekt, Text, Adresse…",
+  "sv": "Nummer, projekt, text, adress…"
+ },
+ "p.nothing_found": {
+  "en": "No requests match. Try another word or show all.",
+  "lv": "Nav atbilstošu pieprasījumu. Mēģiniet citu vārdu vai rādiet visus.",
+  "ru": "Ничего не найдено. Попробуйте другое слово или покажите все.",
+  "nl": "Geen aanvragen gevonden. Probeer een ander woord of toon alles.",
+  "de": "Keine Treffer. Versuchen Sie ein anderes Wort oder zeigen Sie alle.",
+  "sv": "Inga träffar. Prova ett annat ord eller visa alla."
+ },
+ "p.readable": {
+  "en": "Readable from about {m} m · best impact up to {b} m",
+  "lv": "Salasāms no apm. {m} m · labākā iedarbība līdz {b} m",
+  "ru": "Читается примерно с {m} м · лучше всего до {b} м",
+  "nl": "Leesbaar vanaf ca. {m} m · beste effect tot {b} m",
+  "de": "Lesbar aus ca. {m} m · beste Wirkung bis {b} m",
+  "sv": "Läsbar från cirka {m} m · bäst effekt upp till {b} m"
+ },
+ "p.again": {
+  "en": "Order again",
+  "lv": "Pasūtīt vēlreiz",
+  "ru": "Повторить заказ",
+  "nl": "Opnieuw bestellen",
+  "de": "Erneut bestellen",
+  "sv": "Beställ igen"
+ },
+ "p.again_title": {
+  "en": "Repeat of {no}",
+  "lv": "{no} atkārtojums",
+  "ru": "Повтор {no}",
+  "nl": "Herhaling van {no}",
+  "de": "Wiederholung von {no}",
+  "sv": "Upprepning av {no}"
+ },
+ "p.again_note": {
+  "en": "The signs from {no} are filled in. Change anything you need before sending.",
+  "lv": "Izkārtnes no {no} ir aizpildītas. Pirms sūtīšanas mainiet visu nepieciešamo.",
+  "ru": "Вывески из {no} уже заполнены. Измените что нужно перед отправкой.",
+  "nl": "De borden uit {no} zijn ingevuld. Pas aan wat nodig is voor het verzenden.",
+  "de": "Die Schilder aus {no} sind eingetragen. Ändern Sie vor dem Senden, was nötig ist.",
+  "sv": "Skyltarna från {no} är ifyllda. Ändra det som behövs innan du skickar."
+ },
+ "p.zip": {
+  "en": "All files ({n}) as ZIP",
+  "lv": "Visi faili ({n}) ZIP formātā",
+  "ru": "Все файлы ({n}) в ZIP",
+  "nl": "Alle bestanden ({n}) als ZIP",
+  "de": "Alle Dateien ({n}) als ZIP",
+  "sv": "Alla filer ({n}) som ZIP"
+ },
+ "p.copy_link": {
+  "en": "Copy link",
+  "lv": "Kopēt saiti",
+  "ru": "Скопировать ссылку",
+  "nl": "Link kopiëren",
+  "de": "Link kopieren",
+  "sv": "Kopiera länk"
+ },
+ "p.site_saved": {
+  "en": "Saved site",
+  "lv": "Saglabāts objekts",
+  "ru": "Сохранённый объект",
+  "nl": "Opgeslagen locatie",
+  "de": "Gespeicherter Standort",
+  "sv": "Sparad plats"
+ },
+ "p.site_new": {
+  "en": "New address…",
+  "lv": "Jauna adrese…",
+  "ru": "Новый адрес…",
+  "nl": "Nieuw adres…",
+  "de": "Neue Adresse…",
+  "sv": "Ny adress…"
+ },
+ "p.site_save": {
+  "en": "Save this address to my sites",
+  "lv": "Saglabāt šo adresi manos objektos",
+  "ru": "Сохранить адрес в мои объекты",
+  "nl": "Dit adres opslaan bij mijn locaties",
+  "de": "Diese Adresse in meinen Standorten speichern",
+  "sv": "Spara adressen bland mina platser"
+ },
+ "p.site_label": {
+  "en": "Name of the site",
+  "lv": "Objekta nosaukums",
+  "ru": "Название объекта",
+  "nl": "Naam van de locatie",
+  "de": "Name des Standorts",
+  "sv": "Platsens namn"
+ },
+ "p.site_label_ph": {
+  "en": "e.g. Riga, Spice shopping centre",
+  "lv": "piem. Rīga, t/c Spice",
+  "ru": "напр. Рига, ТЦ Spice",
+  "nl": "bijv. Riga, winkelcentrum Spice",
+  "de": "z. B. Riga, Einkaufszentrum Spice",
+  "sv": "t.ex. Riga, köpcentret Spice"
+ },
+ "p.site_contact": {
+  "en": "Contact on site",
+  "lv": "Kontaktpersona objektā",
+  "ru": "Контакт на объекте",
+  "nl": "Contactpersoon ter plaatse",
+  "de": "Ansprechpartner vor Ort",
+  "sv": "Kontakt på plats"
+ },
+ "p.site_notes": {
+  "en": "Notes for mounting",
+  "lv": "Piezīmes montāžai",
+  "ru": "Заметки для монтажа",
+  "nl": "Notities voor montage",
+  "de": "Hinweise zur Montage",
+  "sv": "Anteckningar för montering"
+ },
+ "p.site_notes_ph": {
+  "en": "Facade, height, access hours, lift needed…",
+  "lv": "Fasāde, augstums, piekļuves laiks, vajadzīgs pacēlājs…",
+  "ru": "Фасад, высота, часы доступа, нужен подъёмник…",
+  "nl": "Gevel, hoogte, toegangstijden, hoogwerker nodig…",
+  "de": "Fassade, Höhe, Zugangszeiten, Hubbühne nötig…",
+  "sv": "Fasad, höjd, tillträdestider, lift behövs…"
+ },
+ "p.site_add": {
+  "en": "Add a site",
+  "lv": "Pievienot objektu",
+  "ru": "Добавить объект",
+  "nl": "Locatie toevoegen",
+  "de": "Standort hinzufügen",
+  "sv": "Lägg till plats"
+ },
+ "p.site_added": {
+  "en": "Site saved.",
+  "lv": "Objekts saglabāts.",
+  "ru": "Объект сохранён.",
+  "nl": "Locatie opgeslagen.",
+  "de": "Standort gespeichert.",
+  "sv": "Platsen sparad."
+ },
+ "p.site_deleted": {
+  "en": "Site removed.",
+  "lv": "Objekts noņemts.",
+  "ru": "Объект удалён.",
+  "nl": "Locatie verwijderd.",
+  "de": "Standort entfernt.",
+  "sv": "Platsen borttagen."
+ },
+ "p.site_delete_q": {
+  "en": "Remove this site? Requests that used it keep their address.",
+  "lv": "Noņemt šo objektu? Pieprasījumos adrese saglabāsies.",
+  "ru": "Удалить объект? В запросах адрес сохранится.",
+  "nl": "Deze locatie verwijderen? Aanvragen behouden hun adres.",
+  "de": "Standort entfernen? Anfragen behalten ihre Adresse.",
+  "sv": "Ta bort platsen? Förfrågningar behåller sin adress."
+ },
+ "p.site_used": {
+  "en": "Used in {n} request(s)",
+  "lv": "Izmantots pieprasījumos: {n}",
+  "ru": "Использован в запросах: {n}",
+  "nl": "Gebruikt in {n} aanvraag/aanvragen",
+  "de": "In {n} Anfrage(n) verwendet",
+  "sv": "Använd i {n} förfrågan/förfrågningar"
+ },
+ "p.sites_lead": {
+  "en": "Keep your shops, branches and building sites here. Pick one when you send a request, and the address and mounting notes come with it.",
+  "lv": "Glabājiet šeit savus veikalus, filiāles un objektus. Izvēlieties vienu, sūtot pieprasījumu, un adrese tiks pievienota.",
+  "ru": "Храните здесь магазины, филиалы и объекты. Выберите объект при отправке запроса, и адрес подставится сам.",
+  "nl": "Bewaar hier uw winkels, vestigingen en bouwplaatsen. Kies er een bij een aanvraag en het adres gaat mee.",
+  "de": "Speichern Sie hier Filialen, Geschäfte und Baustellen. Wählen Sie einen Standort bei der Anfrage, die Adresse kommt mit.",
+  "sv": "Spara era butiker, filialer och byggplatser här. Välj en när du skickar en förfrågan så följer adressen med."
+ },
+ "p.sites_none": {
+  "en": "No saved sites yet.",
+  "lv": "Saglabātu objektu vēl nav.",
+  "ru": "Сохранённых объектов пока нет.",
+  "nl": "Nog geen opgeslagen locaties.",
+  "de": "Noch keine gespeicherten Standorte.",
+  "sv": "Inga sparade platser än."
+ },
+ "p.edit": {
+  "en": "Edit",
+  "lv": "Labot",
+  "ru": "Изменить",
+  "nl": "Bewerken",
+  "de": "Bearbeiten",
+  "sv": "Redigera"
+ },
+ "p.draft_found": {
+  "en": "You have an unsent request draft on this device.",
+  "lv": "Šajā ierīcē ir nenosūtīts pieprasījuma melnraksts.",
+  "ru": "На этом устройстве есть неотправленный черновик запроса.",
+  "nl": "Er staat een niet-verzonden concept op dit apparaat.",
+  "de": "Auf diesem Gerät gibt es einen nicht gesendeten Entwurf.",
+  "sv": "Det finns ett osänt utkast på den här enheten."
+ },
+ "p.draft_restore": {
+  "en": "Restore",
+  "lv": "Atjaunot",
+  "ru": "Восстановить",
+  "nl": "Herstellen",
+  "de": "Wiederherstellen",
+  "sv": "Återställ"
+ },
+ "p.draft_drop": {
+  "en": "Discard",
+  "lv": "Dzēst",
+  "ru": "Удалить",
+  "nl": "Weggooien",
+  "de": "Verwerfen",
+  "sv": "Släng"
+ },
+ "p.proofs": {
+  "en": "Design proofs",
+  "lv": "Dizaina maketi",
+  "ru": "Макеты",
+  "nl": "Ontwerpproeven",
+  "de": "Entwürfe",
+  "sv": "Korrektur"
+ },
+ "p.proofs_lead": {
+  "en": "Check the drawing carefully: we start cutting after you approve it.",
+  "lv": "Rūpīgi pārbaudiet rasējumu: griešanu sākam pēc jūsu apstiprinājuma.",
+  "ru": "Внимательно проверьте макет: резку начинаем после вашего утверждения.",
+  "nl": "Controleer de tekening goed: we beginnen met snijden na uw goedkeuring.",
+  "de": "Prüfen Sie die Zeichnung genau: Wir schneiden erst nach Ihrer Freigabe.",
+  "sv": "Kontrollera ritningen noga: vi börjar skära efter ditt godkännande."
+ },
+ "p.proof_v": {
+  "en": "Proof v{v}",
+  "lv": "Makets v{v}",
+  "ru": "Макет v{v}",
+  "nl": "Proef v{v}",
+  "de": "Entwurf v{v}",
+  "sv": "Korrektur v{v}"
+ },
+ "p.proof_ok": {
+  "en": "Approve the proof",
+  "lv": "Apstiprināt maketu",
+  "ru": "Утвердить макет",
+  "nl": "Proef goedkeuren",
+  "de": "Entwurf freigeben",
+  "sv": "Godkänn korrekturen"
+ },
+ "p.proof_changes": {
+  "en": "Ask for changes",
+  "lv": "Lūgt izmaiņas",
+  "ru": "Попросить правки",
+  "nl": "Wijzigingen vragen",
+  "de": "Änderungen anfordern",
+  "sv": "Be om ändringar"
+ },
+ "p.proof_changes_what": {
+  "en": "What should we change?",
+  "lv": "Ko mums mainīt?",
+  "ru": "Что исправить?",
+  "nl": "Wat moeten we wijzigen?",
+  "de": "Was sollen wir ändern?",
+  "sv": "Vad ska vi ändra?"
+ },
+ "p.proof_changes_send": {
+  "en": "Send changes",
+  "lv": "Nosūtīt izmaiņas",
+  "ru": "Отправить правки",
+  "nl": "Wijzigingen versturen",
+  "de": "Änderungen senden",
+  "sv": "Skicka ändringar"
+ },
+ "p.proof_ok_done": {
+  "en": "Thank you, the proof is approved. Production can start.",
+  "lv": "Paldies, makets apstiprināts. Ražošana var sākties.",
+  "ru": "Спасибо, макет утверждён. Можно начинать производство.",
+  "nl": "Dank u, de proef is goedgekeurd. De productie kan starten.",
+  "de": "Danke, der Entwurf ist freigegeben. Die Fertigung kann beginnen.",
+  "sv": "Tack, korrekturen är godkänd. Produktionen kan börja."
+ },
+ "p.proof_changes_done": {
+  "en": "Thank you, we’ll send a new version.",
+  "lv": "Paldies, nosūtīsim jaunu versiju.",
+  "ru": "Спасибо, мы пришлём новую версию.",
+  "nl": "Dank u, we sturen een nieuwe versie.",
+  "de": "Danke, wir senden eine neue Version.",
+  "sv": "Tack, vi skickar en ny version."
+ },
+ "p.proof_need_note": {
+  "en": "Please write what should change.",
+  "lv": "Lūdzu, uzrakstiet, kas jāmaina.",
+  "ru": "Пожалуйста, напишите, что исправить.",
+  "nl": "Schrijf alstublieft wat er moet veranderen.",
+  "de": "Bitte schreiben Sie, was geändert werden soll.",
+  "sv": "Skriv vad som ska ändras."
+ },
+ "p.proof_signed": {
+  "en": "Approved by {name}, {date}",
+  "lv": "Apstiprināja {name}, {date}",
+  "ru": "Утвердил(а) {name}, {date}",
+  "nl": "Goedgekeurd door {name}, {date}",
+  "de": "Freigegeben von {name}, {date}",
+  "sv": "Godkänd av {name}, {date}"
+ },
+ "p.pf.pending": {
+  "en": "Waiting for you",
+  "lv": "Gaida jūs",
+  "ru": "Ждёт вас",
+  "nl": "Wacht op u",
+  "de": "Wartet auf Sie",
+  "sv": "Väntar på dig"
+ },
+ "p.pf.approved": {
+  "en": "Approved",
+  "lv": "Apstiprināts",
+  "ru": "Утверждён",
+  "nl": "Goedgekeurd",
+  "de": "Freigegeben",
+  "sv": "Godkänd"
+ },
+ "p.pf.changes": {
+  "en": "Changes asked",
+  "lv": "Prasītas izmaiņas",
+  "ru": "Нужны правки",
+  "nl": "Wijzigingen gevraagd",
+  "de": "Änderungen angefordert",
+  "sv": "Ändringar begärda"
+ },
+ "p.pf.superseded": {
+  "en": "Replaced",
+  "lv": "Aizstāts",
+  "ru": "Заменён",
+  "nl": "Vervangen",
+  "de": "Ersetzt",
+  "sv": "Ersatt"
+ },
+ "p.rate_h": {
+  "en": "How did we do?",
+  "lv": "Kā mums gāja?",
+  "ru": "Как мы справились?",
+  "nl": "Hoe deden we het?",
+  "de": "Wie waren wir?",
+  "sv": "Hur gick det?"
+ },
+ "p.rate_lead": {
+  "en": "Your sign is installed. One click helps our team, and a comment helps even more.",
+  "lv": "Jūsu izkārtne ir uzstādīta. Viens klikšķis palīdz mūsu komandai, komentārs vēl vairāk.",
+  "ru": "Вывеска смонтирована. Один клик помогает нашей команде, а комментарий ещё больше.",
+  "nl": "Uw signing is gemonteerd. Eén klik helpt ons team, een opmerking nog meer.",
+  "de": "Ihre Werbeanlage ist montiert. Ein Klick hilft unserem Team, ein Kommentar noch mehr.",
+  "sv": "Er skylt är monterad. Ett klick hjälper vårt team, en kommentar ännu mer."
+ },
+ "p.rate_comment": {
+  "en": "Comment (optional)",
+  "lv": "Komentārs (pēc izvēles)",
+  "ru": "Комментарий (необязательно)",
+  "nl": "Opmerking (optioneel)",
+  "de": "Kommentar (optional)",
+  "sv": "Kommentar (valfritt)"
+ },
+ "p.rate_send": {
+  "en": "Send feedback",
+  "lv": "Nosūtīt atsauksmi",
+  "ru": "Отправить отзыв",
+  "nl": "Feedback versturen",
+  "de": "Feedback senden",
+  "sv": "Skicka omdöme"
+ },
+ "p.rate_update": {
+  "en": "Update feedback",
+  "lv": "Atjaunināt atsauksmi",
+  "ru": "Обновить отзыв",
+  "nl": "Feedback bijwerken",
+  "de": "Feedback aktualisieren",
+  "sv": "Uppdatera omdöme"
+ },
+ "p.thanks_feedback": {
+  "en": "Thank you for your feedback!",
+  "lv": "Paldies par atsauksmi!",
+  "ru": "Спасибо за отзыв!",
+  "nl": "Bedankt voor uw feedback!",
+  "de": "Danke für Ihr Feedback!",
+  "sv": "Tack för ditt omdöme!"
+ },
+ "p.new_msg_toast": {
+  "en": "New message on this request",
+  "lv": "Jauna ziņa šajā pieprasījumā",
+  "ru": "Новое сообщение по этому запросу",
+  "nl": "Nieuw bericht bij deze aanvraag",
+  "de": "Neue Nachricht zu dieser Anfrage",
+  "sv": "Nytt meddelande i den här förfrågan"
+ },
+ "p.ev_created": {
+  "en": "Request created",
+  "lv": "Pieprasījums izveidots",
+  "ru": "Запрос создан",
+  "nl": "Aanvraag aangemaakt",
+  "de": "Anfrage erstellt",
+  "sv": "Förfrågan skapad"
+ },
+ "p.ev_status": {
+  "en": "Status: {status}",
+  "lv": "Statuss: {status}",
+  "ru": "Статус: {status}",
+  "nl": "Status: {status}",
+  "de": "Status: {status}",
+  "sv": "Status: {status}"
+ },
+ "p.ev_quote_sent": {
+  "en": "Quote {no} sent to you",
+  "lv": "Jums nosūtīts piedāvājums {no}",
+  "ru": "Вам отправлено КП {no}",
+  "nl": "Offerte {no} naar u verzonden",
+  "de": "Angebot {no} an Sie gesendet",
+  "sv": "Offert {no} skickad till dig"
+ },
+ "p.ev_quote_accepted": {
+  "en": "Quote {no} accepted",
+  "lv": "Piedāvājums {no} pieņemts",
+  "ru": "КП {no} принято",
+  "nl": "Offerte {no} geaccepteerd",
+  "de": "Angebot {no} angenommen",
+  "sv": "Offert {no} accepterad"
+ },
+ "p.ev_quote_declined": {
+  "en": "Quote {no} declined",
+  "lv": "Piedāvājums {no} noraidīts",
+  "ru": "КП {no} отклонено",
+  "nl": "Offerte {no} afgewezen",
+  "de": "Angebot {no} abgelehnt",
+  "sv": "Offert {no} avböjd"
+ },
+ "p.ev_proof_posted": {
+  "en": "Proof v{v} ready for your approval",
+  "lv": "Makets v{v} gatavs apstiprināšanai",
+  "ru": "Макет v{v} готов к утверждению",
+  "nl": "Proef v{v} klaar voor goedkeuring",
+  "de": "Entwurf v{v} bereit zur Freigabe",
+  "sv": "Korrektur v{v} klar för godkännande"
+ },
+ "p.ev_proof_approved": {
+  "en": "Proof v{v} approved",
+  "lv": "Makets v{v} apstiprināts",
+  "ru": "Макет v{v} утверждён",
+  "nl": "Proef v{v} goedgekeurd",
+  "de": "Entwurf v{v} freigegeben",
+  "sv": "Korrektur v{v} godkänd"
+ },
+ "p.ev_proof_changes": {
+  "en": "Changes asked on proof v{v}",
+  "lv": "Lūgtas izmaiņas maketā v{v}",
+  "ru": "Запрошены правки макета v{v}",
+  "nl": "Wijzigingen gevraagd op proef v{v}",
+  "de": "Änderungen an Entwurf v{v} angefordert",
+  "sv": "Ändringar begärda på korrektur v{v}"
+ },
+ "p.ev_message": {
+  "en": "Message from {name}",
+  "lv": "Ziņa no {name}",
+  "ru": "Сообщение от {name}",
+  "nl": "Bericht van {name}",
+  "de": "Nachricht von {name}",
+  "sv": "Meddelande från {name}"
+ },
+ "p.new": {
+  "en": "New",
+  "lv": "Jauns",
+  "ru": "Новое",
+  "nl": "Nieuw",
+  "de": "Neu",
+  "sv": "Nytt"
+ },
+ "p.activity_none": {
+  "en": "Nothing has happened on your requests yet.",
+  "lv": "Jūsu pieprasījumos vēl nekas nav noticis.",
+  "ru": "По вашим запросам пока ничего не происходило.",
+  "nl": "Er is nog niets gebeurd met uw aanvragen.",
+  "de": "Bei Ihren Anfragen ist noch nichts passiert.",
+  "sv": "Inget har hänt med dina förfrågningar än."
+ },
+ "p.mail.what_proof": {
+  "en": "Proof v{v} is ready for your approval.",
+  "lv": "Makets v{v} ir gatavs jūsu apstiprinājumam.",
+  "ru": "Макет v{v} готов к вашему утверждению.",
+  "nl": "Proef v{v} is klaar voor uw goedkeuring.",
+  "de": "Entwurf v{v} ist bereit zur Freigabe.",
+  "sv": "Korrektur v{v} är klar för ditt godkännande."
+ },
+ "cmp.add": {
+  "en": "Compare",
+  "lv": "Salīdzināt",
+  "ru": "Сравнить",
+  "nl": "Vergelijken",
+  "de": "Vergleichen",
+  "sv": "Jämför"
+ },
+ "cmp.clear": {
+  "en": "Clear comparison",
+  "lv": "Notīrīt salīdzinājumu",
+  "ru": "Очистить сравнение",
+  "nl": "Vergelijking wissen",
+  "de": "Vergleich leeren",
+  "sv": "Rensa jämförelsen"
+ },
+ "cmp.n": {
+  "en": "{n} of 3 to compare",
+  "lv": "{n} no 3 salīdzināšanai",
+  "ru": "{n} из 3 для сравнения",
+  "nl": "{n} van 3 om te vergelijken",
+  "de": "{n} von 3 zum Vergleich",
+  "sv": "{n} av 3 att jämföra"
+ },
+ "cmp.light": {
+  "en": "Light",
+  "lv": "Gaisma",
+  "ru": "Подсветка",
+  "nl": "Licht",
+  "de": "Licht",
+  "sv": "Ljus"
+ },
+ "cmp.custom": {
+  "en": "Custom depth",
+  "lv": "Individuāls dziļums",
+  "ru": "Глубина на заказ",
+  "nl": "Diepte op maat",
+  "de": "Tiefe nach Maß",
+  "sv": "Djup på beställning"
+ },
+ "cmp.yes": {
+  "en": "Yes",
+  "lv": "Jā",
+  "ru": "Да",
+  "nl": "Ja",
+  "de": "Ja",
+  "sv": "Ja"
+ },
+ "cmp.no": {
+  "en": "No",
+  "lv": "Nē",
+  "ru": "Нет",
+  "nl": "Nee",
+  "de": "Nein",
+  "sv": "Nej"
+ },
+ "cmp.open_profile": {
+  "en": "Open profile",
+  "lv": "Atvērt profilu",
+  "ru": "Открыть профиль",
+  "nl": "Profiel openen",
+  "de": "Profil öffnen",
+  "sv": "Öppna profilen"
+ },
+ "cmp.remove": {
+  "en": "Remove from comparison",
+  "lv": "Noņemt no salīdzinājuma",
+  "ru": "Убрать из сравнения",
+  "nl": "Uit vergelijking halen",
+  "de": "Aus dem Vergleich entfernen",
+  "sv": "Ta bort ur jämförelsen"
+ },
+ "pv.kicker": {
+  "en": "Night preview",
+  "lv": "Nakts priekšskatījums",
+  "ru": "Ночной просмотр",
+  "nl": "Nachtvoorbeeld",
+  "de": "Nachtvorschau",
+  "sv": "Nattförhandsvisning"
+ },
+ "pv.title": {
+  "en": "See your sign switched on",
+  "lv": "Apskatiet savu izkārtni ieslēgtu",
+  "ru": "Посмотрите свою вывеску включённой",
+  "nl": "Zie uw reclame aan",
+  "de": "Sehen Sie Ihr Schild eingeschaltet",
+  "sv": "Se er skylt tänd"
+ },
+ "pv.lead": {
+  "en": "Type your text, choose the light and the colours, then switch it on. You can use a photo of your own facade: it stays on your device.",
+  "lv": "Ierakstiet tekstu, izvēlieties gaismu un krāsas un ieslēdziet. Varat izmantot savas fasādes fotoattēlu: tas paliek jūsu ierīcē.",
+  "ru": "Введите текст, выберите подсветку и цвета, затем включите. Можно взять фото своего фасада: оно остаётся на вашем устройстве.",
+  "nl": "Typ uw tekst, kies het licht en de kleuren en zet hem aan. U kunt een foto van uw eigen gevel gebruiken: die blijft op uw apparaat.",
+  "de": "Text eingeben, Licht und Farben wählen, dann einschalten. Sie können ein Foto Ihrer eigenen Fassade verwenden: Es bleibt auf Ihrem Gerät.",
+  "sv": "Skriv er text, välj ljus och färger och tänd skylten. Ni kan använda ett foto av er egen fasad: det stannar på er enhet."
+ },
+ "pv.text": {
+  "en": "Your text",
+  "lv": "Jūsu teksts",
+  "ru": "Ваш текст",
+  "nl": "Uw tekst",
+  "de": "Ihr Text",
+  "sv": "Er text"
+ },
+ "pv.sample": {
+  "en": "YOUR SIGN",
+  "lv": "JŪSU IZKĀRTNE",
+  "ru": "ВАША ВЫВЕСКА",
+  "nl": "UW RECLAME",
+  "de": "IHR SCHILD",
+  "sv": "ER SKYLT"
+ },
+ "pv.light": {
+  "en": "Light",
+  "lv": "Gaisma",
+  "ru": "Подсветка",
+  "nl": "Verlichting",
+  "de": "Beleuchtung",
+  "sv": "Belysning"
+ },
+ "pv.face": {
+  "en": "Face",
+  "lv": "Fronte",
+  "ru": "Лицевая часть",
+  "nl": "Front",
+  "de": "Front",
+  "sv": "Front"
+ },
+ "pv.led": {
+  "en": "LED colour",
+  "lv": "LED krāsa",
+  "ru": "Цвет светодиодов",
+  "nl": "LED-kleur",
+  "de": "LED-Farbe",
+  "sv": "LED-färg"
+ },
+ "pv.ret": {
+  "en": "Returns",
+  "lv": "Sāni",
+  "ru": "Борта",
+  "nl": "Zijkanten",
+  "de": "Zargen",
+  "sv": "Sidor"
+ },
+ "pv.wall": {
+  "en": "Wall",
+  "lv": "Siena",
+  "ru": "Стена",
+  "nl": "Gevel",
+  "de": "Fassade",
+  "sv": "Fasad"
+ },
+ "pv.size": {
+  "en": "Size on the wall",
+  "lv": "Izmērs uz sienas",
+  "ru": "Размер на стене",
+  "nl": "Formaat op de gevel",
+  "de": "Größe an der Wand",
+  "sv": "Storlek på väggen"
+ },
+ "pv.height": {
+  "en": "Letter height, mm",
+  "lv": "Burtu augstums, mm",
+  "ru": "Высота букв, мм",
+  "nl": "Letterhoogte, mm",
+  "de": "Buchstabenhöhe, mm",
+  "sv": "Bokstavshöjd, mm"
+ },
+ "pv.on": {
+  "en": "Switch on",
+  "lv": "Ieslēgt",
+  "ru": "Включить",
+  "nl": "Aanzetten",
+  "de": "Einschalten",
+  "sv": "Tänd"
+ },
+ "pv.off": {
+  "en": "Switch off",
+  "lv": "Izslēgt",
+  "ru": "Выключить",
+  "nl": "Uitzetten",
+  "de": "Ausschalten",
+  "sv": "Släck"
+ },
+ "pv.png": {
+  "en": "Download picture",
+  "lv": "Lejupielādēt attēlu",
+  "ru": "Скачать картинку",
+  "nl": "Afbeelding downloaden",
+  "de": "Bild herunterladen",
+  "sv": "Ladda ner bild"
+ },
+ "pv.request": {
+  "en": "Request this sign",
+  "lv": "Pieprasīt šo izkārtni",
+  "ru": "Запросить эту вывеску",
+  "nl": "Deze reclame aanvragen",
+  "de": "Dieses Schild anfragen",
+  "sv": "Begär den här skylten"
+ },
+ "pv.attach": {
+  "en": "Attach to my request",
+  "lv": "Pievienot pieprasījumam",
+  "ru": "Приложить к запросу",
+  "nl": "Toevoegen aan mijn aanvraag",
+  "de": "Zur Anfrage hinzufügen",
+  "sv": "Bifoga till min förfrågan"
+ },
+ "pv.attached": {
+  "en": "Night preview attached to your request.",
+  "lv": "Nakts priekšskatījums pievienots pieprasījumam.",
+  "ru": "Ночной просмотр приложен к запросу.",
+  "nl": "Nachtvoorbeeld toegevoegd aan uw aanvraag.",
+  "de": "Nachtvorschau zur Anfrage hinzugefügt.",
+  "sv": "Nattförhandsvisningen är bifogad."
+ },
+ "pv.from_profile": {
+  "en": "Your night preview from the profile page is attached. You can add more details below.",
+  "lv": "Jūsu nakts priekšskatījums no profila lapas ir pievienots. Zemāk varat pievienot vairāk informācijas.",
+  "ru": "Ваш ночной просмотр со страницы профиля приложен. Ниже можно добавить подробности.",
+  "nl": "Uw nachtvoorbeeld van de profielpagina is toegevoegd. Hieronder kunt u meer details geven.",
+  "de": "Ihre Nachtvorschau von der Profilseite ist angehängt. Unten können Sie weitere Angaben machen.",
+  "sv": "Er nattförhandsvisning från profilsidan är bifogad. Lägg till fler detaljer nedan."
+ },
+ "pv.drag": {
+  "en": "Drag the sign to move it, or use the arrow keys.",
+  "lv": "Velciet izkārtni, lai to pārvietotu, vai izmantojiet bultiņu taustiņus.",
+  "ru": "Перетащите вывеску или двигайте её стрелками.",
+  "nl": "Sleep de reclame om hem te verplaatsen of gebruik de pijltjestoetsen.",
+  "de": "Schild ziehen oder mit den Pfeiltasten verschieben.",
+  "sv": "Dra skylten för att flytta den, eller använd piltangenterna."
+ },
+ "pv.scale": {
+  "en": "Letters {h} mm high · readable from about {m} m",
+  "lv": "Burti {h} mm augsti · salasāmi no apm. {m} m",
+  "ru": "Буквы высотой {h} мм · читаются примерно с {m} м",
+  "nl": "Letters {h} mm hoog · leesbaar vanaf ca. {m} m",
+  "de": "Buchstaben {h} mm hoch · lesbar aus ca. {m} m",
+  "sv": "Bokstäver {h} mm höga · läsbara från cirka {m} m"
+ },
+ "pv.figure": {
+  "en": "figure for scale: 1.8 m",
+  "lv": "mēroga figūra: 1,8 m",
+  "ru": "фигура для масштаба: 1,8 м",
+  "nl": "figuur voor schaal: 1,8 m",
+  "de": "Figur zum Maßstab: 1,8 m",
+  "sv": "figur för skala: 1,8 m"
+ },
+ "pv.alt": {
+  "en": "Sign preview: “{text}”, {light}, {face} face, {led} light, {wall}, {state}.",
+  "lv": "Izkārtnes priekšskatījums: “{text}”, {light}, fronte {face}, gaisma {led}, {wall}, {state}.",
+  "ru": "Просмотр вывески: «{text}», {light}, лицо {face}, свет {led}, {wall}, {state}.",
+  "nl": "Voorbeeld: “{text}”, {light}, front {face}, licht {led}, {wall}, {state}.",
+  "de": "Vorschau: „{text}“, {light}, Front {face}, Licht {led}, {wall}, {state}.",
+  "sv": "Förhandsvisning: ”{text}”, {light}, front {face}, ljus {led}, {wall}, {state}."
+ },
+ "pv.state_on": {
+  "en": "switched on at night",
+  "lv": "ieslēgta naktī",
+  "ru": "включена ночью",
+  "nl": "s nachts aan",
+  "de": "nachts eingeschaltet",
+  "sv": "tänd på natten"
+ },
+ "pv.state_off": {
+  "en": "by day",
+  "lv": "dienā",
+  "ru": "днём",
+  "nl": "overdag",
+  "de": "bei Tag",
+  "sv": "på dagen"
+ },
+ "pv.summary": {
+  "en": "Night preview: {light}; face {face}; LED {led}; returns {ret}; letters {h} mm",
+  "lv": "Nakts priekšskatījums: {light}; fronte {face}; LED {led}; sāni {ret}; burti {h} mm",
+  "ru": "Ночной просмотр: {light}; лицо {face}; светодиоды {led}; борта {ret}; буквы {h} мм",
+  "nl": "Nachtvoorbeeld: {light}; front {face}; LED {led}; zijkanten {ret}; letters {h} mm",
+  "de": "Nachtvorschau: {light}; Front {face}; LED {led}; Zargen {ret}; Buchstaben {h} mm",
+  "sv": "Nattförhandsvisning: {light}; front {face}; LED {led}; sidor {ret}; bokstäver {h} mm"
+ },
+ "pv.note": {
+  "en": "For orientation only: the real sign is drawn to your artwork and your brand colours, and you approve a proof first.",
+  "lv": "Tikai orientācijai: īstā izkārtne tiek zīmēta pēc jūsu maketa un zīmola krāsām, un vispirms jūs apstiprināt maketu.",
+  "ru": "Только для ориентира: настоящая вывеска делается по вашему макету и фирменным цветам, и сначала вы утверждаете макет.",
+  "nl": "Alleen ter indicatie: de echte reclame wordt getekend naar uw ontwerp en huiskleuren, en u keurt eerst een proef goed.",
+  "de": "Nur zur Orientierung: Das echte Schild entsteht nach Ihrer Vorlage und Ihren Markenfarben, und Sie geben zuerst einen Entwurf frei.",
+  "sv": "Endast som vägledning: den riktiga skylten ritas efter ert original och era profilfärger, och ni godkänner ett korrektur först."
+ },
+ "pv.photo_hint": {
+  "en": "Your photo is not uploaded anywhere.",
+  "lv": "Jūsu foto netiek nekur augšupielādēts.",
+  "ru": "Ваше фото никуда не загружается.",
+  "nl": "Uw foto wordt nergens geüpload.",
+  "de": "Ihr Foto wird nirgends hochgeladen.",
+  "sv": "Ert foto laddas inte upp någonstans."
+ },
+ "pv.open": {
+  "en": "Night preview",
+  "lv": "Nakts priekšskatījums",
+  "ru": "Ночной просмотр",
+  "nl": "Nachtvoorbeeld",
+  "de": "Nachtvorschau",
+  "sv": "Nattförhandsvisning"
+ },
+ "pv.close": {
+  "en": "Close",
+  "lv": "Aizvērt",
+  "ru": "Закрыть",
+  "nl": "Sluiten",
+  "de": "Schließen",
+  "sv": "Stäng"
+ },
+ "pv.c.white": {
+  "en": "white",
+  "lv": "balta",
+  "ru": "белый",
+  "nl": "wit",
+  "de": "weiß",
+  "sv": "vit"
+ },
+ "pv.c.red": {
+  "en": "red",
+  "lv": "sarkana",
+  "ru": "красный",
+  "nl": "rood",
+  "de": "rot",
+  "sv": "röd"
+ },
+ "pv.c.yellow": {
+  "en": "yellow",
+  "lv": "dzeltena",
+  "ru": "жёлтый",
+  "nl": "geel",
+  "de": "gelb",
+  "sv": "gul"
+ },
+ "pv.c.blue": {
+  "en": "blue",
+  "lv": "zila",
+  "ru": "синий",
+  "nl": "blauw",
+  "de": "blau",
+  "sv": "blå"
+ },
+ "pv.c.black": {
+  "en": "black",
+  "lv": "melna",
+  "ru": "чёрный",
+  "nl": "zwart",
+  "de": "schwarz",
+  "sv": "svart"
+ },
+ "pv.c.silver": {
+  "en": "aluminium",
+  "lv": "alumīnijs",
+  "ru": "алюминий",
+  "nl": "aluminium",
+  "de": "Aluminium",
+  "sv": "aluminium"
+ },
+ "pv.c.warm": {
+  "en": "warm white",
+  "lv": "silti balta",
+  "ru": "тёплый белый",
+  "nl": "warmwit",
+  "de": "warmweiß",
+  "sv": "varmvit"
+ },
+ "pv.c.cool": {
+  "en": "cool white",
+  "lv": "auksti balta",
+  "ru": "холодный белый",
+  "nl": "koelwit",
+  "de": "kaltweiß",
+  "sv": "kallvit"
+ },
+ "pv.c.amber": {
+  "en": "amber",
+  "lv": "dzintara",
+  "ru": "янтарный",
+  "nl": "amber",
+  "de": "bernstein",
+  "sv": "bärnsten"
+ },
+ "pv.w.brick": {
+  "en": "Brick",
+  "lv": "Ķieģelis",
+  "ru": "Кирпич",
+  "nl": "Baksteen",
+  "de": "Ziegel",
+  "sv": "Tegel"
+ },
+ "pv.w.plaster": {
+  "en": "Plaster",
+  "lv": "Apmetums",
+  "ru": "Штукатурка",
+  "nl": "Stucwerk",
+  "de": "Putz",
+  "sv": "Puts"
+ },
+ "pv.w.glass": {
+  "en": "Shop window",
+  "lv": "Skatlogs",
+  "ru": "Витрина",
+  "nl": "Etalage",
+  "de": "Schaufenster",
+  "sv": "Skyltfönster"
+ },
+ "pv.w.panel": {
+  "en": "Graphite panel",
+  "lv": "Grafīta panelis",
+  "ru": "Графитовая панель",
+  "nl": "Grafiet paneel",
+  "de": "Graphitpaneel",
+  "sv": "Grafitpanel"
+ },
+ "pv.w.photo": {
+  "en": "My facade photo",
+  "lv": "Mana fasādes foto",
+  "ru": "Фото моего фасада",
+  "nl": "Foto van mijn gevel",
+  "de": "Foto meiner Fassade",
+  "sv": "Foto av min fasad"
+ },
+ "p.cc": {
+  "en": "Also send updates to",
+  "lv": "Atjauninājumus sūtīt arī uz",
+  "ru": "Также отправлять уведомления на",
+  "nl": "Updates ook sturen naar",
+  "de": "Benachrichtigungen auch an",
+  "sv": "Skicka även uppdateringar till"
+ },
+ "p.cc_hint": {
+  "en": "Up to 3 e-mail addresses, separated by commas (accounting, site manager …). They get updates on your requests, never login links.",
+  "lv": "Līdz 3 e-pasta adresēm, atdalītām ar komatiem (grāmatvedība, objekta vadītājs …). Tās saņem pieprasījumu atjauninājumus, nekad ne pieteikšanās saites.",
+  "ru": "До 3 адресов через запятую (бухгалтерия, прораб …). Они получают новости по запросам, но никогда не ссылки для входа.",
+  "nl": "Maximaal 3 e-mailadressen, gescheiden door komma’s (boekhouding, uitvoerder …). Zij krijgen updates over uw aanvragen, nooit inloglinks.",
+  "de": "Bis zu 3 E-Mail-Adressen, durch Kommas getrennt (Buchhaltung, Bauleitung …). Sie erhalten Neuigkeiten zu Ihren Anfragen, nie Anmeldelinks.",
+  "sv": "Upp till 3 e-postadresser, åtskilda med kommatecken (ekonomi, platschef …). De får uppdateringar om era förfrågningar, aldrig inloggningslänkar."
+ },
+ "p.cc_err": {
+  "en": "Please check the extra e-mail addresses (up to 3, separated by commas).",
+  "lv": "Lūdzu, pārbaudiet papildu e-pasta adreses (līdz 3, atdalītas ar komatiem).",
+  "ru": "Проверьте дополнительные адреса (до 3, через запятую).",
+  "nl": "Controleer de extra e-mailadressen (maximaal 3, gescheiden door komma’s).",
+  "de": "Bitte prüfen Sie die zusätzlichen E-Mail-Adressen (bis zu 3, durch Kommas getrennt).",
+  "sv": "Kontrollera de extra e-postadresserna (upp till 3, åtskilda med kommatecken)."
+ },
+ "p.todo_install": {
+  "en": "Confirm the installation date: {date}",
+  "lv": "Apstipriniet montāžas datumu: {date}",
+  "ru": "Подтвердите дату монтажа: {date}",
+  "nl": "Bevestig de montagedatum: {date}",
+  "de": "Montagetermin bestätigen: {date}",
+  "sv": "Bekräfta monteringsdatum: {date}"
+ },
+ "p.install_h": {
+  "en": "Installation",
+  "lv": "Montāža",
+  "ru": "Монтаж",
+  "nl": "Montage",
+  "de": "Montage",
+  "sv": "Montering"
+ },
+ "p.install_crew": {
+  "en": "Crew",
+  "lv": "Brigāde",
+  "ru": "Бригада",
+  "nl": "Ploeg",
+  "de": "Team",
+  "sv": "Montörer"
+ },
+ "p.install_st_proposed": {
+  "en": "Please confirm",
+  "lv": "Lūdzu, apstipriniet",
+  "ru": "Подтвердите, пожалуйста",
+  "nl": "Graag bevestigen",
+  "de": "Bitte bestätigen",
+  "sv": "Bekräfta gärna"
+ },
+ "p.install_st_confirmed": {
+  "en": "Confirmed",
+  "lv": "Apstiprināts",
+  "ru": "Подтверждено",
+  "nl": "Bevestigd",
+  "de": "Bestätigt",
+  "sv": "Bekräftat"
+ },
+ "p.install_st_change": {
+  "en": "New date asked",
+  "lv": "Lūgts cits datums",
+  "ru": "Запрошена другая дата",
+  "nl": "Andere datum gevraagd",
+  "de": "Anderer Termin erbeten",
+  "sv": "Nytt datum önskat"
+ },
+ "p.install_wait": {
+  "en": "Thank you. We will propose another date shortly.",
+  "lv": "Paldies. Drīz piedāvāsim citu datumu.",
+  "ru": "Спасибо. Скоро предложим другую дату.",
+  "nl": "Dank u. We stellen binnenkort een andere datum voor.",
+  "de": "Danke. Wir schlagen in Kürze einen anderen Termin vor.",
+  "sv": "Tack. Vi föreslår snart ett annat datum."
+ },
+ "p.install_ics": {
+  "en": "Add to calendar",
+  "lv": "Pievienot kalendāram",
+  "ru": "Добавить в календарь",
+  "nl": "Aan agenda toevoegen",
+  "de": "Zum Kalender hinzufügen",
+  "sv": "Lägg till i kalendern"
+ },
+ "p.install_ics_title": {
+  "en": "Sign installation {no}",
+  "lv": "Izkārtnes montāža {no}",
+  "ru": "Монтаж вывески {no}",
+  "nl": "Montage reclame {no}",
+  "de": "Schildmontage {no}",
+  "sv": "Skyltmontering {no}"
+ },
+ "p.install_ok": {
+  "en": "Confirm this date",
+  "lv": "Apstiprināt šo datumu",
+  "ru": "Подтвердить эту дату",
+  "nl": "Deze datum bevestigen",
+  "de": "Diesen Termin bestätigen",
+  "sv": "Bekräfta datumet"
+ },
+ "p.install_change": {
+  "en": "Ask for another date",
+  "lv": "Lūgt citu datumu",
+  "ru": "Попросить другую дату",
+  "nl": "Andere datum vragen",
+  "de": "Anderen Termin erbitten",
+  "sv": "Be om ett annat datum"
+ },
+ "p.install_change_what": {
+  "en": "Which days and times suit you, and is there anything the crew should know (access, lift, parking)?",
+  "lv": "Kuras dienas un laiki jums der, un vai ir kas brigādei jāzina (piekļuve, pacēlājs, stāvvieta)?",
+  "ru": "Какие дни и время вам подходят, и что нужно знать бригаде (доступ, подъёмник, парковка)?",
+  "nl": "Welke dagen en tijden passen u, en moet de ploeg iets weten (toegang, hoogwerker, parkeren)?",
+  "de": "Welche Tage und Zeiten passen Ihnen, und gibt es Hinweise für das Team (Zugang, Hubsteiger, Parken)?",
+  "sv": "Vilka dagar och tider passar, och finns det något montörerna bör veta (tillträde, lift, parkering)?"
+ },
+ "p.install_change_send": {
+  "en": "Send",
+  "lv": "Sūtīt",
+  "ru": "Отправить",
+  "nl": "Versturen",
+  "de": "Senden",
+  "sv": "Skicka"
+ },
+ "p.install_need_note": {
+  "en": "Please tell us which days suit you.",
+  "lv": "Lūdzu, norādiet, kuras dienas jums der.",
+  "ru": "Напишите, какие дни вам подходят.",
+  "nl": "Laat ons weten welke dagen u passen.",
+  "de": "Bitte nennen Sie uns passende Tage.",
+  "sv": "Berätta vilka dagar som passar."
+ },
+ "p.install_ok_done": {
+  "en": "Thank you, the installation date is confirmed.",
+  "lv": "Paldies, montāžas datums ir apstiprināts.",
+  "ru": "Спасибо, дата монтажа подтверждена.",
+  "nl": "Dank u, de montagedatum is bevestigd.",
+  "de": "Danke, der Montagetermin ist bestätigt.",
+  "sv": "Tack, monteringsdatumet är bekräftat."
+ },
+ "p.install_change_done": {
+  "en": "Thank you, we will propose another date.",
+  "lv": "Paldies, piedāvāsim citu datumu.",
+  "ru": "Спасибо, мы предложим другую дату.",
+  "nl": "Dank u, we stellen een andere datum voor.",
+  "de": "Danke, wir schlagen einen anderen Termin vor.",
+  "sv": "Tack, vi föreslår ett annat datum."
+ },
+ "p.ev_install_proposed": {
+  "en": "Installation proposed for {date}",
+  "lv": "Montāža piedāvāta {date}",
+  "ru": "Предложена дата монтажа: {date}",
+  "nl": "Montage voorgesteld op {date}",
+  "de": "Montage vorgeschlagen für {date}",
+  "sv": "Montering föreslagen {date}"
+ },
+ "p.ev_install_confirmed": {
+  "en": "Installation confirmed for {date}",
+  "lv": "Montāža apstiprināta {date}",
+  "ru": "Монтаж подтверждён: {date}",
+  "nl": "Montage bevestigd op {date}",
+  "de": "Montage bestätigt für {date}",
+  "sv": "Montering bekräftad {date}"
+ },
+ "p.ev_install_change": {
+  "en": "Another installation date asked",
+  "lv": "Lūgts cits montāžas datums",
+  "ru": "Запрошена другая дата монтажа",
+  "nl": "Andere montagedatum gevraagd",
+  "de": "Anderer Montagetermin erbeten",
+  "sv": "Annat monteringsdatum önskat"
+ },
+ "p.mail.what_install": {
+  "en": "We propose to install your sign on {date}. Please confirm the date in the portal, or ask for another one.",
+  "lv": "Piedāvājam uzstādīt jūsu izkārtni {date}. Lūdzu, apstipriniet datumu portālā vai lūdziet citu.",
+  "ru": "Предлагаем смонтировать вывеску {date}. Подтвердите дату в кабинете или попросите другую.",
+  "nl": "We stellen voor uw reclame te monteren op {date}. Bevestig de datum in het portaal of vraag een andere.",
+  "de": "Wir schlagen vor, Ihr Schild am {date} zu montieren. Bitte bestätigen Sie den Termin im Portal oder erbitten Sie einen anderen.",
+  "sv": "Vi föreslår att montera er skylt {date}. Bekräfta datumet i portalen eller be om ett annat."
+ },
+ "p.mail.what_install_booked": {
+  "en": "Installation of your sign is booked for {date}.",
+  "lv": "Jūsu izkārtnes montāža ir ieplānota {date}.",
+  "ru": "Монтаж вашей вывески назначен на {date}.",
+  "nl": "De montage van uw reclame staat gepland op {date}.",
+  "de": "Die Montage Ihres Schildes ist für {date} gebucht.",
+  "sv": "Monteringen av er skylt är bokad {date}."
+ },
+ "p.mon.1": {
+  "en": "Jan",
+  "lv": "Jan",
+  "ru": "Янв",
+  "nl": "Jan",
+  "de": "Jan",
+  "sv": "Jan"
+ },
+ "p.mon.2": {
+  "en": "Feb",
+  "lv": "Feb",
+  "ru": "Фев",
+  "nl": "Feb",
+  "de": "Feb",
+  "sv": "Feb"
+ },
+ "p.mon.3": {
+  "en": "Mar",
+  "lv": "Mar",
+  "ru": "Мар",
+  "nl": "Mrt",
+  "de": "Mär",
+  "sv": "Mar"
+ },
+ "p.mon.4": {
+  "en": "Apr",
+  "lv": "Apr",
+  "ru": "Апр",
+  "nl": "Apr",
+  "de": "Apr",
+  "sv": "Apr"
+ },
+ "p.mon.5": {
+  "en": "May",
+  "lv": "Mai",
+  "ru": "Май",
+  "nl": "Mei",
+  "de": "Mai",
+  "sv": "Maj"
+ },
+ "p.mon.6": {
+  "en": "Jun",
+  "lv": "Jūn",
+  "ru": "Июн",
+  "nl": "Jun",
+  "de": "Jun",
+  "sv": "Jun"
+ },
+ "p.mon.7": {
+  "en": "Jul",
+  "lv": "Jūl",
+  "ru": "Июл",
+  "nl": "Jul",
+  "de": "Jul",
+  "sv": "Jul"
+ },
+ "p.mon.8": {
+  "en": "Aug",
+  "lv": "Aug",
+  "ru": "Авг",
+  "nl": "Aug",
+  "de": "Aug",
+  "sv": "Aug"
+ },
+ "p.mon.9": {
+  "en": "Sep",
+  "lv": "Sep",
+  "ru": "Сен",
+  "nl": "Sep",
+  "de": "Sep",
+  "sv": "Sep"
+ },
+ "p.mon.10": {
+  "en": "Oct",
+  "lv": "Okt",
+  "ru": "Окт",
+  "nl": "Okt",
+  "de": "Okt",
+  "sv": "Okt"
+ },
+ "p.mon.11": {
+  "en": "Nov",
+  "lv": "Nov",
+  "ru": "Ноя",
+  "nl": "Nov",
+  "de": "Nov",
+  "sv": "Nov"
+ },
+ "p.mon.12": {
+  "en": "Dec",
+  "lv": "Dec",
+  "ru": "Дек",
+  "nl": "Dec",
+  "de": "Dez",
+  "sv": "Dec"
  }
 }

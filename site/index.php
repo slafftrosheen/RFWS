@@ -29,7 +29,7 @@ if (PHP_SAPI !== 'cli' && PHP_SAPI !== 'cli-server' && extension_loaded('zlib') 
 $PAGE_CACHE = null;
 if (getenv('RF_SITE_URL') === false && ($_SERVER['REQUEST_METHOD'] ?? 'GET') === 'GET' && ($_SERVER['QUERY_STRING'] ?? '') === '' && !isset($_COOKIE['rfadmin'])
     && !preg_match('#^/(?:[a-z]{2}/)?(?:portal|api|admin)(?:/|$)#', $path) && !is_dir(DATA . '/_cache/.off')) {
-    $PAGE_CACHE = DATA . '/_cache/' . md5($path) . '.html';
+    $PAGE_CACHE = DATA . '/_cache/' . md5('2.5|' . $path) . '.html';   // the version in the key: pages cached by an older release are never served after an update
     if (is_file($PAGE_CACHE)) {
         $etag = '"' . md5_file($PAGE_CACHE) . '"';
         header('ETag: ' . $etag); header('Cache-Control: public, max-age=0, must-revalidate'); header('X-Page-Cache: hit');
@@ -102,6 +102,7 @@ if (!str_ends_with($path, '/') && !preg_match('/\.[a-z0-9]{2,5}$/i', $path)) { h
 
 $slug = $seg[0] ?? '';
 // client portal: requests, quotes, messages (PostgreSQL); the only part of the public site that uses a cookie
+if ($slug === 'search.json') { header('Cache-Control: public, max-age=3600'); send(search_json(), 200, 'application/json; charset=utf-8'); exit; }
 if ($slug === 'portal') { require __DIR__ . '/app/portal.php'; portal_route(array_slice($seg, 1)); exit; }
 // old WordPress category pages
 if ($slug === 'category') { $to = ['story' => '/projects/', 'product-profiles' => '/product-profiles/'][$seg[1] ?? ''] ?? '/'; header('Location: ' . url($to), true, 301); exit; }
@@ -112,7 +113,7 @@ if (count($seg) > 1) { send(page_404(), 404); exit; }
 $isAdmin = false;
 if (isset($_COOKIE['rfadmin'])) { session_name('rfadmin'); session_start(['read_and_close' => true]); $isAdmin = !empty($_SESSION['uid']); }
 
-$routes = ['' => 'page_home', 'product-profiles' => 'page_profiles', 'projects' => 'page_projects', 'signage-research' => 'page_research', 'contact' => 'page_contact', 'privacy-policy' => 'page_privacy'];
+$routes = ['' => 'page_home', 'product-profiles' => 'page_profiles', 'projects' => 'page_projects', 'signage-research' => 'page_research', 'contact' => 'page_contact', 'privacy-policy' => 'page_privacy', 'lumigrid' => 'page_lumigrid'];
 if (isset($routes[$slug])) { send($routes[$slug]()); exit; }
 foreach (['profiles' => 'page_profile', 'stories' => 'page_story'] as $type => $fn) {
     $it = item($type, $slug);

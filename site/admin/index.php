@@ -129,7 +129,7 @@ case 'dash':
     $stats = [['Профили', count(items('profiles')) . ' / ' . count(items('profiles', false)), aurl('a=profiles'), 'опубликовано / всего'], ['Истории', count(items('stories')) . ' / ' . count(items('stories', false)), aurl('a=stories'), 'опубликовано / всего'],
               ['Фото в медиатеке', (string)count(media_all()), aurl('a=media'), ''], ['Новые заявки', (string)$new, aurl('a=inbox'), 'из ' . count($inbox)]];
     $st = ''; foreach ($stats as [$t, $v, $u, $h]) $st .= '<a class="stat card" href="' . $u . '"><span>' . e($t) . '</span><b>' . e($v) . '</b><small>' . e($h) . '</small></a>';
-    $body = '<div class="stats">' . $st . '</div><div class="grid2"><section class="card"><h2>Переводы сайта</h2><p class="small">Доля текстов, переведённых с английского. Непереведённое на сайте показывается по-английски.</p><ul class="bars">' . $bars . '</ul></section>'
+    $body = php_health() . portal_kpis() . '<div class="stats">' . $st . '</div><div class="grid2"><section class="card"><h2>Переводы сайта</h2><p class="small">Доля текстов, переведённых с английского. Непереведённое на сайте показывается по-английски.</p><ul class="bars">' . $bars . '</ul></section>'
         . '<section class="card"><h2>Последние заявки</h2>' . ($recent ? '<ul class="recent">' . $recent . '</ul>' : '<p class="small">Пока нет заявок с сайта.</p>') . '<p><a href="' . aurl('a=inbox') . '">Все заявки →</a></p></section></div>'
         . '<section class="card"><h2>Быстрые действия</h2><div class="quick"><a class="b b-line" href="' . aurl('a=profile&slug=new') . '">+ Новый профиль</a><a class="b b-line" href="' . aurl('a=story&slug=new') . '">+ Новая история</a><a class="b b-line" href="' . aurl('a=media') . '">Загрузить фото</a><a class="b b-line" href="' . aurl('a=page&id=home') . '">Изменить главную</a><a class="b b-line" href="' . aurl('a=backup') . '">Скачать резервную копию</a></div></section>';
     admin_page('Обзор', $body, 'dash', ['sub' => '<p class="sub">Здравствуйте, ' . e(me()['name']) . '!</p>']);
@@ -280,13 +280,16 @@ case 'translate':
 case 'ui':
     // Interface texts are edited one group at a time: the whole set is ~1,700 fields, more than PHP accepts in one form by default.
     $u = ui_all();
-    $GROUPS = ['Меню и шапка' => ['nav.', 'cta.quote', 'brand.', 'skip', 'menu', 'lang', 'home', 'crumbs'], 'Профили' => ['all_profiles', 'box_letters', 'lightboxes', 'filter.', 'spec', 'see_made', 'made_with', 'other_', 'ask_price', 'letter_height', 'depths', 'custom', 'no_custom', 'construction', 'ral_', 'mounting', 'mount_text', 'surface', 'led', 'customisation', 'lightbox_note', 'light.'],
+    $GROUPS = ['Меню и шапка' => ['nav.', 'cta.quote', 'brand.', 'skip', 'menu', 'lang', 'home', 'crumbs', 'theme.', 'search.', 'totop', 'copied'], 'Профили' => ['cmp.', 'all_profiles', 'box_letters', 'lightboxes', 'filter.', 'spec', 'see_made', 'made_with', 'other_', 'ask_price', 'letter_height', 'depths', 'custom', 'no_custom', 'construction', 'ral_', 'mounting', 'mount_text', 'surface', 'led', 'customisation', 'lightbox_note', 'light.'],
                'Анимация, корзина, «Устройство буквы»' => ['motion.', 'basket.', 'anat.', 'film_label'], 'Истории и видео' => ['read_story', 'video', 'photos', 'next_story', 'project_story', 'play', 'yt_note', 'story_en_only'], 'Формы' => ['f.', 'start_request'],
                'Кабинет клиента: вход и регистрация' => ['p.title', 'p.lead', 'p.login', 'p.logout', 'p.email', 'p.password', 'p.forgot', 'p.no_account', 'p.register', 'p.have_account', 'p.name', 'p.company', 'p.vat', 'p.phone', 'p.country', 'p.address', 'p.lang', 'p.consent', 'p.err', 'p.sent_', 'p.verified', 'p.pending', 'p.reset', 'p.why', 'p.login_to'],
-               'Кабинет клиента: запросы и КП' => ['p.'], 'Кабинет клиента: письма' => ['p.mail.', 'p.sig'], 'Подвал и прочее' => []];
+               'Кабинет клиента: запросы и КП' => ['p.'], 'Кабинет клиента: письма' => ['p.mail.', 'p.sig'], 'Главная: шаги производства, «Контакты»: время' => ['proc.', 'live.'],
+               'Кабинет клиента: макеты, объекты, события' => ['p.proof', 'p.pf.', 'p.site', 'p.sites', 'p.ev_', 'p.activity', 'p.rate', 'p.todo', 'p.f_', 'p.find', 'p.filter', 'p.draft', 'p.again', 'p.zip', 'p.copy', 'p.readable', 'p.attention', 'p.new_items', 'p.new_msg_toast', 'p.nothing_found', 'p.n_items', 'p.edit', 'p.thanks_feedback'],
+               'Ночной просмотр вывески, монтаж (2.4)' => ['pv.', 'p.install', 'p.mon.', 'p.cc', 'p.ev_install', 'p.todo_install'],
+               'Подвал и прочее' => []];
     $assign = [];
     foreach ($u as $k => $v) {   // most specific group wins: письма → вход → запросы
-        foreach (['Кабинет клиента: письма', 'Кабинет клиента: вход и регистрация'] as $g0) foreach ($GROUPS[$g0] as $p0) if (!isset($assign[$k]) && ($k === $p0 || str_starts_with($k, $p0))) $assign[$k] = $g0;
+        foreach (['Кабинет клиента: письма', 'Ночной просмотр вывески, монтаж (2.4)', 'Кабинет клиента: вход и регистрация', 'Кабинет клиента: макеты, объекты, события'] as $g0) foreach ($GROUPS[$g0] as $p0) if (!isset($assign[$k]) && ($k === $p0 || str_starts_with($k, $p0))) $assign[$k] = $g0;
         if (isset($assign[$k])) continue;
         foreach ($GROUPS as $g => $pref) { if (!$pref) continue; foreach ($pref as $p0) if ($k === $p0 || str_starts_with($k, $p0)) { $assign[$k] = $g; continue 3; } }
         $assign[$k] = 'Подвал и прочее';
@@ -374,6 +377,11 @@ case 'pclients': padm_clients($POST); break;
 case 'pclient': padm_client($POST); break;
 case 'psettings': padm_settings($POST); break;
 case 'pfile': padm_file(); break;
+case 'pboard': padm_board($POST); break;
+case 'pcal': padm_cal(); break;
+case 'pcsv': padm_csv(); break;
+case 'pprices': padm_prices($POST); break;
+case 'preplies': padm_replies($POST); break;
 case 'ptransfer': if ($POST) padm_transfer(); go('a=inbox');
 
 default: go('');

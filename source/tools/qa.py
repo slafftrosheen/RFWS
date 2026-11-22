@@ -1,6 +1,6 @@
 import asyncio, re, json
 from playwright.async_api import async_playwright
-B='http://127.0.0.1:8770'
+import os; B=os.environ.get('RF_BASE','http://127.0.0.1:8770')
 async def main():
     import urllib.request
     sm=urllib.request.urlopen(B+'/sitemap.xml').read().decode()
@@ -38,8 +38,8 @@ async def main():
             if not l: continue
             resp=await pg.goto(B+l)
             if resp.status>=400: issues.append(('link',l,resp.status))
-        await br.close()
-    print(n,'page loads,',len(paths),'pages,',len(links),'internal links')
-    for i in issues[:40]: print(i)
-    print('ISSUES',len(issues))
+        print(n,'page loads,',len(paths),'pages,',len(links),'internal links', flush=True)
+        for i in issues[:40]: print(i, flush=True)
+        print('ISSUES',len(issues), flush=True)
+        import os as _o; _o._exit(0)
 asyncio.run(main())

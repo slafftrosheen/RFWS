@@ -8,7 +8,7 @@
    Supabase: use the "Session pooler" connection string and add ?sslmode=require. */
 declare(strict_types=1);
 
-const DB_SCHEMA_VERSION = 1;
+const DB_SCHEMA_VERSION = 3;
 
 function db_url(): string {
     $env = getenv('DATABASE_URL');
@@ -130,6 +130,51 @@ CREATE TABLE IF NOT EXISTS rf_throttle (k text PRIMARY KEY, n integer NOT NULL, 
 SQL);
             $pdo->exec("INSERT INTO rf_meta (k, v) VALUES ('schema', '1') ON CONFLICT (k) DO UPDATE SET v = '1'");
         }
+        if ($v < 2) {   // 2.3: saved sites (address book), design proofs, feedback after installation, activity feed
+            $pdo->exec(<<<'SQL'
+CREATE TABLE IF NOT EXISTS rf_sites (
+  id bigserial PRIMARY KEY, client_id bigint NOT NULL REFERENCES rf_clients(id) ON DELETE CASCADE,
+  label text NOT NULL, address text NOT NULL DEFAULT '', contact text NOT NULL DEFAULT '', phone text NOT NULL DEFAULT '', notes text NOT NULL DEFAULT '',
+  created_at timestamptz NOT NULL DEFAULT now()
+);
+CREATE INDEX IF NOT EXISTS rf_sites_client ON rf_sites (client_id);
+CREATE TABLE IF NOT EXISTS rf_proofs (
+  id bigserial PRIMARY KEY, request_id bigint NOT NULL REFERENCES rf_requests(id) ON DELETE CASCADE,
+  file_id bigint NOT NULL REFERENCES rf_files(id) ON DELETE CASCADE, version integer NOT NULL DEFAULT 1, note text NOT NULL DEFAULT '',
+  status text NOT NULL DEFAULT 'pending' CHECK (status IN ('pending', 'approved', 'changes', 'superseded')),
+  created_by text NOT NULL DEFAULT '', created_at timestamptz NOT NULL DEFAULT now(),
+  decided_at timestamptz, decided_name text NOT NULL DEFAULT '', decision_note text NOT NULL DEFAULT '', decided_ip text NOT NULL DEFAULT ''
+);
+CREATE INDEX IF NOT EXISTS rf_proofs_req ON rf_proofs (request_id, version DESC);
+CREATE TABLE IF NOT EXISTS rf_feedback (
+  request_id bigint PRIMARY KEY REFERENCES rf_requests(id) ON DELETE CASCADE,
+  rating integer NOT NULL CHECK (rating BETWEEN 1 AND 5), comment text NOT NULL DEFAULT '', created_at timestamptz NOT NULL DEFAULT now()
+);
+ALTER TABLE rf_requests ADD COLUMN IF NOT EXISTS site_id bigint REFERENCES rf_sites(id) ON DELETE SET NULL;
+ALTER TABLE rf_clients ADD COLUMN IF NOT EXISTS activity_seen_at timestamptz NOT NULL DEFAULT now();
+CREATE INDEX IF NOT EXISTS rf_events_req ON rf_events (request_id, created_at DESC);
+SQL);
+            $pdo->exec("INSERT INTO rf_meta (k, v) VALUES ('schema', '2') ON CONFLICT (k) DO UPDATE SET v = '2'");
+        }
+        if ($v < 3) {   // 2.4: owner + reminder + internal notes (staff only), installation appointment, extra notification e-mails
+            $pdo->exec(<<<'SQL'
+ALTER TABLE rf_requests ADD COLUMN IF NOT EXISTS assignee text NOT NULL DEFAULT '';
+ALTER TABLE rf_requests ADD COLUMN IF NOT EXISTS follow_up date;
+ALTER TABLE rf_requests ADD COLUMN IF NOT EXISTS install_at timestamptz;
+ALTER TABLE rf_requests ADD COLUMN IF NOT EXISTS install_hours numeric(4,1) NOT NULL DEFAULT 4;
+ALTER TABLE rf_requests ADD COLUMN IF NOT EXISTS install_state text NOT NULL DEFAULT '';
+ALTER TABLE rf_requests ADD COLUMN IF NOT EXISTS install_note text NOT NULL DEFAULT '';
+ALTER TABLE rf_requests ADD COLUMN IF NOT EXISTS install_crew text NOT NULL DEFAULT '';
+ALTER TABLE rf_clients ADD COLUMN IF NOT EXISTS cc_emails text NOT NULL DEFAULT '';
+CREATE TABLE IF NOT EXISTS rf_notes (
+  id bigserial PRIMARY KEY, request_id bigint NOT NULL REFERENCES rf_requests(id) ON DELETE CASCADE,
+  author text NOT NULL DEFAULT '', body text NOT NULL, created_at timestamptz NOT NULL DEFAULT now()
+);
+CREATE INDEX IF NOT EXISTS rf_notes_req ON rf_notes (request_id, created_at DESC);
+CREATE INDEX IF NOT EXISTS rf_requests_install ON rf_requests (install_at) WHERE install_at IS NOT NULL;
+SQL);
+            $pdo->exec("INSERT INTO rf_meta (k, v) VALUES ('schema', '3') ON CONFLICT (k) DO UPDATE SET v = '3'");
+        }
     } finally { $pdo->exec('SELECT pg_advisory_unlock(7310)'); }
 }
 
@@ -180,6 +225,28 @@ function files_store(string $field, int $rid, ?int $mid, string $who): array {
     }
     return [$ok, $err];
 }
+/** One uploaded file (admin proofs). Returns [file id or null, error]. */
+function file_store_one(string $field, int $rid, string $who, array $only = []): array {
+    $f = $_FILES[$field] ?? null; if (!$f || is_array($f['name']) || $f['error'] === UPLOAD_ERR_NO_FILE) return [null, 'none'];
+    $name = mb_substr(preg_replace('/[^\p{L}\p{N}._ ()-]+/u', '_', basename((string)$f['name'])), 0, 120); $ext = strtolower(pathinfo($name, PATHINFO_EXTENSION));
+    if ($f['error'] !== UPLOAD_ERR_OK) return [null, 'upload'];
+    if (!in_array($ext, $only ?: PORTAL_EXT, true)) return [null, 'type'];
+    if ($f['size'] > PORTAL_MAX_FILE) return [null, 'size'];
+    $dir = DATA . '/_portal/files/' . date('Y/m'); if (!is_dir($dir)) mkdir($dir, 0770, true);
+    $stored = date('Y/m') . '/' . bin2hex(random_bytes(16)) . '.bin';
+    if (!move_uploaded_file($f['tmp_name'], DATA . '/_portal/files/' . $stored)) return [null, 'save'];
+    $id = (int)val('INSERT INTO rf_files (request_id, message_id, uploader_kind, original_name, stored_name, mime, size) VALUES (?, NULL, ?, ?, ?, ?, ?) RETURNING id', [$rid, $who, $name, $stored, $ext, (int)$f['size']]);
+    return [$id, ''];
+}
+const PREVIEW_MIME = ['png' => 'image/png', 'jpg' => 'image/jpeg', 'jpeg' => 'image/jpeg', 'webp' => 'image/webp'];
+/** Raster images may be shown inline (proof previews); everything else is always downloaded. */
+function file_view(array $file): never {
+    $p = DATA . '/_portal/files/' . $file['stored_name']; $mime = PREVIEW_MIME[strtolower((string)$file['mime'])] ?? null;
+    if (!$mime || !is_file($p) || str_contains($file['stored_name'], '..')) file_send($file);
+    header('Content-Type: ' . $mime); header('Content-Disposition: inline'); header('Content-Length: ' . filesize($p));
+    header('X-Content-Type-Options: nosniff'); header("Content-Security-Policy: default-src 'none'; sandbox"); header('Cache-Control: private, max-age=3600');
+    readfile($p); exit;
+}
 function file_send(array $file): never {
     $p = DATA . '/_portal/files/' . $file['stored_name'];
     if (!is_file($p) || str_contains($file['stored_name'], '..')) { http_response_code(404); exit('Not found'); }
@@ -208,4 +275,27 @@ function send_mail(string $to, string $subject, string $body, string $replyTo = 
 function portal_cfg(): array {
     $d = ['registration' => 'auto', 'vat' => 21, 'valid_days' => 30, 'notify' => '', 'terms' => []];
     return array_merge($d, settings()['portal'] ?? []);
+}
+
+/* ---------- calendar file (.ics) for an installation appointment ---------- */
+function ics_install(array $r, string $summary, string $desc, string $loc): string {
+    $esc = fn($x) => str_replace(["\\", ';', ',', "\r", "\n"], ['\\\\', '\\;', '\\,', '', '\\n'], $x);
+    $t0 = strtotime((string)$r['install_at']); $t1 = $t0 + (int)round((float)$r['install_hours'] * 3600);
+    $u = fn($t) => gmdate('Ymd\THis\Z', $t);
+    $lines = ['BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//Reclame Fabriek//Portal//EN', 'CALSCALE:GREGORIAN', 'METHOD:PUBLISH', 'BEGIN:VEVENT',
+              'UID:install-' . $r['no'] . '@reclamefabriek.eu', 'DTSTAMP:' . $u(time()), 'DTSTART:' . $u($t0), 'DTEND:' . $u($t1),
+              'SUMMARY:' . $esc($summary), 'DESCRIPTION:' . $esc($desc), 'LOCATION:' . $esc($loc), 'STATUS:' . ($r['install_state'] === 'confirmed' ? 'CONFIRMED' : 'TENTATIVE'), 'END:VEVENT', 'END:VCALENDAR'];
+    $out = '';
+    foreach ($lines as $ln) { while (strlen($ln) > 74) { $cut = 74; while ($cut > 1 && (ord($ln[$cut]) & 0xC0) === 0x80) $cut--; $out .= substr($ln, 0, $cut) . "\r\n "; $ln = substr($ln, $cut); } $out .= $ln . "\r\n"; }
+    return $out;
+}
+function ics_send(string $ics, string $name): never {
+    header('Content-Type: text/calendar; charset=utf-8'); header('Content-Disposition: attachment; filename="' . preg_replace('/[^A-Za-z0-9._-]/', '_', $name) . '"');
+    header('Cache-Control: private, no-store'); echo $ics; exit;
+}
+/** "a@x.lv, b@y.lv" -> clean unique list (max 3), never the main address. */
+function cc_list(string $raw, string $main = ''): array {
+    $o = [];
+    foreach (preg_split('/[\s,;]+/', strtolower($raw)) ?: [] as $e) if ($e !== '' && $e !== strtolower($main) && filter_var($e, FILTER_VALIDATE_EMAIL) && !in_array($e, $o, true)) $o[] = $e;
+    return array_slice($o, 0, 3);
 }

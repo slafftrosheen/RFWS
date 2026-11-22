@@ -54,7 +54,11 @@ function token_use(string $t, array $kinds): ?array {
 function mail_client(array $c, string $subjKey, string $bodyKey, array $vars): bool {
     $l = in_array($c['lang'], array_keys(LANG_NAMES), true) ? $c['lang'] : 'en';
     $vars['name'] = $c['name'] ?: $c['email'];
-    return send_mail($c['email'], ul($subjKey, $l, $vars), ul($bodyKey, $l, $vars) . "\n\n— \n" . ul('p.sig', $l));
+    $subj = ul($subjKey, $l, $vars); $body = ul($bodyKey, $l, $vars) . "\n\n— \n" . ul('p.sig', $l);
+    $ok = send_mail($c['email'], $subj, $body);
+    // copies to the extra addresses the client added (accounting, site manager …), not for login / password e-mails
+    if (!in_array($subjKey, ['p.mail.verify_s', 'p.mail.reset_s', 'p.mail.invite_s'], true)) foreach (cc_list((string)($c['cc_emails'] ?? ''), $c['email']) as $cc) send_mail($cc, $subj, $body);
+    return $ok;
 }
 function mail_staff(string $subject, string $body): void {
     $s = settings(); $to = portal_cfg()['notify'] ?: ($s['form_to'] ?? '');
@@ -73,8 +77,9 @@ function notify_client(int $rid, string $whatKey, array $vars = []): void {
 function portal_page(string $title, string $body, string $tab = ''): void {
     $c = client(); $nav = '';
     if ($c) {
-        $tabs = [['', ui('p.dash'), 'dash'], ['requests/new', ui('p.new_request'), 'new'], ['account', ui('p.account'), 'account']];
-        foreach ($tabs as [$p, $l, $k]) $nav .= '<a href="' . e(purl($p)) . '"' . ($tab === $k ? ' aria-current="page"' : '') . '>' . e($l) . '</a>';
+        $na = $tab === 'activity' ? 0 : activity_unseen($c);
+        $tabs = [['', ui('p.dash'), 'dash', 'factory'], ['requests/new', ui('p.new_request'), 'new', 'plus'], ['activity', ui('p.activity'), 'activity', 'bell'], ['sites', ui('p.sites'), 'sites', 'sites'], ['account', ui('p.account'), 'account', 'user']];
+        foreach ($tabs as [$p, $l, $k, $ic]) $nav .= '<a href="' . e(purl($p)) . '"' . ($tab === $k ? ' aria-current="page"' : '') . '>' . icon($ic, 'ic ic-s') . '<span>' . e($l) . '</span>' . ($k === 'activity' && $na ? '<b class="pt-dot" aria-label="' . e(ui('p.new_items', ['n' => $na])) . '">' . $na . '</b>' : '') . '</a>';
         $nav = '<nav class="pt-nav" aria-label="' . e(ui('p.title')) . '"><div class="pt-who">' . icon('user', 'ic ic-s') . '<b>' . e($c['company'] ?: $c['name']) . '</b><small>' . e($c['email']) . '</small></div><div class="pt-tabs">' . $nav . '</div>'
             . '<form method="post" action="' . e(purl('logout')) . '">' . pcsrf() . '<button class="btn btn-line btn-s" type="submit">' . icon('logout', 'ic ic-s') . e(ui('p.logout')) . '</button></form></nav>';
     }
@@ -85,7 +90,7 @@ function portal_page(string $title, string $body, string $tab = ''): void {
     $html = '<section class="pt-head"><div class="wrap"><p class="k k-lit">' . e(ui('p.title')) . '</p><h1 class="h1">' . e($title) . '</h1></div></section>'
           . '<section class="portal"><div class="wrap">' . $nav . $fl . $body . '</div></section>';
     echo layout($title . ' · ' . ui('p.title'), ui('p.lead'), $GLOBALS['PORTAL_PATH'] ?? '/portal/', $html, ['noindex' => true, 'cta' => false, 'body' => 'is-portal',
-        'css' => '<link rel="stylesheet" href="/assets/css/' . $pc . '?v=' . $v . '">', 'js' => '<script src="/assets/js/' . $pj . '?v=' . $v . '" defer></script>']);
+        'css' => '<link rel="stylesheet" href="/assets/css/' . $pc . '?v=' . $v . '">', 'js' => '<script src="/assets/js/' . $pj . '?v=' . $v . '" defer></script>' . ($GLOBALS['PORTAL_JS'] ?? '')]);
     exit;
 }
 function portal_unavailable(): never {
@@ -105,7 +110,7 @@ function portal_route(array $seg): void {
     if ($a === 'logout') { if ($POST) { $_SESSION = ['csrf' => bin2hex(random_bytes(16))]; session_regenerate_id(true); } pgo('login'); }
     if (in_array($a, $public, true)) { ('p_' . $a)($POST); return; }
     if (!client()) {
-        if ($a === 'requests' && ($seg[1] ?? '') === 'new') $_SESSION['after_login'] = 'requests/new' . (isset($_GET['p']) ? '?p=' . rawurlencode((string)$_GET['p']) : '');
+        if ($a === 'requests' && ($seg[1] ?? '') === 'new') $_SESSION['after_login'] = 'requests/new' . (isset($_GET['p']) ? '?p=' . rawurlencode((string)$_GET['p']) . (isset($_GET['pv']) ? '&pv=1' : '') : '');
         elseif ($a !== '') $_SESSION['after_login'] = implode('/', $seg);
         pgo('login');
     }
@@ -113,9 +118,15 @@ function portal_route(array $seg): void {
         $a === '' => p_dash(),
         $a === 'account' => p_account($POST),
         $a === 'requests' && ($seg[1] ?? '') === 'new' => p_new($POST),
-        $a === 'requests' && isset($seg[1]) => p_request((string)$seg[1], $POST),
+        $a === 'requests' && isset($seg[1]) && ($seg[2] ?? '') === 'files.zip' => p_zip((string)$seg[1]),
+        $a === 'requests' && isset($seg[1]) && ($seg[2] ?? '') === 'poll' => p_poll((string)$seg[1]),
+        $a === 'requests' && isset($seg[1]) && ($seg[2] ?? '') === 'install.ics' => p_ics((string)$seg[1]),
+        $a === 'requests' && isset($seg[1]) && !isset($seg[2]) => p_request((string)$seg[1], $POST),
         $a === 'quotes' && isset($seg[1]) => p_quote((string)$seg[1], $POST),
+        $a === 'files' && isset($seg[1]) && ($seg[2] ?? '') === 'view' => p_file((string)$seg[1], true),
         $a === 'files' && isset($seg[1]) => p_file((string)$seg[1]),
+        $a === 'sites' => p_sites($POST),
+        $a === 'activity' => p_activity(),
         default => portal_page('404', '<div class="pt-card"><p>' . e(ui('nf.text')) . '</p></div>'),
     };
 }
@@ -141,7 +152,7 @@ function p_login(bool $POST): void {
                     q('UPDATE rf_clients SET last_login_at = now() WHERE id = ?', [$c['id']]);
                     if (password_needs_rehash($c['pass_hash'], PASSWORD_DEFAULT)) q('UPDATE rf_clients SET pass_hash = ? WHERE id = ?', [password_hash((string)$_POST['pw'], PASSWORD_DEFAULT), $c['id']]);
                     $next = (string)($_SESSION['after_login'] ?? ''); unset($_SESSION['after_login']);
-                    if ($next !== '' && preg_match('#^[a-zA-Z0-9/_.,?=%-]+$#', $next)) { header('Location: ' . purl(explode('?', $next)[0]) . (str_contains($next, '?') ? '?' . explode('?', $next, 2)[1] : ''), true, 303); exit; }
+                    if ($next !== '' && preg_match('#^[a-zA-Z0-9/_.,?=%&-]+$#', $next)) { header('Location: ' . purl(explode('?', $next)[0]) . (str_contains($next, '?') ? '?' . explode('?', $next, 2)[1] : ''), true, 303); exit; }
                     pgo();
                 }
             } else { usleep(300000); $err = ui('p.err_login'); }
@@ -224,24 +235,65 @@ function p_reset(bool $POST): void {
 }
 
 /* ---------------- dashboard ---------------- */
+/* 2.3 · what the client still has to look at: things the factory did since they last opened "Activity" */
+function activity_unseen(array $c): int {
+    try {
+        return (int)val("SELECT (SELECT count(*) FROM rf_events e JOIN rf_requests r ON r.id = e.request_id WHERE r.client_id = ? AND e.created_at > ? AND e.kind IN ('status','quote_sent','proof_posted','install_proposed','install_confirmed') AND COALESCE(e.data->>'by','') <> 'client')
+                       + (SELECT count(*) FROM rf_messages m JOIN rf_requests r ON r.id = m.request_id WHERE r.client_id = ? AND m.author_kind = 'staff' AND m.created_at > ?)", [$c['id'], $c['activity_seen_at'] ?? date('c'), $c['id'], $c['activity_seen_at'] ?? date('c')]);
+    } catch (Throwable $e) { return 0; }
+}
+const DASH_FILTERS = ['open', 'action', 'done', 'all'];
 function p_dash(): void {
     $c = client();
     q("UPDATE rf_quotes q SET status = 'expired' FROM rf_requests r WHERE q.request_id = r.id AND r.client_id = ? AND q.status = 'sent' AND q.valid_until < current_date", [$c['id']]);
     $rows = all("SELECT r.*, (SELECT count(*) FROM rf_messages m WHERE m.request_id = r.id AND m.author_kind <> 'client' AND m.created_at > r.client_seen_at) AS unread,
                         (SELECT count(*) FROM rf_quotes qq WHERE qq.request_id = r.id AND qq.status = 'sent') AS qwait,
-                        (SELECT count(*) FROM rf_request_items i WHERE i.request_id = r.id) AS n_items
+                        (SELECT no FROM rf_quotes qq WHERE qq.request_id = r.id AND qq.status = 'sent' ORDER BY version DESC LIMIT 1) AS qno,
+                        (SELECT count(*) FROM rf_proofs pf WHERE pf.request_id = r.id AND pf.status = 'pending') AS pwait,
+                        (SELECT count(*) FROM rf_request_items i WHERE i.request_id = r.id) AS n_items,
+                        (SELECT string_agg(i.profile_slug || ' ' || i.content, ' ') FROM rf_request_items i WHERE i.request_id = r.id) AS words,
+                        EXISTS (SELECT 1 FROM rf_feedback f WHERE f.request_id = r.id) AS rated
                  FROM rf_requests r WHERE r.client_id = ? ORDER BY r.updated_at DESC", [$c['id']]);
-    $open = count(array_filter($rows, fn($r) => !in_array($r['status'], ['closed', 'cancelled', 'installed'], true)));
-    $qw = array_sum(array_column($rows, 'qwait')); $un = array_sum(array_column($rows, 'unread'));
-    $stats = '<ul class="pt-stats"><li><b>' . $open . '</b><span>' . e(ui('p.open_requests')) . '</span></li><li' . ($qw ? ' class="is-lit"' : '') . '><b>' . $qw . '</b><span>' . e(ui('p.quotes_waiting')) . '</span></li><li' . ($un ? ' class="is-lit"' : '') . '><b>' . $un . '</b><span>' . e(ui('p.unread')) . '</span></li></ul>';
-    $list = '';
+    $closed = ['closed', 'cancelled', 'installed'];
+    $open = count(array_filter($rows, fn($r) => !in_array($r['status'], $closed, true)));
+    $qw = array_sum(array_column($rows, 'qwait')); $un = array_sum(array_column($rows, 'unread')); $pw = array_sum(array_column($rows, 'pwait'));
+    $stats = '<ul class="pt-stats"><li><b>' . $open . '</b><span>' . e(ui('p.open_requests')) . '</span></li><li' . ($qw ? ' class="is-lit"' : '') . '><b>' . $qw . '</b><span>' . e(ui('p.quotes_waiting')) . '</span></li>'
+           . '<li' . ($pw ? ' class="is-lit"' : '') . '><b>' . $pw . '</b><span>' . e(ui('p.proofs_waiting')) . '</span></li><li' . ($un ? ' class="is-lit"' : '') . '><b>' . $un . '</b><span>' . e(ui('p.unread')) . '</span></li></ul>';
+    // needs your attention
+    $todo = '';
     foreach ($rows as $r) {
-        $list .= '<li class="pt-req"><a href="' . e(purl('requests/' . $r['no'])) . '"><span class="pt-req-no">' . e($r['no']) . '</span><span class="pt-req-t"><b>' . e($r['title']) . '</b><small>' . e(ui('p.updated')) . ': ' . e(pdate($r['updated_at'], true)) . '</small></span>'
-              . '<span class="pt-req-s">' . chip_status($r['status']) . ($r['qwait'] ? '<span class="pt-badge">' . icon('doc', 'ic ic-xs') . e(ui('p.q.sent')) . '</span>' : '') . ($r['unread'] ? '<span class="pt-badge">' . icon('chat', 'ic ic-xs') . (int)$r['unread'] . '</span>' : '') . '</span>' . icon('arrow', 'ic ic-s') . '</a></li>';
+        $u = purl('requests/' . $r['no']);
+        if ($r['qwait']) $todo .= '<li><a href="' . e(purl('quotes/' . $r['qno'])) . '">' . icon('doc', 'ic ic-s') . '<span><b>' . e(ui('p.todo_quote', ['no' => $r['qno']])) . '</b><small>' . e($r['no'] . ' · ' . $r['title']) . '</small></span>' . icon('arrow', 'ic ic-s') . '</a></li>';
+        if ($r['pwait']) $todo .= '<li><a href="' . e($u) . '#proofs">' . icon('proof', 'ic ic-s') . '<span><b>' . e(ui('p.todo_proof')) . '</b><small>' . e($r['no'] . ' · ' . $r['title']) . '</small></span>' . icon('arrow', 'ic ic-s') . '</a></li>';
+        if ($r['unread']) $todo .= '<li><a href="' . e($u) . '#thread">' . icon('chat', 'ic ic-s') . '<span><b>' . e(ui('p.todo_msg', ['n' => (int)$r['unread']])) . '</b><small>' . e($r['no'] . ' · ' . $r['title']) . '</small></span>' . icon('arrow', 'ic ic-s') . '</a></li>';
+        if ($r['install_state'] === 'proposed' && $r['install_at'] && strtotime($r['install_at']) > time()) $todo .= '<li><a href="' . e($u) . '#install">' . icon('calendar', 'ic ic-s') . '<span><b>' . e(ui('p.todo_install', ['date' => pdate($r['install_at'], true)])) . '</b><small>' . e($r['no'] . ' · ' . $r['title']) . '</small></span>' . icon('arrow', 'ic ic-s') . '</a></li>';
+        if ($r['status'] === 'installed' && !$r['rated']) $todo .= '<li><a href="' . e($u) . '#feedback">' . icon('star', 'ic ic-s') . '<span><b>' . e(ui('p.todo_rate')) . '</b><small>' . e($r['no'] . ' · ' . $r['title']) . '</small></span>' . icon('arrow', 'ic ic-s') . '</a></li>';
     }
-    $body = $stats . '<div class="pt-bar"><h2 class="h3">' . e(ui('p.requests')) . '</h2><a class="btn btn-red" href="' . e(purl('requests/new')) . '">' . icon('plus', 'ic ic-s') . e(ui('p.new_request')) . '</a></div>'
-          . ($list ? '<ul class="pt-reqs">' . $list . '</ul>' : '<div class="pt-card pt-empty">' . lottie('rf_svc_letters', '', 'lt-empty', '') . '<p>' . e(ui('p.no_requests')) . '</p><a class="btn btn-line" href="' . e(url('/product-profiles/')) . '">' . e(ui('p.browse')) . '</a></div>');
+    $att = $todo ? '<section class="pt-att" aria-labelledby="att-h"><h2 class="h4" id="att-h"><span class="lit-dot" aria-hidden="true"></span>' . e(ui('p.attention')) . '</h2><ul>' . $todo . '</ul></section>' : '';
+    // list with filter + search (works without JS through ?f= and ?q=; JS filters instantly)
+    $f = in_array($_GET['f'] ?? '', DASH_FILTERS, true) ? $_GET['f'] : 'all'; $qs = trim(mb_substr((string)($_GET['q'] ?? ''), 0, 80));
+    $list = ''; $shown = 0;
+    foreach ($rows as $r) {
+        $grp = in_array($r['status'], $closed, true) ? 'done' : 'open'; $act = $r['qwait'] || $r['pwait'] || $r['unread'] || ($r['status'] === 'installed' && !$r['rated']);
+        $hay = mb_strtolower($r['no'] . ' ' . $r['title'] . ' ' . $r['site_address'] . ' ' . $r['words'] . ' ' . ui('p.st.' . $r['status']));
+        $vis = ($f === 'all' || $f === $grp || ($f === 'action' && $act)) && ($qs === '' || str_contains($hay, mb_strtolower($qs)));
+        if ($vis) $shown++;
+        $list .= '<li class="pt-req" data-grp="' . $grp . '"' . ($act ? ' data-act' : '') . ' data-hay="' . e($hay) . '"' . ($vis ? '' : ' hidden') . '><a href="' . e(purl('requests/' . $r['no'])) . '"><span class="pt-req-no">' . e($r['no']) . '</span><span class="pt-req-t"><b>' . e($r['title']) . '</b><small>' . e(ui('p.updated')) . ': ' . e(pdate($r['updated_at'], true)) . ' · ' . e(ui('p.n_items', ['n' => (int)$r['n_items']])) . '</small></span>'
+              . '<span class="pt-req-s">' . chip_status($r['status']) . ($r['qwait'] ? '<span class="pt-badge">' . icon('doc', 'ic ic-xs') . e(ui('p.q.sent')) . '</span>' : '') . ($r['pwait'] ? '<span class="pt-badge">' . icon('proof', 'ic ic-xs') . e(ui('p.proof')) . '</span>' : '') . ($r['unread'] ? '<span class="pt-badge">' . icon('chat', 'ic ic-xs') . (int)$r['unread'] . '</span>' : '') . '</span>'
+              . '<span class="pt-mini" aria-hidden="true">' . mini_line($r['status']) . '</span>' . icon('arrow', 'ic ic-s') . '</a></li>';
+    }
+    $chips = ''; foreach (DASH_FILTERS as $k) $chips .= '<a class="chip" href="' . e(purl('') . '?f=' . $k . ($qs !== '' ? '&q=' . rawurlencode($qs) : '')) . '" data-f="' . $k . '"' . ($f === $k ? ' aria-current="true"' : '') . '>' . e(ui('p.f_' . $k)) . '</a>';
+    $tools = $rows ? '<form class="pt-tools" method="get" action="' . e(purl('')) . '" role="search" data-dash><div class="pt-chips" role="group" aria-label="' . e(ui('p.filter')) . '">' . $chips . '</div>'
+           . '<label class="pt-find">' . icon('search', 'ic ic-s') . '<span class="sr">' . e(ui('p.find')) . '</span><input type="search" name="q" value="' . e($qs) . '" placeholder="' . e(ui('p.find_ph')) . '" data-dash-q></label><input type="hidden" name="f" value="' . e($f) . '"></form>' : '';
+    $none = '<p class="pt-none small" data-dash-none' . ($rows && !$shown ? '' : ' hidden') . '>' . e(ui('p.nothing_found')) . '</p>';
+    $body = $stats . $att . '<div class="pt-bar"><h2 class="h3">' . e(ui('p.requests')) . '</h2><a class="btn btn-red" href="' . e(purl('requests/new')) . '">' . icon('plus', 'ic ic-s') . e(ui('p.new_request')) . '</a></div>' . $tools
+          . ($list ? '<ul class="pt-reqs">' . $list . '</ul>' . $none : '<div class="pt-card pt-empty">' . lottie('rf_svc_letters', '', 'lt-empty', '') . '<p>' . e(ui('p.no_requests')) . '</p><a class="btn btn-line" href="' . e(url('/product-profiles/')) . '">' . e(ui('p.browse')) . '</a></div>');
     portal_page(ui('p.hello', ['name' => $c['name'] ?: $c['company']]), $body, 'dash');
+}
+/** a tiny LED strip: how far along a request is */
+function mini_line(string $st): string {
+    $cur = array_search($st, REQ_FLOW, true); if ($cur === false) return '';
+    $o = ''; foreach (REQ_FLOW as $i => $_) $o .= '<i' . ($i <= $cur ? ' class="on"' : '') . '></i>'; return $o;
 }
 
 /* ---------------- new request (profiles from the website) ---------------- */
@@ -249,7 +301,7 @@ function profile_map(): array {
     $m = [];
     foreach (items('profiles') as $s => $p) {
         $d = array_values(array_filter(array_map('trim', explode(',', preg_replace('/\s*mm\s*$/', '', (string)($p['depth'] ?? ''))))));
-        $m[$s] = ['t' => tr($p['title']), 's' => tr($p['subtitle'] ?? []), 'img' => media_src($p['cover'] ?? null, 400), 'd' => $d, 'c' => (bool)($p['custom_depth'] ?? true), 'g' => $p['group'], 'u' => url('/' . $s . '/')];
+        $m[$s] = ['t' => tr($p['title']), 's' => tr($p['subtitle'] ?? []), 'img' => media_src($p['cover'] ?? null, 400), 'd' => $d, 'c' => (bool)($p['custom_depth'] ?? true), 'g' => $p['group'], 'l' => $p['light'] ?? 'unlit', 'u' => url('/' . $s . '/')];
     }
     return $m;
 }
@@ -266,17 +318,18 @@ function item_row(int $i, array $it, array $map): string {
         . '<a class="lnk pt-plink" data-plink href="' . e($sel['u'] ?? url('/product-profiles/')) . '" target="_blank" rel="noopener"' . ($sel ? '' : ' hidden') . '>' . e(ui('p.view_profile')) . ' ' . icon('ext', 'ic ic-s') . '</a></div>'
         . '<div class="row3">' . fld(ui('p.content'), inp($n . '[content]', (string)($it['content'] ?? ''), 'maxlength="300" placeholder="' . e(ui('p.content_ph')) . '"'), 'pt-span2')
         . fld(ui('p.qty'), inp($n . '[qty]', (string)($it['qty'] ?? '1'), 'type="number" min="1" max="999" inputmode="numeric"')) . '</div>'
-        . '<div class="row3">' . fld(ui('p.height'), inp($n . '[height_mm]', (string)($it['height_mm'] ?? ''), 'type="number" min="10" max="20000" inputmode="numeric"'))
+        . '<div class="row3">' . fld(ui('p.height'), inp($n . '[height_mm]', (string)($it['height_mm'] ?? ''), 'type="number" min="10" max="20000" inputmode="numeric" data-height') . '<small class="pt-readable" data-readable-out aria-live="polite"></small>')
         . fld(ui('p.depth'), inp($n . '[depth]', (string)($it['depth'] ?? ''), 'maxlength="40" list="dl-' . e($it['profile_slug'] ?? 'none') . '" data-depth'))
         . fld(ui('p.mounting'), '<select name="' . $n . '[mounting]">' . $mo . '</select>') . '</div>'
         . '<div class="row2">' . fld(ui('p.face'), inp($n . '[face_colour]', (string)($it['face_colour'] ?? ''), 'maxlength="80" placeholder="RAL 9003"')) . fld(ui('p.sides'), inp($n . '[side_colour]', (string)($it['side_colour'] ?? ''), 'maxlength="80" placeholder="RAL 9005"')) . '</div>'
         . fld(ui('p.notes'), '<textarea name="' . $n . '[notes]" rows="2" maxlength="2000">' . e((string)($it['notes'] ?? '')) . '</textarea>')
-        . '<button type="button" class="btn btn-line btn-s pt-rm" data-item-rm>' . icon('trash', 'ic ic-s') . e(ui('p.remove')) . '</button></fieldset>';
+        . '<div class="pt-item-act"><button type="button" class="btn btn-line btn-s pt-pv" data-pv-open>' . icon('bulb', 'ic ic-s') . e(ui('pv.open')) . '</button><button type="button" class="btn btn-line btn-s pt-rm" data-item-rm>' . icon('trash', 'ic ic-s') . e(ui('p.remove')) . '</button></div></fieldset>';
 }
 function p_new(bool $POST): void {
     $c = client(); $map = profile_map(); $err = ''; $items = []; $v = ['title' => '', 'site_address' => '', 'deadline' => '', 'notes' => ''];
     if ($POST) {
         foreach ($v as $k => $_) $v[$k] = pin($k, $k === 'notes' ? 5000 : 200);
+        $siteId = ctype_digit((string)($_POST['site_id'] ?? '')) ? (int)val('SELECT id FROM rf_sites WHERE id = ? AND client_id = ?', [(int)$_POST['site_id'], $c['id']]) : null;
         foreach ((array)($_POST['items'] ?? []) as $raw) {
             if (!is_array($raw)) continue;
             $g = fn($k, $m = 300) => trim(mb_substr((string)($raw[$k] ?? ''), 0, $m));
@@ -291,9 +344,10 @@ function p_new(bool $POST): void {
         else {
             $title = $v['title'] ?: (($items[0]['profile_slug'] ? $map[$items[0]['profile_slug']]['t'] : '') . ($items[0]['content'] ? ' · ' . $items[0]['content'] : '')) ?: ui('p.new_request');
             $dl = preg_match('/^\d{4}-\d{2}-\d{2}$/', $v['deadline']) ? $v['deadline'] : null;
-            [$rid, $no] = tx(function () use ($c, $title, $v, $dl, $items, $map) {
+            if (!$siteId && !empty($_POST['save_site']) && $v['site_address'] !== '') $siteId = (int)val('INSERT INTO rf_sites (client_id, label, address) VALUES (?, ?, ?) RETURNING id', [$c['id'], mb_substr(pin('site_label', 120) ?: $v['site_address'], 0, 120), $v['site_address']]);
+            [$rid, $no] = tx(function () use ($c, $title, $v, $dl, $items, $map, $siteId) {
                 $no = next_no('RF');
-                $rid = (int)val('INSERT INTO rf_requests (no, client_id, title, site_address, deadline, notes) VALUES (?, ?, ?, ?, ?, ?) RETURNING id', [$no, $c['id'], mb_substr($title, 0, 200), $v['site_address'], $dl, $v['notes']]);
+                $rid = (int)val('INSERT INTO rf_requests (no, client_id, title, site_address, deadline, notes, site_id) VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING id', [$no, $c['id'], mb_substr($title, 0, 200), $v['site_address'], $dl, $v['notes'], $siteId ?: null]);
                 foreach ($items as $i => $it) {
                     $p = $map[$it['profile_slug']] ?? null; $pr = $it['profile_slug'] ? item('profiles', $it['profile_slug']) : null;
                     q('INSERT INTO rf_request_items (request_id, position, profile_slug, profile_title, light, content, height_mm, depth, qty, face_colour, side_colour, mounting, notes) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
@@ -307,23 +361,36 @@ function p_new(bool $POST): void {
             mail_client($c, 'p.mail.received_s', 'p.mail.received_b', ['no' => $no, 'link' => pabs('requests/' . $no, $c['lang'])]);
             $lines = []; foreach ($items as $it) $lines[] = '• ' . ($it['profile_slug'] ? $map[$it['profile_slug']]['t'] : 'без профиля') . ($it['content'] ? ' — ' . $it['content'] : '') . ($it['height_mm'] ? ', ' . $it['height_mm'] . ' мм' : '') . ', ' . $it['qty'] . ' шт.';
             mail_staff("Кабинет: новый запрос $no от " . ($c['company'] ?: $c['name']), "Клиент: {$c['name']}, {$c['company']} <{$c['email']}>\nПроект: $title\n\n" . implode("\n", $lines) . ($okf ? "\n\nФайлов: $okf" : ''));
-            pflash(ui('p.request_sent', ['no' => $no])); pgo('requests/' . $no, 'sent=1');
+            pflash(ui('p.request_sent', ['no' => $no])); pgo('requests/' . $no, 'sent=1&new=1');
         }
     } else {
         foreach (array_slice(array_filter(explode(',', (string)($_GET['p'] ?? '')), fn($s) => isset($map[$s])), 0, 20) as $s) $items[] = ['profile_slug' => $s, 'qty' => 1];
+        if (!empty($_GET['from']) && ($src = one('SELECT * FROM rf_requests WHERE no = ? AND client_id = ?', [(string)$_GET['from'], $c['id']]))) {   // "Order again"
+            $items = all('SELECT profile_slug, content, height_mm, depth, qty, face_colour, side_colour, mounting, notes FROM rf_request_items WHERE request_id = ? ORDER BY position', [$src['id']]);
+            $v['title'] = mb_substr(ui('p.again_title', ['no' => $src['no']]) . ' · ' . $src['title'], 0, 200); $v['site_address'] = $src['site_address']; $fromNo = $src['no'];
+        }
         if (!$items) $items[] = ['profile_slug' => '', 'qty' => 1];
     }
     $rows = ''; foreach (array_values($items) as $i => $it) $rows .= item_row($i, $it, $map);
     $dls = ''; foreach ($map as $s => $p) { $dls .= '<datalist id="dl-' . e($s) . '">'; foreach ($p['d'] as $d) $dls .= '<option value="' . e($d . ' mm') . '">'; $dls .= '</datalist>'; }
     $pre = !$POST && isset($_GET['p']) && count($items) > 0 && $items[0]['profile_slug'] ? '<p class="pt-note">' . icon('check', 'ic ic-s') . e(ui('p.basket_note', ['n' => count($items)])) . '</p>' : '';
+    if (!empty($fromNo)) $pre = '<p class="pt-note">' . icon('repeat', 'ic ic-s') . e(ui('p.again_note', ['no' => $fromNo])) . '</p>';
+    $pre .= '<p class="pt-note pt-pvnote" data-pv-note hidden><img alt="" width="96" height="48"><span>' . e(ui('pv.from_profile')) . '</span></p>';
+    $sites = all('SELECT * FROM rf_sites WHERE client_id = ? ORDER BY label', [$c['id']]);
+    $so = '<option value="">' . e(ui('p.site_new')) . '</option>'; foreach ($sites as $st) $so .= '<option value="' . (int)$st['id'] . '" data-addr="' . e($st['address']) . '">' . e($st['label']) . '</option>';
+    $sitePick = $sites ? fld(ui('p.site_saved'), '<select name="site_id" data-site-pick>' . $so . '</select>') : '';
+    $draft = '<p class="pt-note pt-draft" data-draft-note hidden>' . icon('clock', 'ic ic-s') . '<span>' . e(ui('p.draft_found')) . '</span><button type="button" class="btn btn-line btn-s" data-draft-restore>' . e(ui('p.draft_restore')) . '</button><button type="button" class="btn btn-line btn-s" data-draft-drop>' . e(ui('p.draft_drop')) . '</button></p>';
     $tpl = '<template data-item-tpl>' . item_row(999, ['qty' => 1], $map) . '</template>';
-    $body = '<form class="pt-form form" method="post" action="' . e(purl('requests/new')) . '" enctype="multipart/form-data" data-reqform data-map="' . e(json_encode($map, JSON_UNESCAPED_UNICODE)) . '">' . pcsrf() . ($err ? '<p class="pt-err" role="alert">' . e($err) . '</p>' : '') . $pre
-          . '<div class="pt-card"><div class="row2">' . fld(ui('p.req_title'), inp('title', $v['title'], 'maxlength="200" placeholder="' . e(ui('p.req_title_ph')) . '"')) . fld(ui('p.site'), inp('site_address', $v['site_address'], 'maxlength="200"')) . '</div>'
-          . '<div class="row2">' . fld(ui('p.deadline'), inp('deadline', $v['deadline'], 'type="date"')) . '<span></span></div></div>'
+    $body = '<form class="pt-form form" method="post" action="' . e(purl('requests/new')) . '" enctype="multipart/form-data" data-reqform data-draft-key="rf_draft_' . (int)$c['id'] . '" data-readable="' . e(ui('p.readable')) . '" data-map="' . e(json_encode($map, JSON_UNESCAPED_UNICODE)) . '">' . pcsrf() . ($err ? '<p class="pt-err" role="alert">' . e($err) . '</p>' : '') . $pre . ($POST || !empty($fromNo) || isset($_GET['p']) ? '' : $draft)
+          . '<div class="pt-card"><div class="row2">' . fld(ui('p.req_title'), inp('title', $v['title'], 'maxlength="200" placeholder="' . e(ui('p.req_title_ph')) . '"')) . fld(ui('p.deadline'), inp('deadline', $v['deadline'], 'type="date" min="' . date('Y-m-d') . '"')) . '</div>'
+          . '<div class="row2">' . ($sitePick ?: '') . fld(ui('p.site'), inp('site_address', $v['site_address'], 'maxlength="200" autocomplete="street-address" data-site-addr')) . ($sitePick ? '' : '<span></span>') . '</div>'
+          . '<div class="pt-savesite" data-save-site><label class="chk"><input type="checkbox" name="save_site" value="1"> <span>' . e(ui('p.site_save')) . '</span></label>' . fld(ui('p.site_label'), inp('site_label', '', 'maxlength="120" placeholder="' . e(ui('p.site_label_ph')) . '"'), 'pt-site-label') . '</div></div>'
           . '<h2 class="h3 pt-h">' . e(ui('p.items')) . '</h2><div class="pt-items" data-items>' . $rows . '</div><button type="button" class="btn btn-line" data-item-add>' . icon('plus', 'ic ic-s') . e(ui('p.add_item')) . '</button>'
           . '<div class="pt-card">' . fld(ui('p.notes'), '<textarea name="notes" rows="4" maxlength="5000">' . e($v['notes']) . '</textarea>')
-          . '<label class="fld pt-drop" data-drop><span>' . icon('upload', 'ic ic-s') . e(ui('p.files')) . '</span><input type="file" name="files[]" multiple accept=".' . implode(',.', PORTAL_EXT) . '" data-files><small>' . e(ui('p.files_hint')) . '</small><ul class="pt-picked" data-picked></ul></label></div>'
+          . '<label class="fld pt-drop" data-drop><span>' . icon('upload', 'ic ic-s') . e(ui('p.files')) . '</span><input type="file" name="files[]" multiple accept=".' . implode(',.', PORTAL_EXT) . '" data-files><small>' . e(ui('p.files_hint')) . '</small><ul class="pt-picked" data-picked></ul></label><p class="pt-note pt-pvdone" data-pv-done hidden role="status">' . icon('check', 'ic ic-s') . e(ui('pv.attached')) . '</p></div>'
           . '<div class="pt-submit"><button class="btn btn-red" type="submit">' . e(ui('p.send_request')) . ' ' . icon('arrow', 'ic ic-s') . '</button></div>' . $tpl . $dls . '</form>';
+    $body .= '<dialog class="pv-dlg" data-pv-dlg aria-labelledby="pv-dlg-h"><div class="pv-dlg-h"><h2 class="h3" id="pv-dlg-h">' . e(ui('pv.title')) . '</h2><button type="button" class="btn-ic" data-pv-close aria-label="' . e(ui('pv.close')) . '">' . icon('close', 'ic') . '</button></div>' . signpv_html(['mode' => 'portal', 'n' => 'pvd-']) . '</dialog>';
+    $GLOBALS['PORTAL_JS'] = pv_js();
     portal_page(ui('p.new_request'), $body, 'new');
 }
 
@@ -336,7 +403,7 @@ function req_for_client(string $no): array {
 function timeline(string $st): string {
     if (in_array($st, ['cancelled', 'closed'], true)) return '<div class="pt-line pt-line-off"><span class="pt-node is-now">' . e(ui('p.st.' . $st)) . '</span></div>';
     $cur = array_search($st, REQ_FLOW, true); $o = '';
-    foreach (REQ_FLOW as $i => $s) $o .= '<li class="' . ($i < $cur ? 'is-done' : ($i === $cur ? 'is-now' : '')) . '"' . ($i === $cur ? ' aria-current="step"' : '') . '><i aria-hidden="true"></i><span>' . e(ui('p.st.' . $s)) . '</span></li>';
+    foreach (REQ_FLOW as $i => $s) $o .= '<li class="' . ($i < $cur ? 'is-done' : ($i === $cur ? 'is-now' : '')) . '" style="--i:' . $i . '"' . ($i === $cur ? ' aria-current="step"' : '') . '><i aria-hidden="true"></i><span>' . e(ui('p.st.' . $s)) . '</span></li>';
     return '<ol class="pt-line" aria-label="' . e(ui('p.timeline')) . '" style="--n:' . count(REQ_FLOW) . ';--at:' . (int)$cur . '">' . $o . '</ol>';
 }
 function items_table(int $rid, bool $links = true): string {
@@ -379,6 +446,40 @@ function p_request(string $no, bool $POST): void {
             }
             header('Location: ' . purl('requests/' . $no) . '#thread', true, 303); exit;
         }
+        if (in_array($do, ['proof_ok', 'proof_changes'], true)) {
+            $pf = one("SELECT * FROM rf_proofs WHERE id = ? AND request_id = ? AND status = 'pending'", [(int)($_POST['proof'] ?? 0), $rid]);
+            $note = trim(mb_substr((string)($_POST['note'] ?? ''), 0, 2000)); $name = pin('name', 120) ?: ($c['name'] ?: $c['email']);
+            if ($pf && ($do === 'proof_ok' || $note !== '')) {
+                $ok = $do === 'proof_ok';
+                tx(function () use ($pf, $rid, $ok, $note, $name) {
+                    q('UPDATE rf_proofs SET status = ?, decided_at = now(), decided_name = ?, decision_note = ?, decided_ip = ? WHERE id = ?', [$ok ? 'approved' : 'changes', $name, $note, ip(), $pf['id']]);
+                    q("INSERT INTO rf_messages (request_id, author_kind, author_name, body) VALUES (?, 'system', '', ?)", [$rid, 'Proof v' . $pf['version'] . ($ok ? ' approved by ' . $name : ' · changes requested: ' . $note)]);
+                    q('UPDATE rf_requests SET updated_at = now() WHERE id = ?', [$rid]);
+                    event_add($rid, $ok ? 'proof_approved' : 'proof_changes', ['v' => (int)$pf['version'], 'by' => 'client']);
+                });
+                mail_staff("Кабинет: макет v{$pf['version']} по $no " . ($ok ? 'УТВЕРЖДЁН' : '— нужны правки') . ' — ' . ($c['company'] ?: $c['name']), $ok ? "Подпись: $name" : "Правки: $note");
+                pflash(ui($ok ? 'p.proof_ok_done' : 'p.proof_changes_done'));
+            } elseif ($pf) pflash(ui('p.proof_need_note'), 'err');
+            header('Location: ' . purl('requests/' . $no) . '#proofs', true, 303); exit;
+        }
+        if (in_array($do, ['install_ok', 'install_change'], true) && $r['install_state'] === 'proposed' && $r['install_at']) {
+            $ok = $do === 'install_ok'; $note = trim(mb_substr((string)($_POST['note'] ?? ''), 0, 1000));
+            if (!$ok && $note === '') { pflash(ui('p.install_need_note'), 'err'); header('Location: ' . purl('requests/' . $no) . '#install', true, 303); exit; }
+            $when = pdate($r['install_at'], true);
+            tx(function () use ($rid, $ok, $note, $when, $c) {
+                q('UPDATE rf_requests SET install_state = ?, install_note = ?, updated_at = now() WHERE id = ?', [$ok ? 'confirmed' : 'change', $ok ? '' : $note, $rid]);
+                q("INSERT INTO rf_messages (request_id, author_kind, author_name, body) VALUES (?, 'system', '', ?)", [$rid, $ok ? 'Installation on ' . $when . ' confirmed by ' . ($c['name'] ?: $c['email']) : 'Another installation date asked: ' . $note]);
+                event_add($rid, $ok ? 'install_confirmed' : 'install_change', ['at' => $when, 'by' => 'client']);
+            });
+            mail_staff("Кабинет: монтаж по $no " . ($ok ? 'ПОДТВЕРЖДЁН' : '— клиент просит другую дату') . ' — ' . ($c['company'] ?: $c['name']), $ok ? "Дата: $when" : "Дата: $when\nКлиент пишет: $note");
+            pflash(ui($ok ? 'p.install_ok_done' : 'p.install_change_done')); header('Location: ' . purl('requests/' . $no) . '#install', true, 303); exit;
+        }
+        if ($do === 'feedback' && $r['status'] === 'installed') {
+            $rt = max(1, min(5, (int)($_POST['rating'] ?? 0)));
+            q('INSERT INTO rf_feedback (request_id, rating, comment) VALUES (?, ?, ?) ON CONFLICT (request_id) DO UPDATE SET rating = EXCLUDED.rating, comment = EXCLUDED.comment, created_at = now()', [$rid, $rt, trim(mb_substr((string)($_POST['comment'] ?? ''), 0, 3000))]);
+            mail_staff("Кабинет: отзыв по $no — $rt/5", trim((string)($_POST['comment'] ?? '')) ?: 'Без комментария.');
+            pflash(ui('p.thanks_feedback')); header('Location: ' . purl('requests/' . $no) . '#feedback', true, 303); exit;
+        }
         if ($do === 'cancel' && in_array($r['status'], ['new', 'review', 'quoted'], true)) {
             q("UPDATE rf_requests SET status = 'cancelled', updated_at = now() WHERE id = ?", [$rid]);
             q("UPDATE rf_quotes SET status = 'superseded' WHERE request_id = ? AND status = 'sent'", [$rid]);
@@ -401,13 +502,52 @@ function p_request(string $no, bool $POST): void {
     $files = all('SELECT * FROM rf_files WHERE request_id = ? ORDER BY id', [$rid]); $fl = '';
     foreach ($files as $f) $fl .= '<li><a class="pt-file" href="' . e(purl('files/' . $f['id'])) . '">' . icon('clip', 'ic ic-s') . e($f['original_name']) . ' <small>' . e(fsize((int)$f['size'])) . ' · ' . e(pdate($f['created_at'])) . '</small></a></li>';
     $thread = thread_html($rid, 'client', purl('files/'));
+    $proofs = all('SELECT p.*, f.original_name, f.mime, f.size FROM rf_proofs p JOIN rf_files f ON f.id = p.file_id WHERE p.request_id = ? ORDER BY p.version DESC', [$rid]);
+    $pl = '';
+    foreach ($proofs as $i => $pf) {
+        $img = isset(PREVIEW_MIME[strtolower((string)$pf['mime'])]);
+        $pl .= '<li class="pt-proof pt-proof-' . e($pf['status']) . '"><div class="pt-proof-media">' . ($img ? '<a href="' . e(purl('files/' . $pf['file_id'] . '/view')) . '" data-lb-item data-cap="' . e(ui('p.proof_v', ['v' => $pf['version']])) . '"><img src="' . e(purl('files/' . $pf['file_id'] . '/view')) . '" alt="' . e(ui('p.proof_v', ['v' => $pf['version']])) . '" loading="lazy"></a>' : lottie('rf_proof', '', 'lt-proof', icon('proof', 'ic'))) . '</div>'
+            . '<div class="pt-proof-b"><p class="pt-proof-h"><b>' . e(ui('p.proof_v', ['v' => $pf['version']])) . '</b>' . proof_chip($pf['status']) . '</p><p class="small">' . e(pdate($pf['created_at'], true)) . ($pf['created_by'] !== '' ? ' · ' . e($pf['created_by']) : '') . '</p>'
+            . ($pf['note'] !== '' ? '<p>' . nl2br(e($pf['note'])) . '</p>' : '') . '<a class="pt-file" href="' . e(purl('files/' . $pf['file_id'])) . '">' . icon('download', 'ic ic-s') . e($pf['original_name']) . ' <small>' . e(fsize((int)$pf['size'])) . '</small></a>'
+            . ($pf['status'] === 'approved' ? '<p class="pt-proof-sig">' . icon('check', 'ic ic-s') . e(ui('p.proof_signed', ['name' => $pf['decided_name'], 'date' => pdate($pf['decided_at'], true)])) . '</p>' : '')
+            . ($pf['status'] === 'changes' ? '<p class="pt-proof-sig">' . icon('chat', 'ic ic-s') . '“' . e($pf['decision_note']) . '”</p>' : '')
+            . ($pf['status'] === 'pending' && !in_array($r['status'], ['cancelled', 'closed'], true) ? '<div class="pt-proof-act"><form method="post" class="pt-inline">' . pcsrf() . '<input type="hidden" name="do" value="proof_ok"><input type="hidden" name="proof" value="' . (int)$pf['id'] . '">'
+                . fld(ui('p.accept_name'), inp('name', $c['name'], 'required maxlength="120" autocomplete="name"')) . '<button class="btn btn-red" type="submit">' . icon('check', 'ic ic-s') . e(ui('p.proof_ok')) . '</button></form>'
+                . '<details class="pt-decline"><summary>' . e(ui('p.proof_changes')) . '</summary><form method="post" class="form">' . pcsrf() . '<input type="hidden" name="do" value="proof_changes"><input type="hidden" name="proof" value="' . (int)$pf['id'] . '">'
+                . fld(ui('p.proof_changes_what'), '<textarea name="note" rows="3" maxlength="2000" required></textarea>') . '<button class="btn btn-line" type="submit">' . e(ui('p.proof_changes_send')) . '</button></form></details></div>' : '')
+            . '</div></li>';
+    }
+    $fb = null; if ($r['status'] === 'installed') $fb = one('SELECT * FROM rf_feedback WHERE request_id = ?', [$rid]);
+    $stars = ''; for ($i = 5; $i >= 1; $i--) $stars .= '<input type="radio" name="rating" id="rt' . $i . '" value="' . $i . '"' . ((int)($fb['rating'] ?? 0) === $i ? ' checked' : '') . ' required><label for="rt' . $i . '" title="' . $i . '/5">' . icon('star', 'ic') . '<span class="sr">' . $i . ' / 5</span></label>';
+    $feedback = $r['status'] === 'installed' ? '<section class="pt-card pt-fb" id="feedback"><h2 class="h4">' . e(ui('p.rate_h')) . '</h2><p class="small">' . e(ui('p.rate_lead')) . '</p><form method="post" class="form">' . pcsrf() . '<input type="hidden" name="do" value="feedback">'
+        . '<fieldset class="pt-stars"><legend class="sr">' . e(ui('p.rate_h')) . '</legend>' . $stars . '</fieldset>' . fld(ui('p.rate_comment'), '<textarea name="comment" rows="3" maxlength="3000">' . e($fb['comment'] ?? '') . '</textarea>') . '<button class="btn btn-dark" type="submit">' . e(ui($fb ? 'p.rate_update' : 'p.rate_send')) . '</button></form></section>' : '';
+    $inst = '';
+    if ($r['install_at'] && in_array($r['install_state'], ['proposed', 'confirmed', 'change'], true) && !in_array($r['status'], ['cancelled', 'closed'], true)) {
+        $t0 = strtotime($r['install_at']); $t1 = $t0 + (int)round((float)$r['install_hours'] * 3600); $past = $t1 < time();
+        $chip = ['proposed' => ['p.install_st_proposed', 'quoted'], 'confirmed' => ['p.install_st_confirmed', 'accepted'], 'change' => ['p.install_st_change', 'review']][$r['install_state']];
+        $inst = '<section class="pt-card pt-install pt-install-' . e($r['install_state']) . '" id="install"><div class="pt-install-h"><span class="pt-cal" aria-hidden="true"><b>' . date('d', $t0) . '</b><small>' . e(mb_strtoupper(ui('p.mon.' . date('n', $t0)))) . '</small></span>'
+            . '<div><h2 class="h4">' . e(ui('p.install_h')) . '</h2><p class="pt-install-when"><b>' . e(pdate($r['install_at'], true)) . '–' . date('H:i', $t1) . '</b></p>' . ($r['site_address'] !== '' ? '<p class="small">' . icon('pin', 'ic ic-s') . e($r['site_address']) . '</p>' : '') . '</div><span class="st st-' . $chip[1] . '">' . e(ui($chip[0])) . '</span></div>'
+            . ($r['install_crew'] !== '' ? '<p class="small">' . e(ui('p.install_crew')) . ': ' . e($r['install_crew']) . '</p>' : '')
+            . ($r['install_state'] === 'change' ? '<p class="pt-proof-sig">' . icon('chat', 'ic ic-s') . '“' . e($r['install_note']) . '”</p><p class="small">' . e(ui('p.install_wait')) . '</p>' : '')
+            . '<div class="pt-install-act"><a class="btn btn-line btn-s" href="' . e(purl('requests/' . $r['no'] . '/install.ics')) . '" download>' . icon('download', 'ic ic-s') . e(ui('p.install_ics')) . '</a></div>'
+            . ($r['install_state'] === 'proposed' && !$past ? '<div class="pt-proof-act"><form method="post" class="pt-inline">' . pcsrf() . '<input type="hidden" name="do" value="install_ok"><button class="btn btn-red" type="submit">' . icon('check', 'ic ic-s') . e(ui('p.install_ok')) . '</button></form>'
+                . '<details class="pt-decline"><summary>' . e(ui('p.install_change')) . '</summary><form method="post" class="form">' . pcsrf() . '<input type="hidden" name="do" value="install_change">'
+                . fld(ui('p.install_change_what'), '<textarea name="note" rows="3" maxlength="1000" required></textarea>') . '<button class="btn btn-line" type="submit">' . e(ui('p.install_change_send')) . '</button></form></details></div>' : '')
+            . '</section>';
+    }
+    $nf = count($files);
+    $tools = '<div class="pt-req-tools"><a class="btn btn-line btn-s" href="' . e(purl('requests/new') . '?from=' . rawurlencode($r['no'])) . '">' . icon('repeat', 'ic ic-s') . e(ui('p.again')) . '</a>'
+           . ($nf ? '<a class="btn btn-line btn-s" href="' . e(purl('requests/' . $r['no'] . '/files.zip')) . '" download>' . icon('zip', 'ic ic-s') . e(ui('p.zip', ['n' => $nf])) . '</a>' : '')
+           . '<button type="button" class="btn btn-line btn-s" data-copy="' . e(pabs('requests/' . $r['no'])) . '">' . icon('clip', 'ic ic-s') . e(ui('p.copy_link')) . '</button></div>';
     $meta = '<dl class="pt-meta"><dt>' . e(ui('p.created')) . '</dt><dd>' . e(pdate($r['created_at'])) . '</dd>' . ($r['site_address'] !== '' ? '<dt>' . e(ui('p.site')) . '</dt><dd>' . e($r['site_address']) . '</dd>' : '')
           . ($r['deadline'] ? '<dt>' . e(ui('p.deadline')) . '</dt><dd>' . e(pdate($r['deadline'])) . '</dd>' : '') . '</dl>' . ($r['notes'] !== '' ? '<p class="pt-notes">' . nl2br(e($r['notes'])) . '</p>' : '');
-    $body = (isset($_GET['sent']) ? '<i data-basket-clear hidden></i>' : '')
-        . '<div class="pt-req-head"><div><p class="k">' . e($r['no']) . '</p><h2 class="h2">' . e($r['title']) . '</h2></div>' . chip_status($r['status']) . '</div>'
+    $body = (isset($_GET['sent']) ? '<i data-basket-clear hidden></i><i data-draft-clear hidden></i>' : '')
+        . (isset($_GET['new']) ? '<div class="pt-lit pt-sent" aria-hidden="true">' . lottie('rf_sent', '', 'lt-sent', '') . '</div>' : '')
+        . '<div class="pt-req-head"><div><p class="k">' . e($r['no']) . '</p><h2 class="h2">' . e($r['title']) . '</h2></div>' . chip_status($r['status']) . '</div>' . $tools
         . '<div class="pt-strip" data-spot>' . timeline($r['status']) . '</div>'
-        . '<div class="pt-cols"><div class="pt-main">' . ($ql ? '<section class="pt-card"><h2 class="h4">' . e(ui('p.quotes')) . '</h2><ul class="pt-qs">' . $ql . '</ul></section>' : '')
-        . '<section class="pt-card" id="thread"><h2 class="h4">' . e(ui('p.messages')) . '</h2>' . ($thread ? '<ol class="pt-thread" data-thread>' . $thread . '</ol>' : '<p class="small">' . e(ui('p.no_messages')) . '</p>')
+        . '<div class="pt-cols"><div class="pt-main">' . $feedback . $inst . ($pl ? '<section class="pt-card" id="proofs"><h2 class="h4">' . e(ui('p.proofs')) . '</h2><p class="small">' . e(ui('p.proofs_lead')) . '</p><ul class="pt-proofs" data-lb-group>' . $pl . '</ul></section>' : '')
+        . ($ql ? '<section class="pt-card"><h2 class="h4">' . e(ui('p.quotes')) . '</h2><ul class="pt-qs">' . $ql . '</ul></section>' : '')
+        . '<section class="pt-card" id="thread" data-poll="' . e(purl('requests/' . $r['no'] . '/poll')) . '" data-poll-n="' . (int)val('SELECT count(*) FROM rf_messages WHERE request_id = ?', [$rid]) . '" data-poll-msg="' . e(ui('p.new_msg_toast')) . '"><h2 class="h4">' . e(ui('p.messages')) . '</h2>' . '<ol class="pt-thread" data-thread' . ($thread ? '' : ' hidden') . '>' . $thread . '</ol>' . ($thread ? '' : '<p class="small" data-thread-empty>' . e(ui('p.no_messages')) . '</p>')
         . (!in_array($r['status'], ['cancelled', 'closed'], true) ? '<form class="pt-reply" method="post" enctype="multipart/form-data" action="' . e(purl('requests/' . $r['no'])) . '">' . pcsrf() . '<input type="hidden" name="do" value="message">'
             . '<label class="fld"><span class="sr">' . e(ui('p.write')) . '</span><textarea name="body" rows="3" maxlength="8000" placeholder="' . e(ui('p.write')) . '"></textarea></label>'
             . '<div class="pt-reply-act"><label class="btn btn-line btn-s pt-attach">' . icon('clip', 'ic ic-s') . e(ui('p.attach')) . '<input type="file" name="files[]" multiple accept=".' . implode(',.', PORTAL_EXT) . '" data-files hidden></label><ul class="pt-picked" data-picked></ul>'
@@ -488,10 +628,95 @@ function p_quote(string $no, bool $POST): void {
 }
 
 /* ---------------- files, account ---------------- */
-function p_file(string $id): void {
+function p_file(string $id, bool $view = false): void {
     $f = ctype_digit($id) ? one('SELECT f.* FROM rf_files f JOIN rf_requests r ON r.id = f.request_id WHERE f.id = ? AND r.client_id = ?', [(int)$id, client()['id']]) : null;
     if (!$f) { http_response_code(404); exit('Not found'); }
-    file_send($f);
+    $view ? file_view($f) : file_send($f);
+}
+function proof_chip(string $st): string { return '<span class="qst qst-' . e(['pending' => 'sent', 'approved' => 'accepted', 'changes' => 'declined', 'superseded' => 'superseded'][$st] ?? $st) . '">' . e(ui('p.pf.' . $st)) . '</span>'; }
+/** every file of a request in one ZIP (built on the fly, never stored) */
+function p_zip(string $no): void {
+    $r = req_for_client($no); $files = all('SELECT * FROM rf_files WHERE request_id = ? ORDER BY id', [$r['id']]);
+    if (!$files || !class_exists('ZipArchive')) { http_response_code(404); exit('Not found'); }
+    $tmp = tempnam(sys_get_temp_dir(), 'rfz'); $z = new ZipArchive(); $z->open($tmp, ZipArchive::OVERWRITE); $seen = [];
+    foreach ($files as $f) {
+        $p = DATA . '/_portal/files/' . $f['stored_name']; if (!is_file($p) || str_contains($f['stored_name'], '..')) continue;
+        $n = $f['original_name']; $k = 1; while (isset($seen[$n])) { $n = pathinfo($f['original_name'], PATHINFO_FILENAME) . ' (' . (++$k) . ').' . pathinfo($f['original_name'], PATHINFO_EXTENSION); } $seen[$n] = 1;
+        $z->addFile($p, ($f['uploader_kind'] === 'client' ? 'from-you/' : 'from-reclame-fabriek/') . $n);
+    }
+    $z->close();
+    header('Content-Type: application/zip'); header('Content-Disposition: attachment; filename="' . $r['no'] . '-files.zip"'); header('Content-Length: ' . filesize($tmp)); header('Cache-Control: private, no-store');
+    readfile($tmp); @unlink($tmp); exit;
+}
+/** the thread, for the live refresh (JSON: message count + the rendered list) */
+function p_poll(string $no): void {
+    $r = req_for_client($no); $n = (int)val('SELECT count(*) FROM rf_messages WHERE request_id = ?', [$r['id']]);
+    header('Content-Type: application/json; charset=utf-8'); header('Cache-Control: no-store');
+    $since = (int)($_GET['n'] ?? 0);
+    if ($n > $since) q('UPDATE rf_requests SET client_seen_at = now() WHERE id = ?', [$r['id']]);
+    echo json_encode(['n' => $n, 'html' => $n > $since ? thread_html((int)$r['id'], 'client', purl('files/')) : null], JSON_UNESCAPED_UNICODE); exit;
+}
+/* ---------------- 2.3 · saved sites (address book) ---------------- */
+function p_sites(bool $POST): void {
+    $c = client(); $err = '';
+    if ($POST) {
+        $do = (string)($_POST['do'] ?? ''); $id = (int)($_POST['id'] ?? 0);
+        if ($do === 'delete') { q('DELETE FROM rf_sites WHERE id = ? AND client_id = ?', [$id, $c['id']]); pflash(ui('p.site_deleted')); pgo('sites'); }
+        $f = ['label' => pin('label', 120), 'address' => pin('address', 300), 'contact' => pin('contact', 120), 'phone' => pin('phone', 60), 'notes' => pin('notes', 1000)];
+        if ($f['label'] === '' || $f['address'] === '') $err = ui('p.err_required');
+        elseif ($id) { q('UPDATE rf_sites SET label = ?, address = ?, contact = ?, phone = ?, notes = ? WHERE id = ? AND client_id = ?', [...array_values($f), $id, $c['id']]); pflash(ui('p.saved')); pgo('sites'); }
+        elseif ((int)val('SELECT count(*) FROM rf_sites WHERE client_id = ?', [$c['id']]) >= 200) $err = ui('p.err_wait');
+        else { q('INSERT INTO rf_sites (client_id, label, address, contact, phone, notes) VALUES (?, ?, ?, ?, ?, ?)', [$c['id'], ...array_values($f)]); pflash(ui('p.site_added')); pgo('sites'); }
+    }
+    $rows = all('SELECT s.*, (SELECT count(*) FROM rf_requests r WHERE r.site_id = s.id) AS n FROM rf_sites s WHERE s.client_id = ? ORDER BY s.label', [$c['id']]);
+    $form = function (array $x = []) { $id = (int)($x['id'] ?? 0);
+        return '<form method="post" class="form pt-site-form">' . pcsrf() . '<input type="hidden" name="do" value="save"><input type="hidden" name="id" value="' . $id . '">'
+            . '<div class="row2">' . fld(ui('p.site_label') . ' *', inp('label', (string)($x['label'] ?? ''), 'required maxlength="120" placeholder="' . e(ui('p.site_label_ph')) . '"')) . fld(ui('p.site') . ' *', inp('address', (string)($x['address'] ?? ''), 'required maxlength="300" autocomplete="street-address"')) . '</div>'
+            . '<div class="row2">' . fld(ui('p.site_contact'), inp('contact', (string)($x['contact'] ?? ''), 'maxlength="120"')) . fld(ui('p.phone'), inp('phone', (string)($x['phone'] ?? ''), 'type="tel" maxlength="60"')) . '</div>'
+            . fld(ui('p.site_notes'), '<textarea name="notes" rows="2" maxlength="1000" placeholder="' . e(ui('p.site_notes_ph')) . '">' . e((string)($x['notes'] ?? '')) . '</textarea>')
+            . '<button class="btn btn-dark" type="submit">' . e(ui($id ? 'p.save' : 'p.site_add')) . '</button></form>'; };
+    $list = '';
+    foreach ($rows as $x) {
+        $list .= '<li class="pt-card pt-site"><div class="pt-site-h">' . icon('sites', 'ic') . '<div><h3 class="h4">' . e($x['label']) . '</h3><p>' . e($x['address']) . '</p>' . ($x['contact'] || $x['phone'] ? '<p class="small">' . e(trim($x['contact'] . ' · ' . $x['phone'], ' ·')) . '</p>' : '') . ($x['notes'] ? '<p class="small">' . nl2br(e($x['notes'])) . '</p>' : '')
+            . '<p class="small">' . e(ui('p.site_used', ['n' => (int)$x['n']])) . '</p></div></div>'
+            . '<div class="pt-site-act"><a class="btn btn-line btn-s" href="https://www.google.com/maps/search/?api=1&amp;query=' . e(rawurlencode($x['address'])) . '" target="_blank" rel="noopener">' . icon('pin', 'ic ic-s') . e(ui('open_maps')) . '</a>'
+            . '<details class="pt-edit"><summary class="btn btn-line btn-s">' . e(ui('p.edit')) . '</summary>' . $form($x) . '</details>'
+            . '<form method="post" data-confirm="' . e(ui('p.site_delete_q')) . '">' . pcsrf() . '<input type="hidden" name="do" value="delete"><input type="hidden" name="id" value="' . (int)$x['id'] . '"><button class="btn btn-line btn-s" type="submit">' . icon('trash', 'ic ic-s') . e(ui('p.remove')) . '</button></form></div></li>';
+    }
+    $body = ($err ? '<p class="pt-err" role="alert">' . e($err) . '</p>' : '') . '<p class="lead-s">' . e(ui('p.sites_lead')) . '</p>'
+        . '<div class="pt-cols"><div class="pt-main">' . ($list ? '<ul class="pt-sites">' . $list . '</ul>' : '<div class="pt-card pt-empty">' . icon('sites', 'ic') . '<p>' . e(ui('p.sites_none')) . '</p></div>') . '</div>'
+        . '<aside class="pt-side"><section class="pt-card"><h2 class="h4">' . e(ui('p.site_add')) . '</h2>' . $form() . '</section></aside></div>';
+    portal_page(ui('p.sites'), $body, 'sites');
+}
+/* ---------------- 2.3 · activity: everything that happened on your requests, newest first ---------------- */
+function p_activity(): void {
+    $c = client(); $seen = $c['activity_seen_at'] ?? date('c');
+    $ev = all("SELECT e.kind, e.data, e.created_at, r.no, r.title FROM rf_events e JOIN rf_requests r ON r.id = e.request_id WHERE r.client_id = ? AND e.kind NOT IN ('assigned', 'install_cleared') ORDER BY e.created_at DESC LIMIT 120", [$c['id']]);
+    $ms = all("SELECT m.author_name, m.body, m.created_at, r.no, r.title FROM rf_messages m JOIN rf_requests r ON r.id = m.request_id WHERE r.client_id = ? AND m.author_kind = 'staff' ORDER BY m.created_at DESC LIMIT 80", [$c['id']]);
+    $items = [];
+    foreach ($ev as $x) {
+        $d = json_decode((string)$x['data'], true) ?: [];
+        [$ic, $txt, $anchor] = match ($x['kind']) {
+            'created' => ['plus', ui('p.ev_created'), ''], 'status' => ['factory', ui('p.ev_status', ['status' => ui('p.st.' . ($d['to'] ?? 'new'))]), ''],
+            'quote_sent' => ['doc', ui('p.ev_quote_sent', ['no' => $d['quote'] ?? '']), ''], 'quote_accepted' => ['check', ui('p.ev_quote_accepted', ['no' => $d['quote'] ?? '']), ''],
+            'quote_declined' => ['close', ui('p.ev_quote_declined', ['no' => $d['quote'] ?? '']), ''], 'proof_posted' => ['proof', ui('p.ev_proof_posted', ['v' => $d['v'] ?? 1]), '#proofs'],
+            'proof_approved' => ['check', ui('p.ev_proof_approved', ['v' => $d['v'] ?? 1]), '#proofs'], 'proof_changes' => ['chat', ui('p.ev_proof_changes', ['v' => $d['v'] ?? 1]), '#proofs'],
+            'install_proposed' => ['calendar', ui('p.ev_install_proposed', ['date' => $d['at'] ?? '']), '#install'], 'install_confirmed' => ['calendar', ui('p.ev_install_confirmed', ['date' => $d['at'] ?? '']), '#install'],
+            'install_change' => ['calendar', ui('p.ev_install_change'), '#install'],
+            default => ['spark', $x['kind'], ''] };
+        $items[] = [$x['created_at'], $ic, $txt, '', $x['no'], $x['title'], $anchor, ($d['by'] ?? '') !== 'client' && in_array($x['kind'], ['status', 'quote_sent', 'proof_posted', 'install_proposed', 'install_confirmed'], true)];
+    }
+    foreach ($ms as $m) $items[] = [$m['created_at'], 'chat', ui('p.ev_message', ['name' => $m['author_name']]), mb_strimwidth($m['body'], 0, 160, '…'), $m['no'], $m['title'], '#thread', true];
+    usort($items, fn($a, $b) => strcmp((string)$b[0], (string)$a[0]));
+    $o = ''; $day = '';
+    foreach (array_slice($items, 0, 150) as [$at, $ic, $txt, $sub, $no, $title, $anchor, $fromUs]) {
+        $dd = pdate($at); if ($dd !== $day) { $o .= '<li class="pt-act-day"><span>' . e($dd) . '</span></li>'; $day = $dd; }
+        $new = $fromUs && strtotime((string)$at) > strtotime((string)$seen);
+        $o .= '<li class="pt-act' . ($new ? ' is-new' : '') . '"><span class="pt-act-ic">' . icon($ic, 'ic ic-s') . '</span><a href="' . e(purl('requests/' . $no) . $anchor) . '"><b>' . e($txt) . '</b>' . ($sub !== '' ? '<span class="pt-act-sub">' . e($sub) . '</span>' : '') . '<small>' . e($no . ' · ' . $title) . ' · <time datetime="' . e(date('c', strtotime((string)$at))) . '">' . e(date('H:i', strtotime((string)$at))) . '</time></small></a>' . ($new ? '<b class="pt-newb">' . e(ui('p.new')) . '</b>' : '') . '</li>';
+    }
+    q('UPDATE rf_clients SET activity_seen_at = now() WHERE id = ?', [$c['id']]);
+    $body = $o ? '<ol class="pt-acts">' . $o . '</ol>' : '<div class="pt-card pt-empty">' . icon('bell', 'ic') . '<p>' . e(ui('p.activity_none')) . '</p></div>';
+    portal_page(ui('p.activity'), $body, 'activity');
 }
 function p_account(bool $POST): void {
     $c = client(); $err = '';
@@ -504,7 +729,8 @@ function p_account(bool $POST): void {
             $l = in_array($_POST['lang'] ?? '', langs(), true) ? $_POST['lang'] : $c['lang'];
             $name = pin('name', 160); $company = pin('company', 160);
             if ($name === '' || $company === '') $err = ui('p.err_required');
-            else { q('UPDATE rf_clients SET name = ?, company = ?, phone = ?, country = ?, vat = ?, address = ?, lang = ?, notify = ? WHERE id = ?', [$name, $company, pin('phone', 60), pin('country', 80), pin('vat', 40), pin('address', 300), $l, !empty($_POST['notify']) ? 'true' : 'false', $c['id']]); pflash(ui('p.saved')); pgo('account'); }
+            elseif (($ccRaw = pin('cc_emails', 400)) !== '' && count(cc_list($ccRaw, $c['email'])) !== count(array_filter(preg_split('/[\s,;]+/', $ccRaw) ?: [], fn($x) => $x !== '' && strtolower($x) !== strtolower($c['email'])))) $err = ui('p.cc_err');
+            else { q('UPDATE rf_clients SET name = ?, company = ?, phone = ?, country = ?, vat = ?, address = ?, lang = ?, notify = ?, cc_emails = ? WHERE id = ?', [$name, $company, pin('phone', 60), pin('country', 80), pin('vat', 40), pin('address', 300), $l, !empty($_POST['notify']) ? 'true' : 'false', implode(', ', cc_list($ccRaw, $c['email'])), $c['id']]); pflash(ui('p.saved')); pgo('account'); }
         }
     }
     $lo = ''; foreach (langs() as $l) $lo .= '<option value="' . $l . '"' . ($c['lang'] === $l ? ' selected' : '') . '>' . e(LANG_NAMES[$l]) . '</option>';
@@ -513,8 +739,16 @@ function p_account(bool $POST): void {
         . '<div class="row2">' . fld(ui('p.email'), inp('email_ro', $c['email'], 'disabled')) . fld(ui('p.phone'), inp('phone', $c['phone'], 'type="tel" autocomplete="tel"')) . '</div>'
         . '<div class="row2">' . fld(ui('p.vat'), inp('vat', $c['vat'])) . fld(ui('p.country'), inp('country', $c['country'], 'autocomplete="country-name"')) . '</div>'
         . fld(ui('p.address'), inp('address', $c['address'], 'autocomplete="street-address"')) . '<div class="row2">' . fld(ui('p.lang'), '<select name="lang">' . $lo . '</select>') . '<span></span></div>'
-        . '<label class="chk"><input type="checkbox" name="notify" value="1"' . ($c['notify'] ? ' checked' : '') . '> <span>' . e(ui('p.notify')) . '</span></label><button class="btn btn-dark" type="submit">' . e(ui('p.save')) . '</button></form>'
+        . '<label class="chk"><input type="checkbox" name="notify" value="1"' . ($c['notify'] ? ' checked' : '') . '> <span>' . e(ui('p.notify')) . '</span></label>'
+        . fld(ui('p.cc'), inp('cc_emails', (string)$c['cc_emails'], 'maxlength="400" inputmode="email" placeholder="accounting@company.lv, site@company.lv" aria-describedby="cc-h"') . '<small id="cc-h">' . e(ui('p.cc_hint')) . '</small>')
+        . '<button class="btn btn-dark" type="submit">' . e(ui('p.save')) . '</button></form>'
         . '<form class="pt-card form pt-side" method="post">' . pcsrf() . '<input type="hidden" name="do" value="pw"><h2 class="h4">' . e(ui('p.change_pw')) . '</h2>' . fld(ui('p.pw_current'), '<input type="password" name="old" required autocomplete="current-password">')
         . fld(ui('p.password_new'), '<input type="password" name="pw" required minlength="10" autocomplete="new-password">') . fld(ui('p.password2'), '<input type="password" name="pw2" required minlength="10" autocomplete="new-password">') . '<button class="btn btn-line" type="submit">' . e(ui('p.change_pw')) . '</button></form></div>';
     portal_page(ui('p.account'), $body, 'account');
+}
+
+function p_ics(string $no): never {
+    $c = client(); $r = req_for_client($no);
+    if (!$r['install_at'] || !in_array($r['install_state'], ['proposed', 'confirmed', 'change'], true)) { http_response_code(404); exit('Not found'); }
+    ics_send(ics_install($r, ui('p.install_ics_title', ['no' => $r['no']]) . ' · ' . $r['title'], ui('p.install_h') . ': ' . $r['title'] . "\n" . pabs('requests/' . $r['no'], $c['lang']), $r['site_address']), 'reclame-fabriek-' . $r['no'] . '.ics');
 }

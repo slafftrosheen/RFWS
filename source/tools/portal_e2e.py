@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Website 2.2 · client portal end-to-end test (Playwright + local PostgreSQL).
+"""Website 2.3 · client portal end-to-end test (2.2 flow; new 2.3 features are in portal23_e2e.py) (Playwright + local PostgreSQL).
 Flow: register → confirm email → basket from profile pages → request with files → messages → admin reply →
 admin quote → client accepts → status → access control → password reset → website form → portal → admin delete."""
 import asyncio, glob, json, os, re, subprocess, sys, time
@@ -165,9 +165,10 @@ async def main():
         await s.goto(B + '/admin/?a=psettings'); ok('portal settings show connection', 'Подключено' in await s.content())
 
         ok('no JavaScript errors in the client browser', not errs, '; '.join(errs[:3]))
-        await br.close()
-    log = open('/tmp/php.log').read()
-    ok('no PHP warnings or errors', not re.search(r'(PHP )?(Warning|Fatal|Notice|Deprecated)', log), re.findall(r'.*(?:Warning|Fatal|Notice|Deprecated).*', log)[:2])
-    n = sum(1 for x in R if x[1]); print(f'\n{n} / {len(R)} passed')
-    json.dump([{'check': a, 'pass': b, 'note': c} for a, b, c in R], open('/tmp/rfcms/portal-e2e.json', 'w'), ensure_ascii=False, indent=1)
+        log = open('/tmp/php8080.log').read()
+        bad = [l for l in log.splitlines() if re.search(r'Warning|Fatal|Notice|Deprecated', l)]
+        ok('no PHP warnings or errors', not bad, '; '.join(bad[:2]))
+        n = sum(1 for x in R if x[1]); print(f'\n{n} / {len(R)} passed', flush=True)
+        json.dump([{'check': a, 'pass': b, 'note': c} for a, b, c in R], open('/tmp/rfcms/portal-e2e.json', 'w'), ensure_ascii=False, indent=1)
+        os._exit(0)   # closing Chromium can hang in this container; results are already written
 asyncio.run(main())

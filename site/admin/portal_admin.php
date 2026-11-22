@@ -25,7 +25,8 @@ function st_ru(string $s): string { return '<span class="pst pst-' . e($s) . '">
 function padm_requests(): void {
     padm_need_db();
     $f = (string)($_GET['st'] ?? 'open'); $qs = trim((string)($_GET['q'] ?? ''));
-    $where = match ($f) { 'open' => "r.status NOT IN ('cancelled','closed','installed')", 'all' => 'true', default => isset(ST_RU[$f]) ? 'r.status = ' . db()->quote($f) : 'true' };
+    $where = match ($f) { 'open' => "r.status NOT IN ('cancelled','closed','installed')", 'all' => 'true', 'mine' => "r.status NOT IN ('cancelled','closed') AND r.assignee = " . db()->quote((string)$_SESSION['uid']),
+                          'follow' => "r.follow_up IS NOT NULL AND r.follow_up <= current_date AND r.status NOT IN ('cancelled','closed')", default => isset(ST_RU[$f]) ? 'r.status = ' . db()->quote($f) : 'true' };
     $args = [];
     if ($qs !== '') { $where .= ' AND (r.no ILIKE ? OR r.title ILIKE ? OR c.company ILIKE ? OR c.email ILIKE ? OR c.name ILIKE ?)'; $args = array_fill(0, 5, '%' . $qs . '%'); }
     $rows = all("SELECT r.*, c.company, c.name, c.email,
@@ -36,11 +37,12 @@ function padm_requests(): void {
     foreach ($rows as $r) {
         $isNew = $r['staff_seen_at'] === null || $r['unread'] > 0;
         $tr .= '<tr class="' . ($isNew ? 'unread' : '') . '"><td><a href="' . aurl('a=preq&no=' . rawurlencode($r['no'])) . '"><b>' . e($r['no']) . '</b></a></td><td>' . e($r['title']) . '</td><td>' . e($r['company'] ?: $r['name']) . '<br><small>' . e($r['email']) . '</small></td>'
-             . '<td>' . st_ru($r['status']) . ($r['qstatus'] ? '<br><small>КП: ' . e(QST_RU[$r['qstatus']] ?? '') . '</small>' : '') . '</td><td>' . ($r['unread'] ? '<b class="badge">' . (int)$r['unread'] . '</b>' : '') . '</td><td>' . e(pdate($r['updated_at'], true)) . '</td></tr>';
+             . '<td>' . st_ru($r['status']) . ($r['qstatus'] ? '<br><small>КП: ' . e(QST_RU[$r['qstatus']] ?? '') . '</small>' : '') . '</td><td>' . ($r['assignee'] !== '' ? e(users()[$r['assignee']]['name'] ?? $r['assignee']) : '<small>—</small>') . ($r['follow_up'] ? '<br><small class="' . (strtotime($r['follow_up']) <= strtotime('today') ? 'due' : '') . '">⏰ ' . e(pdate($r['follow_up'])) . '</small>' : '') . '</td><td>' . ($r['unread'] ? '<b class="badge">' . (int)$r['unread'] . '</b>' : '') . '</td><td>' . e(pdate($r['updated_at'], true)) . '</td></tr>';
     }
-    $seg = '<div class="seg">'; foreach (['open' => 'В работе', 'new' => 'Новые', 'quoted' => 'КП отправлено', 'accepted' => 'КП принято', 'production' => 'В производстве', 'all' => 'Все'] as $k => $l) $seg .= '<a href="' . aurl('a=portal&st=' . $k) . '"' . ($f === $k ? ' aria-current="true"' : '') . '>' . e($l) . '</a>'; $seg .= '</div>';
+    $seg = '<div class="seg">'; foreach (['open' => 'В работе', 'mine' => 'Мои', 'follow' => 'Напомнить сегодня' . (($nf = (int)val("SELECT count(*) FROM rf_requests WHERE follow_up IS NOT NULL AND follow_up <= current_date AND status NOT IN ('cancelled','closed')")) ? ' (' . $nf . ')' : ''), 'new' => 'Новые', 'quoted' => 'КП отправлено', 'accepted' => 'КП принято', 'production' => 'В производстве', 'all' => 'Все'] as $k => $l) $seg .= '<a href="' . aurl('a=portal&st=' . $k) . '"' . ($f === $k ? ' aria-current="true"' : '') . '>' . e($l) . '</a>'; $seg .= '</div>';
     $search = '<form class="psearch" method="get" action="/admin/"><input type="hidden" name="a" value="portal"><input type="hidden" name="st" value="' . e($f) . '"><input type="search" name="q" value="' . e($qs) . '" placeholder="Номер, проект, компания, e-mail"><button class="b b-line" type="submit">Найти</button></form>';
-    admin_page('Запросы клиентов', $seg . $search . '<div class="card">' . ($tr ? '<table class="tbl"><thead><tr><th>№</th><th>Проект</th><th>Клиент</th><th>Статус</th><th>Новые сообщ.</th><th>Обновлено</th></tr></thead><tbody>' . $tr . '</tbody></table>' : '<p class="small">Здесь будут запросы из кабинета клиента. Клиенты попадают в кабинет сами (регистрация на сайте) или по вашему приглашению из раздела «Клиенты».</p>') . '</div>', 'portal',
+    $tools = '<div class="quick ptools"><a class="b b-line b-s" href="' . aurl('a=pboard') . '">▦ Доска производства</a><a class="b b-line b-s" href="' . aurl('a=pcal') . '">▤ График монтажа</a><a class="b b-ghost b-s" href="' . aurl('a=pcsv') . '">Скачать CSV</a></div>';
+    admin_page('Запросы клиентов', $tools . $seg . $search . '<div class="card">' . ($tr ? '<table class="tbl"><thead><tr><th>№</th><th>Проект</th><th>Клиент</th><th>Статус</th><th>Ответственный</th><th>Новые сообщ.</th><th>Обновлено</th></tr></thead><tbody>' . $tr . '</tbody></table>' : '<p class="small">Здесь будут запросы из кабинета клиента. Клиенты попадают в кабинет сами (регистрация на сайте) или по вашему приглашению из раздела «Клиенты».</p>') . '</div>', 'portal',
         ['sub' => '<p class="sub">Запросы, коммерческие предложения и переписка с клиентами. Жирным — новое или непрочитанное.</p>']);
 }
 
@@ -62,13 +64,55 @@ function padm_request(bool $POST): void {
             }
         } elseif ($do === 'status' && isset(ST_RU[$_POST['status'] ?? ''])) {
             $to = (string)$_POST['status'];
-            if ($to !== $r['status']) {
-                q('UPDATE rf_requests SET status = ?, updated_at = now() WHERE id = ?', [$to, $rid]);
-                q("INSERT INTO rf_messages (request_id, author_kind, author_name, body) VALUES (?, 'system', ?, ?)", [$rid, $me, 'Status: ' . ul('p.st.' . $to, $c['lang'])]);
-                event_add($rid, 'status', ['to' => $to, 'by' => $_SESSION['uid']]);
-                if (!empty($_POST['notify'])) notify_client($rid, 'p.mail.what_status', ['status' => $to]);
-                flash('Статус изменён: ' . ST_RU[$to] . '.');
+            if (padm_set_status($r, $to, !empty($_POST['notify']))) flash('Статус изменён: ' . ST_RU[$to] . '.');
+        } elseif ($do === 'proof') {
+            [$fid, $ferr] = file_store_one('proof', $rid, 'staff', ['png', 'jpg', 'jpeg', 'webp', 'pdf']);
+            if (!$fid) flash($ferr === 'none' ? 'Выберите файл макета.' : 'Макет не загружен: ' . (['type' => 'нужен PNG, JPG, WebP или PDF', 'size' => 'файл больше 25 МБ'][$ferr] ?? $ferr), 'err');
+            else {
+                $note = trim(mb_substr((string)($_POST['note'] ?? ''), 0, 2000));
+                $v = tx(function () use ($rid, $fid, $note, $me) {
+                    $v = (int)val('SELECT COALESCE(max(version), 0) + 1 FROM rf_proofs WHERE request_id = ?', [$rid]);
+                    q("UPDATE rf_proofs SET status = 'superseded' WHERE request_id = ? AND status = 'pending'", [$rid]);
+                    q('INSERT INTO rf_proofs (request_id, file_id, version, note, created_by) VALUES (?, ?, ?, ?, ?)', [$rid, $fid, $v, $note, $me]);
+                    q("INSERT INTO rf_messages (request_id, author_kind, author_name, body) VALUES (?, 'system', ?, ?)", [$rid, $me, 'Proof v' . $v . ' posted for approval']);
+                    q("UPDATE rf_requests SET updated_at = now(), staff_seen_at = now(), status = CASE WHEN status = 'new' THEN 'review' ELSE status END WHERE id = ?", [$rid]);
+                    event_add($rid, 'proof_posted', ['v' => $v, 'by' => 'staff']);
+                    return $v;
+                });
+                notify_client($rid, 'p.mail.what_proof', ['v' => $v]);
+                flash('Макет v' . $v . ' отправлен клиенту на утверждение.');
             }
+            go('a=preq&no=' . rawurlencode($no) . '#proofs');
+        } elseif ($do === 'internal') {
+            $as = (string)($_POST['assignee'] ?? ''); if ($as !== '' && !isset(users()[$as])) $as = '';
+            $fu = preg_match('/^\d{4}-\d{2}-\d{2}$/', (string)($_POST['follow_up'] ?? '')) ? $_POST['follow_up'] : null;
+            q('UPDATE rf_requests SET assignee = ?, follow_up = ? WHERE id = ?', [$as, $fu, $rid]);
+            if ($as !== $r['assignee']) event_add($rid, 'assigned', ['to' => $as, 'by' => $_SESSION['uid']]);
+            flash('Сохранено: ответственный ' . ($as ? (users()[$as]['name'] ?? $as) : '— не назначен') . ($fu ? ', напомнить ' . pdate($fu) : '') . '.');
+            go('a=preq&no=' . rawurlencode($no) . '#internal');
+        } elseif ($do === 'note') {
+            $body = trim(mb_substr((string)($_POST['body'] ?? ''), 0, 4000));
+            if ($body !== '') q('INSERT INTO rf_notes (request_id, author, body) VALUES (?, ?, ?)', [$rid, $me, $body]);
+            go('a=preq&no=' . rawurlencode($no) . '#internal');
+        } elseif ($do === 'note_del') {
+            q('DELETE FROM rf_notes WHERE id = ? AND request_id = ?', [(int)($_POST['id'] ?? 0), $rid]); flash('Заметка удалена.');
+            go('a=preq&no=' . rawurlencode($no) . '#internal');
+        } elseif ($do === 'install') {
+            $d = (string)($_POST['date'] ?? ''); $t = (string)($_POST['time'] ?? '');
+            if (!empty($_POST['clear'])) {
+                q("UPDATE rf_requests SET install_at = NULL, install_state = '', install_note = '' WHERE id = ?", [$rid]); event_add($rid, 'install_cleared', ['by' => $_SESSION['uid']]); flash('Дата монтажа снята.');
+            } elseif (!preg_match('/^\d{4}-\d{2}-\d{2}$/', $d) || !preg_match('/^\d{2}:\d{2}$/', $t)) flash('Укажите дату и время монтажа.', 'err');
+            else {
+                $hours = max(0.5, min(48, (float)str_replace(',', '.', (string)($_POST['hours'] ?? '4'))));
+                $crew = mb_substr(trim((string)($_POST['crew'] ?? '')), 0, 200); $state = !empty($_POST['confirmed']) ? 'confirmed' : 'proposed';
+                q('UPDATE rf_requests SET install_at = ?::timestamptz, install_hours = ?, install_crew = ?, install_state = ?, install_note = \'\', updated_at = now() WHERE id = ?', ["$d $t", $hours, $crew, $state, $rid]);
+                $when = date('d.m.Y H:i', strtotime("$d $t"));
+                q("INSERT INTO rf_messages (request_id, author_kind, author_name, body) VALUES (?, 'system', ?, ?)", [$rid, $me, ($state === 'confirmed' ? 'Installation booked: ' : 'Installation date proposed: ') . $when]);
+                event_add($rid, 'install_' . $state, ['at' => $when, 'by' => 'staff']);
+                if (!empty($_POST['notify'])) notify_client($rid, $state === 'confirmed' ? 'p.mail.what_install_booked' : 'p.mail.what_install', ['date' => $when]);
+                flash($state === 'confirmed' ? 'Монтаж записан: ' . $when . '.' : 'Дата монтажа ' . $when . ' предложена клиенту — он подтвердит её в кабинете.');
+            }
+            go('a=preq&no=' . rawurlencode($no) . '#install');
         } elseif ($do === 'newquote') {
             $cfg = portal_cfg(); $ver = (int)val('SELECT COALESCE(max(version), 0) + 1 FROM rf_quotes WHERE request_id = ?', [$rid]);
             $prev = one("SELECT * FROM rf_quotes WHERE request_id = ? ORDER BY version DESC LIMIT 1", [$rid]);
@@ -88,6 +132,7 @@ function padm_request(bool $POST): void {
         }
         go('a=preq&no=' . rawurlencode($no) . '#thread');
     }
+    if (isset($_GET['ics']) && $r['install_at']) ics_send(ics_install($r, 'Монтаж ' . $r['no'] . ' · ' . ($c['company'] ?: $c['name']), $r['title'] . ($r['install_crew'] !== '' ? "\nБригада: " . $r['install_crew'] : '') . "\nКлиент: " . $c['name'] . ' ' . $c['phone'] . ' ' . $c['email'], $r['site_address']), 'montazh-' . $r['no'] . '.ics');
     q('UPDATE rf_requests SET staff_seen_at = now() WHERE id = ?', [$rid]);
     $GLOBALS['LANG'] = 'ru';
     $quotes = all('SELECT * FROM rf_quotes WHERE request_id = ? ORDER BY version DESC', [$rid]); $ql = '';
@@ -96,13 +141,24 @@ function padm_request(bool $POST): void {
     $files = ''; foreach (all('SELECT * FROM rf_files WHERE request_id = ? ORDER BY id', [$rid]) as $f) $files .= '<li><a href="' . aurl('a=pfile&id=' . $f['id']) . '">' . e($f['original_name']) . '</a> <small>' . e(fsize((int)$f['size'])) . ' · ' . ($f['uploader_kind'] === 'client' ? 'клиент' : 'мы') . ' · ' . e(pdate($f['created_at'])) . '</small></li>';
     $sto = ''; foreach (ST_RU as $k => $l) $sto .= '<option value="' . $k . '"' . ($r['status'] === $k ? ' selected' : '') . '>' . e($l) . '</option>';
     $thread = thread_html($rid, 'staff', aurl('a=pfile&id='));
+    $PF_RU = ['pending' => 'Ждёт решения клиента', 'approved' => 'Утверждён', 'changes' => 'Нужны правки', 'superseded' => 'Заменён новой версией'];
+    $pr = ''; foreach (all('SELECT p.*, f.original_name FROM rf_proofs p JOIN rf_files f ON f.id = p.file_id WHERE p.request_id = ? ORDER BY p.version DESC', [$rid]) as $pf)
+        $pr .= '<tr><td><b>v' . (int)$pf['version'] . '</b></td><td><a href="' . aurl('a=pfile&id=' . $pf['file_id']) . '">' . e($pf['original_name']) . '</a>' . ($pf['note'] !== '' ? '<br><small>' . e($pf['note']) . '</small>' : '') . '</td><td><span class="pst pst-' . ($pf['status'] === 'approved' ? 'accepted' : ($pf['status'] === 'changes' ? 'cancelled' : 'quoted')) . '">' . e($PF_RU[$pf['status']]) . '</span>'
+             . ($pf['decided_name'] !== '' ? '<br><small>' . e($pf['decided_name']) . ' · ' . e(pdate($pf['decided_at'], true)) . '</small>' : '') . ($pf['decision_note'] !== '' ? '<br><small>«' . e($pf['decision_note']) . '»</small>' : '') . '</td><td>' . e(pdate($pf['created_at'], true)) . '</td></tr>';
+    $fb = one('SELECT * FROM rf_feedback WHERE request_id = ?', [$rid]);
     $body = '<div class="grid2 pgrid"><div>'
         . '<section class="card" id="thread"><h2>Переписка с клиентом</h2>' . ($thread ? '<ol class="pthread">' . $thread . '</ol>' : '<p class="small">Сообщений пока нет.</p>')
-        . '<form method="post" enctype="multipart/form-data" class="preply">' . csrf_field() . '<input type="hidden" name="do" value="message"><label class="fld">Ответ клиенту <small>(клиент получит письмо на ' . e(LANG_NAMES_RU[$c['lang']] ?? '') . ' языке, если включил уведомления)</small><textarea name="body" rows="4"></textarea></label>'
+        . '<form method="post" enctype="multipart/form-data" class="preply">' . csrf_field() . '<input type="hidden" name="do" value="message"><label class="fld">Ответ клиенту <small>(клиент получит письмо на ' . e(LANG_NAMES_RU[$c['lang']] ?? '') . ' языке, если включил уведомления)</small><textarea name="body" rows="4" data-reply-body></textarea></label>' . replies_picker($c, $r)
         . '<label class="fld">Файлы<input type="file" name="files[]" multiple></label><button class="b b-red" type="submit">Отправить</button></form></section>'
         . '<section class="card"><h2>Коммерческие предложения</h2>' . ($ql ? '<table class="tbl"><thead><tr><th>№</th><th>Статус</th><th>Сумма с НДС</th><th>Отправлено</th></tr></thead><tbody>' . $ql . '</tbody></table>' : '<p class="small">КП ещё нет. Создайте его — строки заполнятся из запроса клиента, останется вписать цены.</p>')
-        . '<form method="post">' . csrf_field() . '<input type="hidden" name="do" value="newquote"><button class="b b-dark" type="submit">' . ($quotes ? '+ Новая версия КП' : '+ Создать КП') . '</button></form></section></div>'
+        . '<form method="post">' . csrf_field() . '<input type="hidden" name="do" value="newquote"><button class="b b-dark" type="submit">' . ($quotes ? '+ Новая версия КП' : '+ Создать КП') . '</button></form></section>'
+        . '<section class="card" id="proofs"><h2>Макеты на утверждение</h2><p class="small">Клиент видит макет в кабинете (картинки — сразу на странице, PDF — для скачивания) и нажимает «Утвердить» или пишет, что исправить. Новая версия заменяет неутверждённую старую.</p>'
+        . ($pr ? '<table class="tbl"><thead><tr><th>Версия</th><th>Файл</th><th>Решение клиента</th><th>Отправлен</th></tr></thead><tbody>' . $pr . '</tbody></table>' : '')
+        . '<form method="post" enctype="multipart/form-data" class="preply">' . csrf_field() . '<input type="hidden" name="do" value="proof"><label class="fld">Файл макета <small>(PNG, JPG, WebP или PDF, до 25 МБ)</small><input type="file" name="proof" accept=".png,.jpg,.jpeg,.webp,.pdf" required></label>'
+        . '<label class="fld">Комментарий для клиента <small>(на его языке: ' . e(LANG_NAMES_RU[$c['lang']] ?? '') . ')</small><textarea name="note" rows="2" maxlength="2000"></textarea></label><button class="b b-dark" type="submit">Отправить макет клиенту</button></form></section></div>'
         . '<div><section class="card"><h2>Статус</h2><form method="post" class="pstatus">' . csrf_field() . '<input type="hidden" name="do" value="status"><select name="status">' . $sto . '</select><label class="chk"><input type="checkbox" name="notify" value="1" checked> Сообщить клиенту письмом</label><button class="b b-line" type="submit">Сохранить статус</button></form></section>'
+        . internal_card($r, $no) . install_card($r, $c, $no)
+        . ($fb ? '<section class="card"><h2>Отзыв клиента</h2><p class="stars-ru" aria-label="' . (int)$fb['rating'] . ' из 5">' . str_repeat('★', (int)$fb['rating']) . str_repeat('☆', 5 - (int)$fb['rating']) . '</p>' . ($fb['comment'] !== '' ? '<div class="msg">' . nl2br(e($fb['comment'])) . '</div>' : '') . '<p class="small">' . e(pdate($fb['created_at'], true)) . '</p></section>' : '')
         . '<section class="card"><h2>Клиент</h2><p><b>' . e($c['company'] ?: '—') . '</b><br>' . e($c['name']) . '<br><a href="mailto:' . e($c['email']) . '">' . e($c['email']) . '</a>' . ($c['phone'] ? '<br>' . e($c['phone']) : '') . ($c['vat'] ? '<br>НДС: ' . e($c['vat']) : '') . '</p><p><a href="' . aurl('a=pclient&id=' . $c['id']) . '">Карточка клиента →</a></p></section>'
         . '<section class="card"><h2>Что просит клиент</h2>' . items_table($rid, true)
         . '<dl class="dl"><dt>Создан</dt><dd>' . e(pdate($r['created_at'], true)) . '</dd><dt>Источник</dt><dd>' . ($r['source'] === 'website' ? 'Форма на сайте' : 'Кабинет') . '</dd>' . ($r['site_address'] !== '' ? '<dt>Адрес монтажа</dt><dd>' . e($r['site_address']) . '</dd>' : '') . ($r['deadline'] ? '<dt>Нужно к</dt><dd>' . e(pdate($r['deadline'])) . '</dd>' : '') . '</dl>'
@@ -166,7 +222,7 @@ function padm_quote(bool $POST): void {
             . '<label class="fld">Срок изготовления<input name="lead_time" value="' . e($qq['lead_time']) . '" placeholder="например: 15 рабочих дней после согласования чертежа"></label></div>'
             . '<label class="fld">Вступление (видит клиент)<textarea name="intro" rows="3">' . e($qq['intro']) . '</textarea></label>'
             . '<table class="tbl qlines"><thead><tr><th>Описание и профиль</th><th>Кол-во</th><th>Ед.</th><th>Цена, € без НДС</th><th class="num">Сумма</th><th></th></tr></thead><tbody data-qbody>' . $tr . '</tbody></table><template data-qtpl>' . $row(999, []) . '</template>'
-            . '<p><button type="button" class="b b-line b-s" data-qadd>+ Строка</button></p><dl class="qtot"><dt>Без НДС</dt><dd data-tnet>' . e(money($t['net'], 'EUR', 'ru')) . '</dd><dt>НДС</dt><dd data-tvat>' . e(money($t['vat'], 'EUR', 'ru')) . '</dd><dt>Итого</dt><dd data-ttot><b>' . e(money($t['total'], 'EUR', 'ru')) . '</b></dd></dl>'
+            . '<div class="qadd-row"><button type="button" class="b b-line b-s" data-qadd>+ Строка</button>' . price_picker($c['lang']) . '</div><dl class="qtot"><dt>Без НДС</dt><dd data-tnet>' . e(money($t['net'], 'EUR', 'ru')) . '</dd><dt>НДС</dt><dd data-tvat>' . e(money($t['vat'], 'EUR', 'ru')) . '</dd><dt>Итого</dt><dd data-ttot><b>' . e(money($t['total'], 'EUR', 'ru')) . '</b></dd></dl>'
             . '<label class="fld">Условия (на языке клиента: ' . e(LANG_NAMES_RU[$c['lang']] ?? '') . ')<textarea name="terms" rows="4">' . e($qq['terms']) . '</textarea></label>'
             . '<div class="quick"><button class="b b-line" type="submit" name="do" value="save">Сохранить черновик</button><button class="b b-red" type="submit" name="do" value="send" data-confirm-btn="Отправить КП клиенту? Он получит письмо и сможет принять его онлайн.">Отправить клиенту</button>'
             . '<a class="b b-ghost" href="' . aurl('a=pquote&id=' . $qq['id'] . '&print=1') . '" target="_blank" rel="noopener">Как увидит клиент / печать ↗</a></div></form>'
@@ -300,3 +356,5 @@ function padm_transfer(): void {
         go('a=pclient&id=' . $c['id']); }
     flash('Заявка перенесена в кабинет как ' . $no . '.'); go('a=preq&no=' . rawurlencode($no));
 }
+
+require_once __DIR__ . '/ops_admin.php';

@@ -1,4 +1,4 @@
-# Reclame Fabriek website 2.2 (PHP; PostgreSQL only for the client portal). Replaces WordPress.
+# Reclame Fabriek website 2.3 (PHP; PostgreSQL only for the client portal). Replaces WordPress.
 Options -Indexes
 DirectoryIndex index.php
 <IfModule mod_rewrite.c>

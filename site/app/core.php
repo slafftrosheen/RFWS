@@ -1,6 +1,8 @@
 <?php
 /* Reclame Fabriek CMS · core helpers shared by the website and the admin. No database: content lives in /data as JSON. */
 declare(strict_types=1);
+// The factory's clock: dates and times on the site, in the portal, e-mails and calendar files are Daugavpils time, whatever the server's own zone.
+date_default_timezone_set('Europe/Riga');
 mb_internal_encoding('UTF-8');
 define('ROOT', dirname(__DIR__));
 define('DATA', ROOT . '/data');
@@ -8,7 +10,7 @@ define('UPLOADS', ROOT . '/uploads');
 const LANG_NAMES = ['en' => 'English', 'lv' => 'Latviešu', 'ru' => 'Русский', 'nl' => 'Nederlands', 'de' => 'Deutsch', 'sv' => 'Svenska'];
 const LANG_NAMES_RU = ['en' => 'Английский', 'lv' => 'Латышский', 'ru' => 'Русский', 'nl' => 'Нидерландский', 'de' => 'Немецкий', 'sv' => 'Шведский'];
 const LIGHT_KINDS = ['frontlit', 'corona', 'neon', 'front_corona', 'front_side', 'unlit', 'flat', 'lightbox'];
-const PAGE_PATHS = ['home' => '/', 'product-profiles' => '/product-profiles/', 'projects' => '/projects/', 'signage-research' => '/signage-research/', 'contact' => '/contact/', 'privacy-policy' => '/privacy-policy/'];
+const PAGE_PATHS = ['home' => '/', 'product-profiles' => '/product-profiles/', 'projects' => '/projects/', 'signage-research' => '/signage-research/', 'contact' => '/contact/', 'privacy-policy' => '/privacy-policy/', 'lumigrid' => '/lumigrid/'];
 
 /* ---------- JSON storage (atomic write + history) ---------- */
 function jread(string $rel, $default = null) {

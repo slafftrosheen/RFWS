@@ -2,7 +2,12 @@
  "seo": {
   "title": {},
   "description": {
-   "en": "How Reclame Fabriek handles the details you send through this website."
+   "en": "How Reclame Fabriek handles the details you send through this website.",
+   "lv": "Kā Reclame Fabriek apstrādā datus, ko jūs sūtāt caur šo vietni.",
+   "ru": "Как Reclame Fabriek обрабатывает данные, которые вы отправляете через этот сайт.",
+   "nl": "Hoe Reclame Fabriek omgaat met de gegevens die u via deze website verstuurt.",
+   "de": "Wie Reclame Fabriek mit den Daten umgeht, die Sie über diese Website senden.",
+   "sv": "Hur Reclame Fabriek hanterar de uppgifter du skickar via den här webbplatsen."
   }
  },
  "head": {

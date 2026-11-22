@@ -2,7 +2,12 @@
  "seo": {
   "title": {},
   "description": {
-   "en": "The Reclame Fabriek Signage Research Department: full-scale 3D printing, decorative coatings and material imitation, next-gen LED neon tubes and in-house LED controllers."
+   "en": "The Reclame Fabriek Signage Research Department: full-scale 3D printing, decorative coatings and material imitation, next-gen LED neon tubes and in-house LED controllers.",
+   "lv": "Reclame Fabriek izkārtņu izpētes nodaļa: pilna izmēra 3D drukāšana, dekoratīvi pārklājumi un materiālu imitācija, jaunās paaudzes LED neona caurules un pašu izstrādāti LED kontrolleri.",
+   "ru": "Отдел исследований Reclame Fabriek: полноразмерная 3D-печать, декоративные покрытия и имитация материалов, LED-неон нового поколения и собственные LED-контроллеры.",
+   "nl": "De afdeling Signage Research van Reclame Fabriek: 3D-printen op ware grootte, decoratieve coatings en materiaalimitatie, LED-neonbuizen van de nieuwe generatie en eigen LED-controllers.",
+   "de": "Die Forschungsabteilung von Reclame Fabriek: 3D-Druck in Originalgröße, dekorative Beschichtungen und Materialimitationen, LED-Neon der neuen Generation und eigene LED-Controller.",
+   "sv": "Reclame Fabriks avdelning för skyltforskning: 3D-utskrift i full skala, dekorativa beläggningar och materialimitation, LED-neonrör av ny generation och egna LED-styrenheter."
   }
  },
  "head": {
@@ -208,7 +213,7 @@
    "de": "LUMIGRID-Seite öffnen",
    "sv": "Öppna LUMIGRID-sidan"
   },
-  "url": "https://algorhythmicdev.github.io/lumigrid-lander/",
+  "url": "/lumigrid/",
   "title2": {
    "en": "Leading the future of signage",
    "lv": "Izkārtņu nākotnes priekšgalā",

@@ -1,6 +1,6 @@
 import asyncio
 from playwright.async_api import async_playwright
-B='http://127.0.0.1:8770'; res=[]
+import sys; B=sys.argv[1] if len(sys.argv)>1 else 'http://127.0.0.1:8770'; res=[]
 def ck(c,m): res.append(c); print(('PASS ' if c else 'FAIL ')+m)
 async def main():
     async with async_playwright() as p:

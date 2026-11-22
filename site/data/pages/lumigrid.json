@@ -1,0 +1,1371 @@
+{
+ "seo": {
+  "title": {
+   "en": "LUMIGRID lighting control and LEDNode controller",
+   "lv": "LUMIGRID apgaismojuma vadība un LEDNode kontrolleris",
+   "ru": "Управление светом LUMIGRID и контроллер LEDNode",
+   "nl": "LUMIGRID-lichtsturing en LEDNode-controller",
+   "de": "LUMIGRID-Lichtsteuerung und LEDNode-Controller",
+   "sv": "LUMIGRID ljusstyrning och LEDNode-styrenhet"
+  },
+  "description": {
+   "en": "LUMIGRID by Reclame Fabriek: the LEDNode controller drives 8 pixel strips and 8 dimmers with 24 effects, scenes and schedules from a browser on your local network.",
+   "lv": "Reclame Fabriek LUMIGRID: LEDNode kontrolleris vada 8 pikseļu lentes un 8 regulatorus ar 24 efektiem, ainām un grafikiem no pārlūka lokālajā tīklā.",
+   "ru": "LUMIGRID от Reclame Fabriek: контроллер LEDNode управляет 8 пиксельными лентами и 8 диммерами — 24 эффекта, сцены и расписания из браузера в локальной сети.",
+   "nl": "LUMIGRID van Reclame Fabriek: de LEDNode-controller stuurt 8 pixelstrips en 8 dimmers aan met 24 effecten, scènes en schema’s vanuit een browser in uw netwerk.",
+   "de": "LUMIGRID von Reclame Fabriek: Der LEDNode-Controller steuert 8 Pixelstreifen und 8 Dimmer mit 24 Effekten, Szenen und Zeitplänen im Browser im lokalen Netz.",
+   "sv": "LUMIGRID från Reclame Fabriek: LEDNode-styrenheten driver 8 pixelslingor och 8 dimmers med 24 effekter, scener och scheman från en webbläsare i ditt nätverk."
+  }
+ },
+ "head": {
+  "kicker": {
+   "en": "Signage Research · made in Daugavpils",
+   "lv": "Signage Research · ražots Daugavpilī",
+   "ru": "Signage Research · сделано в Даугавпилсе",
+   "nl": "Signage Research · gemaakt in Daugavpils",
+   "de": "Signage Research · made in Daugavpils",
+   "sv": "Signage Research · tillverkad i Daugavpils"
+  },
+  "title": {
+   "en": "LUMIGRID",
+   "lv": "LUMIGRID",
+   "ru": "LUMIGRID",
+   "nl": "LUMIGRID",
+   "de": "LUMIGRID",
+   "sv": "LUMIGRID"
+  },
+  "tagline": {
+   "en": "Light that knows its cue.",
+   "lv": "Gaisma, kas zina savu brīdi.",
+   "ru": "Свет, который знает свой выход.",
+   "nl": "Licht dat zijn moment kent.",
+   "de": "Licht, das seinen Einsatz kennt.",
+   "sv": "Ljus som vet när det är dags."
+  },
+  "lead": {
+   "en": "Our own lighting control for signs. The LEDNode controller runs the LUMIGRID firmware: 16 outputs for pixel strips and dimmable light, saved scenes and schedules, all controlled from a browser on site.",
+   "lv": "Mūsu pašu apgaismojuma vadība izkārtnēm. LEDNode kontrolleris darbina LUMIGRID programmatūru: 16 izejas pikseļu lentēm un regulējamai gaismai, saglabātas ainas un grafiki, viss vadāms no pārlūka uz vietas.",
+   "ru": "Наше собственное управление светом для вывесок. Контроллер LEDNode работает на прошивке LUMIGRID: 16 выходов для пиксельных лент и диммируемого света, сохранённые сцены и расписания, управление из браузера прямо на объекте.",
+   "nl": "Onze eigen lichtsturing voor signing. De LEDNode-controller draait de LUMIGRID-firmware: 16 uitgangen voor pixelstrips en dimbaar licht, opgeslagen scènes en schema’s, alles te bedienen vanuit een browser ter plaatse.",
+   "de": "Unsere eigene Lichtsteuerung für Werbeanlagen. Der LEDNode-Controller läuft mit der LUMIGRID-Firmware: 16 Ausgänge für Pixelstreifen und dimmbares Licht, gespeicherte Szenen und Zeitpläne, bedient im Browser vor Ort.",
+   "sv": "Vår egen ljusstyrning för skyltar. LEDNode-styrenheten kör LUMIGRID-firmwaren: 16 utgångar för pixelslingor och dimbart ljus, sparade scener och scheman, allt styrt från en webbläsare på plats."
+  },
+  "button": {
+   "en": "Plan a lit sign",
+   "lv": "Plānot izgaismotu izkārtni",
+   "ru": "Спланировать световую вывеску",
+   "nl": "Verlichte signing plannen",
+   "de": "Leuchtwerbung planen",
+   "sv": "Planera en ljusskylt"
+  },
+  "button2": {
+   "en": "See the controller",
+   "lv": "Apskatīt kontrolleri",
+   "ru": "Посмотреть контроллер",
+   "nl": "Bekijk de controller",
+   "de": "Zum Controller",
+   "sv": "Se styrenheten"
+  },
+  "canvas": {
+   "en": "The word LUMIGRID drawn in LED pixels that switch on",
+   "lv": "Vārds LUMIGRID no LED pikseļiem, kas iedegas",
+   "ru": "Слово LUMIGRID из светодиодных пикселей, которые зажигаются",
+   "nl": "Het woord LUMIGRID in LED-pixels die aangaan",
+   "de": "Das Wort LUMIGRID aus LED-Pixeln, die aufleuchten",
+   "sv": "Ordet LUMIGRID i LED-pixlar som tänds"
+  }
+ },
+ "stats": {
+  "items": [
+   {
+    "value": "16",
+    "label": {
+     "en": "outputs per LEDNode",
+     "lv": "izejas vienā LEDNode",
+     "ru": "выходов на один LEDNode",
+     "nl": "uitgangen per LEDNode",
+     "de": "Ausgänge pro LEDNode",
+     "sv": "utgångar per LEDNode"
+    }
+   },
+   {
+    "value": "256",
+    "label": {
+     "en": "pixels per strip output",
+     "lv": "pikseļi uz lentes izeju",
+     "ru": "пикселей на выход ленты",
+     "nl": "pixels per stripuitgang",
+     "de": "Pixel pro Streifenausgang",
+     "sv": "pixlar per slingutgång"
+    }
+   },
+   {
+    "value": "24",
+    "label": {
+     "en": "effects in the firmware",
+     "lv": "efekti programmatūrā",
+     "ru": "эффекта в прошивке",
+     "nl": "effecten in de firmware",
+     "de": "Effekte in der Firmware",
+     "sv": "effekter i firmwaren"
+    }
+   },
+   {
+    "value": "32",
+    "label": {
+     "en": "saved scenes",
+     "lv": "saglabātas ainas",
+     "ru": "сохранённые сцены",
+     "nl": "opgeslagen scènes",
+     "de": "gespeicherte Szenen",
+     "sv": "sparade scener"
+    }
+   }
+  ]
+ },
+ "system": {
+  "kicker": {
+   "en": "The system",
+   "lv": "Sistēma",
+   "ru": "Система",
+   "nl": "Het systeem",
+   "de": "Das System",
+   "sv": "Systemet"
+  },
+  "title": {
+   "en": "From our workshop to the façade",
+   "lv": "No mūsu darbnīcas līdz fasādei",
+   "ru": "Из нашего цеха — на фасад",
+   "nl": "Van onze werkplaats naar de gevel",
+   "de": "Von unserer Werkstatt an die Fassade",
+   "sv": "Från vår verkstad till fasaden"
+  },
+  "text": {
+   "en": "LUMIGRID connects the signs we build with the way they are lit, so letters, neon and lightboxes work as one installation.",
+   "lv": "LUMIGRID savieno mūsu izgatavotās izkārtnes ar to apgaismojumu, lai burti, neons un gaismas kastes darbotos kā viena instalācija.",
+   "ru": "LUMIGRID связывает вывески, которые мы делаем, с тем, как они светятся: буквы, неон и лайтбоксы работают как одна установка.",
+   "nl": "LUMIGRID verbindt de signing die we bouwen met de manier waarop die oplicht, zodat letters, neon en lichtbakken samenwerken als één installatie.",
+   "de": "LUMIGRID verbindet die Werbeanlagen, die wir bauen, mit ihrem Licht. So arbeiten Buchstaben, Neon und Leuchtkästen als eine Anlage.",
+   "sv": "LUMIGRID kopplar ihop skyltarna vi bygger med hur de lyser, så att bokstäver, neon och ljuslådor fungerar som en installation."
+  },
+  "items": [
+   {
+    "icon": "box-letter",
+    "title": {
+     "en": "The sign",
+     "lv": "Izkārtne",
+     "ru": "Вывеска",
+     "nl": "De signing",
+     "de": "Die Werbeanlage",
+     "sv": "Skylten"
+    },
+    "text": {
+     "en": "We build the letters, neon and lightboxes and plan the light for each part: what moves and what simply glows.",
+     "lv": "Mēs izgatavojam burtus, neonu un gaismas kastes un plānojam gaismu katrai daļai: kas kustas un kas vienkārši mirdz.",
+     "ru": "Мы делаем буквы, неон и лайтбоксы и планируем свет для каждой части: что движется, а что просто светится.",
+     "nl": "Wij bouwen de letters, het neon en de lichtbakken en plannen het licht per onderdeel: wat beweegt en wat gewoon gloeit.",
+     "de": "Wir bauen Buchstaben, Neon und Leuchtkästen und planen das Licht für jedes Teil: was sich bewegt und was einfach leuchtet.",
+     "sv": "Vi bygger bokstäverna, neonet och ljuslådorna och planerar ljuset för varje del: vad som rör sig och vad som bara lyser."
+    }
+   },
+   {
+    "icon": "controller",
+    "title": {
+     "en": "LEDNode",
+     "lv": "LEDNode",
+     "ru": "LEDNode",
+     "nl": "LEDNode",
+     "de": "LEDNode",
+     "sv": "LEDNode"
+    },
+    "text": {
+     "en": "One controller inside the sign or its cabinet drives up to 16 outputs: 8 pixel strips and 8 dimmable channels.",
+     "lv": "Viens kontrolleris izkārtnē vai tās skapī vada līdz 16 izejām: 8 pikseļu lentes un 8 regulējamus kanālus.",
+     "ru": "Один контроллер в вывеске или её шкафу управляет 16 выходами: 8 пиксельных лент и 8 диммируемых каналов.",
+     "nl": "Eén controller in de signing of de kast stuurt tot 16 uitgangen aan: 8 pixelstrips en 8 dimbare kanalen.",
+     "de": "Ein Controller in der Anlage oder ihrem Schaltschrank steuert bis zu 16 Ausgänge: 8 Pixelstreifen und 8 dimmbare Kanäle.",
+     "sv": "En styrenhet i skylten eller dess skåp driver upp till 16 utgångar: 8 pixelslingor och 8 dimbara kanaler."
+    }
+   },
+   {
+    "icon": "globe",
+    "title": {
+     "en": "Your browser",
+     "lv": "Jūsu pārlūks",
+     "ru": "Ваш браузер",
+     "nl": "Uw browser",
+     "de": "Ihr Browser",
+     "sv": "Din webbläsare"
+    },
+    "text": {
+     "en": "Scenes, schedules and live control run from the controller’s own page on your local network. No cloud account is needed.",
+     "lv": "Ainas, grafiki un tiešā vadība darbojas no paša kontrollera lapas jūsu lokālajā tīklā. Mākoņkonts nav vajadzīgs.",
+     "ru": "Сцены, расписания и ручное управление работают со страницы самого контроллера в вашей локальной сети. Облачный аккаунт не нужен.",
+     "nl": "Scènes, schema’s en live bediening draaien vanaf de eigen pagina van de controller in uw lokale netwerk. Een cloudaccount is niet nodig.",
+     "de": "Szenen, Zeitpläne und Live-Steuerung laufen über die eigene Seite des Controllers im lokalen Netz. Ein Cloud-Konto ist nicht nötig.",
+     "sv": "Scener, scheman och direktstyrning körs från styrenhetens egen sida i ditt lokala nätverk. Inget molnkonto behövs."
+    }
+   },
+   {
+    "icon": "layers",
+    "title": {
+     "en": "More nodes, more light",
+     "lv": "Vairāk kontrolleru, vairāk gaismas",
+     "ru": "Больше контроллеров — больше света",
+     "nl": "Meer nodes, meer licht",
+     "de": "Mehr Nodes, mehr Licht",
+     "sv": "Fler noder, mer ljus"
+    },
+    "text": {
+     "en": "Several LEDNodes on one network can play matching shows, and a lighting desk can take over through Art-Net or sACN.",
+     "lv": "Vairāki LEDNode vienā tīklā var atskaņot saskaņotas programmas, un gaismas pults var pārņemt vadību caur Art-Net vai sACN.",
+     "ru": "Несколько LEDNode в одной сети играют согласованные шоу, а световой пульт может взять управление через Art-Net или sACN.",
+     "nl": "Meerdere LEDNodes in één netwerk spelen bij elkaar passende shows, en een lichttafel kan het overnemen via Art-Net of sACN.",
+     "de": "Mehrere LEDNodes in einem Netz spielen abgestimmte Shows, und ein Lichtpult kann per Art-Net oder sACN übernehmen.",
+     "sv": "Flera LEDNoder i samma nätverk kan spela matchande shower, och ett ljusbord kan ta över via Art-Net eller sACN."
+    }
+   }
+  ]
+ },
+ "node": {
+  "kicker": {
+   "en": "The controller",
+   "lv": "Kontrolleris",
+   "ru": "Контроллер",
+   "nl": "De controller",
+   "de": "Der Controller",
+   "sv": "Styrenheten"
+  },
+  "title": {
+   "en": "LEDNode",
+   "lv": "LEDNode",
+   "ru": "LEDNode",
+   "nl": "LEDNode",
+   "de": "LEDNode",
+   "sv": "LEDNode"
+  },
+  "text": {
+   "en": "A compact ESP32 controller that runs LUMIGRID. One board mixes two kinds of light: animated pixel strips and classic dimmable LED.",
+   "lv": "Kompakts ESP32 kontrolleris, kas darbina LUMIGRID. Viena plate apvieno divus gaismas veidus: animētas pikseļu lentes un klasisku regulējamu LED.",
+   "ru": "Компактный контроллер на ESP32 с прошивкой LUMIGRID. Одна плата сочетает два вида света: анимированные пиксельные ленты и классический диммируемый LED.",
+   "nl": "Een compacte ESP32-controller met LUMIGRID. Eén bord combineert twee soorten licht: geanimeerde pixelstrips en klassieke dimbare LED.",
+   "de": "Ein kompakter ESP32-Controller mit LUMIGRID. Eine Platine verbindet zwei Lichtarten: animierte Pixelstreifen und klassische dimmbare LED.",
+   "sv": "En kompakt ESP32-styrenhet som kör LUMIGRID. Ett kort blandar två sorters ljus: animerade pixelslingor och klassisk dimbar LED."
+  },
+  "specs": [
+   {
+    "label": {
+     "en": "Pixel outputs",
+     "lv": "Pikseļu izejas",
+     "ru": "Пиксельные выходы",
+     "nl": "Pixeluitgangen",
+     "de": "Pixelausgänge",
+     "sv": "Pixelutgångar"
+    },
+    "value": {
+     "en": "8 (A1–A8) · WS2812 RGB or SK6812 RGBW · up to 256 pixels each",
+     "lv": "8 (A1–A8) · WS2812 RGB vai SK6812 RGBW · līdz 256 pikseļiem katrā",
+     "ru": "8 (A1–A8) · WS2812 RGB или SK6812 RGBW · до 256 пикселей на каждом",
+     "nl": "8 (A1–A8) · WS2812 RGB of SK6812 RGBW · tot 256 pixels per uitgang",
+     "de": "8 (A1–A8) · WS2812 RGB oder SK6812 RGBW · bis zu 256 Pixel je Ausgang",
+     "sv": "8 (A1–A8) · WS2812 RGB eller SK6812 RGBW · upp till 256 pixlar var"
+    }
+   },
+   {
+    "label": {
+     "en": "Dimmer outputs",
+     "lv": "Regulējamās izejas",
+     "ru": "Диммерные выходы",
+     "nl": "Dimuitgangen",
+     "de": "Dimmerausgänge",
+     "sv": "Dimmerutgångar"
+    },
+    "value": {
+     "en": "8 (P1–P8) · independent PWM channels",
+     "lv": "8 (P1–P8) · neatkarīgi PWM kanāli",
+     "ru": "8 (P1–P8) · независимые ШИМ-каналы",
+     "nl": "8 (P1–P8) · onafhankelijke PWM-kanalen",
+     "de": "8 (P1–P8) · unabhängige PWM-Kanäle",
+     "sv": "8 (P1–P8) · oberoende PWM-kanaler"
+    }
+   },
+   {
+    "label": {
+     "en": "Processor",
+     "lv": "Procesors",
+     "ru": "Процессор",
+     "nl": "Processor",
+     "de": "Prozessor",
+     "sv": "Processor"
+    },
+    "value": {
+     "en": "ESP32 · 8 MB flash",
+     "lv": "ESP32 · 8 MB zibatmiņa",
+     "ru": "ESP32 · 8 МБ флеш-памяти",
+     "nl": "ESP32 · 8 MB flash",
+     "de": "ESP32 · 8 MB Flash",
+     "sv": "ESP32 · 8 MB flash"
+    }
+   },
+   {
+    "label": {
+     "en": "Connection",
+     "lv": "Savienojums",
+     "ru": "Связь",
+     "nl": "Verbinding",
+     "de": "Verbindung",
+     "sv": "Anslutning"
+    },
+    "value": {
+     "en": "Wi-Fi · own setup network · browser interface on the controller",
+     "lv": "Wi-Fi · savs iestatīšanas tīkls · pārlūka saskarne kontrollerī",
+     "ru": "Wi-Fi · собственная сеть для настройки · веб-интерфейс на самом контроллере",
+     "nl": "Wi-Fi · eigen installatienetwerk · browserinterface op de controller",
+     "de": "WLAN · eigenes Einrichtungsnetz · Browseroberfläche auf dem Controller",
+     "sv": "Wi-Fi · eget installationsnätverk · webbgränssnitt på styrenheten"
+    }
+   },
+   {
+    "label": {
+     "en": "Live input",
+     "lv": "Tiešā ievade",
+     "ru": "Внешнее управление",
+     "nl": "Live-invoer",
+     "de": "Live-Eingang",
+     "sv": "Direktingång"
+    },
+    "value": {
+     "en": "Art-Net and sACN, off until you switch them on",
+     "lv": "Art-Net un sACN, izslēgti, līdz tos ieslēdzat",
+     "ru": "Art-Net и sACN, выключены, пока вы их не включите",
+     "nl": "Art-Net en sACN, uit tot u ze aanzet",
+     "de": "Art-Net und sACN, aus, bis Sie sie einschalten",
+     "sv": "Art-Net och sACN, avstängda tills du slår på dem"
+    }
+   },
+   {
+    "label": {
+     "en": "Sync",
+     "lv": "Sinhronizācija",
+     "ru": "Синхронизация",
+     "nl": "Synchronisatie",
+     "de": "Synchronisation",
+     "sv": "Synkning"
+    },
+    "value": {
+     "en": "Up to 8 controllers on the same local network",
+     "lv": "Līdz 8 kontrolleriem vienā lokālajā tīklā",
+     "ru": "До 8 контроллеров в одной локальной сети",
+     "nl": "Tot 8 controllers in hetzelfde lokale netwerk",
+     "de": "Bis zu 8 Controller im selben lokalen Netz",
+     "sv": "Upp till 8 styrenheter i samma lokala nätverk"
+    }
+   },
+   {
+    "label": {
+     "en": "Updates",
+     "lv": "Atjauninājumi",
+     "ru": "Обновления",
+     "nl": "Updates",
+     "de": "Updates",
+     "sv": "Uppdateringar"
+    },
+    "value": {
+     "en": "Over the network, with automatic rollback if a new version does not start",
+     "lv": "Caur tīklu, ar automātisku atgriešanos, ja jaunā versija nestartē",
+     "ru": "По сети, с автоматическим откатом, если новая версия не запускается",
+     "nl": "Via het netwerk, met automatisch terugzetten als een nieuwe versie niet start",
+     "de": "Über das Netz, mit automatischer Rückkehr, wenn eine neue Version nicht startet",
+     "sv": "Via nätverket, med automatisk återgång om en ny version inte startar"
+    }
+   },
+   {
+    "label": {
+     "en": "Start-up",
+     "lv": "Ieslēgšana",
+     "ru": "Запуск",
+     "nl": "Opstarten",
+     "de": "Start",
+     "sv": "Uppstart"
+    },
+    "value": {
+     "en": "Outputs stay off until the controller is ready, then soft-start in 0.5 s",
+     "lv": "Izejas paliek izslēgtas, līdz kontrolleris ir gatavs, tad maigi ieslēdzas 0,5 s laikā",
+     "ru": "Выходы выключены, пока контроллер не готов, затем плавно включаются за 0,5 с",
+     "nl": "Uitgangen blijven uit tot de controller klaar is en starten dan zacht in 0,5 s",
+     "de": "Ausgänge bleiben aus, bis der Controller bereit ist, dann Sanftstart in 0,5 s",
+     "sv": "Utgångarna är avstängda tills styrenheten är redo och mjukstartar sedan på 0,5 s"
+    }
+   }
+  ],
+  "note": {
+   "en": "LEDNode is the controller. Power supplies, wiring and fusing are chosen for each installation, and the firmware keeps a power estimate for every output and supply.",
+   "lv": "LEDNode ir kontrolleris. Barošanas blokus, vadus un drošinātājus izvēlas katrai instalācijai, un programmatūra aprēķina jaudu katrai izejai un barošanas avotam.",
+   "ru": "LEDNode — это контроллер. Блоки питания, проводку и предохранители подбирают под каждую установку, а прошивка ведёт расчёт мощности по каждому выходу и источнику.",
+   "nl": "LEDNode is de controller. Voedingen, bekabeling en zekeringen worden per installatie gekozen, en de firmware houdt per uitgang en voeding een vermogensschatting bij.",
+   "de": "LEDNode ist der Controller. Netzteile, Verkabelung und Absicherung werden für jede Anlage gewählt, und die Firmware schätzt die Leistung je Ausgang und Netzteil.",
+   "sv": "LEDNode är styrenheten. Nätaggregat, kablage och säkringar väljs för varje installation, och firmwaren håller en effektuppskattning för varje utgång och aggregat."
+  },
+  "strips": {
+   "en": "Pixel strips",
+   "lv": "Pikseļu lentes",
+   "ru": "Пиксельные ленты",
+   "nl": "Pixelstrips",
+   "de": "Pixelstreifen",
+   "sv": "Pixelslingor"
+  },
+  "dimmers": {
+   "en": "Dimmers",
+   "lv": "Regulatori",
+   "ru": "Диммеры",
+   "nl": "Dimmers",
+   "de": "Dimmer",
+   "sv": "Dimmers"
+  },
+  "figure": {
+   "en": "Drawing of the LEDNode board: 8 pixel outputs, 8 dimmer outputs and the ESP32 module",
+   "lv": "LEDNode plates zīmējums: 8 pikseļu izejas, 8 regulējamās izejas un ESP32 modulis",
+   "ru": "Схема платы LEDNode: 8 пиксельных выходов, 8 диммерных выходов и модуль ESP32",
+   "nl": "Tekening van het LEDNode-bord: 8 pixeluitgangen, 8 dimuitgangen en de ESP32-module",
+   "de": "Zeichnung der LEDNode-Platine: 8 Pixelausgänge, 8 Dimmerausgänge und das ESP32-Modul",
+   "sv": "Ritning av LEDNode-kortet: 8 pixelutgångar, 8 dimmerutgångar och ESP32-modulen"
+  }
+ },
+ "lab": {
+  "kicker": {
+   "en": "Effect lab",
+   "lv": "Efektu laboratorija",
+   "ru": "Лаборатория эффектов",
+   "nl": "Effectenlab",
+   "de": "Effektlabor",
+   "sv": "Effektlabb"
+  },
+  "title": {
+   "en": "24 effects, straight from the firmware",
+   "lv": "24 efekti tieši no programmatūras",
+   "ru": "24 эффекта прямо из прошивки",
+   "nl": "24 effecten, rechtstreeks uit de firmware",
+   "de": "24 Effekte, direkt aus der Firmware",
+   "sv": "24 effekter, direkt från firmwaren"
+  },
+  "text": {
+   "en": "Pick an effect and a palette. Your browser draws all 16 outputs with the same maths the controller uses.",
+   "lv": "Izvēlieties efektu un paleti. Jūsu pārlūks zīmē visas 16 izejas ar tiem pašiem aprēķiniem, ko izmanto kontrolleris.",
+   "ru": "Выберите эффект и палитру. Браузер рисует все 16 выходов по тем же формулам, что и контроллер.",
+   "nl": "Kies een effect en een palet. Uw browser tekent alle 16 uitgangen met dezelfde berekening als de controller.",
+   "de": "Wählen Sie einen Effekt und eine Palette. Ihr Browser zeichnet alle 16 Ausgänge mit derselben Mathematik wie der Controller.",
+   "sv": "Välj en effekt och en palett. Din webbläsare ritar alla 16 utgångar med samma matematik som styrenheten."
+  },
+  "note": {
+   "en": "An illustration in your browser, not a connection to a controller. Real colour and brightness depend on the LEDs and the power supply. The eight strips run one effect, each a little later than the one above.",
+   "lv": "Ilustrācija jūsu pārlūkā, nevis savienojums ar kontrolleri. Īstā krāsa un spilgtums ir atkarīgi no LED un barošanas. Astoņas lentes rāda vienu efektu, katra nedaudz vēlāk par iepriekšējo.",
+   "ru": "Это иллюстрация в браузере, а не связь с контроллером. Настоящие цвет и яркость зависят от светодиодов и блока питания. Восемь лент играют один эффект, каждая чуть позже предыдущей.",
+   "nl": "Een illustratie in uw browser, geen verbinding met een controller. Echte kleur en helderheid hangen af van de LED’s en de voeding. De acht strips spelen één effect, elk iets later dan de vorige.",
+   "de": "Eine Darstellung im Browser, keine Verbindung zu einem Controller. Echte Farbe und Helligkeit hängen von den LEDs und dem Netzteil ab. Die acht Streifen spielen einen Effekt, jeder etwas später als der vorige.",
+   "sv": "En illustration i webbläsaren, ingen anslutning till en styrenhet. Verklig färg och ljusstyrka beror på lysdioderna och nätaggregatet. De åtta slingorna spelar en effekt, var och en lite senare än den ovan."
+  },
+  "l_effect": {
+   "en": "Effect",
+   "lv": "Efekts",
+   "ru": "Эффект",
+   "nl": "Effect",
+   "de": "Effekt",
+   "sv": "Effekt"
+  },
+  "l_palette": {
+   "en": "Palette",
+   "lv": "Palete",
+   "ru": "Палитра",
+   "nl": "Palet",
+   "de": "Palette",
+   "sv": "Palett"
+  },
+  "l_speed": {
+   "en": "Speed",
+   "lv": "Ātrums",
+   "ru": "Скорость",
+   "nl": "Snelheid",
+   "de": "Tempo",
+   "sv": "Hastighet"
+  },
+  "l_pwm_yes": {
+   "en": "Also works on a dimmer",
+   "lv": "Der arī regulatoram",
+   "ru": "Подходит и для диммера",
+   "nl": "Werkt ook op een dimmer",
+   "de": "Auch für Dimmer",
+   "sv": "Fungerar även på en dimmer"
+  },
+  "l_pwm_no": {
+   "en": "Made for pixel strips",
+   "lv": "Paredzēts pikseļu lentēm",
+   "ru": "Для пиксельных лент",
+   "nl": "Gemaakt voor pixelstrips",
+   "de": "Für Pixelstreifen gemacht",
+   "sv": "Gjord för pixelslingor"
+  },
+  "l_strips": {
+   "en": "Pixel strips A1–A8",
+   "lv": "Pikseļu lentes A1–A8",
+   "ru": "Пиксельные ленты A1–A8",
+   "nl": "Pixelstrips A1–A8",
+   "de": "Pixelstreifen A1–A8",
+   "sv": "Pixelslingor A1–A8"
+  },
+  "l_dimmers": {
+   "en": "Dimmers P1–P8",
+   "lv": "Regulatori P1–P8",
+   "ru": "Диммеры P1–P8",
+   "nl": "Dimmers P1–P8",
+   "de": "Dimmer P1–P8",
+   "sv": "Dimmers P1–P8"
+  },
+  "l_canvas": {
+   "en": "Preview of the 16 outputs running the selected effect",
+   "lv": "16 izeju priekšskatījums ar izvēlēto efektu",
+   "ru": "Предпросмотр 16 выходов с выбранным эффектом",
+   "nl": "Voorbeeld van de 16 uitgangen met het gekozen effect",
+   "de": "Vorschau der 16 Ausgänge mit dem gewählten Effekt",
+   "sv": "Förhandsvisning av de 16 utgångarna med vald effekt"
+  },
+  "effects": [
+   {
+    "id": "solid",
+    "name": {
+     "en": "Steady color",
+     "lv": "Vienmērīga krāsa",
+     "ru": "Ровный цвет",
+     "nl": "Vaste kleur",
+     "de": "Gleichmäßige Farbe",
+     "sv": "Jämn färg"
+    },
+    "text": {
+     "en": "An even wash of one colour.",
+     "lv": "Vienmērīgs vienas krāsas apgaismojums.",
+     "ru": "Ровная заливка одним цветом.",
+     "nl": "Een egale gloed in één kleur.",
+     "de": "Eine gleichmäßige Fläche in einer Farbe.",
+     "sv": "Ett jämnt sken i en färg."
+    }
+   },
+   {
+    "id": "breathe",
+    "name": {
+     "en": "Smooth pulse",
+     "lv": "Maiga pulsācija",
+     "ru": "Плавный пульс",
+     "nl": "Zachte puls",
+     "de": "Sanfter Puls",
+     "sv": "Mjuk puls"
+    },
+    "text": {
+     "en": "Fades between a soft glow and full brightness.",
+     "lv": "Pāriet no maiga mirdzuma līdz pilnam spilgtumam.",
+     "ru": "Переходит от мягкого свечения к полной яркости.",
+     "nl": "Gaat van een zachte gloed naar volle helderheid.",
+     "de": "Blendet zwischen sanftem Glimmen und voller Helligkeit.",
+     "sv": "Tonar mellan ett mjukt sken och full ljusstyrka."
+    }
+   },
+   {
+    "id": "chase",
+    "name": {
+     "en": "Moving comet",
+     "lv": "Komēta",
+     "ru": "Комета",
+     "nl": "Komeet",
+     "de": "Komet",
+     "sv": "Komet"
+    },
+    "text": {
+     "en": "A bright head travels along the strip with a fading tail.",
+     "lv": "Spilgta galva skrien pa lenti ar dziestošu asti.",
+     "ru": "Яркая голова бежит по ленте с гаснущим хвостом.",
+     "nl": "Een felle kop loopt over de strip met een uitdovende staart.",
+     "de": "Ein heller Kopf läuft mit verglühendem Schweif über den Streifen.",
+     "sv": "Ett ljust huvud rör sig längs slingan med en svans som bleknar."
+    }
+   },
+   {
+    "id": "sweep",
+    "name": {
+     "en": "Color sweep",
+     "lv": "Krāsas aizpilde",
+     "ru": "Заполнение цветом",
+     "nl": "Kleurveeg",
+     "de": "Farbwischer",
+     "sv": "Färgsvep"
+    },
+    "text": {
+     "en": "The colour fills the strip from end to end.",
+     "lv": "Krāsa aizpilda lenti no gala līdz galam.",
+     "ru": "Цвет заполняет ленту от края до края.",
+     "nl": "De kleur vult de strip van begin tot eind.",
+     "de": "Die Farbe füllt den Streifen von Ende zu Ende.",
+     "sv": "Färgen fyller slingan från ände till ände."
+    }
+   },
+   {
+    "id": "reveal",
+    "name": {
+     "en": "Soft reveal",
+     "lv": "Maiga iedegšanās",
+     "ru": "Мягкое появление",
+     "nl": "Zacht oplichten",
+     "de": "Sanftes Einblenden",
+     "sv": "Mjuk tändning"
+    },
+    "text": {
+     "en": "The whole lane fades in for a polished sign-on.",
+     "lv": "Visa līnija maigi iedegas, kā izkārtne, kas ieslēdzas.",
+     "ru": "Вся линия плавно загорается, как включающаяся вывеска.",
+     "nl": "De hele lijn licht zacht op, als een signing die aangaat.",
+     "de": "Die ganze Linie blendet ein, wie eine Anlage, die angeht.",
+     "sv": "Hela linjen tonar in, som en skylt som tänds."
+    }
+   },
+   {
+    "id": "sparkle",
+    "name": {
+     "en": "Random twinkle",
+     "lv": "Dzirksteles",
+     "ru": "Искры",
+     "nl": "Fonkeling",
+     "de": "Funkeln",
+     "sv": "Gnistor"
+    },
+    "text": {
+     "en": "Crisp white sparks over a steady colour.",
+     "lv": "Spilgtas baltas dzirksteles uz vienmērīgas krāsas.",
+     "ru": "Чёткие белые искры поверх ровного цвета.",
+     "nl": "Heldere witte vonken boven een vaste kleur.",
+     "de": "Klare weiße Funken über einer ruhigen Farbe.",
+     "sv": "Skarpa vita gnistor över en jämn färg."
+    }
+   },
+   {
+    "id": "gradient",
+    "name": {
+     "en": "Flowing glow",
+     "lv": "Plūstošs mirdzums",
+     "ru": "Плывущее свечение",
+     "nl": "Stromende gloed",
+     "de": "Fließendes Leuchten",
+     "sv": "Flytande sken"
+    },
+    "text": {
+     "en": "A colour gradient flows with a soft wave of light.",
+     "lv": "Krāsu pāreja plūst ar maigu gaismas vilni.",
+     "ru": "Цветовой переход плывёт мягкой волной света.",
+     "nl": "Een kleurverloop stroomt mee met een zachte lichtgolf.",
+     "de": "Ein Farbverlauf fließt mit einer weichen Lichtwelle.",
+     "sv": "En färgtoning flyter med en mjuk ljusvåg."
+    }
+   },
+   {
+    "id": "strobe",
+    "name": {
+     "en": "Beat strobe",
+     "lv": "Stroboskops",
+     "ru": "Стробоскоп",
+     "nl": "Stroboscoop",
+     "de": "Stroboskop",
+     "sv": "Stroboskop"
+    },
+    "text": {
+     "en": "Regular flashes with an adjustable on-time.",
+     "lv": "Regulāri uzplaiksnījumi ar regulējamu ilgumu.",
+     "ru": "Ритмичные вспышки с настраиваемой длительностью.",
+     "nl": "Regelmatige flitsen met instelbare aan-tijd.",
+     "de": "Regelmäßige Blitze mit einstellbarer Leuchtdauer.",
+     "sv": "Regelbundna blixtar med justerbar tändtid."
+    }
+   },
+   {
+    "id": "fire",
+    "name": {
+     "en": "Living flame",
+     "lv": "Dzīva liesma",
+     "ru": "Живое пламя",
+     "nl": "Levende vlam",
+     "de": "Lebendige Flamme",
+     "sv": "Levande låga"
+    },
+    "text": {
+     "en": "A flickering flame texture along the strip.",
+     "lv": "Mirgojoša liesmas faktūra pa visu lenti.",
+     "ru": "Мерцающая фактура пламени по ленте.",
+     "nl": "Een flakkerende vlamtextuur over de strip.",
+     "de": "Eine flackernde Flammenstruktur entlang des Streifens.",
+     "sv": "En fladdrande lågstruktur längs slingan."
+    }
+   },
+   {
+    "id": "aurora",
+    "name": {
+     "en": "Aurora glow",
+     "lv": "Ziemeļblāzma",
+     "ru": "Северное сияние",
+     "nl": "Noorderlicht",
+     "de": "Polarlicht",
+     "sv": "Norrsken"
+    },
+    "text": {
+     "en": "The colour shifts gently across the whole lane.",
+     "lv": "Krāsa maigi mainās visā līnijā.",
+     "ru": "Цвет мягко меняется по всей линии.",
+     "nl": "De kleur verschuift zacht over de hele lijn.",
+     "de": "Die Farbe verschiebt sich sanft über die ganze Linie.",
+     "sv": "Färgen skiftar mjukt över hela linjen."
+    }
+   },
+   {
+    "id": "colorwave",
+    "name": {
+     "en": "Color wave",
+     "lv": "Krāsu vilnis",
+     "ru": "Цветовая волна",
+     "nl": "Kleurgolf",
+     "de": "Farbwelle",
+     "sv": "Färgvåg"
+    },
+    "text": {
+     "en": "A repeating wave of colour and light moves along.",
+     "lv": "Atkārtots krāsas un gaismas vilnis virzās uz priekšu.",
+     "ru": "Повторяющаяся волна цвета и света движется вдоль ленты.",
+     "nl": "Een herhalende golf van kleur en licht beweegt mee.",
+     "de": "Eine wiederkehrende Welle aus Farbe und Licht wandert entlang.",
+     "sv": "En upprepad våg av färg och ljus rör sig framåt."
+    }
+   },
+   {
+    "id": "staticpulse",
+    "name": {
+     "en": "Static pulse",
+     "lv": "Vienmērīgs pulss",
+     "ru": "Ровный пульс",
+     "nl": "Rustige puls",
+     "de": "Ruhiger Puls",
+     "sv": "Lugn puls"
+    },
+    "text": {
+     "en": "A slow brightness pulse in one fixed colour.",
+     "lv": "Lēna spilgtuma pulsācija vienā krāsā.",
+     "ru": "Медленный пульс яркости в одном цвете.",
+     "nl": "Een langzame helderheidspuls in één vaste kleur.",
+     "de": "Ein langsamer Helligkeitspuls in einer festen Farbe.",
+     "sv": "En långsam ljuspuls i en fast färg."
+    }
+   },
+   {
+    "id": "rainbow",
+    "name": {
+     "en": "Rainbow flow",
+     "lv": "Varavīksne",
+     "ru": "Радуга",
+     "nl": "Regenboog",
+     "de": "Regenbogen",
+     "sv": "Regnbåge"
+    },
+    "text": {
+     "en": "The full spectrum moves along the strip.",
+     "lv": "Viss spektrs virzās pa lenti.",
+     "ru": "Весь спектр движется по ленте.",
+     "nl": "Het volledige spectrum beweegt over de strip.",
+     "de": "Das ganze Spektrum wandert über den Streifen.",
+     "sv": "Hela spektrumet rör sig längs slingan."
+    }
+   },
+   {
+    "id": "colorfade",
+    "name": {
+     "en": "Color fade",
+     "lv": "Krāsu pāreja",
+     "ru": "Смена цвета",
+     "nl": "Kleurovergang",
+     "de": "Farbübergang",
+     "sv": "Färgövergång"
+    },
+    "text": {
+     "en": "The lane blends through the palette and back.",
+     "lv": "Līnija pāriet cauri paletei un atpakaļ.",
+     "ru": "Линия проходит через палитру и обратно.",
+     "nl": "De lijn loopt door het palet en terug.",
+     "de": "Die Linie läuft durch die Palette und zurück.",
+     "sv": "Linjen glider genom paletten och tillbaka."
+    }
+   },
+   {
+    "id": "scanner",
+    "name": {
+     "en": "Soft scanner",
+     "lv": "Skeneris",
+     "ru": "Сканер",
+     "nl": "Scanner",
+     "de": "Scanner",
+     "sv": "Skanner"
+    },
+    "text": {
+     "en": "A soft spotlight runs to the end and back.",
+     "lv": "Maigs gaismas punkts aizskrien līdz galam un atpakaļ.",
+     "ru": "Мягкое пятно света бежит до конца и обратно.",
+     "nl": "Een zachte spot loopt naar het eind en terug.",
+     "de": "Ein weicher Lichtpunkt läuft ans Ende und zurück.",
+     "sv": "En mjuk ljuspunkt löper till slutet och tillbaka."
+    }
+   },
+   {
+    "id": "theater",
+    "name": {
+     "en": "Marquee chase",
+     "lv": "Afišas gaismas",
+     "ru": "Бегущие огни",
+     "nl": "Lichtkrant",
+     "de": "Lauflicht",
+     "sv": "Löpljus"
+    },
+    "text": {
+     "en": "Spaced lights travel along, like a theatre marquee.",
+     "lv": "Gaismas ar atstarpēm skrien kā teātra afišā.",
+     "ru": "Огни с промежутками бегут, как на театральной афише.",
+     "nl": "Lampjes op afstand lopen mee, als bij een theaterluifel.",
+     "de": "Lichter mit Abstand laufen mit, wie an einem Theatervordach.",
+     "sv": "Ljus med mellanrum vandrar, som på en teaterskylt."
+    }
+   },
+   {
+    "id": "twinkle",
+    "name": {
+     "en": "Soft twinkle",
+     "lv": "Maiga mirgošana",
+     "ru": "Мягкое мерцание",
+     "nl": "Zacht twinkelen",
+     "de": "Sanftes Funkeln",
+     "sv": "Mjukt glitter"
+    },
+    "text": {
+     "en": "Coloured points gently fade in and out over black.",
+     "lv": "Krāsaini punkti maigi iedegas un izdziest uz melna.",
+     "ru": "Цветные точки мягко зажигаются и гаснут на чёрном.",
+     "nl": "Gekleurde punten lichten zacht op en doven uit.",
+     "de": "Farbige Punkte blenden sanft ein und aus.",
+     "sv": "Färgade punkter tonar mjukt in och ut mot svart."
+    }
+   },
+   {
+    "id": "candle",
+    "name": {
+     "en": "Candlelight",
+     "lv": "Svece",
+     "ru": "Свеча",
+     "nl": "Kaarslicht",
+     "de": "Kerzenlicht",
+     "sv": "Levande ljus"
+    },
+    "text": {
+     "en": "An even glow with a gentle, irregular flicker.",
+     "lv": "Vienmērīgs mirdzums ar maigu, nevienmērīgu mirgošanu.",
+     "ru": "Ровное свечение с мягким неровным мерцанием.",
+     "nl": "Een egale gloed met een zacht, onregelmatig flakkeren.",
+     "de": "Ein ruhiges Leuchten mit sanftem, unregelmäßigem Flackern.",
+     "sv": "Ett jämnt sken med ett mjukt, oregelbundet fladder."
+    }
+   },
+   {
+    "id": "heartbeat",
+    "name": {
+     "en": "Heartbeat",
+     "lv": "Sirdspuksti",
+     "ru": "Сердцебиение",
+     "nl": "Hartslag",
+     "de": "Herzschlag",
+     "sv": "Hjärtslag"
+    },
+    "text": {
+     "en": "Two pulses, then a quiet rest.",
+     "lv": "Divi pulsi, tad klusa pauze.",
+     "ru": "Два удара, затем тихая пауза.",
+     "nl": "Twee pulsen, dan een rustige pauze.",
+     "de": "Zwei Pulse, dann eine ruhige Pause.",
+     "sv": "Två pulser, sedan en lugn paus."
+    }
+   },
+   {
+    "id": "ripple",
+    "name": {
+     "en": "Center ripple",
+     "lv": "Viļņi no centra",
+     "ru": "Круги от центра",
+     "nl": "Rimpeling",
+     "de": "Wellen aus der Mitte",
+     "sv": "Ringar från mitten"
+    },
+    "text": {
+     "en": "Soft fronts spread from the centre to both ends.",
+     "lv": "Maigi viļņi izplešas no centra uz abiem galiem.",
+     "ru": "Мягкие волны расходятся от центра к обоим концам.",
+     "nl": "Zachte golven lopen vanuit het midden naar beide uiteinden.",
+     "de": "Weiche Wellen laufen von der Mitte zu beiden Enden.",
+     "sv": "Mjuka vågor sprids från mitten mot båda ändar."
+    }
+   },
+   {
+    "id": "dissolve",
+    "name": {
+     "en": "Dissolve",
+     "lv": "Izkliede",
+     "ru": "Растворение",
+     "nl": "Oplossen",
+     "de": "Auflösen",
+     "sv": "Upplösning"
+    },
+    "text": {
+     "en": "Pixels change colour in a shuffled order, then back.",
+     "lv": "Pikseļi maina krāsu jauktā secībā un atpakaļ.",
+     "ru": "Пиксели меняют цвет в перемешанном порядке и обратно.",
+     "nl": "Pixels wisselen van kleur in willekeurige volgorde, en terug.",
+     "de": "Pixel wechseln die Farbe in gemischter Reihenfolge und zurück.",
+     "sv": "Pixlar byter färg i blandad ordning och tillbaka."
+    }
+   },
+   {
+    "id": "plasma",
+    "name": {
+     "en": "Plasma flow",
+     "lv": "Plazma",
+     "ru": "Плазма",
+     "nl": "Plasma",
+     "de": "Plasma",
+     "sv": "Plasma"
+    },
+    "text": {
+     "en": "Overlapping waves form a moving colour texture.",
+     "lv": "Pārklājoši viļņi veido kustīgu krāsu faktūru.",
+     "ru": "Наложенные волны создают живую цветовую фактуру.",
+     "nl": "Overlappende golven vormen een bewegende kleurtextuur.",
+     "de": "Überlagerte Wellen bilden eine bewegte Farbstruktur.",
+     "sv": "Överlappande vågor bildar en rörlig färgstruktur."
+    }
+   },
+   {
+    "id": "lightning",
+    "name": {
+     "en": "Lightning",
+     "lv": "Zibens",
+     "ru": "Молния",
+     "nl": "Bliksem",
+     "de": "Blitz",
+     "sv": "Blixt"
+    },
+    "text": {
+     "en": "A burst of flashes, then a dark pause.",
+     "lv": "Uzplaiksnījumu sērija, tad tumša pauze.",
+     "ru": "Серия вспышек, затем тёмная пауза.",
+     "nl": "Een reeks flitsen, dan een donkere pauze.",
+     "de": "Eine Blitzfolge, dann eine dunkle Pause.",
+     "sv": "En skur av blixtar, sedan en mörk paus."
+    }
+   },
+   {
+    "id": "confetti",
+    "name": {
+     "en": "Confetti",
+     "lv": "Konfeti",
+     "ru": "Конфетти",
+     "nl": "Confetti",
+     "de": "Konfetti",
+     "sv": "Konfetti"
+    },
+    "text": {
+     "en": "Colourful sparks appear and leave fading glows.",
+     "lv": "Krāsainas dzirksteles parādās un atstāj dziestošu mirdzumu.",
+     "ru": "Цветные искры вспыхивают и оставляют гаснущий след.",
+     "nl": "Kleurige vonken verschijnen en laten een uitdovende gloed achter.",
+     "de": "Bunte Funken erscheinen und hinterlassen verglühendes Licht.",
+     "sv": "Färgglada gnistor dyker upp och lämnar ett bleknande sken."
+    }
+   }
+  ],
+  "palette_names": {
+   "en": "Custom, Rainbow, Ocean, Lava, Forest, Sunset, Amber, Ice, Neon, Lavender, Candy, Festive, Ember, Twilight",
+   "lv": "Pielāgota, Varavīksne, Okeāns, Lava, Mežs, Saulriets, Dzintars, Ledus, Neons, Lavanda, Konfektes, Svētki, Ogles, Krēsla",
+   "ru": "Своя, Радуга, Океан, Лава, Лес, Закат, Янтарь, Лёд, Неон, Лаванда, Леденец, Праздник, Угли, Сумерки",
+   "nl": "Eigen, Regenboog, Oceaan, Lava, Bos, Zonsondergang, Amber, IJs, Neon, Lavendel, Snoep, Feestelijk, Gloed, Schemering",
+   "de": "Eigene, Regenbogen, Ozean, Lava, Wald, Sonnenuntergang, Bernstein, Eis, Neon, Lavendel, Bonbon, Festlich, Glut, Dämmerung",
+   "sv": "Egen, Regnbåge, Hav, Lava, Skog, Solnedgång, Bärnsten, Is, Neon, Lavendel, Godis, Festlig, Glöd, Skymning"
+  }
+ },
+ "show": {
+  "kicker": {
+   "en": "Show control",
+   "lv": "Programmas vadība",
+   "ru": "Управление шоу",
+   "nl": "Showsturing",
+   "de": "Showsteuerung",
+   "sv": "Showstyrning"
+  },
+  "title": {
+   "en": "Scenes, schedules and cues",
+   "lv": "Ainas, grafiki un komandas",
+   "ru": "Сцены, расписания и сигналы",
+   "nl": "Scènes, schema’s en cues",
+   "de": "Szenen, Zeitpläne und Cues",
+   "sv": "Scener, scheman och cues"
+  },
+  "text": {
+   "en": "Light that changes with the hour, the season or the event, with nobody standing at the switch.",
+   "lv": "Gaisma, kas mainās līdz ar stundu, sezonu vai notikumu, bez neviena pie slēdža.",
+   "ru": "Свет, который меняется по часам, сезону или событию — без человека у выключателя.",
+   "nl": "Licht dat meegaat met het uur, het seizoen of het evenement, zonder dat iemand bij de schakelaar staat.",
+   "de": "Licht, das sich mit Uhrzeit, Saison oder Anlass ändert, ohne dass jemand am Schalter steht.",
+   "sv": "Ljus som skiftar med timmen, säsongen eller evenemanget, utan att någon står vid strömbrytaren."
+  },
+  "items": [
+   {
+    "icon": "layers",
+    "title": {
+     "en": "Scenes",
+     "lv": "Ainas",
+     "ru": "Сцены",
+     "nl": "Scènes",
+     "de": "Szenen",
+     "sv": "Scener"
+    },
+    "text": {
+     "en": "32 saved scenes, with up to 3 layers on every output, mixed as normal, add, multiply or screen.",
+     "lv": "32 saglabātas ainas, līdz 3 slāņiem katrā izejā, sajaukti kā normal, add, multiply vai screen.",
+     "ru": "32 сохранённые сцены, до 3 слоёв на каждом выходе, смешивание normal, add, multiply или screen.",
+     "nl": "32 opgeslagen scènes, tot 3 lagen per uitgang, gemengd als normal, add, multiply of screen.",
+     "de": "32 gespeicherte Szenen, bis zu 3 Ebenen je Ausgang, gemischt als Normal, Add, Multiply oder Screen.",
+     "sv": "32 sparade scener, upp till 3 lager per utgång, blandade som normal, add, multiply eller screen."
+    }
+   },
+   {
+    "icon": "sites",
+    "title": {
+     "en": "Groups",
+     "lv": "Grupas",
+     "ru": "Группы",
+     "nl": "Groepen",
+     "de": "Gruppen",
+     "sv": "Grupper"
+    },
+    "text": {
+     "en": "Up to 8 zones, so one command reaches every letter of a word.",
+     "lv": "Līdz 8 zonām, lai viena komanda sasniegtu katru vārda burtu.",
+     "ru": "До 8 зон: одна команда доходит до каждой буквы слова.",
+     "nl": "Tot 8 zones, zodat één opdracht elke letter van een woord bereikt.",
+     "de": "Bis zu 8 Zonen, damit ein Befehl jeden Buchstaben eines Wortes erreicht.",
+     "sv": "Upp till 8 zoner, så att ett kommando når varje bokstav i ett ord."
+    }
+   },
+   {
+    "icon": "repeat",
+    "title": {
+     "en": "Timelines",
+     "lv": "Laika secības",
+     "ru": "Таймлайны",
+     "nl": "Tijdlijnen",
+     "de": "Zeitleisten",
+     "sv": "Tidslinjer"
+    },
+    "text": {
+     "en": "Up to 16 steps that play scenes in order, with motion between them.",
+     "lv": "Līdz 16 soļiem, kas atskaņo ainas pēc kārtas ar pārejām starp tām.",
+     "ru": "До 16 шагов, которые проигрывают сцены по порядку с переходами.",
+     "nl": "Tot 16 stappen die scènes op volgorde afspelen, met beweging ertussen.",
+     "de": "Bis zu 16 Schritte, die Szenen der Reihe nach abspielen, mit Bewegung dazwischen.",
+     "sv": "Upp till 16 steg som spelar scener i ordning, med rörelse mellan dem."
+    }
+   },
+   {
+    "icon": "play",
+    "title": {
+     "en": "Cue lists",
+     "lv": "Komandu saraksti",
+     "ru": "Списки сигналов",
+     "nl": "Cuelijsten",
+     "de": "Cue-Listen",
+     "sv": "Cuelistor"
+    },
+    "text": {
+     "en": "8 lists of 16 cues for events, with a manual crossfade.",
+     "lv": "8 saraksti pa 16 komandām pasākumiem, ar manuālu pāreju.",
+     "ru": "8 списков по 16 сигналов для мероприятий, с ручным кроссфейдом.",
+     "nl": "8 lijsten van 16 cues voor evenementen, met een handmatige crossfade.",
+     "de": "8 Listen mit je 16 Cues für Veranstaltungen, mit manuellem Überblenden.",
+     "sv": "8 listor med 16 cues för evenemang, med manuell övertoning."
+    }
+   },
+   {
+    "icon": "calendar",
+    "title": {
+     "en": "Schedules",
+     "lv": "Grafiki",
+     "ru": "Расписания",
+     "nl": "Schema’s",
+     "de": "Zeitpläne",
+     "sv": "Scheman"
+    },
+    "text": {
+     "en": "Switch scenes by time of day, in the controller’s own time zone.",
+     "lv": "Mainiet ainas pēc diennakts laika kontrollera laika joslā.",
+     "ru": "Смена сцен по времени суток в часовом поясе контроллера.",
+     "nl": "Wissel scènes op tijdstip, in de eigen tijdzone van de controller.",
+     "de": "Szenen nach Uhrzeit wechseln, in der Zeitzone des Controllers.",
+     "sv": "Byt scen efter tid på dygnet, i styrenhetens egen tidszon."
+    }
+   },
+   {
+    "icon": "bolt",
+    "title": {
+     "en": "Live input",
+     "lv": "Tiešā vadība",
+     "ru": "Живое управление",
+     "nl": "Live-invoer",
+     "de": "Live-Eingang",
+     "sv": "Direktstyrning"
+    },
+    "text": {
+     "en": "A lighting desk can take over through Art-Net or sACN. When its signal stops, the saved scene takes over again.",
+     "lv": "Gaismas pults var pārņemt vadību caur Art-Net vai sACN. Kad signāls beidzas, atkal darbojas saglabātā aina.",
+     "ru": "Световой пульт может взять управление через Art-Net или sACN. Когда сигнал пропадает, снова играет сохранённая сцена.",
+     "nl": "Een lichttafel kan het overnemen via Art-Net of sACN. Valt het signaal weg, dan neemt de opgeslagen scène het weer over.",
+     "de": "Ein Lichtpult kann per Art-Net oder sACN übernehmen. Endet das Signal, übernimmt wieder die gespeicherte Szene.",
+     "sv": "Ett ljusbord kan ta över via Art-Net eller sACN. När signalen upphör tar den sparade scenen över igen."
+    }
+   }
+  ]
+ },
+ "setup": {
+  "kicker": {
+   "en": "Getting started",
+   "lv": "Kā sākt",
+   "ru": "Как начать",
+   "nl": "Aan de slag",
+   "de": "Erste Schritte",
+   "sv": "Kom igång"
+  },
+  "title": {
+   "en": "First light in four steps",
+   "lv": "Pirmā gaisma četros soļos",
+   "ru": "Первый свет за четыре шага",
+   "nl": "Eerste licht in vier stappen",
+   "de": "Erstes Licht in vier Schritten",
+   "sv": "Första ljuset i fyra steg"
+  },
+  "items": [
+   {
+    "title": {
+     "en": "Connect the light",
+     "lv": "Pieslēdziet gaismu",
+     "ru": "Подключите свет",
+     "nl": "Sluit het licht aan",
+     "de": "Licht anschließen",
+     "sv": "Anslut ljuset"
+    },
+    "text": {
+     "en": "Power stays off while wiring. We match the LEDs, power supply and wiring to the sign.",
+     "lv": "Vadu pieslēgšanas laikā barošana ir izslēgta. Mēs saskaņojam LED, barošanu un vadus ar izkārtni.",
+     "ru": "Во время монтажа питание выключено. Светодиоды, блок питания и проводку мы подбираем под вывеску.",
+     "nl": "Tijdens het bedraden blijft de stroom uit. Wij stemmen LED’s, voeding en bekabeling af op de signing.",
+     "de": "Beim Verdrahten bleibt der Strom aus. LEDs, Netzteil und Verkabelung stimmen wir auf die Anlage ab.",
+     "sv": "Strömmen är av under kopplingen. Vi anpassar lysdioder, nätaggregat och kablage till skylten."
+    }
+   },
+   {
+    "title": {
+     "en": "Join the setup network",
+     "lv": "Pievienojieties iestatīšanas tīklam",
+     "ru": "Подключитесь к сети настройки",
+     "nl": "Verbind met het installatienetwerk",
+     "de": "Mit dem Einrichtungsnetz verbinden",
+     "sv": "Anslut till installationsnätverket"
+    },
+    "text": {
+     "en": "A new LEDNode opens its own Wi-Fi, LumiGrid-Setup. Its unique password is shown during commissioning.",
+     "lv": "Jauns LEDNode atver savu Wi-Fi tīklu LumiGrid-Setup. Tā unikālā parole tiek parādīta nodošanas laikā.",
+     "ru": "Новый LEDNode открывает свою сеть Wi-Fi LumiGrid-Setup. Уникальный пароль показывается при пусконаладке.",
+     "nl": "Een nieuwe LEDNode opent een eigen wifi-netwerk, LumiGrid-Setup. Het unieke wachtwoord verschijnt bij de inbedrijfstelling.",
+     "de": "Ein neuer LEDNode öffnet ein eigenes WLAN, LumiGrid-Setup. Das individuelle Passwort wird bei der Inbetriebnahme angezeigt.",
+     "sv": "En ny LEDNode öppnar ett eget Wi-Fi, LumiGrid-Setup. Det unika lösenordet visas vid driftsättningen."
+    }
+   },
+   {
+    "title": {
+     "en": "Create your access key",
+     "lv": "Izveidojiet piekļuves atslēgu",
+     "ru": "Создайте ключ доступа",
+     "nl": "Maak uw toegangssleutel",
+     "de": "Zugangsschlüssel anlegen",
+     "sv": "Skapa din åtkomstnyckel"
+    },
+    "text": {
+     "en": "Open 192.168.4.1 and set a private admin key of 16 to 64 characters. Operators and installers can have their own keys.",
+     "lv": "Atveriet 192.168.4.1 un iestatiet privātu administratora atslēgu no 16 līdz 64 rakstzīmēm. Operatoriem un uzstādītājiem var būt savas atslēgas.",
+     "ru": "Откройте 192.168.4.1 и задайте личный ключ администратора длиной от 16 до 64 символов. У операторов и монтажников могут быть свои ключи.",
+     "nl": "Open 192.168.4.1 en stel een eigen beheerderssleutel van 16 tot 64 tekens in. Operators en installateurs kunnen eigen sleutels krijgen.",
+     "de": "Öffnen Sie 192.168.4.1 und legen Sie einen privaten Admin-Schlüssel mit 16 bis 64 Zeichen fest. Bediener und Installateure können eigene Schlüssel bekommen.",
+     "sv": "Öppna 192.168.4.1 och ange en privat adminnyckel på 16 till 64 tecken. Operatörer och installatörer kan få egna nycklar."
+    }
+   },
+   {
+    "title": {
+     "en": "Test, then save a scene",
+     "lv": "Pārbaudiet un saglabājiet ainu",
+     "ru": "Проверьте и сохраните сцену",
+     "nl": "Test en sla een scène op",
+     "de": "Testen, dann Szene speichern",
+     "sv": "Testa och spara en scen"
+    },
+    "text": {
+     "en": "Name an output, try it at low brightness and save your first scene. Add schedules when you need them.",
+     "lv": "Nosauciet izeju, pārbaudiet to ar mazu spilgtumu un saglabājiet pirmo ainu. Grafikus pievienojiet, kad tie vajadzīgi.",
+     "ru": "Назовите выход, проверьте его на малой яркости и сохраните первую сцену. Расписания добавьте, когда понадобятся.",
+     "nl": "Geef een uitgang een naam, test op lage helderheid en sla uw eerste scène op. Voeg schema’s toe wanneer u ze nodig hebt.",
+     "de": "Benennen Sie einen Ausgang, testen Sie ihn mit wenig Helligkeit und speichern Sie die erste Szene. Zeitpläne kommen dazu, wenn Sie sie brauchen.",
+     "sv": "Namnge en utgång, prova den på låg ljusstyrka och spara din första scen. Lägg till scheman när du behöver dem."
+    }
+   }
+  ]
+ },
+ "local": {
+  "kicker": {
+   "en": "On your network",
+   "lv": "Jūsu tīklā",
+   "ru": "В вашей сети",
+   "nl": "In uw netwerk",
+   "de": "In Ihrem Netz",
+   "sv": "I ditt nätverk"
+  },
+  "title": {
+   "en": "Your light stays yours",
+   "lv": "Jūsu gaisma paliek jūsu",
+   "ru": "Ваш свет остаётся вашим",
+   "nl": "Uw licht blijft van u",
+   "de": "Ihr Licht bleibt Ihres",
+   "sv": "Ditt ljus förblir ditt"
+  },
+  "text": {
+   "en": "LUMIGRID runs on the controller itself. Everyday control needs no cloud account and no subscription.",
+   "lv": "LUMIGRID darbojas pašā kontrollerī. Ikdienas vadībai nav vajadzīgs ne mākoņkonts, ne abonements.",
+   "ru": "LUMIGRID работает на самом контроллере. Для повседневного управления не нужны ни облачный аккаунт, ни подписка.",
+   "nl": "LUMIGRID draait op de controller zelf. Voor dagelijkse bediening is geen cloudaccount en geen abonnement nodig.",
+   "de": "LUMIGRID läuft auf dem Controller selbst. Für die tägliche Steuerung braucht es weder Cloud-Konto noch Abo.",
+   "sv": "LUMIGRID körs på själva styrenheten. Vardaglig styrning kräver varken molnkonto eller abonnemang."
+  },
+  "items": [
+   {
+    "icon": "lock",
+    "title": {
+     "en": "Keys and roles",
+     "lv": "Atslēgas un lomas",
+     "ru": "Ключи и роли",
+     "nl": "Sleutels en rollen",
+     "de": "Schlüssel und Rollen",
+     "sv": "Nycklar och roller"
+    },
+    "text": {
+     "en": "Operator, installer and admin each have their own access. Browser sessions end after 30 minutes without use.",
+     "lv": "Operatoram, uzstādītājam un administratoram ir sava piekļuve. Pārlūka sesija beidzas pēc 30 minūtēm bez darbības.",
+     "ru": "У оператора, монтажника и администратора свой доступ. Сеанс в браузере завершается после 30 минут бездействия.",
+     "nl": "Operator, installateur en beheerder hebben elk eigen toegang. Browsersessies stoppen na 30 minuten zonder gebruik.",
+     "de": "Bediener, Installateur und Admin haben jeweils eigenen Zugang. Browsersitzungen enden nach 30 Minuten ohne Nutzung.",
+     "sv": "Operatör, installatör och admin har var sin åtkomst. Webbsessioner avslutas efter 30 minuter utan användning."
+    }
+   },
+   {
+    "icon": "repeat",
+    "title": {
+     "en": "Safe updates",
+     "lv": "Droši atjauninājumi",
+     "ru": "Безопасные обновления",
+     "nl": "Veilige updates",
+     "de": "Sichere Updates",
+     "sv": "Säkra uppdateringar"
+    },
+    "text": {
+     "en": "A new firmware version is checked before it starts. If it does not start properly, the controller returns to the previous one.",
+     "lv": "Jaunā programmatūras versija tiek pārbaudīta pirms palaišanas. Ja tā nestartē pareizi, kontrolleris atgriežas pie iepriekšējās.",
+     "ru": "Новая версия прошивки проверяется перед запуском. Если она не стартует как надо, контроллер возвращается к предыдущей.",
+     "nl": "Een nieuwe firmwareversie wordt gecontroleerd voordat die start. Start ze niet goed, dan keert de controller terug naar de vorige.",
+     "de": "Eine neue Firmware-Version wird vor dem Start geprüft. Startet sie nicht richtig, kehrt der Controller zur vorherigen zurück.",
+     "sv": "En ny firmwareversion kontrolleras innan den startar. Startar den inte som den ska går styrenheten tillbaka till den förra."
+    }
+   },
+   {
+    "icon": "download",
+    "title": {
+     "en": "Backup and restore",
+     "lv": "Rezerves kopija",
+     "ru": "Резервная копия",
+     "nl": "Back-up en herstel",
+     "de": "Sicherung und Wiederherstellung",
+     "sv": "Säkerhetskopia"
+    },
+    "text": {
+     "en": "Export the controller’s settings and scenes, and bring them back after a change or a replacement.",
+     "lv": "Eksportējiet kontrollera iestatījumus un ainas un atjaunojiet tos pēc izmaiņām vai nomaiņas.",
+     "ru": "Выгрузите настройки и сцены контроллера и верните их после изменений или замены.",
+     "nl": "Exporteer de instellingen en scènes van de controller en zet ze terug na een wijziging of vervanging.",
+     "de": "Exportieren Sie Einstellungen und Szenen des Controllers und spielen Sie sie nach einer Änderung oder einem Tausch zurück.",
+     "sv": "Exportera styrenhetens inställningar och scener och återställ dem efter en ändring eller ett byte."
+    }
+   },
+   {
+    "icon": "lab",
+    "title": {
+     "en": "Where it stands",
+     "lv": "Pašreizējais stāvoklis",
+     "ru": "Где мы сейчас",
+     "nl": "Waar het staat",
+     "de": "Aktueller Stand",
+     "sv": "Var det står"
+    },
+    "text": {
+     "en": "LUMIGRID firmware 1.0 is a release candidate, in bench testing at our research department. Talk to us about what your project needs.",
+     "lv": "LUMIGRID programmatūra 1.0 ir laidiena kandidāts, ko testējam mūsu pētniecības nodaļā. Pastāstiet mums, kas vajadzīgs jūsu projektam.",
+     "ru": "Прошивка LUMIGRID 1.0 — релиз-кандидат, она проходит стендовые испытания в нашем исследовательском отделе. Расскажите нам, что нужно вашему проекту.",
+     "nl": "LUMIGRID-firmware 1.0 is een release candidate en wordt getest op de testbank van onze onderzoeksafdeling. Vertel ons wat uw project nodig heeft.",
+     "de": "Die LUMIGRID-Firmware 1.0 ist ein Release Candidate und wird in unserer Forschungsabteilung auf dem Prüfstand getestet. Sprechen Sie mit uns über Ihr Projekt.",
+     "sv": "LUMIGRID-firmware 1.0 är en releasekandidat som bänktestas på vår forskningsavdelning. Berätta vad ditt projekt behöver."
+    }
+   }
+  ]
+ },
+ "cta": {
+  "title": {
+   "en": "Planning a sign that should move?",
+   "lv": "Plānojat izkārtni, kurai jākustas?",
+   "ru": "Планируете вывеску, которая должна оживать?",
+   "nl": "Signing gepland die moet bewegen?",
+   "de": "Sie planen Werbung, die sich bewegen soll?",
+   "sv": "Planerar du en skylt som ska röra sig?"
+  },
+  "text": {
+   "en": "Tell us about the sign and how it should behave. Signage Research plans the light with you.",
+   "lv": "Pastāstiet par izkārtni un to, kā tai jāuzvedas. Signage Research kopā ar jums saplānos gaismu.",
+   "ru": "Расскажите о вывеске и о том, как она должна себя вести. Signage Research спланирует свет вместе с вами.",
+   "nl": "Vertel ons over de signing en hoe die zich moet gedragen. Signage Research plant het licht met u.",
+   "de": "Erzählen Sie uns von der Anlage und wie sie wirken soll. Signage Research plant das Licht mit Ihnen.",
+   "sv": "Berätta om skylten och hur den ska bete sig. Signage Research planerar ljuset med dig."
+  },
+  "button": {
+   "en": "Talk to Signage Research",
+   "lv": "Sazināties ar Signage Research",
+   "ru": "Связаться с Signage Research",
+   "nl": "Neem contact op met Signage Research",
+   "de": "Signage Research kontaktieren",
+   "sv": "Kontakta Signage Research"
+  },
+  "docs": {
+   "en": "Technical guides on GitHub",
+   "lv": "Tehniskās pamācības GitHub",
+   "ru": "Техническая документация на GitHub",
+   "nl": "Technische handleidingen op GitHub",
+   "de": "Technische Anleitungen auf GitHub",
+   "sv": "Tekniska guider på GitHub"
+  },
+  "docs_url": "https://github.com/slafftrosheen/lumigrid"
+ }
+}

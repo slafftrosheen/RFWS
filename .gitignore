@@ -5,4 +5,6 @@ node_modules/
 
 # PHP runtime data and uploaded client files
 /site/data/_*/
+/site/data/pricelist.json
+/site/data/replies.json
 /site/assets/.rfws-build-*.css

@@ -214,3 +214,53 @@
   });
   calc();
 })();
+
+/* 2.4 · reply templates, price list → quote line, production board (drag & drop + keyboard form) */
+(function () {
+  'use strict';
+  var d = document;
+  // reply template: insert in the client's language at the cursor (or replace an empty box)
+  d.querySelectorAll('[data-reply-pick]').forEach(function (sel) {
+    sel.addEventListener('change', function () {
+      var ta = sel.form && sel.form.querySelector('[data-reply-body]'); if (!ta || !sel.value) return;
+      var v = ta.value, s = ta.selectionStart || v.length;
+      ta.value = v.trim() === '' ? sel.value : v.slice(0, s) + (s && v[s - 1] !== '\n' ? '\n\n' : '') + sel.value + v.slice(s);
+      sel.selectedIndex = 0; ta.focus(); ta.dispatchEvent(new Event('input', { bubbles: true }));
+    });
+  });
+  // price list: add a filled quote line
+  var pa = d.querySelector('[data-price-add]');
+  if (pa) pa.addEventListener('click', function () {
+    var sel = d.querySelector('[data-price-pick]'), o = sel && sel.options[sel.selectedIndex]; if (!o || !o.value && !o.dataset.desc) { sel && sel.focus(); return; }
+    var f = pa.closest('form'), body = f.querySelector('[data-qbody]'), tpl = f.querySelector('[data-qtpl]');
+    var last = body.querySelector('[data-qline]:last-child'), tr;
+    if (last && !last.querySelector('textarea').value.trim()) tr = last;
+    else { var w = d.createElement('tbody'); w.innerHTML = tpl.innerHTML; tr = w.firstElementChild; body.appendChild(tr); }
+    tr.querySelector('textarea').value = o.dataset.desc; tr.querySelector('[data-p]').value = o.dataset.price;
+    tr.querySelector('[name$="[unit]"]').value = o.dataset.unit; var ps = tr.querySelector('select'); if (ps) ps.value = o.dataset.slug || '';
+    sel.selectedIndex = 0; f.dispatchEvent(new Event('input', { bubbles: true }));
+    tr.classList.add('just-added'); setTimeout(function () { tr.classList.remove('just-added'); }, 1200);
+  });
+  if (d.querySelector('[data-price-pick]')) d.querySelector('[data-price-pick]').value = '';
+  // board
+  var kb = d.querySelector('[data-kb]'); if (!kb) return;
+  var all = d.querySelector('[data-kb-notify-all]'), live = d.querySelector('[data-kb-live]'), drag = null;
+  var setNotify = function () { kb.querySelectorAll('[data-kb-notify]').forEach(function (i) { i.value = all.checked ? '1' : ''; }); };
+  all.addEventListener('change', setNotify); setNotify();
+  kb.querySelectorAll('.kb-move button').forEach(function (b) { b.classList.add('kb-go'); });
+  var count = function () { kb.querySelectorAll('.kb-col').forEach(function (c) { c.querySelector('h2 b').textContent = c.querySelectorAll('.kb-card').length; }); };
+  var move = function (card, st) {
+    var f = card.querySelector('form'), old = card.parentNode, from = card.dataset.st; if (st === from) return;
+    f.querySelector('select').value = st;
+    var col = kb.querySelector('[data-kbdrop="' + st + '"]'); col.insertBefore(card, col.firstChild); card.dataset.st = st; card.classList.add('kb-lit'); count();
+    fetch(f.action, { method: 'POST', body: new FormData(f), headers: { Accept: 'application/json' }, credentials: 'same-origin' })
+      .then(function (r) { return r.json(); })
+      .then(function (j) { live.textContent = j.msg; if (!j.ok) throw 0; setTimeout(function () { card.classList.remove('kb-lit'); }, 1400); })
+      .catch(function () { old.insertBefore(card, old.firstChild); card.dataset.st = from; f.querySelector('select').value = from; card.classList.remove('kb-lit'); count(); live.textContent = 'Не удалось перенести'; });
+  };
+  kb.addEventListener('dragstart', function (e) { var c = e.target.closest('.kb-card'); if (!c) return; drag = c; c.classList.add('kb-drag'); e.dataTransfer.effectAllowed = 'move'; e.dataTransfer.setData('text/plain', c.dataset.no); });
+  kb.addEventListener('dragend', function () { if (drag) drag.classList.remove('kb-drag'); drag = null; kb.querySelectorAll('.kb-over').forEach(function (x) { x.classList.remove('kb-over'); }); });
+  kb.addEventListener('dragover', function (e) { var l = e.target.closest('[data-kbdrop]'); if (!l || !drag) return; e.preventDefault(); kb.querySelectorAll('.kb-over').forEach(function (x) { if (x !== l) x.classList.remove('kb-over'); }); l.classList.add('kb-over'); });
+  kb.addEventListener('drop', function (e) { var l = e.target.closest('[data-kbdrop]'); if (!l || !drag) return; e.preventDefault(); l.classList.remove('kb-over'); move(drag, l.dataset.kbdrop); });
+  kb.addEventListener('submit', function (e) { var c = e.target.closest('.kb-card'); if (!c) return; e.preventDefault(); move(c, e.target.querySelector('select').value); });
+})();

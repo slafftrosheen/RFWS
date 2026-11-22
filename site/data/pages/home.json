@@ -2,7 +2,12 @@
  "seo": {
   "title": {},
   "description": {
-   "en": "Reclame Fabriek is a B2B sign supplier in Daugavpils, Latvia, since 1993: custom 3D box letters, lightboxes and LED neon, CNC machinery and custom furniture, delivered across Europe."
+   "en": "Reclame Fabriek is a B2B sign supplier in Daugavpils, Latvia, since 1993: custom 3D box letters, lightboxes and LED neon, CNC machinery and custom furniture, delivered across Europe.",
+   "lv": "Reclame Fabriek ir B2B izkārtņu ražotājs Daugavpilī, Latvijā, kopš 1993. gada: individuāli 3D tilpuma burti, gaismas kastes un LED neons, CNC iekārtas un mēbeles pēc pasūtījuma ar piegādi visā Eiropā.",
+   "ru": "Reclame Fabriek — B2B-производитель вывесок в Даугавпилсе (Латвия) с 1993 года: объёмные буквы на заказ, световые короба и LED-неон, станки с ЧПУ и мебель на заказ с доставкой по всей Европе.",
+   "nl": "Reclame Fabriek is sinds 1993 een B2B-leverancier van signing in Daugavpils, Letland: 3D-doosletters op maat, lichtbakken en LED-neon, CNC-machines en meubels op maat, geleverd in heel Europa.",
+   "de": "Reclame Fabriek ist seit 1993 B2B-Hersteller von Werbeanlagen in Daugavpils, Lettland: 3D-Profilbuchstaben nach Maß, Leuchtkästen und LED-Neon, CNC-Maschinen und Möbel nach Maß, mit Lieferung in ganz Europa.",
+   "sv": "Reclame Fabriek är sedan 1993 en B2B-leverantör av skyltar i Daugavpils, Lettland: 3D-bokstäver på beställning, ljuslådor och LED-neon, CNC-maskiner och möbler på beställning, med leverans i hela Europa."
   }
  },
  "hero": {
@@ -698,6 +703,142 @@
      "nl": "Geleverd in heel Europa",
      "de": "Lieferung in ganz Europa",
      "sv": "Levererat i hela Europa"
+    }
+   }
+  ]
+ },
+ "process": {
+  "kicker": {
+   "en": "From drawing to switch-on",
+   "lv": "No rasējuma līdz ieslēgšanai",
+   "ru": "От чертежа до включения",
+   "nl": "Van tekening tot inschakelen",
+   "de": "Von der Zeichnung bis zum Einschalten",
+   "sv": "Från ritning till tändning"
+  },
+  "title": {
+   "en": "How a box letter is made at Reclame Fabriek",
+   "lv": "Kā Reclame Fabriek top tilpuma burts",
+   "ru": "Как на Reclame Fabriek делается объёмная буква",
+   "nl": "Zo wordt een doosletter gemaakt bij Reclame Fabriek",
+   "de": "So entsteht ein Profilbuchstabe bei Reclame Fabriek",
+   "sv": "Så tillverkas en 3D-bokstav hos Reclame Fabriek"
+  },
+  "text": {
+   "en": "Design, manufacturing and installation under one roof in Daugavpils. Six steps, one team, and you can follow every step in the client portal.",
+   "lv": "Projektēšana, ražošana un uzstādīšana zem viena jumta Daugavpilī. Seši soļi, viena komanda, un katru soli varat sekot klientu portālā.",
+   "ru": "Проектирование, производство и монтаж под одной крышей в Даугавпилсе. Шесть шагов, одна команда, и за каждым шагом можно следить в кабинете клиента.",
+   "nl": "Ontwerp, productie en montage onder één dak in Daugavpils. Zes stappen, één team, en u volgt elke stap in het klantenportaal.",
+   "de": "Planung, Fertigung und Montage unter einem Dach in Daugavpils. Sechs Schritte, ein Team, und jeden Schritt verfolgen Sie im Kundenportal.",
+   "sv": "Design, tillverkning och montering under ett tak i Daugavpils. Sex steg, ett team, och du följer varje steg i kundportalen."
+  },
+  "items": [
+   {
+    "title": {
+     "en": "Drawing and proof",
+     "lv": "Rasējums un korektūra",
+     "ru": "Чертёж и макет",
+     "nl": "Tekening en proef",
+     "de": "Zeichnung und Freigabe",
+     "sv": "Ritning och korrektur"
+    },
+    "text": {
+     "en": "Your logo becomes production drawings: outlines, depth, light and fixing points. You approve the proof before anything is cut.",
+     "lv": "Jūsu logotips kļūst par ražošanas rasējumiem: kontūras, dziļums, gaisma un stiprinājuma punkti. Jūs apstiprināt korektūru, pirms kaut kas tiek griezts.",
+     "ru": "Ваш логотип превращается в рабочие чертежи: контуры, глубина, подсветка и точки крепления. Вы утверждаете макет до начала резки.",
+     "nl": "Uw logo wordt een productietekening: contouren, diepte, licht en bevestigingspunten. U keurt de proef goed voordat er iets wordt gesneden.",
+     "de": "Ihr Logo wird zur Fertigungszeichnung: Konturen, Tiefe, Licht und Befestigungspunkte. Sie geben den Entwurf frei, bevor etwas geschnitten wird.",
+     "sv": "Er logotyp blir produktionsritningar: konturer, djup, ljus och fästpunkter. Ni godkänner korrekturen innan något skärs."
+    }
+   },
+   {
+    "title": {
+     "en": "Cutting",
+     "lv": "Griešana",
+     "ru": "Раскрой",
+     "nl": "Snijden",
+     "de": "Zuschnitt",
+     "sv": "Skärning"
+    },
+    "text": {
+     "en": "CNC routers (2 × 6 m and 2 × 4 m) and a 2 × 5 m laser cut backs and faces from aluminium, acrylic and composite.",
+     "lv": "CNC frēzes (2 × 6 m un 2 × 4 m) un 2 × 5 m lāzers izgriež aizmugures un frontes no alumīnija, akrila un kompozīta.",
+     "ru": "Фрезеры с ЧПУ (2 × 6 м и 2 × 4 м) и лазер 2 × 5 м вырезают задники и лицевые части из алюминия, акрила и композита.",
+     "nl": "CNC-freesmachines (2 × 6 m en 2 × 4 m) en een laser van 2 × 5 m snijden achterkanten en fronten uit aluminium, acryl en composiet.",
+     "de": "CNC-Fräsen (2 × 6 m und 2 × 4 m) und ein 2 × 5 m Laser schneiden Rückwände und Fronten aus Aluminium, Acryl und Verbundplatten.",
+     "sv": "CNC-fräsar (2 × 6 m och 2 × 4 m) och en 2 × 5 m laser skär bakstycken och fronter i aluminium, akryl och komposit."
+    }
+   },
+   {
+    "title": {
+     "en": "Bending",
+     "lv": "Locīšana",
+     "ru": "Гибка",
+     "nl": "Buigen",
+     "de": "Biegen",
+     "sv": "Bockning"
+    },
+    "text": {
+     "en": "CNC box-letter benders (FLT and RCT) form the aluminium returns that give every letter its depth.",
+     "lv": "CNC tilpuma burtu locīšanas iekārtas (FLT un RCT) veido alumīnija sānus, kas katram burtam piešķir dziļumu.",
+     "ru": "Гибочные станки с ЧПУ (FLT и RCT) формируют алюминиевые борта, которые дают каждой букве глубину.",
+     "nl": "CNC-buigmachines voor doosletters (FLT en RCT) vormen de aluminium zijkanten die elke letter diepte geven.",
+     "de": "CNC-Biegemaschinen (FLT und RCT) formen die Aluminium-Zargen, die jedem Buchstaben seine Tiefe geben.",
+     "sv": "CNC-bockmaskiner för 3D-bokstäver (FLT och RCT) formar aluminiumsidorna som ger varje bokstav dess djup."
+    }
+   },
+   {
+    "title": {
+     "en": "Paint",
+     "lv": "Krāsošana",
+     "ru": "Покраска",
+     "nl": "Lakken",
+     "de": "Lackierung",
+     "sv": "Lackering"
+    },
+    "text": {
+     "en": "Tikkurila two-component industrial paint in any RAL or NCS colour, or a special coating.",
+     "lv": "Tikkurila divkomponentu rūpnieciskā krāsa jebkurā RAL vai NCS tonī vai īpašs pārklājums.",
+     "ru": "Промышленная двухкомпонентная краска Tikkurila любого цвета RAL или NCS либо специальное покрытие.",
+     "nl": "Tikkurila industriële tweecomponentenlak in elke RAL- of NCS-kleur, of een speciale coating.",
+     "de": "Tikkurila 2K-Industrielack in jeder RAL- oder NCS-Farbe oder eine Sonderbeschichtung.",
+     "sv": "Tikkurila tvåkomponents industrilack i valfri RAL- eller NCS-kulör, eller en specialbeläggning."
+    }
+   },
+   {
+    "title": {
+     "en": "Light",
+     "lv": "Gaisma",
+     "ru": "Свет",
+     "nl": "Licht",
+     "de": "Licht",
+     "sv": "Ljus"
+    },
+    "text": {
+     "en": "LED modules with a 5-year warranty and power supplies with a 3-year warranty are laid out for even light and wired in.",
+     "lv": "LED moduļi ar 5 gadu garantiju un barošanas bloki ar 3 gadu garantiju tiek izvietoti vienmērīgai gaismai un pievienoti.",
+     "ru": "Светодиодные модули с гарантией 5 лет и блоки питания с гарантией 3 года раскладываются для ровного света и подключаются.",
+     "nl": "LED-modules met 5 jaar garantie en voedingen met 3 jaar garantie worden verdeeld voor gelijkmatig licht en aangesloten.",
+     "de": "LED-Module mit 5 Jahren und Netzteile mit 3 Jahren Garantie werden für gleichmäßiges Licht verteilt und verdrahtet.",
+     "sv": "LED-moduler med 5 års garanti och nätaggregat med 3 års garanti placeras för jämnt ljus och kopplas in."
+    }
+   },
+   {
+    "title": {
+     "en": "Delivery and mounting",
+     "lv": "Piegāde un montāža",
+     "ru": "Доставка и монтаж",
+     "nl": "Levering en montage",
+     "de": "Lieferung und Montage",
+     "sv": "Leverans och montering"
+    },
+    "text": {
+     "en": "Letters ship with a paper template, or pre-installed on rails, across Europe and the UK. We can also install them.",
+     "lv": "Burti tiek piegādāti ar papīra šablonu vai jau uzstādīti uz sliedēm visā Eiropā un Lielbritānijā. Varam tos arī uzstādīt.",
+     "ru": "Буквы отправляются с бумажным шаблоном или уже смонтированными на рейках по всей Европе и в Великобританию. Можем и смонтировать.",
+     "nl": "Letters worden geleverd met een papieren mal of voorgemonteerd op rails, in heel Europa en het VK. We kunnen ze ook monteren.",
+     "de": "Die Buchstaben kommen mit Papierschablone oder vormontiert auf Schienen, europaweit und nach Großbritannien. Montage auf Wunsch.",
+     "sv": "Bokstäverna levereras med pappersmall eller förmonterade på skenor i hela Europa och Storbritannien. Vi kan också montera dem."
     }
    }
   ]

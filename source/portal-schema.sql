@@ -604,3 +604,45 @@ ALTER TABLE ONLY public.rf_tokens
 --
 -- PostgreSQL database dump complete
 --
+
+
+-- ===== Website 2.3 (schema version 2): saved sites, design proofs, feedback, activity =====
+CREATE TABLE IF NOT EXISTS rf_sites (
+  id bigserial PRIMARY KEY, client_id bigint NOT NULL REFERENCES rf_clients(id) ON DELETE CASCADE,
+  label text NOT NULL, address text NOT NULL DEFAULT '', contact text NOT NULL DEFAULT '', phone text NOT NULL DEFAULT '', notes text NOT NULL DEFAULT '',
+  created_at timestamptz NOT NULL DEFAULT now()
+);
+CREATE INDEX IF NOT EXISTS rf_sites_client ON rf_sites (client_id);
+CREATE TABLE IF NOT EXISTS rf_proofs (
+  id bigserial PRIMARY KEY, request_id bigint NOT NULL REFERENCES rf_requests(id) ON DELETE CASCADE,
+  file_id bigint NOT NULL REFERENCES rf_files(id) ON DELETE CASCADE, version integer NOT NULL DEFAULT 1, note text NOT NULL DEFAULT '',
+  status text NOT NULL DEFAULT 'pending' CHECK (status IN ('pending', 'approved', 'changes', 'superseded')),
+  created_by text NOT NULL DEFAULT '', created_at timestamptz NOT NULL DEFAULT now(),
+  decided_at timestamptz, decided_name text NOT NULL DEFAULT '', decision_note text NOT NULL DEFAULT '', decided_ip text NOT NULL DEFAULT ''
+);
+CREATE INDEX IF NOT EXISTS rf_proofs_req ON rf_proofs (request_id, version DESC);
+CREATE TABLE IF NOT EXISTS rf_feedback (
+  request_id bigint PRIMARY KEY REFERENCES rf_requests(id) ON DELETE CASCADE,
+  rating integer NOT NULL CHECK (rating BETWEEN 1 AND 5), comment text NOT NULL DEFAULT '', created_at timestamptz NOT NULL DEFAULT now()
+);
+ALTER TABLE rf_requests ADD COLUMN IF NOT EXISTS site_id bigint REFERENCES rf_sites(id) ON DELETE SET NULL;
+ALTER TABLE rf_clients ADD COLUMN IF NOT EXISTS activity_seen_at timestamptz NOT NULL DEFAULT now();
+CREATE INDEX IF NOT EXISTS rf_events_req ON rf_events (request_id, created_at DESC);
+INSERT INTO rf_meta (k, v) VALUES ('schema', '2') ON CONFLICT (k) DO UPDATE SET v = '2';
+
+-- ---------- schema v3 (website 2.4): owner + reminder + internal notes, installation appointment, extra notification e-mails ----------
+ALTER TABLE rf_requests ADD COLUMN IF NOT EXISTS assignee text NOT NULL DEFAULT '';
+ALTER TABLE rf_requests ADD COLUMN IF NOT EXISTS follow_up date;
+ALTER TABLE rf_requests ADD COLUMN IF NOT EXISTS install_at timestamptz;
+ALTER TABLE rf_requests ADD COLUMN IF NOT EXISTS install_hours numeric(4,1) NOT NULL DEFAULT 4;
+ALTER TABLE rf_requests ADD COLUMN IF NOT EXISTS install_state text NOT NULL DEFAULT '';   -- '' | proposed | confirmed | change
+ALTER TABLE rf_requests ADD COLUMN IF NOT EXISTS install_note text NOT NULL DEFAULT '';
+ALTER TABLE rf_requests ADD COLUMN IF NOT EXISTS install_crew text NOT NULL DEFAULT '';
+ALTER TABLE rf_clients ADD COLUMN IF NOT EXISTS cc_emails text NOT NULL DEFAULT '';
+CREATE TABLE IF NOT EXISTS rf_notes (
+  id bigserial PRIMARY KEY, request_id bigint NOT NULL REFERENCES rf_requests(id) ON DELETE CASCADE,
+  author text NOT NULL DEFAULT '', body text NOT NULL, created_at timestamptz NOT NULL DEFAULT now()
+);
+CREATE INDEX IF NOT EXISTS rf_notes_req ON rf_notes (request_id, created_at DESC);
+CREATE INDEX IF NOT EXISTS rf_requests_install ON rf_requests (install_at) WHERE install_at IS NOT NULL;
+INSERT INTO rf_meta (k, v) VALUES ('schema', '3') ON CONFLICT (k) DO UPDATE SET v = '3';

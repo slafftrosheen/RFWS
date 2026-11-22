@@ -15,5 +15,8 @@ enabled = false
 [studio]
 port = 54323
 
+[analytics]
+enabled = false
+
 [auth]
 site_url = "http://127.0.0.1:8080"
